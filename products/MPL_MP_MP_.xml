@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MPL_MP_MP_" format="xml" last-modified="2011-07-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="MissionPlanReport">
+      <cd:Record namexml="MissionPlanReport">
+        <cd:Field name="ReportingTime">
+          <cd:Text namexml="ReportingTime"/>
+        </cd:Field>
+        <cd:Field name="Datatakes">
+          <cd:Record namexml="Datatakes">
+            <cd:Field name="Datatake">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="Datatake">
+                  <cd:Field name="SatelliteId">
+                    <cd:Text namexml="SatelliteId"/>
+                  </cd:Field>
+                  <cd:Field name="DatatakeId">
+                    <cd:Integer namexml="DatatakeId">
+                      <cd:NativeType>uint64</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionType">
+                    <cd:Text namexml="AcquisitionType"/>
+                  </cd:Field>
+                  <cd:Field name="EopIdentifier">
+                    <cd:Text namexml="EopIdentifier"/>
+                  </cd:Field>
+                  <cd:Field name="DownlinkType">
+                    <cd:Text namexml="DownlinkType"/>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionStation">
+                    <cd:Text namexml="AcquisitionStation"/>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="CirculationCode">
+                    <cd:Text namexml="CirculationCode"/>
+                  </cd:Field>
+                  <cd:Field name="TimelinessRequirement">
+                    <cd:Text namexml="TimelinessRequirement"/>
+                  </cd:Field>
+                  <cd:Field name="ObservationTimeStart">
+                    <cd:Text namexml="ObservationTimeStart"/>
+                  </cd:Field>
+                  <cd:Field name="ObservationDuration">
+                    <cd:Integer namexml="ObservationDuration">
+                      <cd:NativeType>uint64</cd:NativeType>
+                      <cd:Unit>s</cd:Unit>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="OrbitAbsolute">
+                    <cd:Integer namexml="OrbitAbsolute">
+                      <cd:NativeType>int64</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="OrbitRelative">
+                    <cd:Integer namexml="OrbitRelative">
+                      <cd:NativeType>int64</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="ObservationArea">
+                    <cd:Record namexml="ObservationArea">
+                      <cd:Field name="ObservationSection">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="ObservationArea">
+                            <cd:Field name="LeftEdge">
+                              <cd:Record namexml="LeftEdge">
+                                <cd:Field name="ObservationPoint">
+                                  <cd:Record namexml="ObservationPoint">
+                                    <cd:Field name="Latitude">
+                                      <cd:Float namexml="Latitude">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Field>
+                                    <cd:Field name="Longitude">
+                                      <cd:Float namexml="Longitude">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Field>
+                            <cd:Field name="RightEdge">
+                              <cd:Record namexml="RightEdge">
+                                <cd:Field name="ObservationPoint">
+                                  <cd:Record namexml="ObservationPoint">
+                                    <cd:Field name="Latitude">
+                                      <cd:Float namexml="Latitude">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Field>
+                                    <cd:Field name="Longitude">
+                                      <cd:Float namexml="Longitude">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Field>
+                            <cd:Field name="ObservationTime">
+                              <cd:Text namexml="ObservationTime"/>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="InstrumentDetails">
+                    <cd:Record namexml="InstrumentDetails">
+                      <cd:Field name="InstrumentId">
+                        <cd:Text namexml="InstrumentId"/>
+                      </cd:Field>
+                      <cd:Field name="Mode">
+                        <cd:Text namexml="Mode"/>
+                      </cd:Field>
+                      <cd:Field name="Swath">
+                        <cd:Text namexml="Swath"/>
+                      </cd:Field>
+                      <cd:Field name="Polarisation">
+                        <cd:Text namexml="Polarisation"/>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="BitRate">
+                    <cd:Integer namexml="BitRate">
+                      <cd:NativeType>uint64</cd:NativeType>
+                      <cd:Unit>s</cd:Unit>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="OrderList">
+                    <cd:Record namexml="OrderList">
+                      <cd:Field name="OrderDetails">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="OrderDetails">
+                            <cd:Field name="OrderId">
+                              <cd:Text namexml="OrderId"/>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

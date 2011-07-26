@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ct:Tests last-modified="2011-07-26" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <ct:Test name="FileNameCheckEOF" criticality="Error" description="The name of the EOF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EOF"]]></ct:Test>
+  <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
+  <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(25, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
+  <ct:Test name="FileNameMatchFileClass" criticality="Error" description="The file class in the product name should be consistent with the file class field in the header"><![CDATA[substr(4, 4, str(.)) == str(../File_Class)]]></ct:Test>
+  <ct:Test name="FileNameMatchFileType" criticality="Error" description="The file type in the product name should be consistent with the file type field in the header"><![CDATA[substr(9, 10, str(.)) == str(../File_Type)]]></ct:Test>
+  <ct:Test name="FileNameMatchSystem" criticality="Error" description="The site centre in the product name should be consistent with the system field in the header"><![CDATA[substr(20, 4, str(.)) == str(../Source/System)]]></ct:Test>
+  <ct:Test name="FixedValueSentinel1" criticality="Error" description="The value should be 'Sentinel-1'"><![CDATA[str(.) == "Sentinel-1"]]></ct:Test>
+  <ct:Test name="PhysicalFileSizeCheck" criticality="Error" description="The value of this field should match the actual file size"><![CDATA[filesize() == int(.)]]></ct:Test>
+  <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before (or equal to) validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
+  <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
+</ct:Tests> 

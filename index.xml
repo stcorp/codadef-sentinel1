@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<cd:ProductClass name="Sentinel1" last-modified="2011-07-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Description>Sentinel-1 products</cd:Description>
+  <cd:ProductType name="MPL_MP_MP_">
+    <cd:Description>Mission Plan Report</cd:Description>
+    <cd:ProductDefinition id="MPL_MP_MP_" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.1 of the CMC ICD S1PD.ICD.00148.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/MissionPlanReport"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>
