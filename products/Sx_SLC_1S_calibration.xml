@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="Sx_SLC_1S_calibration" format="xml" last-modified="2011-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="calibration">
+      <cd:Record namexml="calibration">
+        <cd:Field name="adsHeader">
+          <cd:Record namexml="adsHeader">
+            <cd:Field name="missionId">
+              <cd:Text namexml="missionId"/>
+            </cd:Field>
+            <cd:Field name="productType">
+              <cd:Text namexml="productType"/>
+            </cd:Field>
+            <cd:Field name="polarisation">
+              <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="swath">
+              <cd:Text namexml="swath"/>
+            </cd:Field>
+            <cd:Field name="startTime">
+              <cd:Text namexml="startTime"/>
+            </cd:Field>
+            <cd:Field name="stopTime">
+              <cd:Text namexml="stopTime"/>
+            </cd:Field>
+            <cd:Field name="absoluteOrbitNumber">
+              <cd:Type namexml="absoluteOrbitNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="missionDataTakeId">
+              <cd:Type namexml="missionDataTakeId">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="imageNumber">
+              <cd:Type namexml="imageNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="calibrationInformation">
+          <cd:Record namexml="calibrationInformation">
+            <cd:Field name="processorScalingFactor">
+              <cd:Type namexml="processorScalingFactor">
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="externalCalibrationScalingFactor">
+              <cd:Type namexml="externalCalibrationScalingFactor">
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="calibrationVectorList">
+          <cd:Record namexml="calibrationVectorList">
+            <cd:Attribute name="count"/>
+            <cd:Field name="calibrationVector">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="calibrationVector">
+                  <cd:Field name="azimuthTime">
+                    <cd:Text namexml="azimuthTime"/>
+                  </cd:Field>
+                  <cd:Field name="line">
+                    <cd:Type namexml="line">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="sample">
+                    <cd:Type namexml="sample">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="slantRangeTime">
+                    <cd:Type namexml="slantRangeTime">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="stepSize">
+                    <cd:Type namexml="stepSize">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="offset">
+                    <cd:Type namexml="offset">
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="sigmaNought">
+                    <cd:Type namexml="sigmaNought">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="betaNought">
+                    <cd:Type namexml="betaNought">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="gamma">
+                    <cd:Type namexml="gamma">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="dn">
+                    <cd:Type namexml="dn">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
