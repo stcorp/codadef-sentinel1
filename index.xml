@@ -1,12 +1,33 @@
 <?xml version="1.0"?>
 <cd:ProductClass name="Sentinel1" last-modified="2011-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
-  <cd:ProductType name="Sx_SLC_1S_calibration">
-    <cd:Description>Mission Plan Report</cd:Description>
-    <cd:ProductDefinition id="Sx_SLC_1S_calibration" format="xml" version="0">
+  <cd:ProductType name="Level1ProductADS">
+    <cd:Description>Level 1 Product ADS</cd:Description>
+    <cd:ProductDefinition id="Level1ProductADS" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.1 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/product/adsHeader/missionId">S1A</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/product/adsHeader/missionId">S1B</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level1CalibrationADS">
+    <cd:Description>Level 1 Calibration ADS</cd:Description>
+    <cd:ProductDefinition id="Level1CalibrationADS" format="xml" version="0">
       <cd:Description>This definition is based on version 2.1 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/calibration/adsHeader/missionId"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level1NoiseADS">
+    <cd:Description>Level 1 Noise ADS</cd:Description>
+    <cd:ProductDefinition id="Level1NoiseADS" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.1 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/noise/adsHeader/missionId"/>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
