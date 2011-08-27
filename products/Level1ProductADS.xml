@@ -1896,6 +1896,75 @@
             <cd:Field name="burstList">
               <cd:Record namexml="burstList">
                 <cd:Attribute name="count"/>
+                <cd:Field name="burst">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="burst">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="azimuthAnxTime">
+                        <cd:Type namexml="azimuthAnxTime">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="byteOffset">
+                        <cd:Type namexml="byteOffset">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="numberOfLines">
+                        <cd:Type namexml="numberOfLines">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="numberOfSamplesPerLine">
+                        <cd:Type namexml="numberOfSamplesPerLine">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="lineTimeSpacing">
+                        <cd:Type namexml="lineTimeSpacing">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="firstValidRangeSample">
+                        <cd:Type namexml="firstValidRangeSample">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="lastValidRangeSample">
+                        <cd:Type namexml="lastValidRangeSample">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
           </cd:Record>
@@ -1982,6 +2051,61 @@
             <cd:Field name="coordinateConversionList">
               <cd:Record namexml="coordinateConversionList">
                 <cd:Attribute name="count"/>
+                <cd:Field name="coordinateConversion">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="coordinateConversion">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="slantRangeTime">
+                        <cd:Type namexml="slantRangeTime">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="sr0">
+                        <cd:Type namexml="sr0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="srgrCoefficients">
+                        <cd:Type namexml="srgrCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="gr0">
+                        <cd:Type namexml="gr0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="grsrCoefficients">
+                        <cd:Type namexml="grsrCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
           </cd:Record>
@@ -1991,6 +2115,63 @@
             <cd:Field name="swathMergeList">
               <cd:Record namexml="swathMergeList">
                 <cd:Attribute name="count"/>
+                <cd:Field name="swathMerge">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="swathMerge">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="swathBoundsList">
+                        <cd:Record namexml="swathBoundsList">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="swathBounds">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="swathBounds">
+                                <cd:Field name="azimuthTime">
+                                  <cd:Type namexml="azimuthTime">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="firstAzimuthLine">
+                                  <cd:Type namexml="firstAzimuthLine">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="firstRangeSample">
+                                  <cd:Type namexml="firstRangeSample">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lastAzimuthLine">
+                                  <cd:Type namexml="lastAzimuthLine">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lastRangeSample">
+                                  <cd:Type namexml="lastRangeSample">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
           </cd:Record>
