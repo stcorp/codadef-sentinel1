@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2011-08-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2011-09-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="Level1ProductADS">
     <cd:Description>Level 1 Product ADS</cd:Description>
@@ -28,6 +28,36 @@
       <cd:Description>This definition is based on version 2.1 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/noise/adsHeader/missionId"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AMx_ERRMAT">
+    <cd:Description>TRM Error Matrices</cd:Description>
+    <cd:ProductDefinition id="AMx_ERRMAT" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AMH_ERRMAT</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AMV_ERRMAT</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AM__FAILUR">
+    <cd:Description>TRM Failure Matrices</cd:Description>
+    <cd:ProductDefinition id="AM__FAILUR" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__FAILUR</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_CALSTST">
+    <cd:Description>Calibration Sites</cd:Description>
+    <cd:ProductDefinition id="AUX_CALSTS" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the QCSS Calibration Sites Format Specification ST-ESA-S1QC-PFS-003</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_CALSTS</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
