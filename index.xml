@@ -31,6 +31,15 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="L1AuxiliaryProcessorParameters">
+    <cd:Description>AUX_PP1 auxiliary data file</cd:Description>
+    <cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.3 (draft) of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/l1AuxiliaryProcessorParameters"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="AMx_ERRMAT">
     <cd:Description>TRM Error Matrices</cd:Description>
     <cd:ProductDefinition id="AMx_ERRMAT" format="xml" version="0">

@@ -1,0 +1,897 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2011-09-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="l1AuxiliaryProcessorParameters">
+      <cd:Record namexml="l1AuxiliaryProcessorParameters">
+        <cd:Field name="productList">
+          <cd:Record namexml="productList">
+            <cd:Description>List of L1 products containing the applicable auxiliary parameters for each. This list contains an entry for each product the IPF is capable of generating, indexed by its unique product identifier.</cd:Description>
+            <cd:Field name="product">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="product">
+                  <cd:Description>Product auxiliary parameters. This DSR contains all of the auxiliary parameters required to process a single product. The parameters are stored in structures that are grouped together by the logical processing steps used during image creation. The parameters within this DSR and its children are not polarisation dependent and in general apply to the entire product; however, in some cases a distinction must be made amongst swaths and when this is necessary the records are indexed with a swath identifier.</cd:Description>
+                  <cd:Field name="productId">
+                    <cd:Text namexml="productId">
+                      <cd:Description>Product type identifier as per S1 IPF ICD to which this set of parameters applies. The productId is used to index and find the correct set of auxiliary parameters for each product the IPF is capable of generating.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="commonProcParams">
+                    <cd:Record namexml="commonProcParams">
+                      <cd:Description>Common processing auxiliary parameters. This record holds the parameters that are common among multiple steps in the image processing chain.</cd:Description>
+                      <cd:Field name="correctIQBiasFlag">
+                        <cd:Type namexml="correctIQBiasFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to control the correction of the constant biases from the I and Q channels. IQ bias correction will be performed if and only if this flag is set to "true".</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="correctIQGainImbalanceFlag">
+                        <cd:Type namexml="correctIQGainImbalanceFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to control the correction of the IQ gain imbalance. IQ gain imbalance correction will be performed if and only if this flag is set to "true".</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="correctIQOrthogonalityFlag">
+                        <cd:Type namexml="correctIQOrthogonalityFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to control the correction of the IQ orthogonality. IQ orthorgonality correction will be performed if and only if this flag is set to "true".</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="correctBistaticDelayFlag">
+                        <cd:Type namexml="correctBistaticDelayFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to compensate for the bi-static delay. Correction will be performed if and only if this flag is set to "true".</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="aziProcBlockParamsList">
+                        <cd:Record namexml="aziProcBlockParamsList">
+                          <cd:Description>Azimuth processing block parameters used for SM processing. One record per SM swath.</cd:Description>
+                          <cd:Field name="aziProcBlockParams">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="aziProcBlockParams">
+                                <cd:Description>Azimuth processing block parameters record indexed by swath. There will be one record per swath.</cd:Description>
+                                <cd:Field name="swath">
+                                  <cd:Text namexml="swath">
+                                    <cd:Description>Swath identifier. This parameter defines the swath to which this record applies.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="aziProcBandwidth">
+                                  <cd:Type namexml="aziProcBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Total processing bandwidth [Hz] (excluding any additional bandwidth resulting from the taperBwExtentFraction). This parameter defines the bandwidth (Bw) to use during processing. The processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="aziBlockSize">
+                                  <cd:Type namexml="aziBlockSize">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Azimuth processing block size [lines]. Only used for SM and IM modes.</cd:Description>
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="extraAziProcBlockOverlap">
+                                  <cd:Type namexml="extraAziProcBlockOverlap">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Extra azimuth block overlap to account for possible variation of Doppler centroid frequency from azimuth block to azimuth block [lines]. Only used for SM and IM modes.</cd:Description>
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="maxFdc">
+                                  <cd:Type namexml="maxFdc">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Maximum expected Doppler centroid frequency [Hz]. Used to calculate the SM SLC azimuth matched filter throwaway component of azimuth block overlap as applicable to all azimuth blocks in a segment. Only used for SM and IM modes.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>                      
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Attribute name="count"/>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="ellipsoidParams">
+                        <cd:Record namexml="ellipsoidParams">
+                          <cd:Description>Ellipsoid and DEM parameters.</cd:Description>
+                          <cd:Field name="ellipsoidName">
+                            <cd:Text namexml="ellipsoidName">
+                              <cd:Description>Name of the reference ellipsoid.</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="ellipsoidSemiMajorAxis">
+                            <cd:Type namexml="ellipsoidSemiMajorAxis">
+                              <cd:Float format="ascii">
+                                <cd:Description>Semi-major axis of ellipsoid [m].</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="ellipsoidSemiMinorAxis">
+                            <cd:Type namexml="ellipsoidSemiMinorAxis">
+                              <cd:Float format="ascii">
+                                <cd:Description>Semi-minor axis of ellipsoid [m].</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="useDemFlag">
+                            <cd:Type namexml="useDemFlag">
+                              <cd:Integer format="ascii">
+                                <cd:Description>This flag is used to control the use of a DEM during processing. Set to true if a DEM is to be used during processing, false otherwise.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="preProcParams">
+                    <cd:Record namexml="preProcParams">
+                      <cd:Description>Pre-processing auxiliary parameters. This record contains the auxiliary parameters required during image pre-processing.</cd:Description>
+                      <cd:Field name="inputMeanExpected">
+                        <cd:Type namexml="inputMeanExpected">
+                          <cd:Float format="ascii">
+                            <cd:Description>This parameter specifies the expected mean of the input I and Q samples and is used in verifying that the calculated mean of the output samples is within the tolerated threshold.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="inputMeanThreshold">
+                        <cd:Type namexml="inputMeanThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Threshold for setting the inputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the inputMeanExpected-T and inputMeanExpected+T. This threshold is used for both the I and Q channels.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="inputStdDevExpected">
+                        <cd:Type namexml="inputStdDevExpected">
+                          <cd:Float format="ascii">
+                            <cd:Description>This parameter specifies the expected standard deviation of the input I and Q samples and is used in verifying that the calculated std. dev. of the output samples is within the tolerated threshold.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="inputStdDevThreshold">
+                        <cd:Type namexml="inputStdDevThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Threshold for setting the inputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured std. dev. must fall between the inputStdDevExpected-D and inputStdDevExpected+D. This threshold is used for both the I and Q channels.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="terrainHeightAziSpacing">
+                        <cd:Type namexml="terrainHeightAziSpacing">
+                          <cd:Float format="ascii">
+                            <cd:Description>Frequency of terrain height estimates along azimuth [s].</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <cd:Unit>s</cd:Unit>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="terrainHeightAziBlockSize">
+                        <cd:Type namexml="terrainHeightAziBlockSize">
+                          <cd:Float format="ascii">
+                            <cd:Description>Size of the block along azimuth used to calculate an average terrain height [s].</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <cd:Unit>s</cd:Unit>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="chirpReplicaSource">
+                        <cd:Text namexml="chirpReplicaSource">
+                          <cd:Description>Chirp replica to use during processing. The extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the nominal chirp will be used if this field is set to "Nominal" or the reconstructed replica is deemed invalid.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="pulseThresholds">
+                        <cd:Record namexml="pulseThresholds">
+                          <cd:Description>Thresholds used in setting the replica reconstruction and PG product status flags in the output product annotations.</cd:Description>
+                          <cd:Field name="maxXCorrPulseIrw">
+                            <cd:Type namexml="maxXCorrPulseIrw">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum allowable broadening of the IRW of the cross-correlation with the nominal replica [%]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>%</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxXCorrPulsePslr">
+                            <cd:Type namexml="maxXCorrPulsePslr">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum allowable PSLR of the cross correlation with the nominal replica [dB]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxXCorrPulseIslr">
+                            <cd:Type namexml="maxXCorrPulseIslr">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum allowable ISLR of the cross correlation with the nominal replica [dB]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxPgAmpStdFraction">
+                            <cd:Type namexml="maxPgAmpStdFraction">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum deviation from the mean allowed for the PG product amplitude, measured as a fraction of the standard deviation. Relative PG product validation shall fail if this value is exceeded.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxPgPhaseStdFraction">
+                            <cd:Type namexml="maxPgPhaseStdFraction">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum deviation from the mean allowed for the PG product phase, measured as a fraction of the standard deviation. Relative PG product validation shall fail if this value is exceeded.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxPgAmpError">
+                            <cd:Type namexml="maxPgAmpError">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum deviation allowed for a PG product amplitude from the corresponding PG product model value. Absolute PG product validation shall fail if this value is exceeded.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxPgPhaseError">
+                            <cd:Type namexml="maxPgPhaseError">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum deviation allowed for a PG product phase from the corresponding PG product model value. Absolute PG product validation shall fail if this value is exceeded.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="maxNumInvalidPgValFraction">
+                            <cd:Type namexml="maxNumInvalidPgValFraction">
+                              <cd:Float format="ascii">
+                                <cd:Description>Maximum number of invalid PG product values allowed, expressed as a fraction of the total number of PG values. The PG product model will be used instead of the extracted PG product values if this value is exceeded.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="missingLinesThreshold">
+                        <cd:Type namexml="missingLinesThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Threshold for setting the missingLinesSignificant flag in the output product annotations. This parameter ranges between 0 and 1 and specifies the percentage of missing lines to total lines [%].</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                            <cd:Unit>%</cd:Unit>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="linesPerGapThreshold">
+                        <cd:Type namexml="linesPerGapThreshold">
+                          <cd:Integer format="ascii">
+                            <cd:Description>This parameter specifies the number of consecutive missing lines in the input data which constitute a gap [lines].</cd:Description>
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="missingGapsThreshold">
+                        <cd:Type namexml="missingGapsThreshold">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Threshold for setting the significantGapsInInputData flag in the output product annotations. This parameter specifies the number of missing gaps permitted in the input data.</cd:Description>
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="getDriftFromPgModelFlag">
+                        <cd:Type namexml="getDriftFromPgModelFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag controlling the use of PG model for instrument drift compensation. True if the PG model should be used, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="applyReplicaWhiteningFlag">
+                        <cd:Type namexml="applyReplicaWhiteningFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag controlling the whitening of the reconstructed reference replica. True if whitening is to be performed, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="dcProcParams">
+                    <cd:Optional/>
+                    <cd:Record namexml="dcProcParams">
+                      <cd:Description>Doppler centroid processing auxiliary parameters. This record contains the auxiliary parameters required during Doppler centroid processing.</cd:Description>
+                      <cd:Field name="dcMethod">
+                        <cd:Text namexml="dcMethod">
+                          <cd:Description>Doppler centroid estimation method. Although the DCE from both orbit &amp; attitude and data are always performed and the results provided in the output product annotations, this parameter is used to specify exactly which Doppler centroid estimation method to use during the image focusing.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="dcInputData">
+                        <cd:Text namexml="dcInputData">
+                          <cd:Description>Type of input data used for Doppler centroid estimation. Options are "Raw" and "Range Compressed".</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="dcPredefinedCoefficients">
+                        <cd:Type namexml="dcPredefinedCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Pre-defined Doppler centroid coefficients. These Doppler centroid coefficients shall be used during processing if and only if the dcMethod element is set to "Pre-defined". This parameter is an array of floating point numbers separated by spaces.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="dcSnrThreshold">
+                        <cd:Type namexml="dcSnrThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Doppler centroid estimation signal-to-noise (SNR) threshold. If the SNR of the Doppler centroid estimate from data is below this threshold they shall not be used during processing; instead, the Doppler centroid calculated from orbit and attitude shall be used, unless overridden by the dcMethod = Pre-defined.</cd:Description>
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="slcProcParams">
+                    <cd:Optional/>
+                    <cd:Record namexml="slcProcParams">
+                      <cd:Description>SLC processing auxiliary parameters. This record contains the auxiliary parameters required during SLC image processing.</cd:Description>
+                      <cd:Field name="outputMeanExpected">
+                        <cd:Type namexml="outputMeanExpected">
+                          <cd:Float format="ascii">
+                            <cd:Description>This parameter specifies the expected mean of the I and Q samples in the output SLC image and is used for verifying that the calculated mean of the output samples is within the tolerated threshold.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="outputMeanThreshold">
+                        <cd:Type namexml="outputMeanThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Threshold for setting the outputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the outputMeanExpected-T and outputMeanExpected+T.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="outputStdDevExpected">
+                        <cd:Type namexml="outputStdDevExpected">
+                          <cd:Float format="ascii">
+                            <cd:Description>This parameter specifies the expected standard deviation of the I and Q samples in the output SLC image and is used for verifying that the calculated std. dev. of the output samples is within the tolerated threshold.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="outputStdDevThreshold">
+                        <cd:Type namexml="outputStdDevThreshold">
+                          <cd:Float format="ascii">
+                            <cd:Description>Threshold for setting the outputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured standard deviation must fall between the outputStdDevExpected-D and outputStdDevExpected+D.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="applyElevationAntennaPatternFlag">
+                        <cd:Type namexml="applyElevationAntennaPatternFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Elevation Antenna Pattern flag. True if the EAP is to be applied, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="estimateThermalNoiseFlag">
+                        <cd:Type namexml="estimateThermalNoiseFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Thermal noise estimation flag. True if thermal noise estimation is to be performed, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="rrfSpectrum">
+                        <cd:Text namexml="rrfSpectrum">
+                          <cd:Description>The type of range matched filter to use during processing. "Unextended": range reference function is unextended in frequency domain; "Extended Flat": range reference function is extended and flat in frequency domain; and, "Extended Tapered": range reference function is extended and tapered in frequency domain.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="swathParamsList">
+                        <cd:Record namexml="swathParamsList">
+                          <cd:Description>List of azimuth processing bandwidths. There is an entry for each relevant swath within the product.</cd:Description>
+                          <cd:Field name="swathParams">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="swathParams">
+                                <cd:Field name="swath">
+                                  <cd:Text namexml="swath">
+                                    <cd:Description>Swath identifier. This parameter defines the swath to which this record applies.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="instantaneousBandwidth">
+                                  <cd:Type namexml="instantaneousBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Azimuth instantaneous bandwidth [Hz]. This field is applicable only to IW and EW modes.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="nominalBeamWidth">
+                                  <cd:Type namexml="nominalBeamWidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Nominal width of the beam [radians].</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>radians</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="taperBwExtentFraction">
+                                  <cd:Type namexml="taperBwExtentFraction">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Fraction (range 0.0 .. 1.0) of azProcessingBandwidth by which to extend existing SLC azimuth matched filter frequency duration azProcessingBandwidth symmetrically at both ends of spectrum using tapering with roll-off to zero. For example, if azimuthProcessedBandwidth = 1000 Hz and taperBWExtentFraction = 0.2, SLC azimuth matched filter spectrum amplitude will equal one over a centrally-spanning frequency extent of 1000 Hz, then will roll-off to zero over a span of 100 Hz at both ends of spectrum, such that the total non-zero bandwidth span is 1200 Hz. If taperBWExtentFraction = 0.0, the SLC azimuth matched filter spectrum amplitude will constitute a boxcar filter where the amplitude will equal one over the frequency span azimuthProcessedBandwidth.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>radians</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Attribute name="count"/>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="postProcParams">
+                    <cd:Optional/>
+                    <cd:Record namexml="postProcParams">
+                      <cd:Description>Post processing auxiliary parameters. This record contains the auxiliary parameters required during image post processing. This includes: SLC post-processing, GRD processing; Browse processing; and, Quick-look image processing</cd:Description>
+                      <cd:Field name="rangeParamsList">
+                        <cd:Record namexml="rangeParamsList">
+                          <cd:Description>Range processing parameters. This list contains the swath-dependent auxiliary parameters required for range processing. The list contains a separate record for each swath, indexed using the applicable swath identifier. For SM SLC products and SM, IW and EW GRD products there is one entry in the list. For IW and EW SLC products, there is one entry per swath (3 and 5 respectively). For all WV products there are two entries in the list.</cd:Description>
+                          <cd:Field name="rangeParams">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="rangeParams">
+                                <cd:Description>This record contains the set of auxiliary parameters required during range processing. For each product type, there is one record for each applicable swath within the product. There will be one record per swath for each mode. For example, for S1 IW there will be 3 records, and for ASAR IM there will be 7 records.</cd:Description>
+                                <cd:Field name="swath">
+                                  <cd:Text namexml="swath">
+                                    <cd:Description>Canonical name of the swath.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="weightingWindow">
+                                  <cd:Text namexml="weightingWindow">
+                                    <cd:Description>Name of the weighting window to use during processing.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="windowCoefficient">
+                                  <cd:Type namexml="windowCoefficient">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Value of the weighting window coefficient to use during processing.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="processingBandwidth">
+                                  <cd:Type namexml="processingBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Total processing bandwidth [Hz]. This parameter defines the bandwidth (Bw) to use during processing. For range, the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= pulse Bw, for azimuth the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lookBandwidth">
+                                  <cd:Type namexml="lookBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Look bandwidth [Hz]. This parameter defines the bandwidth to use for each look during processing.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numberOfLooks">
+                                  <cd:Type namexml="numberOfLooks">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of looks. This parameter defines the number of looks to use during multi-look processing.</cd:Description>
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="pixelSpacing">
+                                  <cd:Type namexml="pixelSpacing">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Spacing between pixels in the output image [m].</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>m</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="multiLookThrowaway">
+                                  <cd:Type namexml="multiLookThrowaway">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of ground range samples to be discarded at both edges.</cd:Description>
+                                      <cd:NativeType>int32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Attribute name="count"/>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="azimuthParamsList">
+                        <cd:Record namexml="azimuthParamsList">
+                          <cd:Description>Azimuth processing parameters. This list contains the swath-dependent auxiliary parameters required for azimuth processing. The list contains a separate record for each swath, indexed using the applicable swath identifier. For SM SLC products and SM, IW and EW GRD products there is one entry in the list. For IW and EW SLC products, there is one entry per swath (3 and 5 respectively). For all WV products there are two entries in the list.</cd:Description>
+                          <cd:Field name="azimuthParams">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="azimuthParams">
+                                <cd:Description>This record contains the set of auxiliary parameters required during azimuth processing. For each product type, there is one record for each applicable swath within the product. There will be one record per swath for each mode. For example, for S1 IW there will be 3 records, and for ASAR IM there will be 7 records.</cd:Description>
+                                <cd:Field name="swath">
+                                  <cd:Text namexml="swath">
+                                    <cd:Description>Canonical name of the swath.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="weightingWindow">
+                                  <cd:Text namexml="weightingWindow">
+                                    <cd:Description>Name of the weighting window to use during processing.</cd:Description>
+                                  </cd:Text>
+                                </cd:Field>
+                                <cd:Field name="windowCoefficient">
+                                  <cd:Type namexml="windowCoefficient">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Value of the weighting window coefficient to use during processing.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="processingBandwidth">
+                                  <cd:Type namexml="processingBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Total processing bandwidth [Hz]. This parameter defines the bandwidth (Bw) to use during processing. For range, the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= pulse Bw, for azimuth the processing bandwidth (Bw) must be 0 &lt; Bw &lt;= PRF.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lookBandwidth">
+                                  <cd:Type namexml="lookBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Look bandwidth [Hz]. This parameter defines the bandwidth to use for each look during processing.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numberOfLooks">
+                                  <cd:Type namexml="numberOfLooks">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of looks. This parameter defines the number of looks to use during multi-look processing.</cd:Description>
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="pixelSpacing">
+                                  <cd:Type namexml="pixelSpacing">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Spacing between pixels in the output image [m].</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>m</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="gain">
+                                  <cd:Type namexml="gain">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Product specific gain [dB]. This parameter defines the gain that is applied to each output sample during azimuth processing.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>dB</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="multiLookThrowaway">
+                                  <cd:Type namexml="multiLookThrowaway">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of ground range samples to be discarded at both edges.</cd:Description>
+                                      <cd:NativeType>int32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Attribute name="count"/>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="annotationVectorStepSize">
+                        <cd:Type namexml="annotationVectorStepSize">
+                          <cd:Integer format="ascii">
+                            <cd:Description>The decimation factor used on annotation vectors when written to the output product. Inside the IPF, each annotation vector could have a point for every range sample. To reduce product size, only points every annotationVectorStepSize are written to the output annotation vectors.</cd:Description>
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="generateCalibrationLutsFlag">
+                        <cd:Type namexml="generateCalibrationLutsFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to control the generation of the absolute calibration LUTs. True if the calibration LUTs are to be created, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="applyAzimuthAntennaPatternFlag">
+                        <cd:Type namexml="applyAzimuthAntennaPatternFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Azimuth Antenna Pattern Flag. True if the AAP is to be applied, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="applyTopsDescallopingFlag">
+                        <cd:Type namexml="applyTopsDescallopingFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Perform de-scalloping for TOPS by applying the Azimuth Antenna Element Pattern. True if TOPS de-scalloping is to be performed by applying the AAEP, false otherwise. This flag is applicable only to IW and EW modes and is ignored for all others.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="applyApplicationLutFlag">
+                        <cd:Type namexml="applyApplicationLutFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Flag to control the use of the application LUT. True if the application LUT identified in the Job Order is to be used to scale the output image, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="detectFlag">
+                        <cd:Type namexml="detectFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>True to detect power and square root extract measurement data, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="mergeFlag">
+                        <cd:Type namexml="mergeFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>True to merge the swaths of output data and annotations, false otherwise. Only valid for IW and EW, not applicable to other modes.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="grdProcParams">
+                        <cd:Record namexml="grdProcParams">
+                          <cd:Description>GRD processing auxiliary parameters. This record contains the auxiliary parameters required during GRD image processing.</cd:Description>
+                          <cd:Field name="outputMeanExpected">
+                            <cd:Type namexml="outputMeanExpected">
+                              <cd:Float format="ascii">
+                                <cd:Description>This parameter specifies the expected mean of the samples in the output mage and is used for verifying that the calculated mean of the output samples is within the tolerated threshold.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="outputMeanThreshold">
+                            <cd:Type namexml="outputMeanThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Threshold for setting the outputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the outputMeanExpected-T and outputMeanExpected+T.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="outputStdDevExpected">
+                            <cd:Type namexml="outputStdDevExpected">
+                              <cd:Float format="ascii">
+                                <cd:Description>This parameter specifies the expected standard deviation of the samples in the output image and is used for verifying that the calculated std. dev. of the output samples is within the tolerated threshold.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="outputStdDevThreshold">
+                            <cd:Type namexml="outputStdDevThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Threshold for setting the outputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured standard deviation must fall between the outputStdDevExpected-D and outputStdDevExpected+D.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="applySrgrConversionFlag">
+                            <cd:Type namexml="applySrgrConversionFlag">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Slant Range to Ground Range (SRGR) conversion flag. True if SRGR conversion is to be performed, false otherwise.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="removeThermalNoiseFlag">
+                            <cd:Type namexml="removeThermalNoiseFlag">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Thermal noise removal flag. True if thermal noise removal is to be performed, false otherwise.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="createQlImageFlag">
+                        <cd:Type namexml="createQlImageFlag">
+                          <cd:Integer format="ascii">
+                          <cd:Description>Create Quick-look product flag. This flag controls the creation of a Quick-look image. It is set to true if a Quick-look image should be created; or, false otherwise.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="qlProcParams">
+                        <cd:Record namexml="qlProcParams">
+                          <cd:Description>Quick-look processing auxiliary parameters. This record contains the auxiliary parameters required during Quick-look image processing. This structure need only be present if the createQlImageFlag is true.</cd:Description>
+                          <cd:Field name="rangeDecimationFactor">
+                            <cd:Type namexml="rangeDecimationFactor">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Range decimation factor for the image.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rangeAveragingFactor">
+                            <cd:Type namexml="rangeAveragingFactor">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Range averaging factor for the image.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthDecimationFactor">
+                            <cd:Type namexml="azimuthDecimationFactor">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Azimuth decimation factor for the image.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthAveragingFactor">
+                            <cd:Type namexml="azimuthAveragingFactor">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Azimuth averaging factor for the image.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="applicationLutList">
+          <cd:Record namexml="applicationLutList">
+            <cd:Description>List of application LUTs. This element is a list of all available application LUTs. The application identifier used to index the list comes from the Job Order.</cd:Description>
+            <cd:Field name="applicationLut">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="applicationLut">
+                  <cd:Description>Application LUT record. This element contains the information required to identify the application scaling LUT specified in the Job Order. The ICD currently defines four application scaling LUTs, one for each mode</cd:Description>
+                  <cd:Field name="applicationLutId">
+                    <cd:Text namexml="applicationLutId">
+                      <cd:Description>Name of this application scaling LUT.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="scalingLutList">
+                    <cd:Record namexml="scalingLutList">
+                      <cd:Description>List of application scaling LUTs for this applicationLutId. There is one entry for each output pixel type.</cd:Description>
+                      <cd:Field name="scalingLut">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="scalingLut">
+                            <cd:Description>Application scaling LUT record. This record provides the scaling LUT for products in the format specified by the outputPixels field.</cd:Description>
+                            <cd:Field name="outputPixels">
+                              <cd:Text namexml="outputPixels">
+                                <cd:Description>Pixel format. Application scaling LUTs are specific to output pixel data type. This field specifies the output pixel type to which this LUT applies.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="incidenceAngleStart">
+                              <cd:Type namexml="incidenceAngleStart">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Incidence angle of the first value of the LUT [degrees].</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <cd:Unit>degrees</cd:Unit>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="angleIncrement">
+                              <cd:Type namexml="angleIncrement">
+                                <cd:Float format="ascii">
+                                  <cd:Description>Step size of the incidence angle between each value [degrees].</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <cd:Unit>degrees</cd:Unit>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="values">
+                              <cd:Type namexml="values">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>Application LUT values. This element is a vector containing attribute “count” floating point values separated by spaces.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                      <cd:Attribute name="count"/>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
