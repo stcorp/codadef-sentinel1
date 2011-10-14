@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2011-09-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
+        <cd:Description>L1 Processor parameters auxiliary file definition (AUX_PP1).</cd:Description>
         <cd:Field name="productList">
           <cd:Record namexml="productList">
             <cd:Description>List of L1 products containing the applicable auxiliary parameters for each. This list contains an entry for each product the IPF is capable of generating, indexed by its unique product identifier.</cd:Description>
@@ -59,6 +60,44 @@
                           </cd:Integer>
                         </cd:Type>
                       </cd:Field>
+                      <cd:Field name="ellipsoidParams">
+                        <cd:Record namexml="ellipsoidParams">
+                          <cd:Description>Ellipsoid and DEM parameters.</cd:Description>
+                          <cd:Field name="ellipsoidName">
+                            <cd:Text namexml="ellipsoidName">
+                              <cd:Description>Name of the reference ellipsoid.</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="ellipsoidSemiMajorAxis">
+                            <cd:Type namexml="ellipsoidSemiMajorAxis">
+                              <cd:Float format="ascii">
+                                <cd:Description>Semi-major axis of ellipsoid [m].</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="ellipsoidSemiMinorAxis">
+                            <cd:Type namexml="ellipsoidSemiMinorAxis">
+                              <cd:Float format="ascii">
+                                <cd:Description>Semi-minor axis of ellipsoid [m].</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="useDemFlag">
+                            <cd:Type namexml="useDemFlag">
+                              <cd:Integer format="ascii">
+                                <cd:Description>This flag is used to control the use of a DEM during processing. Set to true if a DEM is to be used during processing, false otherwise.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
                       <cd:Field name="aziProcBlockParamsList">
                         <cd:Record namexml="aziProcBlockParamsList">
                           <cd:Description>Azimuth processing block parameters used for SM processing. One record per SM swath.</cd:Description>
@@ -108,44 +147,6 @@
                             </cd:Array>
                           </cd:Field>
                           <cd:Attribute name="count"/>
-                        </cd:Record>
-                      </cd:Field>
-                      <cd:Field name="ellipsoidParams">
-                        <cd:Record namexml="ellipsoidParams">
-                          <cd:Description>Ellipsoid and DEM parameters.</cd:Description>
-                          <cd:Field name="ellipsoidName">
-                            <cd:Text namexml="ellipsoidName">
-                              <cd:Description>Name of the reference ellipsoid.</cd:Description>
-                            </cd:Text>
-                          </cd:Field>
-                          <cd:Field name="ellipsoidSemiMajorAxis">
-                            <cd:Type namexml="ellipsoidSemiMajorAxis">
-                              <cd:Float format="ascii">
-                                <cd:Description>Semi-major axis of ellipsoid [m].</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>m</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="ellipsoidSemiMinorAxis">
-                            <cd:Type namexml="ellipsoidSemiMinorAxis">
-                              <cd:Float format="ascii">
-                                <cd:Description>Semi-minor axis of ellipsoid [m].</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>m</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="useDemFlag">
-                            <cd:Type namexml="useDemFlag">
-                              <cd:Integer format="ascii">
-                                <cd:Description>This flag is used to control the use of a DEM during processing. Set to true if a DEM is to be used during processing, false otherwise.</cd:Description>
-                                <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="true" value="1"/>
-                              </cd:Integer>
-                            </cd:Type>
-                          </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
@@ -209,9 +210,9 @@
                           <cd:Description>Chirp replica to use during processing. The extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the nominal chirp will be used if this field is set to "Nominal" or the reconstructed replica is deemed invalid.</cd:Description>
                         </cd:Text>
                       </cd:Field>
-                      <cd:Field name="pulseThresholds">
-                        <cd:Record namexml="pulseThresholds">
-                          <cd:Description>Thresholds used in setting the replica reconstruction and PG product status flags in the output product annotations.</cd:Description>
+                      <cd:Field name="replicaThresholds">
+                        <cd:Record namexml="replicaThresholds">
+                          <cd:Description>Thresholds used to assess the quality of the replica reconstruction and the PG product.</cd:Description>
                           <cd:Field name="maxXCorrPulseIrw">
                             <cd:Type namexml="maxXCorrPulseIrw">
                               <cd:Float format="ascii">
@@ -306,15 +307,10 @@
                           </cd:Integer>
                         </cd:Type>
                       </cd:Field>
-                      <cd:Field name="getDriftFromPgModelFlag">
-                        <cd:Type namexml="getDriftFromPgModelFlag">
-                          <cd:Integer format="ascii">
-                            <cd:Description>Flag controlling the use of PG model for instrument drift compensation. True if the PG model should be used, false otherwise.</cd:Description>
-                            <cd:NativeType>uint8</cd:NativeType>
-                            <cd:Mapping string="false" value="0"/>
-                            <cd:Mapping string="true" value="1"/>
-                          </cd:Integer>
-                        </cd:Type>
+                      <cd:Field name="pgSource">
+                        <cd:Text namexml="pgSource">
+                          <cd:Description>PG source to use during processing.  The PG derived from the extracted replica will be used if this parameter is set to “Extracted” and the IPF determines that the reconstructed replica is valid; otherwise, the pgModel will be used if this field is set to “Model” or the reconstructed replica is deemed invalid.</cd:Description>
+                        </cd:Text>
                       </cd:Field>
                       <cd:Field name="applyReplicaWhiteningFlag">
                         <cd:Type namexml="applyReplicaWhiteningFlag">
@@ -698,6 +694,16 @@
                         <cd:Type namexml="mergeFlag">
                           <cd:Integer format="ascii">
                             <cd:Description>True to merge the swaths of output data and annotations, false otherwise. Only valid for IW and EW, not applicable to other modes.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="createInternalSLCFlag">
+                        <cd:Type namexml="createInternalSLCFlag">
+                          <cd:Integer format="ascii">
+                            <cd:Description>True if the output of post-processing is an internal SLC product, in which case post-processing will pass the input SLC product through without applying further processing.</cd:Description>
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="true" value="1"/>
