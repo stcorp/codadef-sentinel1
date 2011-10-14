@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
+    <cd:Description>Calibration auxiliary file definition (AUX_CAL)</cd:Description>
     <cd:Field name="auxiliaryCalibration">
       <cd:Record namexml="auxiliaryCalibration">
         <cd:Field name="calibrationParamsList">

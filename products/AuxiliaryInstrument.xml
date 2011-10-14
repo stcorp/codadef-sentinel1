@@ -1,0 +1,534 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
+    <cd:Field name="auxiliaryInstrument">
+      <cd:Record namexml="auxiliaryInstrument">
+        <cd:Field name="radarFrequency">
+          <cd:Type namexml="radarFrequency">
+            <cd:Float format="ascii">
+              <cd:Description>Radar frequency.</cd:Description>
+              <cd:Unit>Hz</cd:Unit>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="rollSteeringParams">
+          <cd:Record namexml="rollSteeringParams">
+            <cd:Description>List of calibration parameter records.</cd:Description>
+            <cd:Field name="referenceAntennaAngle">
+              <cd:Type namexml="referenceAntennaAngle">
+                <cd:Float format="ascii">
+                  <cd:Description>Antenna bore sight off nadir angle at the referenceHeight.</cd:Description>
+                  <cd:Unit>degrees</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="referenceHeight">
+              <cd:Type namexml="referenceHeight">
+                <cd:Float format="ascii">
+                  <cd:Description>Satellite height at which the instrument elevation angle is aligned with the referenceAntennaAngle.</cd:Description>
+                  <cd:Unit>m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="rollSteeringSensitivity">
+              <cd:Type namexml="rollSteeringSensitivity">
+                <cd:Float format="ascii">
+                  <cd:Description>Sensitivity of the roll steering versus height.</cd:Description>
+                  <cd:Unit>degrees/m</cd:Unit>
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="swathParamsList">
+          <cd:Record namexml="swathParamsList">
+            <cd:Description>List of calibration parameter records.</cd:Description>
+            <cd:Field name="swathParams">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="swathParams">
+                  <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
+                  <cd:Field name="swathNumber">
+                    <cd:Type namexml="swathNumber">
+                      <cd:Integer format="ascii">
+                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used as an index to select the applicable swathParams record. The IPF uses the swath number and the swath name (below) from this record to perform the mapping between the swathNumber in the downlink and swath name within the AUX_INS, AUX_PP1 and AUX_CAL data.</cd:Description>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="swath">
+                    <cd:Text namexml="swath">
+                      <cd:Description>Canonical name of the swath for this swathNumber.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="radarParams">
+                    <cd:Record namexml="radarParams">
+                      <cd:Description>Radar parameters record.</cd:Description>
+                      <cd:Field name="azimuthSteeringAngles">
+                        <cd:Type namexml="azimuthSteeringAngles">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>TOPSAR azimuth steering angles. This element is a vector of double precision floating point numbers separated by spaces. There is an entry for each PRI in the burst within this swath. This field is only relevant for IW and EW swaths and is ignored for SM and WV swaths.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:Unit>degrees</cd:Unit>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="pulseParams">
+                    <cd:Record namexml="pulseParams">
+                      <cd:Description>Pulse parameters. This DSR contains the characteristics for the nominal pulse within this swath.</cd:Description>
+                      <cd:Field name="amplitudeCoefficients">
+                        <cd:Type namexml="amplitudeCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Pulse amplitude coefficients of nominal chirp replica.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="phaseCoefficients">
+                        <cd:Type namexml="phaseCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Pulse phase coefficients of nominal chirp replica.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="electronicLosses">
+                    <cd:Record namexml="electronicLosses">
+                      <cd:Description>Electronic losses vectors.</cd:Description>
+                      <cd:Field name="lShort">
+                        <cd:Type namexml="lShort">
+                          <cd:Float format="ascii">
+                            <cd:Description>Electronic loss characterisation Lshort.</cd:Description>
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="lCp">
+                        <cd:Type namexml="lCp">
+                          <cd:Float format="ascii">
+                            <cd:Description>Electronic loss characterisation LCP.</cd:Description>
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="internalCalibrationParamsList">
+          <cd:Record namexml="internalCalibrationParamsList">
+            <cd:Description>Internal calibration parameters list. This element contains a list of swath/polarisation channel dependent instrument parameters. There is an entry for each swath/polarisation combination for a total of 60. The SPPDU document defines an additional 68 swath number codes that can be used if required.</cd:Description>
+            <cd:Field name="internalCalibrationParams">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="internalCalibrationParams">
+                  <cd:Description>Internal calibration instrument parameters. This record contains swath/polarisation channel dependent parameters related to the instrument. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
+                  <cd:Field name="swathNumber">
+                    <cd:Type namexml="swathNumber">
+                      <cd:Integer format="ascii">
+                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation as indices to select the applicable internalCalibrationParams record.</cd:Description>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="swath">
+                    <cd:Text namexml="swath">
+                      <cd:Description>Canonical name of the swath.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="polarisation">
+                    <cd:Text namexml="polarisation">
+                      <cd:Description>Polarisation. Used along with the swathNumber as indices to select the applicable internalCalibrationlParams record.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="timeDelay">
+                    <cd:Type namexml="timeDelay">
+                      <cd:Float format="ascii">
+                        <cd:Description>Time delay to be applied to the reference replica, used when the time delay can not be derived from the extracted replica.</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="nominalGain">
+                    <cd:Record namexml="nominalGain">
+                      <cd:Description>Complex gain [dB] to be applied to the reference replica when derived from the nominal chirp.</cd:Description>
+                      <cd:Field name="re">
+                        <cd:Type namexml="re">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="im">
+                        <cd:Type namexml="im">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="extractedGain">
+                    <cd:Record namexml="extractedGain">
+                      <cd:Description>Complex gain [dB] to be applied to the reference replica when derived from the extracted chirp.</cd:Description>
+                      <cd:Field name="re">
+                        <cd:Type namexml="re">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="im">
+                        <cd:Type namexml="im">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="pgProductModel">
+                    <cd:Record namexml="pgProductModel">
+                      <cd:Description>Modeled PG product.  The model is relative to the ascending node of the current orbit.</cd:Description>
+                      <cd:Field name="pgModelInterval">
+                        <cd:Type namexml="pgModelInterval">
+                          <cd:Float format="ascii">
+                            <cd:Description>Interval between adjacent PG Product values in the list.</cd:Description>
+                            <cd:Unit>s</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Array of modeled complex PG model values.  The pattern contains attribute "count" complex floating point values separated by spaces.  The first value in the array corresponds to the time at the ascending node of the current orbit.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Record>
+                              <cd:Field name="re">
+                                <cd:Float>
+                                  <cd:NativeType>float</cd:NativeType>
+                                </cd:Float>
+                              </cd:Field>
+                              <cd:Field name="im">
+                                <cd:Float>
+                                  <cd:NativeType>float</cd:NativeType>
+                                </cd:Float>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="pgReference">
+                    <cd:Record namexml="pgReference">
+                      <cd:Description>Reference absolute PG value that will be defined by offline analysis of the acquired data.  PG values used by the IPF will be normalised by this PG reference value.</cd:Description>
+                      <cd:Field name="re">
+                        <cd:Type namexml="re">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="im">
+                        <cd:Type namexml="im">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="swstBias">
+                    <cd:Type namexml="swstBias">
+                      <cd:Float format="ascii">
+                        <cd:Description>SWST bias.</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="noise">
+                    <cd:Type namexml="noise">
+                      <cd:Float format="ascii">
+                        <cd:Description>Nominal noise value if noise used in processing if no noise value can be calculated from the downlink.</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="timelineList">
+          <cd:Record namexml="timelineList">
+            <cd:Description>Timeline list. This element contains a list of records that describe the expected packet transmission sequence for each of the Sentinel-1 SAR modes. The SPPDU document allows for 48 entries numbered from 0-47. At minimum, this list must include 9 entries: an entry for each instrument measurement mode.</cd:Description>
+            <cd:Field name="timeline">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="timeline">
+                  <cd:Description>Each timeline element describes the expected packet transmission sequence for one of the operational modes of the satellite.  The SPPDU [A-12] allows for 48 entries numbered from 0-47. At minimum, this list must include 10 entries: an entry for each instrument measurement mode (S1, S2, S3, S4, S5-N, S5-S, S6, IW, EW and WV).</cd:Description>
+                  <cd:Field name="eccNumber">
+                    <cd:Type namexml="eccNumber">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Event Control Code (ECC) number. This field uniquely identifies the ECC program number for this instrument mode and is used by the IPF for timeline selection.</cd:Description>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="mode">
+                    <cd:Text namexml="mode">
+                      <cd:Description>Instrument mode. This field identifies the instrument mode to which this timeline entry applies.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="sequenceList">
+                    <cd:Record namexml="sequenceList">
+                      <cd:Description>Sequence list. This element is a list of activity sequences that together form the expected transmission sequence from the SAR instrument for the data take. The number of sequences is arbitrary but there are 5 slots nominally allocated for 1- an initial noise measurement; 2- an initial calibration sequence; 3- image acquisition; 4- final calibration sequence; and, 5- final noise measurement.</cd:Description>
+                      <cd:Field name="sequence">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="sequence">
+                            <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
+                            <cd:Field name="name">
+                              <cd:Text namexml="name">
+                                <cd:Description>The name of the activity within the data acquisition to which this sequence belongs. This field is not used by the IPF for processing. It is for informative purposes only and so the range of the field is unbounded.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="repeat">
+                              <cd:Type namexml="repeat">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Sequence repeat flag. For the imaging sequence, this field shall be set to “true” to indentify the ispList that represents the imaging operation. This field shall be set to “false” for all other sequences.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="ispList">
+                              <cd:Record namexml="ispList">
+                                <cd:Description>ISP list. This element contains contains a list of the expected packets within this sequence in the order they should be received. The number of ISP entries is arbitrary but there are 30 slots defined to capture the worst case EW echo acquisition with PCC2 sequences at the end of each burst.</cd:Description>
+                                <cd:Field name="isp">
+                                  <cd:Array>
+                                    <cd:Dimension/>
+                                    <cd:Record namexml="isp">
+                                      <cd:Field name="swathNumber">
+                                        <cd:Type namexml="swathNumber">
+                                          <cd:Integer format="ascii">
+                                            <cd:Description>SPPDU [A-12] swath number identifier of the swath used to acquire the packet(s).</cd:Description>
+                                          </cd:Integer>
+                                        </cd:Type>
+                                      </cd:Field>
+                                      <cd:Field name="swath">
+                                        <cd:Text namexml="swath">
+                                          <cd:Description>Canonical name of the swath to which this packet belongs.</cd:Description>
+                                        </cd:Text>
+                                      </cd:Field>
+                                      <cd:Field name="signal">
+                                        <cd:Text namexml="signal">
+                                          <cd:Description>Signal type.</cd:Description>
+                                        </cd:Text>
+                                      </cd:Field>
+                                      <cd:Field name="numPri">
+                                        <cd:Type namexml="numPri">
+                                          <cd:Integer format="ascii">
+                                            <cd:Description>The number of packets of this signal type expected in series.</cd:Description>
+                                            <cd:NativeType>uint32</cd:NativeType>
+                                          </cd:Integer>
+                                        </cd:Type>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Array>
+                                </cd:Field>
+                                <cd:Attribute name="count"/>
+                              </cd:Record>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                      <cd:Attribute name="count"/>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="decodingParams">
+          <cd:Record namexml="decodingParams">
+            <cd:Description>Raw data decoding parameters. This DSR contains the tables and parameters that the IPF requires to perform image processing.</cd:Description>
+            <cd:Field name="huffmanLutList">
+              <cd:Record namexml="huffmanLutList">
+                <cd:Description>Huffman decoding LUT list. This element contains the Huffman decoding LUTs required to retrieve the HCode value from FDBAQ encoded user data.  There is one LUT for each Bit Rate Code for a total of 5.</cd:Description>
+                <cd:Field name="huffmanLut">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="huffmanLut">
+                      <cd:Description>Huffman decoding LUT. This element contains the Huffman binary tree values for the applicable Bit Rate Code. The MCode is recovered by applying the values in the decoding LUT to the extracted HCode.</cd:Description>
+                      <cd:Field name="baqCode">
+                        <cd:Text namexml="baqCode">
+                          <cd:Description>Bit Rate Code (as extracted from the BAQ block) to which this LUT applies.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Huffman binary decoding tree values. The tree is implemented using a simple binary coding in which starting at the root, the left side is defined and then the right side is defined. Each node is identified by a 0 followed by a 0 or 1 representing the value of the node. Each leaf is identified by a 1 followed by a 0 or 1 representing the value of the leaf followed by 4 bits representing the MCode value. This encoding scheme is a proposal and will be confirmed prior to CDR.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Attribute name="count"/>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="nrlLutList">
+              <cd:Record namexml="nrlLutList">
+                <cd:Description>Normalised Reconstruction Levels LUT list. This element contains the NRL LUTs required to retrieve the normalised reconstructed sample values from the BAQ encoded data. There is one LUT per BAQ mode/FDBAQ Bit Rate Code for a total of 8 LUTs.</cd:Description>
+                <cd:Field name="rlLut">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="rlLut">
+                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
+                      <cd:Field name="baqCode">
+                        <cd:Text namexml="baqCode">
+                          <cd:Description>Index code for which the LUT applies. For FDBAQ compression this is the Bit Rate Code extracted from the BAQ block and for BAQ compression this is the BAQ mode.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>NRL LUT values. This element contains fifteen double precision floating point values separated by spaces, one entry for each MCode value. Note that some MCodes are not applicable for some FDBAQ and BAQ modes so in this case the entry shall be "NaN" to signify an invalid index.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Attribute name="count"/>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="srlLutList">
+              <cd:Record namexml="srlLutList">
+                <cd:Description>Simple Reconstruction Parameters LUT list. This element contains the Simple Reconstruction Parameters LUTs required to retrieve the simple reconstructed sample values from the BAQ encoded data. There is one LUT per BAQ mode/FDBAQ Bit Rate Code for a total of 8 LUTs.</cd:Description>
+                <cd:Field name="rlLut">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="rlLut">
+                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
+                      <cd:Field name="baqCode">
+                        <cd:Text namexml="baqCode">
+                          <cd:Description>Index code for which the LUT applies. For FDBAQ compression this is the Bit Rate Code extracted from the BAQ block and for BAQ compression this is the BAQ mode.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>NRL LUT values. This element contains fifteen double precision floating point values separated by spaces, one entry for each MCode value. Note that some MCodes are not applicable for some FDBAQ and BAQ modes so in this case the entry shall be "NaN" to signify an invalid index.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Attribute name="count"/>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="sigmaFactorLut">
+              <cd:Type namexml="sigmaFactorLut">
+                <cd:Attribute name="count"/>
+                <cd:Array format="ascii">
+                  <cd:Description>Sigma Factors LUT. This LUT contains the values used to upscale the normalised reconstructed samples. The sigma factors in the table are indexed by the Threshold Index (THIDX) extracted from the BAQ block. This vector contains 255 single precision floating point numbers separated by spaces.</cd:Description>
+                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                  <cd:Float>
+                    <cd:NativeType>float</cd:NativeType>
+                  </cd:Float>
+                </cd:Array>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="dValuesLutList">
+              <cd:Record namexml="dValuesLutList">
+                <cd:Description>Values D LUT. This LUT is used to obtain the D value given the Filter Number and the Value C. There is one entry for each Filter Number . Note that Filter Number 2 is not applicable and the "count" attribute for this element shall be set to -1.</cd:Description>
+                <cd:Field name="dValuesLut">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="dValuesLut">
+                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
+                      <cd:Field name="filterNumber">
+                        <cd:Type namexml="filterNumber">
+                          <cd:Integer format="ascii">
+                            <cd:Description>The Filter Number extracted from the ISP to which this set of D Values applies.</cd:Description>
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="dValues">
+                        <cd:Type namexml="dValues">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>D Value LUT values. This element contains 26 int values separated by spaces, one entry for each C Value. The "count" attribute indicates the number of D values for this filterNumber.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Attribute name="count"/>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
