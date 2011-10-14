@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="auxiliaryCalibration">
+      <cd:Record namexml="auxiliaryCalibration">
+        <cd:Field name="calibrationParamsList">
+          <cd:Record namexml="calibrationParamsList">
+            <cd:Description>List of calibration parameter records.</cd:Description>
+            <cd:Field name="calibrationParams">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="calibrationParams">
+                  <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
+                  <cd:Field name="swathNumber">
+                    <cd:Type namexml="swathNumber">
+                      <cd:Integer format="ascii">
+	                <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation as indices to select the applicable calibrationParams record.</cd:Description>
+	              </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="swath">
+                    <cd:Text namexml="swath">
+                      <cd:Description>Canonical name of the swath.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="polarisation">
+                    <cd:Text namexml="polarisation">
+                      <cd:Description>Polarisation to which this set of calibration parameters applies. Used along with the swathNumber to as indices to select the applicable calibrationParams record.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="elevationAntennaPattern">
+                    <cd:Record namexml="elevationAntennaPattern">
+                      <cd:Description>Two way elevation antenna pattern parameters. The EAPs are used to correct the corresponding radiometric variation of the data in the range direction. The EAPs are also used for the estimation and removal of the thermal noise level.</cd:Description>
+                      <cd:Field name="beamNominalNearRange">
+                        <cd:Type namexml="beamNominalNearRange">
+                          <cd:Float format="ascii">
+                            <cd:Description>Elevation angle of the nominal near range extent of the beam.</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="beamNominalFarRange">
+                        <cd:Type namexml="beamNominalFarRange">
+                          <cd:Float format="ascii">
+                            <cd:Description>Elevation angle of the nominal far range extent of the beam.</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="elevationAngleIncrement">
+                        <cd:Type namexml="elevationAngleIncrement">
+                          <cd:Float format="ascii">
+                            <cd:Description>Elevation angle increment. This parameter defines the step size between the pattern values in the two way elevation antenna pattern.</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Two-way antenna elevation pattern gain values. The centre value in the vector corresponds to the referenceAntennaAngle in the Roll Steering parameters described in the Instrument auxiliary file (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of elevationAngleIncrement from the centre value. The pattern contains attribute “count” floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * elevationAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * elevationAngleIncrement degrees.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:Unit>dB</cd:Unit>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="azimuthAntennaPattern">
+                    <cd:Record namexml="azimuthAntennaPattern">
+                      <cd:Description>Two way azimuth antenna pattern (AAP) parameters.</cd:Description>
+                      <cd:Field name="azimuthAngleIncrement">
+                        <cd:Type namexml="azimuthAngleIncrement">
+                          <cd:Float format="ascii">
+                            <cd:Description>Azimuth angle increment. This parameter defines the step size between the values in the two way azimuth antenna pattern.</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Two way azimuth antenna pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:Unit>dB</cd:Unit>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="azimuthAntennaElementPattern">
+                    <cd:Record namexml="azimuthAntennaElementPattern">
+                      <cd:Description>Two way azimuth antenna element pattern values. The AAEP maps azimuth steering angles to gain power and is used during de-scalloping of TOPSAR data. The AAEP is specific to IW and EW modes and is ignored for all others.</cd:Description>
+                      <cd:Field name="azimuthAngleIncrement">
+                        <cd:Type namexml="azimuthAngleIncrement">
+                          <cd:Float format="ascii">
+                            <cd:Description>Azimuth angle increment. This parameter defines the step size between the values in the two way azimuth antenna element pattern.</cd:Description>
+                            <cd:Unit>degrees</cd:Unit>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="values">
+                        <cd:Type namexml="values">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Description>Two way azimuth antenna element pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:Unit>dB</cd:Unit>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="absoluteCalibrationConstant">
+                    <cd:Type namexml="absoluteCalibrationConstant">
+                      <cd:Float format="ascii">
+	                <cd:Description>Absolute calibration constant value to apply during processing. The calibration constant C0 (described in the Sentinel-1 SAR Instrument Calibration and Characterisation Plan) should be merged into this field to acheive an overall gain value.</cd:Description>
+	                <cd:Unit>dB</cd:Unit>
+	                <cd:NativeType>double</cd:NativeType>
+	              </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="kNoise">
+                    <cd:Type namexml="kNoise">
+                      <cd:Float format="ascii">
+	                <cd:Description>Noise calibration factor used in the estimation of the thermal noise.</cd:Description>
+	                <cd:Unit>dB</cd:Unit>
+	                <cd:NativeType>double</cd:NativeType>
+	              </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+            <cd:Attribute name="count"/>
+          </cd:Record>
+        </cd:Field>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
