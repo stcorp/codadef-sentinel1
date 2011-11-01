@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2011-08-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2011-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="product">
       <cd:Record namexml="product">
@@ -384,6 +384,9 @@
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
+                <cd:Field name="projection">
+                  <cd:Text namexml="projection"/>
+                </cd:Field>
                 <cd:Field name="rangeSamplingRate">
                   <cd:Type namexml="rangeSamplingRate">
                     <cd:Float format="ascii">
@@ -709,7 +712,7 @@
                               <cd:Field name="baqBlockLength">
                                 <cd:Type namexml="baqBlockLength">
                                   <cd:Integer format="ascii">
-                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:NativeType>uint16</cd:NativeType>
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
@@ -842,6 +845,48 @@
                           <cd:Field name="pointingStatusList">
                             <cd:Record namexml="pointingStatusList">
                               <cd:Attribute name="count"/>
+                              <cd:Field name="pointingStatus">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="pointingStatus">
+                                    <cd:Field name="azimuthTime">
+                                      <cd:Type namexml="azimuthTime">
+                                        <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="aocsOpMode">
+                                      <cd:Text namexml="aocsOpMode"/>
+                                    </cd:Field>
+                                    <cd:Field name="rollErrorFlag">
+                                      <cd:Type namexml="rollErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="pitchErrorFlag">
+                                      <cd:Type namexml="pitchErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="yawErrorFlag">
+                                      <cd:Type namexml="yawErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
                             </cd:Record>
                           </cd:Field>
                         </cd:Record>
@@ -1444,6 +1489,11 @@
                     </cd:Integer>
                   </cd:Type>
                 </cd:Field>
+                <cd:Field name="segmentStartTime">
+                  <cd:Type namexml="segmentStartTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
                 <cd:Field name="slantRangeTime">
                   <cd:Type namexml="slantRangeTime">
                     <cd:Float format="ascii">
@@ -1658,6 +1708,114 @@
                 <cd:Field name="swathProcParamsList">
                   <cd:Record namexml="swathProcParamsList">
                     <cd:Attribute name="count"/>
+                    <cd:Field name="swathProcParams">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="swathProcParams">
+                          <cd:Field name="swath">
+                            <cd:Text namexml="swath"/>
+                          </cd:Field>
+                          <cd:Field name="rangeProcessing">
+                            <cd:Record namexml="rangeProcessing">
+                              <cd:Field name="windowType">
+                                <cd:Text namexml="windowType"/>
+                              </cd:Field>
+                              <cd:Field name="windowCoefficient">
+                                <cd:Type namexml="windowCoefficient">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="totalBandwidth">
+                                <cd:Type namexml="totalBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="processingBandwidth">
+                                <cd:Type namexml="processingBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookBandwidth">
+                                <cd:Type namexml="lookBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookOverlap">
+                                <cd:Type namexml="lookOverlap">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="azimuthProcessing">
+                            <cd:Record namexml="azimuthProcessing">
+                              <cd:Field name="windowType">
+                                <cd:Text namexml="windowType"/>
+                              </cd:Field>
+                              <cd:Field name="windowCoefficient">
+                                <cd:Type namexml="windowCoefficient">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="totalBandwidth">
+                                <cd:Type namexml="totalBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="processingBandwidth">
+                                <cd:Type namexml="processingBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookBandwidth">
+                                <cd:Type namexml="lookBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookOverlap">
+                                <cd:Type namexml="lookOverlap">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
                   </cd:Record>
                 </cd:Field>
                 <cd:Field name="inputDimensionsList">
@@ -1671,6 +1829,9 @@
                             <cd:Type namexml="azimuthTime">
                               <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                             </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="swath">
+                            <cd:Text namexml="swath"/>
                           </cd:Field>
                           <cd:Field name="numberOfInputSamples">
                             <cd:Type namexml="numberOfInputSamples">
@@ -1741,14 +1902,26 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="geometryDcPolynomial">
-                        <cd:Record namexml="geometryDcPolynomial">
+                        <cd:Type namexml="geometryDcPolynomial">
                           <cd:Attribute name="count"/>
-                        </cd:Record>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
                       </cd:Field>
                       <cd:Field name="dataDcPolynomial">
-                        <cd:Record namexml="dataDcPolynomial">
+                        <cd:Type namexml="dataDcPolynomial">
                           <cd:Attribute name="count"/>
-                        </cd:Record>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
                       </cd:Field>
                       <cd:Field name="dataDcSnr">
                         <cd:Type namexml="dataDcSnr">
@@ -1893,6 +2066,20 @@
         </cd:Field>
         <cd:Field name="swathTiming">
           <cd:Record namexml="swathTiming">
+            <cd:Field name="linesPerBurst">
+              <cd:Type namexml="linesPerBurst">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="samplesPerBurst">
+              <cd:Type namexml="samplesPerBurst">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
             <cd:Field name="burstList">
               <cd:Record namexml="burstList">
                 <cd:Attribute name="count"/>
@@ -1919,29 +2106,8 @@
                           </cd:Integer>
                         </cd:Type>
                       </cd:Field>
-                      <cd:Field name="numberOfLines">
-                        <cd:Type namexml="numberOfLines">
-                          <cd:Integer format="ascii">
-                            <cd:NativeType>uint32</cd:NativeType>
-                          </cd:Integer>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="numberOfSamplesPerLine">
-                        <cd:Type namexml="numberOfSamplesPerLine">
-                          <cd:Integer format="ascii">
-                            <cd:NativeType>uint32</cd:NativeType>
-                          </cd:Integer>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="lineTimeSpacing">
-                        <cd:Type namexml="lineTimeSpacing">
-                          <cd:Float format="ascii">
-                            <cd:NativeType>double</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="firstValidRangeSample">
-                        <cd:Type namexml="firstValidRangeSample">
+                      <cd:Field name="firstValidSample">
+                        <cd:Type namexml="firstValidSample">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
                             <cd:Dimension>int(str(@count))</cd:Dimension>
@@ -1951,8 +2117,8 @@
                           </cd:Array>
                         </cd:Type>
                       </cd:Field>
-                      <cd:Field name="lastValidRangeSample">
-                        <cd:Type namexml="lastValidRangeSample">
+                      <cd:Field name="lastValidSample">
+                        <cd:Type namexml="lastValidSample">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
                             <cd:Dimension>int(str(@count))</cd:Dimension>

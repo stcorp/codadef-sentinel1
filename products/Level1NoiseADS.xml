@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1NoiseADS" format="xml" last-modified="2011-08-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1NoiseADS" format="xml" last-modified="2011-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="noise">
       <cd:Record namexml="noise">
@@ -46,13 +46,13 @@
             </cd:Field>
           </cd:Record>
         </cd:Field>
-        <cd:Field name="noiseLevelList">
-          <cd:Record namexml="noiseLevelList">
+        <cd:Field name="noiseVectorList">
+          <cd:Record namexml="noiseVectorList">
             <cd:Attribute name="count"/>
-            <cd:Field name="noiseLevel">
+            <cd:Field name="noiseVector">
               <cd:Array>
                 <cd:Dimension/>
-                <cd:Record namexml="noiseLevel">
+                <cd:Record namexml="noiseVector">
                   <cd:Field name="azimuthTime">
                     <cd:Text namexml="azimuthTime"/>
                   </cd:Field>
@@ -63,18 +63,15 @@
                       </cd:Integer>
                     </cd:Type>
                   </cd:Field>
-                  <cd:Field name="sample">
-                    <cd:Type namexml="sample">
-                      <cd:Integer format="ascii">
-                        <cd:NativeType>uint32</cd:NativeType>
-                      </cd:Integer>
-                    </cd:Type>
-                  </cd:Field>
-                  <cd:Field name="stepSize">
-                    <cd:Type namexml="stepSize">
-                      <cd:Integer format="ascii">
-                        <cd:NativeType>uint32</cd:NativeType>
-                      </cd:Integer>
+                  <cd:Field name="pixel">
+                    <cd:Type namexml="pixel">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                        <cd:Integer>
+                          <cd:NativeType>int32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Array>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="noiseLut">
