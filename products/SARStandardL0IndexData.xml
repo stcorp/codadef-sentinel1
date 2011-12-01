@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0IndexData" format="binary" last-modified="2011-12-01">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Record>
+      <cd:Field name="dateAndTime">
+        <cd:Time timeformat="binary_envisat_datetime">
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="deltaTime">
+        <cd:Time timeformat="binary_envisat_datetime">
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="deltaSize">
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="deltaUnitsOffset">
+        <cd:Integer>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="byteOffset">
+        <cd:Integer>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>uint64</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="variableSizeFlag">
+        <cd:Integer>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>24</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = filesize() / 36]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

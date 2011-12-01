@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARL0AnnotationsMeasurementData" format="binary" last-modified="2011-12-01">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Record>
+    </cd:Record>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = filesize() / 1]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

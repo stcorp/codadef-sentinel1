@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0AnnotationData" format="binary" last-modified="2011-12-01">
+  <cd:Array>
+    <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
+    <cd:Record>
+      <cd:Field name="sensing_time">
+        <cd:Time timeformat="binary_envisat_datetime">
+          <cd:Description>ISP Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="downlink_time">
+        <cd:Time timeformat="binary_envisat_datetime">
+          <cd:Description>ISP Downlink Time. Time of the downlink on ground of the source packet (G/S time)</cd:Description>
+        </cd:Time>
+      </cd:Field>
+      <cd:Field name="packet_length">
+        <cd:Integer>
+          <cd:Description>ISP Length = (length of source packet excluding 6 bytes) - 1. This field uses the same definition as the Packet Length field of the Packet Header as specified in CCSDS definitions.</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="frames">
+        <cd:Integer>
+          <cd:Description>Number of frames</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="missingFrames">
+        <cd:Integer>
+          <cd:Description>Number of missing frames</cd:Description>
+          <cd:BitSize>16</cd:BitSize>
+          <cd:NativeType>uint16</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="CRCFlag">
+        <cd:Integer>
+          <cd:Description>CRC Flag</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="VCID">
+        <cd:Integer>
+          <cd:Description>VCID</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="channel">
+        <cd:Integer>
+          <cd:Description>channel</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+          <cd:NativeType>uint8</cd:NativeType>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="spare">
+        <cd:Raw>
+          <cd:Description>spare</cd:Description>
+          <cd:BitSize>8</cd:BitSize>
+        </cd:Raw>
+        <cd:Hidden/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

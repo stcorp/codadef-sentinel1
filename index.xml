@@ -1,6 +1,102 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2011-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2011-12-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
+  <cd:ProductType name="SARStandardL0MeasurementData">
+    <cd:Description>SAR Standard L0 Product - Measurement Data file</cd:Description>
+    <cd:ProductDefinition id="SARStandardL0MeasurementData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SARStandardL0IndexData">
+    <cd:Description>SAR Standard L0 Product - Index Data file</cd:Description>
+    <cd:ProductDefinition id="SARStandardL0IndexData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-index.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-index.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SARStandardL0AnnotationData">
+    <cd:Description>SAR Standard L0 Product - Annotation Data file</cd:Description>
+    <cd:ProductDefinition id="SARStandardL0AnnotationData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-annot.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-annot.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SARL0CalMeasurementData">
+    <cd:Description>SAR L0 Cal Product - Measurement Data file</cd:Description>
+    <cd:ProductDefinition id="SARL0CalMeasurementData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SARL0NoiseMeasurementData">
+    <cd:Description>SAR L0 Noise Product - Measurement Data file</cd:Description>
+    <cd:ProductDefinition id="SARL0AnnotationsMeasurementData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SARL0AnnotationsMeasurementData">
+    <cd:Description>SAR L0 Annotations Product - Measurement Data file</cd:Description>
+    <cd:ProductDefinition id="SARL0AnnotationsMeasurementData" format="binary" version="0">
+      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="Level1ProductADS">
     <cd:Description>Level 1 Product ADS</cd:Description>
     <cd:ProductDefinition id="Level1ProductADS" format="xml" version="0">
