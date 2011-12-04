@@ -1,9 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0MeasurementData" format="binary" last-modified="2011-12-01">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0MeasurementData" format="binary" last-modified="2011-12-04">
   <cd:Array>
     <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
     <cd:Record>
       <cd:Description>Instrument Source Packet</cd:Description>
+      <!-- <cd:BitSize><![CDATA[int(./primaryHeader/packetDataLength) * 8]]></cd:BitSize> -->
       <cd:Field name="primaryHeader">
         <cd:Record>
           <cd:Field name="packetVersionNumber">
@@ -352,7 +353,7 @@
       <cd:Field name="userData">
         <cd:Raw>
           <cd:Description>User Data Field</cd:Description>
-          <cd:BitSize><![CDATA[(int(../../../packetDataLength) - 68) * 8]]></cd:BitSize>
+          <cd:BitSize><![CDATA[(int(../primaryHeader/packetDataLength) - 68) * 8]]></cd:BitSize>
         </cd:Raw>
       </cd:Field>
     </cd:Record>

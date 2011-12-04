@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0AnnotationData" format="binary" last-modified="2011-12-01">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0AnnotationData" format="binary" last-modified="2011-12-04">
   <cd:Array>
     <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
     <cd:Record>
       <cd:Field name="sensing_time">
-        <cd:Time timeformat="binary_envisat_datetime">
+        <cd:Time timeformat="binary_eps_datetime_long">
           <cd:Description>ISP Sensing Time. Time of the actual acquisition of the source packet</cd:Description>
         </cd:Time>
       </cd:Field>
       <cd:Field name="downlink_time">
-        <cd:Time timeformat="binary_envisat_datetime">
+        <cd:Time timeformat="binary_eps_datetime_long">
           <cd:Description>ISP Downlink Time. Time of the downlink on ground of the source packet (G/S time)</cd:Description>
         </cd:Time>
       </cd:Field>
@@ -65,6 +65,6 @@
     </cd:Record>
   </cd:Array>
   <cd:ProductVariable name="num_dsr">
-    <cd:Init><![CDATA[$num_dsr = unboundindex(/, byteoffset(.) >= filesize())]]></cd:Init>
+    <cd:Init><![CDATA[$num_dsr = filesize() / 26]]></cd:Init>
   </cd:ProductVariable>
 </cd:ProductDefinition>

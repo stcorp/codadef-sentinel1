@@ -1,15 +1,19 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0IndexData" format="binary" last-modified="2011-12-01">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="SARStandardL0IndexData" format="binary" last-modified="2011-12-04">
   <cd:Array>
     <cd:Dimension><![CDATA[$num_dsr]]></cd:Dimension>
     <cd:Record>
       <cd:Field name="dateAndTime">
-        <cd:Time timeformat="binary_envisat_datetime">
-        </cd:Time>
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
       </cd:Field>
       <cd:Field name="deltaTime">
-        <cd:Time timeformat="binary_envisat_datetime">
-        </cd:Time>
+        <cd:Float>
+          <cd:BitSize>64</cd:BitSize>
+          <cd:NativeType>double</cd:NativeType>
+        </cd:Float>
       </cd:Field>
       <cd:Field name="deltaSize">
         <cd:Integer>
