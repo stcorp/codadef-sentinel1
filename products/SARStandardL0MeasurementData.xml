@@ -353,7 +353,7 @@
       <cd:Field name="userData">
         <cd:Raw>
           <cd:Description>User Data Field</cd:Description>
-          <cd:BitSize><![CDATA[(int(../primaryHeader/packetDataLength) - 68) * 8]]></cd:BitSize>
+          <cd:BitSize><![CDATA[(int(../primaryHeader/packetDataLength) - 61) * 8]]></cd:BitSize>
         </cd:Raw>
       </cd:Field>
     </cd:Record>
