@@ -157,10 +157,19 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="AUX_RDBDIF">
+    <cd:Description>Mission Plan Report</cd:Description>
+    <cd:ProductDefinition id="AUX_RDBDIF" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_RDBDIF</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="AMx_ERRMAT">
     <cd:Description>TRM Error Matrices</cd:Description>
     <cd:ProductDefinition id="AMx_ERRMAT" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.0 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:Description>This definition is based on version 1.1 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AMH_ERRMAT</cd:MatchData>
       </cd:DetectionRule>
@@ -172,28 +181,50 @@
   <cd:ProductType name="AM__FAILUR">
     <cd:Description>TRM Failure Matrices</cd:Description>
     <cd:ProductDefinition id="AM__FAILUR" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.0 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:Description>This definition is based on version 1.1 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__FAILUR</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="AUX_CALSTST">
+  <cd:ProductType name="AUX_CALSIT">
     <cd:Description>Calibration Sites</cd:Description>
-    <cd:ProductDefinition id="AUX_CALSTS" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.0 of the QCSS Calibration Sites Format Specification ST-ESA-S1QC-PFS-003</cd:Description>
+    <cd:ProductDefinition id="AUX_CALSIT" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the QCSS Calibration Sites Format Specification ST-ESA-S1QC-PFS-003</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_CALSTS</cd:MatchData>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_CALSIT</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="MPL_MP_MP_">
+  <cd:ProductType name="REP_MP_MP_">
     <cd:Description>Mission Plan Report</cd:Description>
-    <cd:ProductDefinition id="MPL_MP_MP_" format="xml" version="0">
+    <cd:ProductDefinition id="REP_MP_MP_" format="xml" version="0">
       <cd:Description>This definition is based on version 2.1 of the CMC ICD S1PD.ICD.00148.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/MissionPlanReport"/>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+<!--
+  products to implement:
+    TLM__REQ_B TM parameter data file for S1 Quality Control
+    RDB SES and SAS files
+    AUX_PP2
+    MPL_REQ_Tx Transponder Control File
+    REP_CALRPT PDGS SAR Calibration Report File
+    AUX_POEORB POD Precise Orbit
+    AUX_RESORB POD Restituted Orbit
+    AUX_RESATT POD Restituted Attitude
+    MPL_ORBPRE FOS Predicited Orbit File
+    REP__MACP_ Manoeuvre Acceleration Profile
+    REP__SUP__ FOS & Satellite Unavailability Report
+    MET_DISCLM Quality Disclaimer Metadata File
+    AM__RQST__ Antenna Model: Parameter file
+    AM__OUTPUT Antenna Model: Antenna Patterns
+    AM__LOG___ Antenna Model: Antenna Model Log File
+
+  S1QC internal file formats (perhaps implement this in a S1QC specific codadef?):
+    Aresys internal format header file
+    'list of changes' file
+-->
 </cd:ProductClass>
