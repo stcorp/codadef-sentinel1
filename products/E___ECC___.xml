@@ -1,0 +1,783 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="E___ECC___" format="xml" last-modified="2011-12-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                 <cd:Field name="Configuration_Identifier">
+                   <cd:Type namexml="Configuration_Identifier">
+                     <cd:Integer format="ascii">
+                       <cd:NativeType>uint32</cd:NativeType>
+                     </cd:Integer>
+                   </cd:Type>
+                 </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Event_Control_Code_Programs">
+              <cd:Record namexml="Event_Control_Code_Programs">
+                <cd:Field name="ECC_Short_Prog">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="ECC_Short_Prog">
+                      <cd:Field name="ECC_Program_Number">
+                        <cd:Record namexml="ECC_Program_Number">
+                          <cd:Field name="Spare">
+                            <cd:Type namexml="Spare">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="ECC_Short_Prog_Number">
+                            <cd:Type namexml="ECC_Short_Prog_Number">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="ECC_Program_Element">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="ECC_Program_Element">
+                            <cd:Field name="ECC_Program_Element_Number">
+                              <cd:Record namexml="ECC_Program_Element_Number">
+                                <cd:Field name="Spare">
+                                  <cd:Type namexml="Spare">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="ECC_Prog_Element_Number">
+                                  <cd:Type namexml="ECC_Prog_Element_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Field>
+                            <cd:Field name="ECC_Entry">
+                              <cd:Record namexml="ECC_Entry">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Swap">
+                                  <cd:Type namexml="Swap">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="PRI_Type">
+                                  <cd:Type namexml="PRI_Type">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Swath_Number">
+                                  <cd:Type namexml="Swath_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Temp_Compensation_Mode">
+                                  <cd:Type namexml="Temp_Compensation_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Cal_Mode">
+                                  <cd:Type namexml="Cal_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Signal_Type">
+                                  <cd:Type namexml="Signal_Type">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="SAS_Test_Mode">
+                                  <cd:Type namexml="SAS_Test_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="BST_Ctrl">
+                                  <cd:Type namexml="BST_Ctrl">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="BST_Number">
+                                  <cd:Type namexml="BST_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Repeat_Instruction">
+                              <cd:Record namexml="ECC_Repeat_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="InstructionCode">
+                                  <cd:Type namexml="InstructionCode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Until_Instruction">
+                              <cd:Record namexml="ECC_Until_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="InstructionCode">
+                                  <cd:Type namexml="InstructionCode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Variable_Until_Instruction">
+                              <cd:Record namexml="ECC_Variable_Until_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Start_Warmup_Instruction">
+                              <cd:Record namexml="ECC_Start_Warmup_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_End_Warmup_Instruction">
+                              <cd:Record namexml="ECC_End_Warmup_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Stop_Instruction">
+                              <cd:Record namexml="ECC_Stop_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_2">
+                                  <cd:Type namexml="Spare_2">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="ECC_Long_Prog">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="ECC_Long_Prog">
+                      <cd:Field name="ECC_Program_Number">
+                        <cd:Record namexml="ECC_Program_Number">
+                          <cd:Field name="Spare">
+                            <cd:Type namexml="Spare">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="ECC_Long_Prog_Number">
+                            <cd:Type namexml="ECC_Long_Prog_Number">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="ECC_Program_Element">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="ECC_Program_Element">
+                            <cd:Field name="ECC_Program_Element_Number">
+                              <cd:Record namexml="ECC_Program_Element_Number">
+                                <cd:Field name="Spare">
+                                  <cd:Type namexml="Spare">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="ECC_Prog_Element_Number">
+                                  <cd:Type namexml="ECC_Prog_Element_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Field>
+                            <cd:Field name="ECC_Entry">
+                              <cd:Record namexml="ECC_Entry">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Swap">
+                                  <cd:Type namexml="Swap">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="PRI_Type">
+                                  <cd:Type namexml="PRI_Type">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Swath_Number">
+                                  <cd:Type namexml="Swath_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Temp_Compensation_Mode">
+                                  <cd:Type namexml="Temp_Compensation_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Cal_Mode">
+                                  <cd:Type namexml="Cal_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Signal_Type">
+                                  <cd:Type namexml="Signal_Type">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="SAS_Test_Mode">
+                                  <cd:Type namexml="SAS_Test_Mode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="BST_Ctrl">
+                                  <cd:Type namexml="BST_Ctrl">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="BST_Number">
+                                  <cd:Type namexml="BST_Number">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Repeat_Instruction">
+                              <cd:Record namexml="ECC_Repeat_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="InstructionCode">
+                                  <cd:Type namexml="InstructionCode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Until_Instruction">
+                              <cd:Record namexml="ECC_Until_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="InstructionCode">
+                                  <cd:Type namexml="InstructionCode">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Variable_Until_Instruction">
+                              <cd:Record namexml="ECC_Variable_Until_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Repetitions">
+                                  <cd:Type namexml="Repetitions">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Start_Warmup_Instruction">
+                              <cd:Record namexml="ECC_Start_Warmup_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_End_Warmup_Instruction">
+                              <cd:Record namexml="ECC_End_Warmup_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Instruction_Code">
+                                  <cd:Type namexml="Instruction_Code">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                            <cd:Field name="ECC_Stop_Instruction">
+                              <cd:Record namexml="ECC_Stop_Instruction">
+                                <cd:Field name="Block_Id">
+                                  <cd:Type namexml="Block_Id">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_1">
+                                  <cd:Type namexml="Spare_1">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_2">
+                                  <cd:Type namexml="Spare_2">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_3">
+                                  <cd:Type namexml="Spare_3">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Spare_4">
+                                  <cd:Type namexml="Spare_4">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint16</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                              <cd:Optional/>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
