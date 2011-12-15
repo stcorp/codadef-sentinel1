@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="E___PTT___" format="xml" last-modified="2011-12-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                 <cd:Field name="Configuration_Identifier">
+                   <cd:Type namexml="Configuration_Identifier">
+                     <cd:Integer format="ascii">
+                       <cd:NativeType>uint32</cd:NativeType>
+                     </cd:Integer>
+                   </cd:Type>
+                 </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="PRI_Type_Table">
+              <cd:Record namexml="PRI_Type_Table">
+                <cd:Field name="PTT_Entry">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="PTT_Entry">
+                      <cd:Field name="PTT_Entry_Number">
+                        <cd:Type namexml="PTT_Entry_Number">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Spare">
+                        <cd:Type namexml="Spare">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="PT_Parameter">
+                        <cd:Record namexml="PT_Parameter">
+                          <cd:Field name="Spare_1">
+                            <cd:Type namexml="Spare_1">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Pulse_Trigger">
+                            <cd:Type namexml="Pulse_Trigger">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SAS_Tx_Gate">
+                            <cd:Type namexml="SAS_Tx_Gate">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="TGU_Tx_Enable">
+                            <cd:Type namexml="TGU_Tx_Enable">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SAS_Rx_Gate_Tx">
+                            <cd:Type namexml="SAS_Rx_Gate_Tx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SAS_Rx_Gate_Rx">
+                            <cd:Type namexml="SAS_Rx_Gate_Rx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Sample_Trigger_Tx">
+                            <cd:Type namexml="Sample_Trigger_Tx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Sample_Trigger_Rx">
+                            <cd:Type namexml="Sample_Trigger_Rx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SES_SSB_1">
+                            <cd:Type namexml="SES_SSB_1">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_2">
+                            <cd:Type namexml="Spare_2">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SAS_SSB_1">
+                            <cd:Type namexml="SAS_SSB_1">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_3">
+                            <cd:Type namexml="Spare_3">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Latch_Time_Tx">
+                            <cd:Type namexml="Latch_Time_Tx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Latch_Time_Rx">
+                            <cd:Type namexml="Latch_Time_Rx">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_4">
+                            <cd:Type namexml="Spare_4">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_5">
+                            <cd:Type namexml="Spare_5">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Spare_6">
+                            <cd:Type namexml="Spare_6">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
