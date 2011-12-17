@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2011-12-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2011-12-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="SARStandardL0MeasurementData">
     <cd:Description>SAR Standard L0 Product - Measurement Data file</cd:Description>
@@ -172,6 +172,15 @@
       <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___PTT___</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="E___SPT___">
+    <cd:Description>Set of Swath Parameter Tables (SPT)</cd:Description>
+    <cd:ProductDefinition id="E___SPT___" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___SPT___</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

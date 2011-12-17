@@ -41,6 +41,7 @@
                                 <cd:NativeType>uint8</cd:NativeType>
                               </cd:Integer>
                             </cd:Type>
+                            <cd:Hidden/>
                           </cd:Field>
                           <cd:Field name="ECC_Short_Prog_Number">
                             <cd:Type namexml="ECC_Short_Prog_Number">
@@ -63,6 +64,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="ECC_Prog_Element_Number">
                                   <cd:Type namexml="ECC_Prog_Element_Number">
@@ -170,6 +172,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="InstructionCode">
                                   <cd:Type namexml="InstructionCode">
@@ -184,6 +187,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -191,6 +195,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -210,6 +215,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="InstructionCode">
                                   <cd:Type namexml="InstructionCode">
@@ -231,6 +237,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -250,6 +257,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -271,6 +279,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -290,6 +299,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -304,6 +314,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -311,6 +322,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -330,6 +342,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -344,6 +357,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -351,6 +365,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -370,6 +385,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_2">
                                   <cd:Type namexml="Spare_2">
@@ -377,6 +393,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_3">
                                   <cd:Type namexml="Spare_3">
@@ -384,6 +401,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -391,6 +409,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -413,6 +432,7 @@
                                 <cd:NativeType>uint16</cd:NativeType>
                               </cd:Integer>
                             </cd:Type>
+                            <cd:Hidden/>
                           </cd:Field>
                           <cd:Field name="ECC_Long_Prog_Number">
                             <cd:Type namexml="ECC_Long_Prog_Number">
@@ -435,6 +455,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="ECC_Prog_Element_Number">
                                   <cd:Type namexml="ECC_Prog_Element_Number">
@@ -542,6 +563,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="InstructionCode">
                                   <cd:Type namexml="InstructionCode">
@@ -556,6 +578,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -563,6 +586,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -582,6 +606,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="InstructionCode">
                                   <cd:Type namexml="InstructionCode">
@@ -603,6 +628,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -622,6 +648,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -643,6 +670,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -662,6 +690,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -676,6 +705,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -683,6 +713,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -702,6 +733,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Instruction_Code">
                                   <cd:Type namexml="Instruction_Code">
@@ -716,6 +748,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -723,6 +756,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
@@ -742,6 +776,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_2">
                                   <cd:Type namexml="Spare_2">
@@ -749,6 +784,7 @@
                                       <cd:NativeType>uint8</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_3">
                                   <cd:Type namexml="Spare_3">
@@ -756,6 +792,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                                 <cd:Field name="Spare_4">
                                   <cd:Type namexml="Spare_4">
@@ -763,6 +800,7 @@
                                       <cd:NativeType>uint16</cd:NativeType>
                                     </cd:Integer>
                                   </cd:Type>
+                                  <cd:Hidden/>
                                 </cd:Field>
                               </cd:Record>
                               <cd:Optional/>
