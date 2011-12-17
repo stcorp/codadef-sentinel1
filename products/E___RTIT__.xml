@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="E___RTIT__" format="xml" last-modified="2011-12-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                 <cd:Field name="Configuration_Identifier">
+                   <cd:Type namexml="Configuration_Identifier">
+                     <cd:Integer format="ascii">
+                       <cd:NativeType>uint32</cd:NativeType>
+                     </cd:Integer>
+                   </cd:Type>
+                 </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="RxM_Threshold_Index_Table">
+              <cd:Record namexml="RxM_Threshold_Index_Table">
+                <cd:Field name="RTIT_Entry">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="RTIT_Entry">
+                      <cd:Field name="Index_Number">
+                        <cd:Type namexml="Index_Number">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="Index_Value">
+                        <cd:Type namexml="Index_Value">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
