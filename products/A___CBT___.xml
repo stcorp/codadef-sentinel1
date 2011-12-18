@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="A___CBT___" format="xml" last-modified="2011-12-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="Earth_Explorer_File">
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
+            <cd:Description>Earth Explorer Header File</cd:Description>
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="Variable_Header">
+                <cd:Field name="Configuration_Identifier">
+                  <cd:Type namexml="Configuration_Identifier">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="Data_Block">
+            <cd:Attribute name="type">
+              <cd:FixedValue>xml</cd:FixedValue>
+            </cd:Attribute>
+            <cd:Field name="Calibration_Beam_Table">
+              <cd:Record namexml="Calibration_Beam_Table">
+                <cd:Field name="CBT_Start_Address">
+                  <cd:Type namexml="CBT_Start_Address">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="EFE_Flags_per_EFE">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="EFE_Flags_per_EFE">
+                      <cd:Field name="EFE">
+                        <cd:Type namexml="EFE">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint16</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="EFE_Flags">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="EFE_Flags">
+                            <cd:Field name="CBA">
+                              <cd:Type namexml="CBA">
+                                <cd:Integer format="ascii">
+                                  <cd:NativeType>uint16</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="Calibration_Flags">
+                              <cd:Record namexml="Calibration_Flags">
+                                <cd:Field name="TRM_Flags_Tx">
+                                  <cd:Record namexml="TRM_Flags_Tx">
+                                    <cd:Field name="TRM_1_Flag">
+                                      <cd:Type namexml="TRM_1_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_2_Flag">
+                                      <cd:Type namexml="TRM_2_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_3_Flag">
+                                      <cd:Type namexml="TRM_3_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_4_Flag">
+                                      <cd:Type namexml="TRM_4_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Field>
+                                <cd:Field name="TRM_Flags_Rx">
+                                  <cd:Record namexml="TRM_Flags_Rx">
+                                    <cd:Field name="TRM_1_Flag">
+                                      <cd:Type namexml="TRM_1_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_2_Flag">
+                                      <cd:Type namexml="TRM_2_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_3_Flag">
+                                      <cd:Type namexml="TRM_3_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="TRM_4_Flag">
+                                      <cd:Type namexml="TRM_4_Flag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+                <cd:Field name="Checksum_Version">
+                  <cd:Record namexml="Checksum_Version">
+                    <cd:Field name="Checksum">
+                      <cd:Type namexml="Checksum">
+                        <cd:Integer format="ascii">
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="Version">
+                      <cd:Type namexml="Version">
+                        <cd:Integer format="ascii">
+                          <cd:NativeType>uint16</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
