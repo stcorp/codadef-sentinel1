@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2011-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2012-01-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="product">
       <cd:Record namexml="product">
@@ -413,7 +413,7 @@
             <cd:Field name="downlinkInformationList">
               <cd:Record namexml="downlinkInformationList">
                 <cd:Attribute name="count"/>
-                <cd:Field name="downlinkInformationList">
+                <cd:Field name="downlinkInformation">
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="downlinkInformation">
