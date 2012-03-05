@@ -1148,7 +1148,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RDBDIF">
-    <cd:Description>Mission Plan Report</cd:Description>
+    <cd:Description>Radar Database Changes file</cd:Description>
     <cd:ProductDefinition id="AUX_RDBDIF" format="xml" version="0">
       <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
@@ -1196,6 +1196,20 @@
     </cd:ProductDefinition>
   </cd:ProductType>
 <!--
+This will start conflicting with other missions. We will have to extend our detection expression system
+for XML files first before we can implement support for the mission CFI orbit/attitude files
+
+  <cd:ProductType name="MPL_ORBPRE">
+    <cd:Description>FOS Predicted Orbit File (EEF)</cd:Description>
+    <cd:ProductDefinition id="MPL_ORBPRE" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">MPL_ORBPRE</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+-->
+<!--
   products to implement:
     TLM__REQ_B TM parameter data file for S1 Quality Control
     AUX_PP2
@@ -1212,8 +1226,14 @@
     AM__OUTPUT Antenna Model: Antenna Patterns
     AM__LOG___ Antenna Model: Antenna Model Log File
 
-  S1QC internal file formats (perhaps implement this in a S1QC specific codadef?):
-    Aresys internal format header file
+    S1 PS Calibration Product - PSC measurements
+    S1 PS Calibration Product - PS mask
+    S1 Coregistered Stack - Annotation Data Set
+    S1 Sigma-Nought Mosaic - Annotation Data Set
+    OBS measurements file
+
+    S1QC Internal Image format - header file
+
     'list of changes' file
 -->
 </cd:ProductClass>
