@@ -349,7 +349,6 @@
                               </cd:Field>
                               <cd:Field name="segmentStartTime">
                                 <cd:Optional/>
-                                <cd:Optional/>
                                 <cd:Text namexml="http://www.esa.int/safe/1.2 segmentStartTime">
                                 </cd:Text>
                               </cd:Field>
