@@ -1,6 +1,15 @@
 <?xml version="1.0"?>
 <cd:ProductClass name="Sentinel1" last-modified="2011-12-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
+  <cd:ProductType name="manifest">
+    <cd:Description>SAFE Manifest file</cd:Description>
+    <cd:ProductDefinition id="manifest" format="xml" version="0">
+      <cd:Description>This definition is based on SAFE version 1.2</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="SARStandardL0MeasurementData">
     <cd:Description>SAR Standard L0 Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0MeasurementData" format="binary" version="0">
