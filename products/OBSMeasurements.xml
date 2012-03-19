@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="OBSMeasurements" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="obsProduct">
+      <cd:Record namexml="obsProduct">
+        <cd:Field name="obsGenericInformation">
+          <cd:Record namexml="obsGenericInformation">
+            <cd:Field name="inputInformation">
+              <cd:Record namexml="inputInformation">
+                <cd:Field name="orbitProductName">
+                  <cd:Text namexml="orbitProductName">
+                    <cd:Description>Auxiliary Orbit File name</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="orbitType">
+                  <cd:Text namexml="orbitType">
+                    <cd:Description>Orbit type (FOS PREDICTED, POD RESTITUTED, POD PRECISE)</cd:Description>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="level0AnnotationProductsList">
+                  <cd:Record namexml="level0AnnotationProductsList">
+                    <cd:Attribute name="length"/>
+                    <cd:Field name="level0AnnotationProductName">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="level0AnnotationProductName">
+                          <cd:Attribute name="pid"/>
+                          <cd:Description>L0 Annotation Product filename</cd:Description>
+                        </cd:Text>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="processingInformation">
+              <cd:Record namexml="processingInformation">
+                <cd:Field name="absoluteOrbitNumber">
+                  <cd:Type namexml="absoluteOrbitNumber">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Absolute number of the processed orbit</cd:Description>
+                      <cd:NativeType>uint64</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="relativeOrbitNumber">
+                  <cd:Type namexml="relativeOrbitNumber">
+                    <cd:Integer format="ascii">
+                      <cd:Description>Relative number of the processed orbit</cd:Description>
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="referenceANXTime">
+                  <cd:Text namexml="referenceANXTime">
+                    <cd:Attribute name="unit"/>
+                  </cd:Text>
+                </cd:Field>
+                <cd:Field name="referenceGroundPointsGrid">
+                  <cd:Record namexml="referenceGroundPointsGrid">
+                    <cd:Field name="azimuthPoints">
+                      <cd:Type namexml="azimuthPoints">
+                        <cd:Integer format="ascii">
+                          <cd:Description>Number of azimuth ground points in the grid.</cd:Description>
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="azimuthStep">
+                      <cd:Type namexml="azimuthStep">
+                        <cd:Float format="ascii">
+                          <cd:Description>Azimuth step used to generate the ground points.</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <cd:Unit>s</cd:Unit>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="swathList">
+                      <cd:Text namexml="swathList">
+                        <cd:Attribute name="length"/>
+                        <cd:Description>List of swath identifiers (SM1..SM6, IW1..IW3, EW1..EW5) associated to refElevationAngleListswathList</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                    <cd:Field name="refElevationAngleList">
+                      <cd:Type namexml="refElevationAngleList">
+                        <cd:Attribute name="length"/>
+                        <cd:Attribute name="unit"/>
+                        <cd:Array format="ascii">
+                          <cd:Dimension>int(str(@length))</cd:Dimension>
+                          <cd:Float>
+                            <cd:Description>List of elevation angles w.r.t. the antenna reference frame used in the direct geocoding process (the length of the list is the number of range ground points in the grid)</cd:Description>
+                            <cd:NativeType>float</cd:NativeType>
+                            <cd:Unit>degree</cd:Unit>
+                          </cd:Float>
+                        </cd:Array>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="obsBaselineRecordsList">
+          <cd:Record namexml="obsBaselineRecordsList">
+            <cd:Attribute name="length"/>
+            <cd:Field name="obsBaselineRecord">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="obsBaselineRecord">
+                  <cd:Attribute name="n"/>
+                  <cd:Field name="azimuthTime">
+                    <cd:Text namexml="azimuthTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Description>Azimuth time at which the ground point in the first swath of swathList has been imaged by the input orbit.</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="anxTime">
+                    <cd:Type namexml="anxTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Azimuth time at which the ground point in the first swath of swathList has been imaged by the input orbit referred to referenceANXTime.</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="deltaUTC">
+                    <cd:Type namexml="deltaUTC">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of delta azimuth times w.r.t. azimuthTime at which the ground points in the different swaths of swathList have been imaged by the input orbit (the first one is always null)</cd:Description>
+                          <cd:NativeType>float</cd:NativeType>
+                          <cd:Unit>s</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="rangeTime">
+                    <cd:Type namexml="rangeTime">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of range times at which the ground points in the different swaths of swathList have been imaged by the input orbit</cd:Description>
+                          <cd:NativeType>double</cd:NativeType>
+                          <cd:Unit>ns</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="elevationAngle">
+                    <cd:Type namexml="elevationAngle">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of elevation angles after roll-steering at which the ground points are imaged by the input orbit</cd:Description>
+                          <cd:NativeType>float</cd:NativeType>
+                          <cd:Unit>degree</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="parallelBaseline">
+                    <cd:Type namexml="parallelBaseline">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of parallel components of the baseline between the reference orbit and the input one</cd:Description>
+                          <cd:NativeType>float</cd:NativeType>
+                          <cd:Unit>m</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="normalBaseline">
+                    <cd:Type namexml="normalBaseline">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of normal components of the baseline between the reference orbit and the input one</cd:Description>
+                          <cd:NativeType>float</cd:NativeType>
+                          <cd:Unit>m</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="alongTrackBaseline">
+                    <cd:Type namexml="alongTrackBaseline">
+                      <cd:Attribute name="length"/>
+                      <cd:Attribute name="unit"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@length))</cd:Dimension>
+                        <cd:Float>
+                          <cd:Description>List of along-track components of the baseline between the reference orbit and the input one</cd:Description>
+                          <cd:NativeType>float</cd:NativeType>
+                          <cd:Unit>m</cd:Unit>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="obsSynchronizationRecordList">
+          <cd:Record namexml="obsSynchronizationRecordList">
+            <cd:Attribute name="length"/>
+            <cd:Field name="obsSynchronizationRecord">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="obsSynchronizationRecord">
+                  <cd:Attribute name="n"/>
+                  <cd:Field name="swathName">
+                    <cd:Text namexml="swathName">
+                      <cd:Description>Swath identifier (S1..S6, IW1..IW3, EW1..EW5) corresponding to the ground point to which the information is referred</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="topsarAcquisitionIndex">
+                    <cd:Type namexml="topsarAcquisitionIndex">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Item of the L0 Annotation Products list to which the ground point is referred</cd:Description>
+                        <cd:NativeType>uint64</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="azimuthTime">
+                    <cd:Text namexml="azimuthTime">
+                      <cd:Attribute name="unit"/>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="anxTime">
+                    <cd:Type namexml="anxTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Azimuth time at which the ground point has been imaged by the input orbit referred to referenceANXTime (obtained adding to anxTime in the corresponding baseline record the proper deltaUTC)</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="timeFromTopsarAcquisitionStart">
+                    <cd:Type namexml="timeFromTopsarAcquisitionStart">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Time from the beginning of the Topsar acquisition at which the ground point has been imaged from the input orbit</cd:Description>
+                        <cd:NativeType>double</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

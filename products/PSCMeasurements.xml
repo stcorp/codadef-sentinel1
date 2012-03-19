@@ -9,9 +9,12 @@
               <cd:Record namexml="inputCoregisteredStackProductsList">
                 <cd:Attribute name="length"/>
                 <cd:Field name="inputCoregisteredStackProductName">
-                  <cd:Text namexml="inputCoregisteredStackProductName">
-                    <cd:Attribute name="pid"/>
-                  </cd:Text>
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Text namexml="inputCoregisteredStackProductName">
+                      <cd:Attribute name="pid"/>
+                    </cd:Text>
+                  </cd:Array>
                 </cd:Field>
               </cd:Record>
             </cd:Field>
