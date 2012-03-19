@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="l2AuxiliaryProcessorParameters">
+      <cd:Record namexml="l2AuxiliaryProcessorParameters">
+        <cd:Field name="productList">
+          <cd:Record namexml="productList">
+            <cd:Attribute name="count"/>
+            <cd:Field name="product">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="product">
+                  <cd:Field name="productId">
+                    <cd:Text namexml="productId"/>
+                  </cd:Field>
+                  <cd:Field name="ocnProcParams">
+                    <cd:Record namexml="ocnProcParams">
+                      <cd:Field name="oswProcParams">
+                        <cd:Record namexml="oswProcParams">
+                          <cd:Field name="spectralEstimationParams">
+                            <cd:Record namexml="spectralEstimationParams">
+                              <cd:Field name="frequencySeparation">
+                                <cd:Type namexml="frequencySeparation">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Frequency separation of neighbouring looks.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="rangeLookFilterWidth">
+                                <cd:Type namexml="rangeLookFilterWidth">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Range look filter width.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="azimuthLookFilterWidth">
+                                <cd:Type namexml="azimuthLookFilterWidth">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Azimuth look filter width.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of individual looks.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numRangePixels">
+                                <cd:Type namexml="numRangePixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of range pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numAzimuthPixels">
+                                <cd:Type namexml="numAzimuthPixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of azimuth pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="spectralInversionParams">
+                            <cd:Record namexml="spectralInversionParams">
+                              <cd:Field name="shortestWavelength">
+                                <cd:Type namexml="shortestWavelength">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Shortest wavelength of output polar grid.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>m</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="longestWavelength">
+                                <cd:Type namexml="longestWavelength">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Longest wavelength of output polar grid.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>m</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="waveNumberBins">
+                                <cd:Type namexml="waveNumberBins">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of wavenumber bins in polar grid.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="directionalBins">
+                                <cd:Type namexml="directionalBins">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of directional bins in polar grid.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="owiProcParams">
+                        <cd:Record namexml="owiProcParams">
+                          <cd:Field name="rangeCellSize">
+                            <cd:Type namexml="rangeCellSize">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Size of the SAR derived wind field in the range direction. Wind cells should typically be square therefore nominally rangeCellSize = azimuthCellSize.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthCellSize">
+                            <cd:Type namexml="azimuthCellSize">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Size of the SAR derived wind field in the azimuth direction. Wind cells should typically be square therefore nominally azimuthCellSize = rangeCellSize.</cd:Description>
+                                <cd:NativeType>uint32</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="distanceToShore">
+                            <cd:Type namexml="distanceToShore">
+                              <cd:Float format="ascii">
+                                <cd:Description>Distance to shore where the processing is not performed.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>km</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="windSpeedStdDev">
+                            <cd:Type namexml="windSpeedStdDev">
+                              <cd:Float format="ascii">
+                                <cd:Description>Standard deviation error of the wind speed provided by ancillary wind information.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m/s</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="windDirStdDev">
+                            <cd:Type namexml="windDirStdDev">
+                              <cd:Float format="ascii">
+                                <cd:Description>Standard deviation error of the wind direction provided by ancillary wind information.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>degrees</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="gmfIndex">
+                            <cd:Text namexml="gmfIndex">
+                              <cd:Description>Name of the Geophysical Model Function (GMF) to be used for the wind inversion (used for VV polarisation data). Options supported are "CMOD-IFR2" and "CMOD5".</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="prIndex">
+                            <cd:Text namexml="prIndex">
+                              <cd:Description>Name of the Polarisation Ratio Function to be used for the wind inversion (used for HH polarisation data). This function converts HH NRCS into VV NRCS before applying the GMF to retrieve the wind. Options supported are "THOMSON", "MOUCHE1" and "MOUCHE2".</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="inversionQualityThreshold">
+                            <cd:Type namexml="inversionQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which minimization in the inversion is considered low quality. Valid value range between 0 and 1e29.</cd:Description>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="calibrationQualityThreshold">
+                            <cd:Type namexml="calibrationQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which the calibration of the product is considered to be incorrect. Valid value range between 0 and 10 dB.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="nrcsQualityThreshold">
+                            <cd:Type namexml="nrcsQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which the NRCS estimated at the SAR wind cell resolution is considered as low quality. Valid value range between -30 and 10 dB.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="brightTargetPfa">
+                            <cd:Type namexml="brightTargetPfa">
+                              <cd:Float format="ascii">
+                                <cd:Description>Probability of false alarm for the removal of bright target.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="rvlProcParams">
+                        <cd:Record namexml="rvlProcParams">
+                          <cd:Field name="rangeBlockSize">
+                            <cd:Type namexml="rangeBlockSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the Doppler estimation block in the range direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthBlockSize">
+                            <cd:Type namexml="azimuthBlockSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the Doppler estimation block in the azimuth direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rangeCellSize">
+                            <cd:Type namexml="rangeCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of grid cell interval in range direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthCellSize">
+                            <cd:Type namexml="azimuthCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of grid cell interval in azimuth direction</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
