@@ -1311,11 +1311,8 @@ for XML files first before we can implement support for the mission CFI orbit/at
     AM__OUTPUT Antenna Model: Antenna Patterns (AM-DESC)
     AM__LOG___ Antenna Model: Antenna Model Log File (AM-DESC)
 
-    S1 PS Calibration Product - PSC measurements (SPP-PFS)
-    S1 PS Calibration Product - PS mask (SPP-PFS)
     S1 Coregistered Stack - Annotation Data Set (SPP-PFS)
     S1 Sigma-Nought Mosaic - Annotation Data Set (SPP-PFS)
-    OBS measurements file (SPP-PFS)
 
     S1QC Internal Image format - header file (QC-ICD-002)
 -->
