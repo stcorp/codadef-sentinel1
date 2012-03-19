@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="REP_MP_MP_" format="xml" last-modified="2011-12-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="REP_MP_MP_" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="MissionPlanReport">
       <cd:Record namexml="MissionPlanReport">
@@ -16,15 +16,14 @@
                     <cd:Text namexml="SatelliteId"/>
                   </cd:Field>
                   <cd:Field name="DatatakeId">
-                    <cd:Integer namexml="DatatakeId">
-                      <cd:NativeType>uint64</cd:NativeType>
-                    </cd:Integer>
+                    <cd:Type namexml="DatatakeId">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint64</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="AcquisitionType">
                     <cd:Text namexml="AcquisitionType"/>
-                  </cd:Field>
-                  <cd:Field name="EopIdentifier">
-                    <cd:Text namexml="EopIdentifier"/>
                   </cd:Field>
                   <cd:Field name="DownlinkType">
                     <cd:Text namexml="DownlinkType"/>
@@ -43,60 +42,66 @@
                     <cd:Text namexml="ObservationTimeStart"/>
                   </cd:Field>
                   <cd:Field name="ObservationDuration">
-                    <cd:Integer namexml="ObservationDuration">
-                      <cd:NativeType>uint64</cd:NativeType>
-                      <cd:Unit>s</cd:Unit>
-                    </cd:Integer>
+                    <cd:Type namexml="ObservationDuration">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint64</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                      </cd:Integer>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="OrbitAbsolute">
-                    <cd:Integer namexml="OrbitAbsolute">
-                      <cd:NativeType>int64</cd:NativeType>
-                    </cd:Integer>
+                    <cd:Type namexml="OrbitAbsolute">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>int64</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="OrbitRelative">
-                    <cd:Integer namexml="OrbitRelative">
-                      <cd:NativeType>int64</cd:NativeType>
-                    </cd:Integer>
+                    <cd:Type namexml="OrbitRelative">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>int64</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="ObservationArea">
                     <cd:Record namexml="ObservationArea">
                       <cd:Field name="ObservationSection">
                         <cd:Array>
                           <cd:Dimension/>
-                          <cd:Record namexml="ObservationArea">
+                          <cd:Record namexml="ObservationSection">
                             <cd:Field name="LeftEdge">
                               <cd:Record namexml="LeftEdge">
-                                <cd:Field name="ObservationPoint">
-                                  <cd:Record namexml="ObservationPoint">
-                                    <cd:Field name="Latitude">
-                                      <cd:Float namexml="Latitude">
-                                        <cd:NativeType>double</cd:NativeType>
-                                      </cd:Float>
-                                    </cd:Field>
-                                    <cd:Field name="Longitude">
-                                      <cd:Float namexml="Longitude">
-                                        <cd:NativeType>double</cd:NativeType>
-                                      </cd:Float>
-                                    </cd:Field>
-                                  </cd:Record>
+                                <cd:Field name="Latitude">
+                                  <cd:Type namexml="Latitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Longitude">
+                                  <cd:Type namexml="Longitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
                                 </cd:Field>
                               </cd:Record>
                             </cd:Field>
                             <cd:Field name="RightEdge">
                               <cd:Record namexml="RightEdge">
-                                <cd:Field name="ObservationPoint">
-                                  <cd:Record namexml="ObservationPoint">
-                                    <cd:Field name="Latitude">
-                                      <cd:Float namexml="Latitude">
-                                        <cd:NativeType>double</cd:NativeType>
-                                      </cd:Float>
-                                    </cd:Field>
-                                    <cd:Field name="Longitude">
-                                      <cd:Float namexml="Longitude">
-                                        <cd:NativeType>double</cd:NativeType>
-                                      </cd:Float>
-                                    </cd:Field>
-                                  </cd:Record>
+                                <cd:Field name="Latitude">
+                                  <cd:Type namexml="Latitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="Longitude">
+                                  <cd:Type namexml="Longitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
                                 </cd:Field>
                               </cd:Record>
                             </cd:Field>
@@ -108,8 +113,8 @@
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
-                  <cd:Field name="InstrumentDetails">
-                    <cd:Record namexml="InstrumentDetails">
+                  <cd:Field name="InstrumentsDetails">
+                    <cd:Record namexml="InstrumentsDetails">
                       <cd:Field name="InstrumentId">
                         <cd:Text namexml="InstrumentId"/>
                       </cd:Field>
@@ -125,10 +130,12 @@
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="BitRate">
-                    <cd:Integer namexml="BitRate">
-                      <cd:NativeType>uint64</cd:NativeType>
-                      <cd:Unit>s</cd:Unit>
-                    </cd:Integer>
+                    <cd:Type namexml="BitRate">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint64</cd:NativeType>
+                        <cd:Unit>s</cd:Unit>
+                      </cd:Integer>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="OrderList">
                     <cd:Record namexml="OrderList">
