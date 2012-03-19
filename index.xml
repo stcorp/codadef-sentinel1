@@ -1214,11 +1214,38 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="MET_DISCLM">
-    <cd:Description>Mission Plan Report</cd:Description>
+    <cd:Description>Quality Disclaimer Metadata File</cd:Description>
     <cd:ProductDefinition id="MET_DISCLM" format="xml" version="0">
       <cd:Description>This definition is based on version 1.2 of the QCSS External ICD ST-ESA-S1QC-ICD-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">MET_DISCLM</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_POEORB">
+    <cd:Description>POD Precise Orbit Ephemerides Orbit File (EEF)</cd:Description>
+    <cd:ProductDefinition id="AUX_POEORB" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">AUX_POEORB</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_RESORB">
+    <cd:Description>POD Restituted Orbit Orbit File (EEF)</cd:Description>
+    <cd:ProductDefinition id="AUX_RESORB" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">AUX_RESORB</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_RESATT">
+    <cd:Description>POD Attitude Restituted Data for Sentinel-1 (EEF)</cd:Description>
+    <cd:ProductDefinition id="AUX_RESATT" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">AUX_RESATT</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1241,13 +1268,8 @@ for XML files first before we can implement support for the mission CFI orbit/at
     TLM__REQ_B TM parameter data file for S1 Quality Control
     MPL_REQ_Tx Transponder Control File
     REP_CALRPT PDGS SAR Calibration Report File
-    AUX_POEORB POD Precise Orbit
-    AUX_RESORB POD Restituted Orbit
-    AUX_RESATT POD Restituted Attitude
-    MPL_ORBPRE FOS Predicited Orbit File
     REP__MACP_ Manoeuvre Acceleration Profile
     REP__SUP__ FOS & Satellite Unavailability Report
-    MET_DISCLM Quality Disclaimer Metadata File
     AM__RQST__ Antenna Model: Parameter file
     AM__OUTPUT Antenna Model: Antenna Patterns
     AM__LOG___ Antenna Model: Antenna Model Log File
@@ -1259,7 +1281,5 @@ for XML files first before we can implement support for the mission CFI orbit/at
     OBS measurements file
 
     S1QC Internal Image format - header file
-
-    'list of changes' file
 -->
 </cd:ProductClass>

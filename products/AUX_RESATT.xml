@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="AUX_RESATT" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="Earth_Explorer_File">
+      <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_File">
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation"/>
+        <cd:Attribute name="schemaVersion"/>
+        <cd:Field name="Earth_Explorer_Header">
+          <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_Header">
+            <cd:Field name="Fixed_Header">
+              <cd:NamedType id="Fixed_Header"/>
+            </cd:Field>
+            <cd:Field name="Variable_Header">
+              <cd:Record namexml="http://eop-cfi.esa.int/CFI Variable_Header"/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="Data_Block">
+          <cd:Record namexml="http://eop-cfi.esa.int/CFI Data_Block">
+            <cd:Attribute name="type"/>
+            <cd:Field name="Attitude_File_Type">
+              <cd:Text namexml="http://eop-cfi.esa.int/CFI Attitude_File_Type"/>
+            </cd:Field>
+            <cd:Field name="Attitude_Data_Type">
+              <cd:Text namexml="http://eop-cfi.esa.int/CFI Attitude_Data_Type"/>
+            </cd:Field>
+            <cd:Field name="Max_Gap">
+              <cd:Type namexml="http://eop-cfi.esa.int/CFI Max_Gap">
+                <cd:Attribute name="unit"/>
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                  <cd:Unit>s</cd:Unit>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="Quaternion_Data">
+              <cd:Record namexml="http://eop-cfi.esa.int/CFI Quaternion_Data">
+                <cd:Field name="Inertial_Ref_Frame">
+                  <cd:Text namexml="http://eop-cfi.esa.int/CFI Inertial_Ref_Frame"/>
+                </cd:Field>
+                <cd:Field name="List_of_Quaternions">
+                  <cd:Record namexml="http://eop-cfi.esa.int/CFI List_of_Quaternions">
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="Quaternions">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="http://eop-cfi.esa.int/CFI Quaternions">
+                          <cd:Field name="Time">
+                            <cd:Type namexml="http://eop-cfi.esa.int/CFI Time">
+                              <cd:Attribute name="ref"/>
+                              <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Q1">
+                            <cd:Type namexml="http://eop-cfi.esa.int/CFI Q1">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Q2">
+                            <cd:Type namexml="http://eop-cfi.esa.int/CFI Q2">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Q3">
+                            <cd:Type namexml="http://eop-cfi.esa.int/CFI Q3">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Q4">
+                            <cd:Type namexml="http://eop-cfi.esa.int/CFI Q4">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
