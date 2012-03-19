@@ -1249,6 +1249,15 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="TLM__REQ_B">
+    <cd:Description>POD Attitude Restituted Data for Sentinel-1 (EEF)</cd:Description>
+    <cd:ProductDefinition id="TLM__REQ_B" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{http://edds.egos.esa/model}ResponsePart"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
 <!--
 This will start conflicting with other missions. We will have to extend our detection expression system
 for XML files first before we can implement support for the mission CFI orbit/attitude files
@@ -1268,8 +1277,8 @@ for XML files first before we can implement support for the mission CFI orbit/at
     TLM__REQ_B TM parameter data file for S1 Quality Control
     MPL_REQ_Tx Transponder Control File
     REP_CALRPT PDGS SAR Calibration Report File
-    REP__MACP_ Manoeuvre Acceleration Profile
-    REP__SUP__ FOS & Satellite Unavailability Report
+    REP__MACP_ Manoeuvre Acceleration Profile (FOS: plain ascii?)
+    REP__SUP__ FOS & Satellite Unavailability Report (FOS: html?)
     AM__RQST__ Antenna Model: Parameter file
     AM__OUTPUT Antenna Model: Antenna Patterns
     AM__LOG___ Antenna Model: Antenna Model Log File
