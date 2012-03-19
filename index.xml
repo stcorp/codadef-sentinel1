@@ -175,6 +175,24 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="PSCMeasurements">
+    <cd:Description>S1 PS Calibration Product - PSC Measurements file</cd:Description>
+    <cd:ProductDefinition id="PSCMeasurements" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.2 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/pscProduct"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="PSMask">
+    <cd:Description>S1 PS Calibration Product - PS Mask file</cd:Description>
+    <cd:ProductDefinition id="PSMask" format="binary" version="0">
+      <cd:Description>This definition is based on version 2.2 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">ps-mask-</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="RDBE_ECC">
     <cd:Description>SES RDB Set of Event Control Code (ECC) Programs</cd:Description>
     <cd:ProductDefinition id="E___ECC___" format="xml" version="0">
@@ -1223,7 +1241,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_POEORB">
-    <cd:Description>POD Precise Orbit Ephemerides Orbit File (EEF)</cd:Description>
+    <cd:Description>POD Precise Orbit Ephemerides Orbit File</cd:Description>
     <cd:ProductDefinition id="AUX_POEORB" format="xml" version="0">
       <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
       <cd:DetectionRule>
@@ -1232,7 +1250,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RESORB">
-    <cd:Description>POD Restituted Orbit Orbit File (EEF)</cd:Description>
+    <cd:Description>POD Restituted Orbit Orbit File</cd:Description>
     <cd:ProductDefinition id="AUX_RESORB" format="xml" version="0">
       <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
       <cd:DetectionRule>
@@ -1241,7 +1259,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="AUX_RESATT">
-    <cd:Description>POD Attitude Restituted Data for Sentinel-1 (EEF)</cd:Description>
+    <cd:Description>POD Attitude Restituted Data for Sentinel-1</cd:Description>
     <cd:ProductDefinition id="AUX_RESATT" format="xml" version="0">
       <cd:Description>This definition is based on version 1.1 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
       <cd:DetectionRule>
@@ -1250,7 +1268,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="TLM__REQ_B">
-    <cd:Description>POD Attitude Restituted Data for Sentinel-1 (EEF)</cd:Description>
+    <cd:Description>Telemetry Parameter Data Files</cd:Description>
     <cd:ProductDefinition id="TLM__REQ_B" format="xml" version="0">
       <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
       <cd:DetectionRule>
@@ -1274,21 +1292,22 @@ for XML files first before we can implement support for the mission CFI orbit/at
 -->
 <!--
   products to implement:
-    TLM__REQ_B TM parameter data file for S1 Quality Control
-    MPL_REQ_Tx Transponder Control File
-    REP_CALRPT PDGS SAR Calibration Report File
-    REP__MACP_ Manoeuvre Acceleration Profile (FOS: plain ascii?)
-    REP__SUP__ FOS & Satellite Unavailability Report (FOS: html?)
-    AM__RQST__ Antenna Model: Parameter file
-    AM__OUTPUT Antenna Model: Antenna Patterns
-    AM__LOG___ Antenna Model: Antenna Model Log File
+    MPL_REQ_Tx Transponder Control File (TP-ICD)
+    REP_CALRPT PDGS SAR Calibration Report File (TP-ICD)
 
-    S1 PS Calibration Product - PSC measurements
-    S1 PS Calibration Product - PS mask
-    S1 Coregistered Stack - Annotation Data Set
-    S1 Sigma-Nought Mosaic - Annotation Data Set
-    OBS measurements file
+    REP__MACP_ Manoeuvre Acceleration Profile (FOS-PFS: plain ascii?)
+    REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)
 
-    S1QC Internal Image format - header file
+    AM__RQST__ Antenna Model: Parameter file (AM-DESC)
+    AM__OUTPUT Antenna Model: Antenna Patterns (AM-DESC)
+    AM__LOG___ Antenna Model: Antenna Model Log File (AM-DESC)
+
+    S1 PS Calibration Product - PSC measurements (SPP-PFS)
+    S1 PS Calibration Product - PS mask (SPP-PFS)
+    S1 Coregistered Stack - Annotation Data Set (SPP-PFS)
+    S1 Sigma-Nought Mosaic - Annotation Data Set (SPP-PFS)
+    OBS measurements file (SPP-PFS)
+
+    S1QC Internal Image format - header file (QC-ICD-002)
 -->
 </cd:ProductClass>

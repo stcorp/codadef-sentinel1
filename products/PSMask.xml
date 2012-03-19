@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="PSMask" format="binary" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Array>
+    <cd:Dimension>filesize()/24</cd:Dimension>
+    <cd:Record>
+      <cd:Field name="Sample">
+        <cd:Integer>
+          <cd:Description>Position of the PS along the range direction in the sampling grid of the input stack Master image (and Mu/Sigma)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="Line">
+        <cd:Integer>
+          <cd:Description>Position of the PS along the azimuth direction in the sampling grid of the input stack Master image (and Mu/Sigma)</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>uint32</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Integer>
+      </cd:Field>
+      <cd:Field name="SlantRangeTime">
+        <cd:Float>
+          <cd:Description>Slant-range time coordinate of the PS in the sampling grid of the input stack Master image</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+          <cd:Unit>s</cd:Unit>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AzimuthTime">
+        <cd:Float>
+          <cd:Description>Azimuth time coordinate of the PS in the sampling grid of the input stack Master image, referred to the orbit Ascending Node Crossing (ANX) time</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+          <cd:Unit>s</cd:Unit>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="AverageCalibrationTargetAmplitude">
+        <cd:Float>
+          <cd:Description>Calibrated Target Average calibrated amplitude of the current PS estimated through the statistical model implemented by the processor.</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+          <cd:Unit>dB</cd:Unit>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+      <cd:Field name="MuSigmaValue">
+        <cd:Float>
+          <cd:Description>Mu/Sigma value corresponding to the current PS</cd:Description>
+          <cd:BitSize>32</cd:BitSize>
+          <cd:NativeType>float</cd:NativeType>
+          <cd:LittleEndian/>
+        </cd:Float>
+      </cd:Field>
+    </cd:Record>
+  </cd:Array>
+</cd:ProductDefinition>
