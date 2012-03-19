@@ -178,7 +178,7 @@
   <cd:ProductType name="RDBE_ECC">
     <cd:Description>SES RDB Set of Event Control Code (ECC) Programs</cd:Description>
     <cd:ProductDefinition id="E___ECC___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___ECC___</cd:MatchData>
       </cd:DetectionRule>
@@ -187,7 +187,7 @@
   <cd:ProductType name="RDBE_PTT">
     <cd:Description>SES RDB PRI Type Table (PTT)</cd:Description>
     <cd:ProductDefinition id="E___PTT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___PTT___</cd:MatchData>
       </cd:DetectionRule>
@@ -196,7 +196,7 @@
   <cd:ProductType name="RDBE_SPT">
     <cd:Description>SES RDB Set of Swath Parameter Tables (SPT)</cd:Description>
     <cd:ProductDefinition id="E___SPT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___SPT___</cd:MatchData>
       </cd:DetectionRule>
@@ -205,7 +205,7 @@
   <cd:ProductType name="RDBE_BST">
     <cd:Description>SES RDB Set of Beam Steering Tables (BST)</cd:Description>
     <cd:ProductDefinition id="E___BST___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___BST___</cd:MatchData>
       </cd:DetectionRule>
@@ -214,7 +214,7 @@
   <cd:ProductType name="RDBE_TPT">
     <cd:Description>SES RDB Tx Pulse Parameter Table (TPT)</cd:Description>
     <cd:ProductDefinition id="E___TPT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___TPT___</cd:MatchData>
       </cd:DetectionRule>
@@ -223,7 +223,7 @@
   <cd:ProductType name="RDBE_PDT">
     <cd:Description>SES RDB Tx Pulse Predistortion Parameter Table (PDT)</cd:Description>
     <cd:ProductDefinition id="E___PDT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___PDT___</cd:MatchData>
       </cd:DetectionRule>
@@ -232,7 +232,7 @@
   <cd:ProductType name="RDBE_TPLUT">
     <cd:Description>SES RDB TxM Power Look-Up Table (TPLUT)</cd:Description>
     <cd:ProductDefinition id="E___TPLUT_" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___TPLUT_</cd:MatchData>
       </cd:DetectionRule>
@@ -241,7 +241,7 @@
   <cd:ProductType name="RDBE_FCT">
     <cd:Description>SES RDB Filter Coefficient Table (FCT)</cd:Description>
     <cd:ProductDefinition id="E___FCT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___FCT___</cd:MatchData>
       </cd:DetectionRule>
@@ -250,7 +250,7 @@
   <cd:ProductType name="RDBE_CPT">
     <cd:Description>SES RDB Compression Parameter Table (CPT)</cd:Description>
     <cd:ProductDefinition id="E___CPT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___CPT___</cd:MatchData>
       </cd:DetectionRule>
@@ -259,7 +259,7 @@
   <cd:ProductType name="RDBE_BRT">
     <cd:Description>SES RDB Bitrate Table (BRT)</cd:Description>
     <cd:ProductDefinition id="E___BRT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___BRT___</cd:MatchData>
       </cd:DetectionRule>
@@ -268,7 +268,7 @@
   <cd:ProductType name="RDBE_RTIT">
     <cd:Description>SES RDB RxM Threshold Index Table (RTIT)</cd:Description>
     <cd:ProductDefinition id="E___RTIT__" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___RTIT__</cd:MatchData>
       </cd:DetectionRule>
@@ -277,7 +277,7 @@
   <cd:ProductType name="RDBE_RZWT">
     <cd:Description>SES RDB RxM Range Zone Width Table (RZWT)</cd:Description>
     <cd:ProductDefinition id="E___RZWT__" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___RZWT__</cd:MatchData>
       </cd:DetectionRule>
@@ -286,7 +286,7 @@
   <cd:ProductType name="RDBE_ECT">
     <cd:Description>SES RDB Entropy Code Table (ECT)</cd:Description>
     <cd:ProductDefinition id="E___ECT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___ECT___</cd:MatchData>
       </cd:DetectionRule>
@@ -295,7 +295,7 @@
   <cd:ProductType name="RDBE_FPPRT">
     <cd:Description>SES RDB RxM Filter Program Parameter Table (FPPRT)</cd:Description>
     <cd:ProductDefinition id="E___FPPRT_" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___FPPRT_</cd:MatchData>
       </cd:DetectionRule>
@@ -304,7 +304,7 @@
   <cd:ProductType name="RDBE_FPPOT">
     <cd:Description>SES RDB RxM Filter Program Pointer Table (FPPOT)</cd:Description>
     <cd:ProductDefinition id="E___FPPOT_" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___FPPOT_</cd:MatchData>
       </cd:DetectionRule>
@@ -313,7 +313,7 @@
   <cd:ProductType name="RDBE_FCRT">
     <cd:Description>SES RDB RxM Filter Control Register Table (FCRT)</cd:Description>
     <cd:ProductDefinition id="E___FCRT__" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___FCRT__</cd:MatchData>
       </cd:DetectionRule>
@@ -322,7 +322,7 @@
   <cd:ProductType name="RDBE_DTP">
     <cd:Description>SES RDB Digital Test Pattern Table (DTP)</cd:Description>
     <cd:ProductDefinition id="E___DTP___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___DTP___</cd:MatchData>
       </cd:DetectionRule>
@@ -331,7 +331,7 @@
   <cd:ProductType name="RDBE_MPT">
     <cd:Description>SES RDB Mission Parameters Table (MPT)</cd:Description>
     <cd:ProductDefinition id="E___MPT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">EA__MPT___</cd:MatchData>
       </cd:DetectionRule>
@@ -343,7 +343,7 @@
   <cd:ProductType name="RDBE_RCT">
     <cd:Description>SES RDB Instrument Redundancy Configuration Table (RCT)</cd:Description>
     <cd:ProductDefinition id="E___RCT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">EA__RCT___</cd:MatchData>
       </cd:DetectionRule>
@@ -355,7 +355,7 @@
   <cd:ProductType name="RDBE_ICT">
     <cd:Description>SES RDB Instrument Configuration Identifier (ICT)</cd:Description>
     <cd:ProductDefinition id="E___ICT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">E___ICT___</cd:MatchData>
       </cd:DetectionRule>
@@ -364,7 +364,7 @@
   <cd:ProductType name="RDBA_EBTIMG">
     <cd:Description>SAS RDB Elevation Beam Table (EBT) - Imaging</cd:Description>
     <cd:ProductDefinition id="A___EBTIMG" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01EBTIMG</cd:MatchData>
       </cd:DetectionRule>
@@ -412,7 +412,7 @@
   <cd:ProductType name="RDBA_EBTCAL">
     <cd:Description>SAS RDB Elevation Beam Table (EBT) - Calibration</cd:Description>
     <cd:ProductDefinition id="A___EBTCAL" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01EBTCAL</cd:MatchData>
       </cd:DetectionRule>
@@ -460,7 +460,7 @@
   <cd:ProductType name="RDBA_ABT">
     <cd:Description>SAS RDB Azimuth Beam Table (ABT)</cd:Description>
     <cd:ProductDefinition id="A___ABT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01ABT___</cd:MatchData>
       </cd:DetectionRule>
@@ -508,7 +508,7 @@
   <cd:ProductType name="RDBA_CBT">
     <cd:Description>SAS RDB Calibration Beam Table (CBT)</cd:Description>
     <cd:ProductDefinition id="A___CBT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01CBT___</cd:MatchData>
       </cd:DetectionRule>
@@ -556,7 +556,7 @@
   <cd:ProductType name="RDBA_SOTIMG">
     <cd:Description>SAS RDB Static Offset Table (SOT) - Imaging</cd:Description>
     <cd:ProductDefinition id="A___SOTIMG" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA01SOTIMG</cd:MatchData>
       </cd:DetectionRule>
@@ -646,7 +646,7 @@
   <cd:ProductType name="RDBA_SOTCAL">
     <cd:Description>SAS RDB Static Offset Table (SOT) - Calibration</cd:Description>
     <cd:ProductDefinition id="A___SOTCAL" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA01SOTCAL</cd:MatchData>
       </cd:DetectionRule>
@@ -736,7 +736,7 @@
   <cd:ProductType name="RDBA_TCTRXP">
     <cd:Description>SAS RDB Set of Temperature Compensation Tables (TCT) - Rx Phase</cd:Description>
     <cd:ProductDefinition id="A___TCTRXP" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TCTRXP</cd:MatchData>
       </cd:DetectionRule>
@@ -784,7 +784,7 @@
   <cd:ProductType name="RDBA_TCTRXG">
     <cd:Description>SAS RDB Set of Temperature Compensation Tables (TCT) - Rx Gain</cd:Description>
     <cd:ProductDefinition id="A___TCTRXG" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TCTRXG</cd:MatchData>
       </cd:DetectionRule>
@@ -832,7 +832,7 @@
   <cd:ProductType name="RDBA_TCTTXP">
     <cd:Description>SAS RDB Set of Temperature Compensation Tables (TCT) - Tx Phase</cd:Description>
     <cd:ProductDefinition id="A___TCTTXP" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TCTTXP</cd:MatchData>
       </cd:DetectionRule>
@@ -880,7 +880,7 @@
   <cd:ProductType name="RDBA_TCTTXG">
     <cd:Description>SAS RDB Set of Temperature Compensation Tables (TCT) - Tx Gain</cd:Description>
     <cd:ProductDefinition id="A___TCTTXG" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TCTTXG</cd:MatchData>
       </cd:DetectionRule>
@@ -928,7 +928,7 @@
   <cd:ProductType name="RDBA_NSTRX">
     <cd:Description>SAS RDB Set of Nearest State Tables (NST) - Rx</cd:Description>
     <cd:ProductDefinition id="A___NSTRX_" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01NSTRX_</cd:MatchData>
       </cd:DetectionRule>
@@ -976,7 +976,7 @@
   <cd:ProductType name="RDBA_NSTTX">
     <cd:Description>SAS RDB Set of Nearest State Tables (NST) - Tx</cd:Description>
     <cd:ProductDefinition id="A___NSTTX_" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01NSTTX_</cd:MatchData>
       </cd:DetectionRule>
@@ -1024,7 +1024,7 @@
   <cd:ProductType name="RDBA_TMT">
     <cd:Description>SAS RDB TRM Mode Table (TMT)</cd:Description>
     <cd:ProductDefinition id="A___TMT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TMT___</cd:MatchData>
       </cd:DetectionRule>
@@ -1072,7 +1072,7 @@
   <cd:ProductType name="RDBA_TDT">
     <cd:Description>SAS RDB TRM Disable Table (TDT)</cd:Description>
     <cd:ProductDefinition id="A___TDT___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01TDT___</cd:MatchData>
       </cd:DetectionRule>
@@ -1120,7 +1120,7 @@
   <cd:ProductType name="RDBA_DSP">
     <cd:Description>SAS RDB Discrete SAS Parameters (DSP)</cd:Description>
     <cd:ProductDefinition id="A___DSP___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01DSP___</cd:MatchData>
       </cd:DetectionRule>
@@ -1168,7 +1168,7 @@
   <cd:ProductType name="AUX_RDBDIF">
     <cd:Description>Radar Database Changes file</cd:Description>
     <cd:ProductDefinition id="AUX_RDBDIF" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS Radar Database Format Specification ST-ESA-S1QC-PFS-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_RDBDIF</cd:MatchData>
       </cd:DetectionRule>
@@ -1177,7 +1177,7 @@
   <cd:ProductType name="AMx_ERRMAT">
     <cd:Description>TRM Error Matrices</cd:Description>
     <cd:ProductDefinition id="AMx_ERRMAT" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AMH_ERRMAT</cd:MatchData>
       </cd:DetectionRule>
@@ -1189,7 +1189,7 @@
   <cd:ProductType name="AM__FAILUR">
     <cd:Description>TRM Failure Matrices</cd:Description>
     <cd:ProductDefinition id="AM__FAILUR" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the QCSS Error and Failure Matrices Format Specification ST-ESA-S1QC-PFS-002</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__FAILUR</cd:MatchData>
       </cd:DetectionRule>
@@ -1198,7 +1198,7 @@
   <cd:ProductType name="AUX_CALSIT">
     <cd:Description>Calibration Sites</cd:Description>
     <cd:ProductDefinition id="AUX_CALSIT" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.1 of the QCSS Calibration Sites Format Specification ST-ESA-S1QC-PFS-003</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the QCSS Calibration Sites Format Specification ST-ESA-S1QC-PFS-003</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_CALSIT</cd:MatchData>
       </cd:DetectionRule>
@@ -1210,6 +1210,15 @@
       <cd:Description>This definition is based on version 2.5 of the CMC ICD S1PD.ICD.00148.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/MissionPlanReport"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="MET_DISCLM">
+    <cd:Description>Mission Plan Report</cd:Description>
+    <cd:ProductDefinition id="MET_DISCLM" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.2 of the QCSS External ICD ST-ESA-S1QC-ICD-001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">MET_DISCLM</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1230,7 +1239,6 @@ for XML files first before we can implement support for the mission CFI orbit/at
 <!--
   products to implement:
     TLM__REQ_B TM parameter data file for S1 Quality Control
-    AUX_PP2
     MPL_REQ_Tx Transponder Control File
     REP_CALRPT PDGS SAR Calibration Report File
     AUX_POEORB POD Precise Orbit

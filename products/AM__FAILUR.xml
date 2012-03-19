@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AM__FAILUR" format="xml" last-modified="2011-09-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AM__FAILUR" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -57,7 +57,7 @@
                                 <cd:Field name="ArrayRow_Element_status">
                                   <cd:Type namexml="ArrayRow_Element_status">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>If true then the TRM is in a failed statue (for the specific mode and polarisation)</cd:Description>
+                                      <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <cd:Mapping string="false" value="0"/>
                                       <cd:Mapping string="true" value="1"/>
@@ -99,7 +99,7 @@
                                 <cd:Field name="ArrayRow_Element_status">
                                   <cd:Type namexml="ArrayRow_Element_status">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>If true then the TRM is in a failed statue (for the specific mode and polarisation)</cd:Description>
+                                      <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <cd:Mapping string="false" value="0"/>
                                       <cd:Mapping string="true" value="1"/>
@@ -141,7 +141,7 @@
                                 <cd:Field name="ArrayRow_Element_status">
                                   <cd:Type namexml="ArrayRow_Element_status">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>If true then the TRM is in a failed statue (for the specific mode and polarisation)</cd:Description>
+                                      <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <cd:Mapping string="false" value="0"/>
                                       <cd:Mapping string="true" value="1"/>
@@ -183,7 +183,7 @@
                                 <cd:Field name="ArrayRow_Element_status">
                                   <cd:Type namexml="ArrayRow_Element_status">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>If true then the TRM is in a failed statue (for the specific mode and polarisation)</cd:Description>
+                                      <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <cd:Mapping string="false" value="0"/>
                                       <cd:Mapping string="true" value="1"/>
