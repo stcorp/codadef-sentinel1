@@ -1,60 +1,58 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_POEORB" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="AUX_POEORB" format="xml" last-modified="2012-04-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="Earth_Explorer_File">
-      <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_File">
-        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation"/>
-        <cd:Attribute name="schemaVersion"/>
+      <cd:Record namexml="Earth_Explorer_File">
         <cd:Field name="Earth_Explorer_Header">
-          <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_Header">
+          <cd:Record namexml="Earth_Explorer_Header">
             <cd:Field name="Fixed_Header">
               <cd:NamedType id="Fixed_Header"/>
             </cd:Field>
             <cd:Field name="Variable_Header">
-              <cd:Record namexml="http://eop-cfi.esa.int/CFI Variable_Header">
+              <cd:Record namexml="Variable_Header">
                 <cd:Field name="Ref_Frame">
-                  <cd:Text namexml="http://eop-cfi.esa.int/CFI Ref_Frame"/>
+                  <cd:Text namexml="Ref_Frame"/>
                 </cd:Field>
                 <cd:Field name="Time_Frame">
-                  <cd:Text namexml="http://eop-cfi.esa.int/CFI Time_Frame"/>
+                  <cd:Text namexml="Time_Frame"/>
                 </cd:Field>
               </cd:Record>
             </cd:Field>
           </cd:Record>
         </cd:Field>
         <cd:Field name="Data_Block">
-          <cd:Record namexml="http://eop-cfi.esa.int/CFI Data_Block">
+          <cd:Record namexml="Data_Block">
             <cd:Attribute name="type"/>
             <cd:Field name="List_of_OSVs">
-              <cd:Record namexml="http://eop-cfi.esa.int/CFI List_of_OSVs">
+              <cd:Record namexml="List_of_OSVs">
                 <cd:Attribute name="count"/>
                 <cd:Field name="OSV">
                   <cd:Array>
                     <cd:Dimension/>
-                    <cd:Record namexml="http://eop-cfi.esa.int/CFI OSV">
+                    <cd:Record namexml="OSV">
                       <cd:Field name="TAI">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI TAI">
+                        <cd:Type namexml="TAI">
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
                             <cd:Description>TAI date and time of OSV, in ASCII standard time format, including time reference and micro-seconds.</cd:Description>
                           </cd:Time>
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="UTC">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI UTC">
+                        <cd:Type namexml="UTC">
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
                             <cd:Description>UTC date and time of OSV, in ASCII standard time format, including time reference and micro-seconds.</cd:Description>
                           </cd:Time>
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="UT1">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI UT1">
+                        <cd:Type namexml="UT1">
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref">
                             <cd:Description>UT1 date and time of OSV, in ASCII standard time format, including time reference and micro-seconds.</cd:Description>
                           </cd:Time>
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="Absolute_Orbit">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI Absolute_Orbit">
+                        <cd:Type namexml="Absolute_Orbit">
                           <cd:Integer format="ascii">
                             <cd:Description>Absolute orbit counter. This counter is incremented by a single unit from one record to the next.</cd:Description>
                             <cd:NativeType>int64</cd:NativeType>
@@ -62,7 +60,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="X">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI X">
+                        <cd:Type namexml="X">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>X position in earth-fixed coordinate system.</cd:Description>
@@ -72,7 +70,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="Y">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI Y">
+                        <cd:Type namexml="Y">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>Y position in earth-fixed coordinate system.</cd:Description>
@@ -82,7 +80,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="Z">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI Z">
+                        <cd:Type namexml="Z">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>Z position in earth-fixed coordinate system.</cd:Description>
@@ -92,7 +90,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="VX">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI VX">
+                        <cd:Type namexml="VX">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>X velocity in earth-fixed coordinate system.</cd:Description>
@@ -102,7 +100,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="VY">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI VY">
+                        <cd:Type namexml="VY">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>Y velocity in earth-fixed coordinate system.</cd:Description>
@@ -112,7 +110,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="VZ">
-                        <cd:Type namexml="http://eop-cfi.esa.int/CFI VZ">
+                        <cd:Type namexml="VZ">
                           <cd:Attribute name="unit"/>
                           <cd:Float format="ascii">
                             <cd:Description>Z velocity in earth-fixed coordinate system.</cd:Description>
@@ -122,7 +120,7 @@
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="Quality">
-                        <cd:Text namexml="http://eop-cfi.esa.int/CFI Quality"/>
+                        <cd:Text namexml="Quality"/>
                       </cd:Field>
                     </cd:Record>
                   </cd:Array>
