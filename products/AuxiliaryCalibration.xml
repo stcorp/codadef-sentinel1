@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2012-05-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Calibration auxiliary file definition (AUX_CAL)</cd:Description>
     <cd:Field name="auxiliaryCalibration">
@@ -15,18 +15,18 @@
                   <cd:Field name="swathNumber">
                     <cd:Type namexml="swathNumber">
                       <cd:Integer format="ascii">
-	                <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation as indices to select the applicable calibrationParams record.</cd:Description>
+	                <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation to index the applicable calibrationParams record.</cd:Description>
 	              </cd:Integer>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="swath">
                     <cd:Text namexml="swath">
-                      <cd:Description>Canonical name of the swath.</cd:Description>
+                      <cd:Description>Canonical name of the swath to which this set of calibration parameters applies. </cd:Description>
                     </cd:Text>
                   </cd:Field>
                   <cd:Field name="polarisation">
                     <cd:Text namexml="polarisation">
-                      <cd:Description>Polarisation to which this set of calibration parameters applies. Used along with the swathNumber to as indices to select the applicable calibrationParams record.</cd:Description>
+                      <cd:Description>Polarisation to which this set of calibration parameters applies. Used along with the swathNumber to index the applicable calibrationParams record.</cd:Description>
                     </cd:Text>
                   </cd:Field>
                   <cd:Field name="elevationAntennaPattern">
@@ -131,7 +131,7 @@
                   <cd:Field name="absoluteCalibrationConstant">
                     <cd:Type namexml="absoluteCalibrationConstant">
                       <cd:Float format="ascii">
-	                <cd:Description>Absolute calibration constant value to apply during processing. The calibration constant C0 (described in the Sentinel-1 SAR Instrument Calibration and Characterisation Plan) should be merged into this field to acheive an overall gain value.</cd:Description>
+	                <cd:Description>Absolute calibration constant value to apply during processing. The calibration constant C0 (described in the Sentinel-1 SAR Instrument Calibration and Characterisation Plan) should be merged into this field to achieve an overall gain value.</cd:Description>
 	                <cd:Unit>dB</cd:Unit>
 	                <cd:NativeType>double</cd:NativeType>
 	              </cd:Float>

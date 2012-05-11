@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2011-10-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2011-05-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -9,6 +9,15 @@
             <cd:Float format="ascii">
               <cd:Description>Radar frequency.</cd:Description>
               <cd:Unit>Hz</cd:Unit>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="deltaTGuard1">
+          <cd:Type namexml="deltaTGuard1">
+            <cd:Float format="ascii">
+              <cd:Description>DeltaT Guard 1 parameter from the instrument radar database [s]. This parameter is used to calculate the internal time delay of the extracted reconstructed replicas.</cd:Description>
+              <cd:Unit>s</cd:Unit>
               <cd:NativeType>double</cd:NativeType>
             </cd:Float>
           </cd:Type>
@@ -68,17 +77,13 @@
                   <cd:Field name="radarParams">
                     <cd:Record namexml="radarParams">
                       <cd:Description>Radar parameters record.</cd:Description>
-                      <cd:Field name="azimuthSteeringAngles">
-                        <cd:Type namexml="azimuthSteeringAngles">
+                      <cd:Field name="azimuthSteeringRate">
+                        <cd:Type namexml="azimuthSteeringRate">
                           <cd:Attribute name="count"/>
-                          <cd:Array format="ascii">
-                            <cd:Description>TOPSAR azimuth steering angles. This element is a vector of double precision floating point numbers separated by spaces. There is an entry for each PRI in the burst within this swath. This field is only relevant for IW and EW swaths and is ignored for SM and WV swaths.</cd:Description>
-                            <cd:Dimension>int(str(@count))</cd:Dimension>
-                            <cd:Float>
-                              <cd:Unit>degrees</cd:Unit>
-                              <cd:NativeType>float</cd:NativeType>
-                            </cd:Float>
-                          </cd:Array>
+                          <cd:Float format="ascii">
+                            <cd:Description>TOPSAR azimuth steering rate. This field is only relevant for IW and EW swaths and is set to 0.0 for SM and WV swaths.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
@@ -141,7 +146,7 @@
         </cd:Field>
         <cd:Field name="internalCalibrationParamsList">
           <cd:Record namexml="internalCalibrationParamsList">
-            <cd:Description>Internal calibration parameters list. This element contains a list of swath/polarisation channel dependent instrument parameters. There is an entry for each swath/polarisation combination for a total of 60. The SPPDU document defines an additional 68 swath number codes that can be used if required.</cd:Description>
+            <cd:Description>Internal calibration instrument parameters. This record contains swath/polarisation channel dependent parameters related to the instrument. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 60. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
             <cd:Field name="internalCalibrationParams">
               <cd:Array>
                 <cd:Dimension/>
@@ -150,7 +155,7 @@
                   <cd:Field name="swathNumber">
                     <cd:Type namexml="swathNumber">
                       <cd:Integer format="ascii">
-                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation as indices to select the applicable internalCalibrationParams record.</cd:Description>
+                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation to index the applicable internalCalibrationParams record.</cd:Description>
                       </cd:Integer>
                     </cd:Type>
                   </cd:Field>
@@ -161,13 +166,13 @@
                   </cd:Field>
                   <cd:Field name="polarisation">
                     <cd:Text namexml="polarisation">
-                      <cd:Description>Polarisation. Used along with the swathNumber as indices to select the applicable internalCalibrationlParams record.</cd:Description>
+                      <cd:Description>Polarisation. Used along with the swathNumber to index the applicable internalCalibrationParams record.</cd:Description>
                     </cd:Text>
                   </cd:Field>
                   <cd:Field name="timeDelay">
                     <cd:Type namexml="timeDelay">
                       <cd:Float format="ascii">
-                        <cd:Description>Time delay to be applied to the reference replica, used when the time delay can not be derived from the extracted replica.</cd:Description>
+                        <cd:Description>Internal time delay [s] to be applied to the nominal chirp used for range processing. The IPF only uses this parameter when the time delay cannot be derived from the extracted replica due to invalid (poor quality) reconstructed replicas. Nominally, the time delay is estimated from the extracted replicas and it compensates for the dual polarisation mis-registration.</cd:Description>
                         <cd:Unit>s</cd:Unit>
                         <cd:NativeType>double</cd:NativeType>
                       </cd:Float>
@@ -175,7 +180,7 @@
                   </cd:Field>
                   <cd:Field name="nominalGain">
                     <cd:Record namexml="nominalGain">
-                      <cd:Description>Complex gain [dB] to be applied to the reference replica when derived from the nominal chirp.</cd:Description>
+                      <cd:Description>Complex gain to be applied to the range match filter when the nominal chirp is used. It is used to compensate for the amplitude and phase differences between the two channels in dual polarisation data.</cd:Description>
                       <cd:Field name="re">
                         <cd:Type namexml="re">
                           <cd:Float format="ascii">
@@ -194,7 +199,7 @@
                   </cd:Field>
                   <cd:Field name="extractedGain">
                     <cd:Record namexml="extractedGain">
-                      <cd:Description>Complex gain [dB] to be applied to the reference replica when derived from the extracted chirp.</cd:Description>
+                      <cd:Description>Complex gain to be applied to the range match filter when the extracted replica is used. It is used to compensate for the amplitude difference between the two channels in dual polarisation data. Phase difference compensation is not done when the extracted replica is used since the phase difference is already embedded in the extracted replicas.</cd:Description>
                       <cd:Field name="re">
                         <cd:Type namexml="re">
                           <cd:Float format="ascii">
@@ -274,6 +279,15 @@
                       </cd:Float>
                     </cd:Type>
                   </cd:Field>
+                  <cd:Field name="deltaTDecFilter">
+                    <cd:Type namexml="deltaTDecFilter">
+                      <cd:Float format="ascii">
+                        <cd:Description>Time delay related to the selected decimation filter [s]. This parameter is subtracted from the calculation of the internal time delay of the extracted reconstructed replicas.</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
                   <cd:Field name="noise">
                     <cd:Type namexml="noise">
                       <cd:Float format="ascii">
@@ -338,6 +352,7 @@
                                   <cd:Array>
                                     <cd:Dimension/>
                                     <cd:Record namexml="isp">
+                                      <cd:Description>The ISP element describes one unique, or a series of unique transmission packets. The packets are identified by the packet signal type and contain the number of PRIs expected for this packet type.</cd:Description>
                                       <cd:Field name="swathNumber">
                                         <cd:Type namexml="swathNumber">
                                           <cd:Integer format="ascii">
@@ -355,10 +370,26 @@
                                           <cd:Description>Signal type.</cd:Description>
                                         </cd:Text>
                                       </cd:Field>
+                                      <cd:Field name="numSilentPriPre">
+                                        <cd:Type namexml="numSilentPriPre">
+                                          <cd:Integer format="ascii">
+                                            <cd:Description>The number of PRIs that are expected to be suppressed by the instrument immediately before this ISP. Silent PRIs do not show up in the downlinked L0 product but must be known in order to correctly predict the value of the PRI counter for every packet in the reconstructed timeline.</cd:Description>
+                                            <cd:NativeType>uint32</cd:NativeType>
+                                          </cd:Integer>
+                                        </cd:Type>
+                                      </cd:Field>
                                       <cd:Field name="numPri">
                                         <cd:Type namexml="numPri">
                                           <cd:Integer format="ascii">
                                             <cd:Description>The number of packets of this signal type expected in series.</cd:Description>
+                                            <cd:NativeType>uint32</cd:NativeType>
+                                          </cd:Integer>
+                                        </cd:Type>
+                                      </cd:Field>
+                                      <cd:Field name="numSilentPriPost">
+                                        <cd:Type namexml="numSilentPriPost">
+                                          <cd:Integer format="ascii">
+                                            <cd:Description>The number of PRIs that are expected to be suppressed by the instrument immediately following this ISP. Silent PRIs do not show up in the downlinked L0 product but must be known in order to correctly predict the value of the PRI counter for every packet in the reconstructed timeline.</cd:Description>
                                             <cd:NativeType>uint32</cd:NativeType>
                                           </cd:Integer>
                                         </cd:Type>
@@ -383,7 +414,7 @@
         </cd:Field>
         <cd:Field name="decodingParams">
           <cd:Record namexml="decodingParams">
-            <cd:Description>Raw data decoding parameters. This DSR contains the tables and parameters that the IPF requires to perform image processing.</cd:Description>
+            <cd:Description>Raw data decoding parameters. This DSR contains the raw data decoding tables and parameters that the IPF requires to perform image processing.</cd:Description>
             <cd:Field name="huffmanLutList">
               <cd:Record namexml="huffmanLutList">
                 <cd:Description>Huffman decoding LUT list. This element contains the Huffman decoding LUTs required to retrieve the HCode value from FDBAQ encoded user data.  There is one LUT for each Bit Rate Code for a total of 5.</cd:Description>
@@ -422,7 +453,7 @@
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="rlLut">
-                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
+                      <cd:Description>Reconstruction Levels LUT. This LUT contains the RL values used to retrieve the reconstructed sample values from the BAQ encoded data. The RL in the table are indexed by: 1. the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and,  2. the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
                       <cd:Field name="baqCode">
                         <cd:Text namexml="baqCode">
                           <cd:Description>Index code for which the LUT applies. For FDBAQ compression this is the Bit Rate Code extracted from the BAQ block and for BAQ compression this is the BAQ mode.</cd:Description>
@@ -453,7 +484,7 @@
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="rlLut">
-                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
+                      <cd:Description>Reconstruction Levels LUT. This LUT contains the RL values used to retrieve the reconstructed sample values from the BAQ encoded data. The RL in the table are indexed by: 1. the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and,  2. the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
                       <cd:Field name="baqCode">
                         <cd:Text namexml="baqCode">
                           <cd:Description>Index code for which the LUT applies. For FDBAQ compression this is the Bit Rate Code extracted from the BAQ block and for BAQ compression this is the BAQ mode.</cd:Description>
@@ -491,7 +522,7 @@
             </cd:Field>
             <cd:Field name="dValuesLutList">
               <cd:Record namexml="dValuesLutList">
-                <cd:Description>Values D LUT. This LUT is used to obtain the D value given the Filter Number and the Value C. There is one entry for each Filter Number . Note that Filter Number 2 is not applicable and the "count" attribute for this element shall be set to -1.</cd:Description>
+                <cd:Description>Values D LUT. This LUT is used to obtain the D value given the Filter Number and the Value C. There is one entry for each Filter Number. Note that for Filter Number 2 the "count" attribute for this element shall be set to 0.</cd:Description>
                 <cd:Field name="dValuesLut">
                   <cd:Array>
                     <cd:Dimension/>
