@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2012-05-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2012-05-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -250,7 +250,6 @@
                               <cd:Float format="ascii">
                                 <cd:Description>Maximum allowable IRW (3-dB width) of the cross-correlation with the nominal replica [samples]. Used for setting the replicaReconstructionFailedFlag in the output product annotations.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>%</cd:Unit>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -301,6 +300,7 @@
                               <cd:Float format="ascii">
                                 <cd:Description>Maximum deviation allowed for a PG product phase from the corresponding PG product model value [radians]. Absolute PG product validation shall fail if this value is exceeded.</cd:Description>
                                 <cd:NativeType>float</cd:NativeType>
+                                <cd:Unit>radians</cd:Unit>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -343,16 +343,6 @@
                         <cd:Text namexml="pgSource">
                           <cd:Description>PG source to use during processing.  The PG derived from the extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the pgModel from the AUX_INS data will be used if this field is set to "Model" or the reconstructed replica is deemed invalid.</cd:Description>
                         </cd:Text>
-                      </cd:Field>
-                      <cd:Field name="applyReplicaWhiteningFlag">
-                        <cd:Type namexml="applyReplicaWhiteningFlag">
-                          <cd:Integer format="ascii">
-                            <cd:Description>Flag controlling the whitening of the reconstructed reference replica. True if whitening is to be performed, false otherwise.</cd:Description>
-                            <cd:NativeType>uint8</cd:NativeType>
-                            <cd:Mapping string="false" value="0"/>
-                            <cd:Mapping string="true" value="1"/>
-                          </cd:Integer>
-                        </cd:Type>
                       </cd:Field>
                     </cd:Record>
                     <cd:Optional/>
@@ -397,38 +387,6 @@
                     <cd:Optional/>
                     <cd:Record namexml="slcProcParams">
                       <cd:Description>SLC processing auxiliary parameters. This record contains the auxiliary parameters required during SLC image processing.</cd:Description>
-                      <cd:Field name="outputMeanExpected">
-                        <cd:Type namexml="outputMeanExpected">
-                          <cd:Float format="ascii">
-                            <cd:Description>This parameter specifies the expected mean of the I and Q samples in the output SLC image and is used for verifying that the calculated mean of the output samples is within the tolerated threshold.</cd:Description>
-                            <cd:NativeType>double</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="outputMeanThreshold">
-                        <cd:Type namexml="outputMeanThreshold">
-                          <cd:Float format="ascii">
-                            <cd:Description>Threshold for setting the outputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the outputMeanExpected-T and outputMeanExpected+T.</cd:Description>
-                            <cd:NativeType>double</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="outputStdDevExpected">
-                        <cd:Type namexml="outputStdDevExpected">
-                          <cd:Float format="ascii">
-                            <cd:Description>This parameter specifies the expected standard deviation of the I and Q samples in the output SLC image and is used for verifying that the calculated std. dev. of the output samples is within the tolerated threshold.</cd:Description>
-                            <cd:NativeType>double</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="outputStdDevThreshold">
-                        <cd:Type namexml="outputStdDevThreshold">
-                          <cd:Float format="ascii">
-                            <cd:Description>Threshold for setting the outputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured standard deviation must fall between the outputStdDevExpected-D and outputStdDevExpected+D.</cd:Description>
-                            <cd:NativeType>double</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
                       <cd:Field name="applyElevationAntennaPatternFlag">
                         <cd:Type namexml="applyElevationAntennaPatternFlag">
                           <cd:Integer format="ascii">
@@ -659,15 +617,6 @@
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
-                                <cd:Field name="gain">
-                                  <cd:Type namexml="gain">
-                                    <cd:Float format="ascii">
-                                      <cd:Description>Product specific gain [dB]. This parameter defines the gain that is applied to each output sample during azimuth processing.</cd:Description>
-                                      <cd:NativeType>double</cd:NativeType>
-                                      <cd:Unit>dB</cd:Unit>
-                                    </cd:Float>
-                                  </cd:Type>
-                                </cd:Field>
                                 <cd:Field name="multiLookThrowaway">
                                   <cd:Type namexml="multiLookThrowaway">
                                     <cd:Integer format="ascii">
@@ -720,16 +669,6 @@
                           </cd:Integer>
                         </cd:Type>
                       </cd:Field>
-                      <cd:Field name="applyApplicationLutFlag">
-                        <cd:Type namexml="applyApplicationLutFlag">
-                          <cd:Integer format="ascii">
-                            <cd:Description>Flag to control the use of the application LUT. True if the application LUT identified in the Job Order is to be used to scale the output image, false otherwise.</cd:Description>
-                            <cd:NativeType>uint8</cd:NativeType>
-                            <cd:Mapping string="false" value="0"/>
-                            <cd:Mapping string="true" value="1"/>
-                          </cd:Integer>
-                        </cd:Type>
-                      </cd:Field>
                       <cd:Field name="detectFlag">
                         <cd:Type namexml="detectFlag">
                           <cd:Integer format="ascii">
@@ -763,42 +702,6 @@
                       <cd:Field name="grdProcParams">
                         <cd:Record namexml="grdProcParams">
                           <cd:Description>GRD processing auxiliary parameters. This record contains the auxiliary parameters required during GRD image processing.</cd:Description>
-                          <cd:Field name="outputMeanExpected">
-                            <cd:Type namexml="outputMeanExpected">
-                              <cd:Float format="ascii">
-                                <cd:Description>This parameter specifies the expected mean of the samples in the output mage and is used for verifying that the calculated mean of the output samples is within the tolerated threshold.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>dB</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="outputMeanThreshold">
-                            <cd:Type namexml="outputMeanThreshold">
-                              <cd:Float format="ascii">
-                                <cd:Description>Threshold for setting the outputDataMeanOutsideNominalRange flag in the output product annotations. This is the value T, such that the measured mean must fall between the outputMeanExpected-T and outputMeanExpected+T.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>dB</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="outputStdDevExpected">
-                            <cd:Type namexml="outputStdDevExpected">
-                              <cd:Float format="ascii">
-                                <cd:Description>This parameter specifies the expected standard deviation of the samples in the output image and is used for verifying that the calculated std. dev. of the output samples is within the tolerated threshold.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>dB</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="outputStdDevThreshold">
-                            <cd:Type namexml="outputStdDevThreshold">
-                              <cd:Float format="ascii">
-                                <cd:Description>Threshold for setting the outputDataStdDevOutsideNominalRange flag in the output product annotations. This is the value D, such that the measured standard deviation must fall between the outputStdDevExpected-D and outputStdDevExpected+D.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>dB</cd:Unit>
-                              </cd:Float>
-                            </cd:Type>
-                          </cd:Field>
                           <cd:Field name="applySrgrConversionFlag">
                             <cd:Type namexml="applySrgrConversionFlag">
                               <cd:Integer format="ascii">

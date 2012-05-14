@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2012-05-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -116,20 +116,20 @@
                         <cd:Record namexml="owiProcParams">
                           <cd:Field name="rangeCellSize">
                             <cd:Type namexml="rangeCellSize">
-                              <cd:Integer format="ascii">
+                              <cd:Float format="ascii">
                                 <cd:Description>Size of the SAR derived wind field in the range direction. Wind cells should typically be square therefore nominally rangeCellSize = azimuthCellSize.</cd:Description>
-                                <cd:NativeType>uint32</cd:NativeType>
+                                <cd:NativeType>double</cd:NativeType>
                                 <cd:Unit>m</cd:Unit>
-                              </cd:Integer>
+                              </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="azimuthCellSize">
                             <cd:Type namexml="azimuthCellSize">
-                              <cd:Integer format="ascii">
+                              <cd:Float format="ascii">
                                 <cd:Description>Size of the SAR derived wind field in the azimuth direction. Wind cells should typically be square therefore nominally azimuthCellSize = rangeCellSize.</cd:Description>
-                                <cd:NativeType>uint32</cd:NativeType>
+                                <cd:NativeType>double</cd:NativeType>
                                 <cd:Unit>m</cd:Unit>
-                              </cd:Integer>
+                              </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="distanceToShore">
@@ -172,14 +172,14 @@
                           <cd:Field name="inversionQualityThreshold">
                             <cd:Type namexml="inversionQualityThreshold">
                               <cd:Float format="ascii">
-                                <cd:Description>Value above which minimization in the inversion is considered low quality. Valid value range between 0 and 1e29.</cd:Description>
+                                <cd:Description>Value above which minimization in the inversion is considered low quality. Valid value range is between 0 and 1e29.</cd:Description>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="calibrationQualityThreshold">
                             <cd:Type namexml="calibrationQualityThreshold">
                               <cd:Float format="ascii">
-                                <cd:Description>Value above which the calibration of the product is considered to be incorrect. Valid value range between 0 and 10 dB.</cd:Description>
+                                <cd:Description>Value above which the calibration of the product is considered to be incorrect. Valid value range is between 0 and 10 dB.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
                                 <cd:Unit>dB</cd:Unit>
                               </cd:Float>
@@ -188,7 +188,7 @@
                           <cd:Field name="nrcsQualityThreshold">
                             <cd:Type namexml="nrcsQualityThreshold">
                               <cd:Float format="ascii">
-                                <cd:Description>Value above which the NRCS estimated at the SAR wind cell resolution is considered as low quality. Valid value range between -30 and 10 dB.</cd:Description>
+                                <cd:Description>Value above which the NRCS estimated at the SAR wind cell resolution is considered as low quality. Valid value range is between -30 and 10 dB.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
                                 <cd:Unit>dB</cd:Unit>
                               </cd:Float>
