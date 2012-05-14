@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1CalibrationADS" format="xml" last-modified="2011-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1CalibrationADS" format="xml" last-modified="2012-05-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="calibration">
       <cd:Record namexml="calibration">
@@ -13,6 +13,9 @@
             </cd:Field>
             <cd:Field name="polarisation">
               <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="mode">
+              <cd:Text namexml="mode"/>
             </cd:Field>
             <cd:Field name="swath">
               <cd:Text namexml="swath"/>
@@ -52,15 +55,8 @@
         </cd:Field>
         <cd:Field name="calibrationInformation">
           <cd:Record namexml="calibrationInformation">
-            <cd:Field name="processorScalingFactor">
-              <cd:Type namexml="processorScalingFactor">
-                <cd:Float format="ascii">
-                  <cd:NativeType>double</cd:NativeType>
-                </cd:Float>
-              </cd:Type>
-            </cd:Field>
-            <cd:Field name="externalCalibrationScalingFactor">
-              <cd:Type namexml="externalCalibrationScalingFactor">
+            <cd:Field name="absoluteCalibrationConstant">
+              <cd:Type namexml="absoluteCalibrationConstant">
                 <cd:Float format="ascii">
                   <cd:NativeType>double</cd:NativeType>
                 </cd:Float>
@@ -83,7 +79,7 @@
                   <cd:Field name="line">
                     <cd:Type namexml="line">
                       <cd:Integer format="ascii">
-                        <cd:NativeType>uint32</cd:NativeType>
+                        <cd:NativeType>int32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
                   </cd:Field>
@@ -96,13 +92,6 @@
                           <cd:NativeType>int32</cd:NativeType>
                         </cd:Integer>
                       </cd:Array>
-                    </cd:Type>
-                  </cd:Field>
-                  <cd:Field name="offset">
-                    <cd:Type namexml="offset">
-                      <cd:Float format="ascii">
-                        <cd:NativeType>double</cd:NativeType>
-                      </cd:Float>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="sigmaNought">
