@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="E___FCT___" format="xml" last-modified="2011-12-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="E___FCT___" format="xml" last-modified="2012-05-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -69,14 +69,14 @@
                                         <cd:Field name="Filter_I_Value">
                                           <cd:Type namexml="Filter_I_Value">
                                             <cd:Integer format="ascii">
-                                              <cd:NativeType>uint16</cd:NativeType>
+                                              <cd:NativeType>int16</cd:NativeType>
                                             </cd:Integer>
                                           </cd:Type>
                                         </cd:Field>
                                         <cd:Field name="Filter_Q_Value">
                                           <cd:Type namexml="Filter_Q_Value">
                                             <cd:Integer format="ascii">
-                                              <cd:NativeType>uint16</cd:NativeType>
+                                              <cd:NativeType>int16</cd:NativeType>
                                             </cd:Integer>
                                           </cd:Type>
                                         </cd:Field>
