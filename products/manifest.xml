@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest" format="xml" last-modified="2012-03-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest" format="xml" last-modified="2012-05-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
         <cd:Attribute name="version"/>
+        <cd:Attribute name="schemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
         <cd:Field name="informationPackageMap">
           <cd:Record namexml="informationPackageMap">
             <cd:Field name="contentUnit">
