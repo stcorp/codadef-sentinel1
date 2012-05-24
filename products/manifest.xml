@@ -4,7 +4,7 @@
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
         <cd:Attribute name="version"/>
-        <cd:Attribute name="schemaLocation">
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation">
           <cd:Optional/>
         </cd:Attribute>
         <cd:Field name="informationPackageMap">
