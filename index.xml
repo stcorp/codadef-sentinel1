@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2012-05-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2012-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest">
     <cd:Description>SAFE Manifest file</cd:Description>
@@ -76,7 +76,7 @@
   </cd:ProductType>
   <cd:ProductType name="SARL0NoiseMeasurementData">
     <cd:Description>SAR L0 Noise Product - Measurement Data file</cd:Description>
-    <cd:ProductDefinition id="SARL0AnnotationsMeasurementData" format="binary" version="0">
+    <cd:ProductDefinition id="SARL0NoiseMeasurementData" format="binary" version="0">
       <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>

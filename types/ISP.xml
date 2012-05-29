@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<cd:Record name="ISP" format="binary" last-modified="2012-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Description>Instrument Source Packet</cd:Description>
+  <!-- <cd:BitSize><![CDATA[int(./primaryHeader/packetDataLength) * 8]]></cd:BitSize> -->
+  <cd:Field name="primaryHeader">
+    <cd:NamedType id="ISPPrimaryHeader"/>
+  </cd:Field>
+  <cd:Field name="secondaryHeader">
+    <cd:NamedType id="ISPSecondaryHeader"/>
+  </cd:Field>
+  <cd:Field name="userData">
+    <cd:Raw>
+      <cd:Description>User Data Field</cd:Description>
+      <cd:BitSize><![CDATA[(int(../primaryHeader/packetDataLength) - 61) * 8]]></cd:BitSize>
+    </cd:Raw>
+  </cd:Field>
+</cd:Record>

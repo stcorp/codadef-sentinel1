@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2012-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Field name="coarseTime">
+    <cd:Integer>
+      <cd:Description>Coarse Time</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fineTime">
+    <cd:Integer>
+      <cd:Description>Fine Time</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="syncMarker">
+    <cd:Raw>
+      <cd:Description>Sync Marker</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+    </cd:Raw>
+  </cd:Field>
+  <cd:Field name="dataTakeID">
+    <cd:Integer>
+      <cd:Description>Data Take ID</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ECCNumber">
+    <cd:Integer>
+      <cd:Description>ECC Number</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spareBit">
+    <cd:Raw>
+      <cd:BitSize>1</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="testMode">
+    <cd:Integer>
+      <cd:Description>Test Mode</cd:Description>
+      <cd:BitSize>3</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RXChannelID">
+    <cd:Integer>
+      <cd:Description>RX Channel ID</cd:Description>
+      <cd:BitSize>4</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="instrumentConfigurationID">
+    <cd:Integer>
+      <cd:Description>Instrument Configuration ID</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dataWordIndex">
+    <cd:Integer>
+      <cd:Description>Sub-Commutated Ancillary Data Word Index</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="dataWord">
+    <cd:Integer>
+      <cd:Description>Sub-Commutated Ancillary Data Word</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spacePacketCount">
+    <cd:Integer>
+      <cd:Description>Space Packet Count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="priCount">
+    <cd:Integer>
+      <cd:Description>Mode PRI Count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare3Bit">
+    <cd:Raw>
+      <cd:BitSize>3</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="BAQMode">
+    <cd:Integer>
+      <cd:Description>BAQMode</cd:Description>
+      <cd:BitSize>5</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="BAQBlockLength">
+    <cd:Integer>
+      <cd:Description>BAQ Block Length</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spareByte">
+    <cd:Raw>
+      <cd:BitSize>8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rangeDecimation">
+    <cd:Integer>
+      <cd:Description>Range Decimation</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="RXGain">
+    <cd:Integer>
+      <cd:Description>RX Gain</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TXRampRate">
+    <cd:Integer>
+      <cd:Description>TX Ramp Rate</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TXPulseStartFrequency">
+    <cd:Integer>
+      <cd:Description>TX Pulse Start Frequency</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TXPulseLength">
+    <cd:Integer>
+      <cd:Description>TX Pulse Start Length</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare3Bit2">
+    <cd:Raw>
+      <cd:BitSize>3</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="rank">
+    <cd:Integer>
+      <cd:Description>Rank</cd:Description>
+      <cd:BitSize>5</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="PRI">
+    <cd:Integer>
+      <cd:Description>PRI</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SWST">
+    <cd:Integer>
+      <cd:Description>SWST</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="SWL">
+    <cd:Integer>
+      <cd:Description>SWL</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+      <cd:NativeType>uint32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ssbFLAG">
+    <cd:Integer>
+      <cd:Description>SSB Flag</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="polarisation">
+    <cd:Integer>
+      <cd:Description>Polarisation</cd:Description>
+      <cd:BitSize>3</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="temperatureCompensation">
+    <cd:Integer>
+      <cd:Description>Temp Comp</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare4Bit">
+    <cd:Raw>
+      <cd:BitSize>4</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="elevationBeamAddress">
+    <cd:Integer>
+      <cd:Description>Elevation Beam Address of SASTest+CalType</cd:Description>
+      <cd:BitSize>4</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="beamAddress">
+    <cd:Integer>
+      <cd:Description>Azimuth Beam Address or Calibration Beam Address</cd:Description>
+      <cd:BitSize>10</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="calMode">
+    <cd:Integer>
+      <cd:Description>Cal Mode</cd:Description>
+      <cd:BitSize>2</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="TXPulseNumber">
+    <cd:Integer>
+      <cd:Description>TX Pulse Number</cd:Description>
+      <cd:BitSize>5</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare4Bit2">
+    <cd:Raw>
+      <cd:BitSize>4</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="signalType">
+    <cd:Integer>
+      <cd:Description>Signal Type</cd:Description>
+      <cd:BitSize>4</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="swap">
+    <cd:Integer>
+      <cd:Description>Swap</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="swathNumber">
+    <cd:Integer>
+      <cd:Description>Swath Number</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="numOfQuads">
+    <cd:Integer>
+      <cd:Description>NumberOfQuads</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fillerOctet">
+    <cd:Integer>
+      <cd:Description>Filler Octet</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>
