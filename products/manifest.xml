@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest" format="xml" last-modified="2012-05-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest" format="xml" last-modified="2012-06-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -11,17 +11,62 @@
           <cd:Record namexml="informationPackageMap">
             <cd:Field name="contentUnit">
               <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
-                <cd:Attribute name="unitType"/>
-                <cd:Attribute name="textInfo"/>
-                <cd:Attribute name="dmdID"/>
-                <cd:Attribute name="pdiID"/>
+                <cd:Attribute name="ID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="order">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="unitType">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="textInfo">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="repID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="dmdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="pdiID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="anyMdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="behaviorID">
+                  <cd:Optional/>
+                </cd:Attribute>
                 <cd:Field name="contentUnit">
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
-                      <cd:Attribute name="unitType"/>
-                      <cd:Attribute name="repID"/>
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="order">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="unitType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="repID">
+                        <cd:Optional/>
+                      </cd:Attribute>
                       <cd:Attribute name="dmdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="pdiID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="anyMdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="behaviorID">
                         <cd:Optional/>
                       </cd:Attribute>
                       <cd:Field name="dataObjectPointer">
@@ -43,20 +88,49 @@
                 <cd:Dimension/>
                 <cd:Record namexml="metadataObject">
                   <cd:Attribute name="ID"/>
-                  <cd:Attribute name="classification"/>
-                  <cd:Attribute name="category"/>
-                  <cd:Field name="dataObjectPointer">
+                  <cd:Attribute name="classification">
                     <cd:Optional/>
-                    <cd:Record namexml="dataObjectPointer">
-                      <cd:Attribute name="dataObjectID"/>
+                  </cd:Attribute>
+                  <cd:Attribute name="category">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="metadataReference">
+                    <cd:Optional/>
+                    <cd:Record namexml="metadataReference">
+                      <cd:Attribute name="href"/>
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locatorType"/>
+                      <cd:Attribute name="otherLocatorType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locator">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="metadataWrap">
                     <cd:Optional/>
                     <cd:Record namexml="metadataWrap">
-                      <cd:Attribute name="mimeType"/>
-                      <cd:Attribute name="vocabularyName"/>
-                      <cd:Attribute name="textInfo"/>
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
                       <cd:Field name="xmlData">
                         <cd:Record namexml="xmlData">
                           <cd:Field name="processing">
@@ -222,6 +296,14 @@
                                     <cd:Text namexml="http://www.esa.int/safe/1.2 mode">
                                     </cd:Text>
                                   </cd:Field>
+                                  <cd:Field name="swath">
+                                    <cd:Optional/>
+                                    <cd:Array>
+                                      <cd:Dimension/>
+                                      <cd:Text namexml="http://www.esa.int/safe/1.2 swath">
+                                      </cd:Text>
+                                    </cd:Array>
+                                  </cd:Field>
                                   <cd:Field name="swathNumber">
                                     <cd:Optional/>
                                     <cd:Text namexml="http://www.esa.int/safe/1.2 swathNumber">
@@ -381,15 +463,13 @@
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
-                  <cd:Field name="metadataReference">
+                  <cd:Field name="dataObjectPointer">
                     <cd:Optional/>
-                    <cd:Record namexml="metadataReference">
-                      <cd:Attribute name="mimeType"/>
-                      <cd:Attribute name="vocabularyName">
+                    <cd:Record namexml="dataObjectPointer">
+                      <cd:Attribute name="ID">
                         <cd:Optional/>
                       </cd:Attribute>
-                      <cd:Attribute name="locatorType"/>
-                      <cd:Attribute name="href"/>
+                      <cd:Attribute name="dataObjectID"/>
                     </cd:Record>
                   </cd:Field>
                 </cd:Record>
@@ -405,22 +485,58 @@
                 <cd:Record namexml="dataObject">
                   <cd:Attribute name="ID"/>
                   <cd:Attribute name="repID"/>
+                  <cd:Attribute name="size">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="combinationName">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registrationAuthority">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registeredID">
+                    <cd:Optional/>
+                  </cd:Attribute>
                   <cd:Field name="byteStream">
-                    <cd:Record namexml="byteStream">
-                      <cd:Attribute name="mimeType"/>
-                      <cd:Attribute name="size"/>
-                      <cd:Field name="fileLocation">
-                        <cd:Record namexml="fileLocation">
-                          <cd:Attribute name="locatorType"/>
-                          <cd:Attribute name="href"/>
-                        </cd:Record>
-                      </cd:Field>
-                      <cd:Field name="checksum">
-                        <cd:Text namexml="checksum">
-                          <cd:Attribute name="checksumName"/>
-                        </cd:Text>
-                      </cd:Field>
-                    </cd:Record>
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Record namexml="byteStream">
+                        <cd:Attribute name="ID">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Attribute name="mimeType"/>
+                        <cd:Attribute name="size">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Field name="fileLocation">
+                          <cd:Record namexml="fileLocation">
+                            <cd:Attribute name="href"/>
+                            <cd:Attribute name="ID">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="textInfo">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locatorType"/>
+                            <cd:Attribute name="otherLocatorType">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locator">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="checksum">
+                          <cd:Text namexml="checksum">
+                            <cd:Attribute name="checksumName"/>
+                          </cd:Text>
+                        </cd:Field>
+                        <cd:Field name="byteOrder">
+                          <cd:Optional/>
+                          <cd:Text namexml="byteOrder"/>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Array>
                   </cd:Field>
                 </cd:Record>
               </cd:Array>
