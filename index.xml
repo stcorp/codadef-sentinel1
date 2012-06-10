@@ -1509,12 +1509,31 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="REP__MACP_">
+    <cd:Description>Manoeuvre Acceleration Profile (DBL)</cd:Description>
+    <cd:ProductDefinition id="REP__MACP_" format="ascii" version="0">
+      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+        <cd:MatchFilename offset="9">REP__MACP_</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP__MACP__HDR">
+    <cd:Description>Manoeuvre Acceleration Profile (HDR)</cd:Description>
+    <cd:ProductDefinition id="REP__MACP__HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">REP__MACP_</cd:MatchData>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
 <!--
   products to implement:
     MPL_REQ_Tx Transponder Control File (TP-ICD)
     REP_CALRPT PDGS SAR Calibration Report File (TP-ICD)
 
-    REP__MACP_ Manoeuvre Acceleration Profile (FOS-PFS: plain ascii?)
     REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)
 
     AM__RQST__ Antenna Model: Parameter file (AM-DESC)

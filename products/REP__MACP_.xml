@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REP__MACP_" format="ascii" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="ascii">
+    <cd:Field name="header">
+      <cd:Record>
+        <cd:Field name="Time">
+          <cd:Text>
+            <cd:Description>File update time as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
+            <cd:ByteSize>23</cd:ByteSize>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="Space">
+          <cd:Hidden/>
+          <cd:Text>
+            <cd:ByteSize>1</cd:ByteSize>
+          </cd:Text>
+        </cd:Field>
+        <cd:Field name="SatelliteID">
+          <cd:Integer>
+            <cd:ByteSize>3</cd:ByteSize>
+            <cd:NativeType>uint16</cd:NativeType>
+          </cd:Integer>
+        </cd:Field>
+        <cd:Field name="Spare">
+          <cd:Hidden/>
+          <cd:AsciiLine/>
+        </cd:Field>
+        <cd:Field name="Line_separator">
+          <cd:Hidden/>
+          <cd:AsciiLineSeparator/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+    <cd:Field name="data">
+      <cd:Array>
+        <cd:Dimension><![CDATA[$num_records]]></cd:Dimension>
+        <cd:Record>
+          <cd:Field name="Epoch">
+            <cd:Text>
+              <cd:Description>Burn start or stop time, as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
+              <cd:ByteSize>23</cd:ByteSize>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Space_1">
+            <cd:Hidden/>
+            <cd:Text>
+              <cd:ByteSize>4</cd:ByteSize>
+            </cd:Text>
+          </cd:Field>
+          <cd:Field name="Acceleration">
+            <cd:Array>
+              <cd:Dimension>3</cd:Dimension>
+              <cd:Float>
+                <cd:Unit>km/s2</cd:Unit>
+                <cd:ByteSize>15</cd:ByteSize>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Array>
+          </cd:Field>
+          <cd:Field name="Flag">
+            <cd:Integer>
+              <cd:ByteSize>5</cd:ByteSize>
+              <cd:NativeType>uint16</cd:NativeType>
+            </cd:Integer>
+          </cd:Field>
+          <cd:Field name="Extra">
+            <cd:AsciiLine/>
+          </cd:Field>
+          <cd:Field name="Line_separator">
+            <cd:AsciiLineSeparator/>
+            <cd:Hidden/>
+          </cd:Field>
+        </cd:Record>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_records">
+    <cd:Init><![CDATA[$num_records = numelements(asciiline) - 1]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>
