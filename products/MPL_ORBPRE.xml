@@ -3,8 +3,12 @@
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_File">
-        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation"/>
-        <cd:Attribute name="schemaVersion"/>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_Header">
             <cd:Field name="Fixed_Header">
