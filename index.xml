@@ -386,6 +386,15 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="STAProductADS">
+    <cd:Description>Coregistered Stack Annotation Data Sets</cd:Description>
+    <cd:ProductDefinition id="STAProductADS" format="xml" version="0">
+      <cd:Description>This definition is based on version 2.2 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/staProduct"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="PSCMeasurements">
     <cd:Description>S1 PS Calibration Product - PSC Measurements file</cd:Description>
     <cd:ProductDefinition id="PSCMeasurements" format="xml" version="0">

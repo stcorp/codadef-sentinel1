@@ -1,0 +1,2456 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="STAProductADS" format="xml" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="staProduct">
+      <cd:Record namexml="staProduct">
+        <cd:Field name="adsHeader">
+          <cd:Record namexml="adsHeader">
+            <cd:Field name="missionId">
+              <cd:Text namexml="missionId"/>
+            </cd:Field>
+            <cd:Field name="productType">
+              <cd:Text namexml="productType"/>
+            </cd:Field>
+            <cd:Field name="polarisation">
+              <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="swath">
+              <cd:Text namexml="swath"/>
+            </cd:Field>
+            <cd:Field name="startTime">
+              <cd:Type namexml="startTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="stopTime">
+              <cd:Type namexml="stopTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="absoluteOrbitNumber">
+              <cd:Type namexml="absoluteOrbitNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="missionDataTakeId">
+              <cd:Type namexml="missionDataTakeId">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="imageNumber">
+              <cd:Type namexml="imageNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="qualityInformation">
+          <cd:Record namexml="qualityInformation">
+            <cd:Field name="productQualityIndex">
+              <cd:Type namexml="productQualityIndex">
+                <cd:Float format="ascii">
+                  <cd:NativeType>double</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="qualityDataList">
+              <cd:Record namexml="qualityDataList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="qualityData">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="qualityData">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="downlinkQuality">
+                        <cd:Record namexml="downlinkQuality">
+                          <cd:Field name="iInputDataMean">
+                            <cd:Type namexml="iInputDataMean">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qInputDataMean">
+                            <cd:Type namexml="qInputDataMean">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="inputDataMeanOutsideNominalRangeFlag">
+                            <cd:Type namexml="inputDataMeanOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iInputDataStdDev">
+                            <cd:Type namexml="iInputDataStdDev">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qInputDataStdDev">
+                            <cd:Type namexml="qInputDataStdDev">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="inputDataStDevOutsideNominalRangeFlag">
+                            <cd:Type namexml="inputDataStDevOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numInputDataGaps">
+                            <cd:Type namexml="numInputDataGaps">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="gapsInInputDataSignificantFlag">
+                            <cd:Type namexml="gapsInInputDataSignificantFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numInputMissingLines">
+                            <cd:Type namexml="numInputMissingLines">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="missingLinesSignificantFlag">
+                            <cd:Type namexml="missingLinesSignificantFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="chirpSourceUsed">
+                            <cd:Text namexml="chirpSourceUsed"/>
+                          </cd:Field>
+                          <cd:Field name="rrfSpectrumUsed">
+                            <cd:Text namexml="rrfSpectrumUsed"/>
+                          </cd:Field>
+                          <cd:Field name="replicaReconstructionFailedFlag">
+                            <cd:Type namexml="replicaReconstructionFailedFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="meanPgProductAmplitude">
+                            <cd:Type namexml="meanPgProductAmplitude">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="stdDevPgProductAmplitude">
+                            <cd:Type namexml="stdDevPgProductAmplitude">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="meanPgProductPhase">
+                            <cd:Type namexml="meanPgProductPhase">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="stdDevPgProductPhase">
+                            <cd:Type namexml="stdDevPgProductPhase">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="pgProductDerivationFailedFlag">
+                            <cd:Type namexml="pgProductDerivationFailedFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="invalidDownlinkParamsFlag">
+                            <cd:Type namexml="invalidDownlinkParamsFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="rawDataAnalysisQuality">
+                        <cd:Record namexml="rawDataAnalysisQuality">
+                          <cd:Field name="iBias">
+                            <cd:Type namexml="iBias">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iBiasSignificanceFlag">
+                            <cd:Type namexml="iBiasSignificanceFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qBias">
+                            <cd:Type namexml="qBias">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qBiasSignificanceFlag">
+                            <cd:Type namexml="qBiasSignificanceFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqGainImbalance">
+                            <cd:Type namexml="iqGainImbalance">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqGainSignificanceFlag">
+                            <cd:Type namexml="iqGainSignificanceFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqQuadratureDeparture">
+                            <cd:Type namexml="iqQuadratureDeparture">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqQuadratureDepartureSignificanceFlag">
+                            <cd:Type namexml="iqQuadratureDepartureSignificanceFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="dopplerCentroidQuality">
+                        <cd:Record namexml="dopplerCentroidQuality">
+                          <cd:Field name="dcMethod">
+                            <cd:Text namexml="dcMethod"/>
+                          </cd:Field>
+                          <cd:Field name="dopplerCentroidUncertainFlag">
+                            <cd:Type namexml="dopplerCentroidUncertainFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="imageQuality">
+                        <cd:Record namexml="imageQuality">
+                          <cd:Field name="imageStatistics">
+                            <cd:Record namexml="imageStatistics">
+                              <cd:Field name="outputDataMean">
+                                <cd:Record namexml="outputDataMean">
+                                  <cd:Field name="re">
+                                    <cd:Type namexml="re">
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="im">
+                                    <cd:Type namexml="im">
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="outputDataStdDev">
+                                <cd:Record namexml="outputDataStdDev">
+                                  <cd:Field name="re">
+                                    <cd:Type namexml="re">
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                  <cd:Field name="im">
+                                    <cd:Type namexml="im">
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Type>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="outputDataMeanOutsideNominalRangeFlag">
+                            <cd:Type namexml="outputDataMeanOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="outputDataStDevOutsideNominalRangeFlag">
+                            <cd:Type namexml="outputDataStDevOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="generalAnnotation">
+          <cd:Record namexml="generalAnnotation">
+            <cd:Field name="productInformation">
+              <cd:Record namexml="productInformation">
+                <cd:Field name="pass">
+                  <cd:Text namexml="pass"/>
+                </cd:Field>
+                <cd:Field name="timelinessCategory">
+                  <cd:Text namexml="timelinessCategory"/>
+                </cd:Field>
+                <cd:Field name="platformHeading">
+                  <cd:Type namexml="platformHeading">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="projection">
+                  <cd:Text namexml="projection"/>
+                </cd:Field>
+                <cd:Field name="rangeSamplingRate">
+                  <cd:Type namexml="rangeSamplingRate">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="radarFrequency">
+                  <cd:Type namexml="radarFrequency">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="azimuthSteeringRate">
+                  <cd:Type namexml="azimuthSteeringRate">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="downlinkInformationList">
+              <cd:Record namexml="downlinkInformationList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="downlinkInformation">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="downlinkInformation">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="firstLineSensingTime">
+                        <cd:Type namexml="firstLineSensingTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="lastLineSensingTime">
+                        <cd:Type namexml="lastLineSensingTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="bitErrorCount">
+                        <cd:Record namexml="bitErrorCount">
+                          <cd:Field name="numErrSyncMarker">
+                            <cd:Type namexml="numErrSyncMarker">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrDataTakeId">
+                            <cd:Type namexml="numErrDataTakeId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrEccNumber">
+                            <cd:Type namexml="numErrEccNumber">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrTestMode">
+                            <cd:Type namexml="numErrTestMode">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrRxChannelId">
+                            <cd:Type namexml="numErrRxChannelId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrInstrumentConfigId">
+                            <cd:Type namexml="numErrInstrumentConfigId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrPacketCount">
+                            <cd:Type namexml="numErrPacketCount">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrPriCount">
+                            <cd:Type namexml="numErrPriCount">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrBaqMode">
+                            <cd:Type namexml="numErrBaqMode">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrBaqBlockLength">
+                            <cd:Type namexml="numErrBaqBlockLength">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrRangeDecimation">
+                            <cd:Type namexml="numErrRangeDecimation">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrRxGain">
+                            <cd:Type namexml="numErrRxGain">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrTxRampRate">
+                            <cd:Type namexml="numErrTxRampRate">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrTxPulseStartFrequency">
+                            <cd:Type namexml="numErrTxPulseStartFrequency">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrRank">
+                            <cd:Type namexml="numErrRank">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrPri">
+                            <cd:Type namexml="numErrPri">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSwst">
+                            <cd:Type namexml="numErrSwst">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSwl">
+                            <cd:Type namexml="numErrSwl">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrPolarisation">
+                            <cd:Type namexml="numErrPolarisation">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrTempComp">
+                            <cd:Type namexml="numErrTempComp">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrElevationBeamAddress">
+                            <cd:Type namexml="numErrElevationBeamAddress">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrAzimuthBeamAddress">
+                            <cd:Type namexml="numErrAzimuthBeamAddress">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSasTestMode">
+                            <cd:Type namexml="numErrSasTestMode">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrCalType">
+                            <cd:Type namexml="numErrCalType">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrCalibrationBeamAddress">
+                            <cd:Type namexml="numErrCalibrationBeamAddress">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrCalMode">
+                            <cd:Type namexml="numErrCalMode">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrTxPulseNumber">
+                            <cd:Type namexml="numErrTxPulseNumber">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSignalType">
+                            <cd:Type namexml="numErrSignalType">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSwapFlag">
+                            <cd:Type namexml="numErrSwapFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSwathNumber">
+                            <cd:Type namexml="numErrSwathNumber">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrNumberOfQuads">
+                            <cd:Type namexml="numErrNumberOfQuads">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numIspHeaderErrors">
+                            <cd:Type namexml="numIspHeaderErrors">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="downlinkValues">
+                        <cd:Record namexml="downlinkValues">
+                          <cd:Field name="pri">
+                            <cd:Type namexml="pri">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rank">
+                            <cd:Type namexml="rank">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="dataTakeId">
+                            <cd:Type namexml="dataTakeId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="eccNumber">
+                            <cd:Type namexml="eccNumber">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rxChannelId">
+                            <cd:Type namexml="rxChannelId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="instrumentConfigId">
+                            <cd:Type namexml="instrumentConfigId">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint16</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="dataFormat">
+                            <cd:Record namexml="dataFormat">
+                              <cd:Field name="baqBlockLength">
+                                <cd:Type namexml="baqBlockLength">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint16</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="echoFormat">
+                                <cd:Text namexml="echoFormat"/>
+                              </cd:Field>
+                              <cd:Field name="noiseFormat">
+                                <cd:Text namexml="noiseFormat"/>
+                              </cd:Field>
+                              <cd:Field name="calibrationFormat">
+                                <cd:Text namexml="calibrationFormat"/>
+                              </cd:Field>
+                              <cd:Field name="meanBitRate">
+                                <cd:Type namexml="meanBitRate">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="rangeDecimation">
+                            <cd:Record namexml="rangeDecimation">
+                              <cd:Field name="decimationFilterBandwidth">
+                                <cd:Type namexml="decimationFilterBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="samplingFrequencyAfterDecimation">
+                                <cd:Type namexml="samplingFrequencyAfterDecimation">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="filterLength">
+                                <cd:Type namexml="filterLength">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="rxGain">
+                            <cd:Type namexml="rxGain">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="txPulseLength">
+                            <cd:Type namexml="txPulseLength">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="txPulseStartFrequency">
+                            <cd:Type namexml="txPulseStartFrequency">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="txPulseRampRate">
+                            <cd:Type namexml="txPulseRampRate">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="swathNumber">
+                            <cd:Type namexml="swathNumber">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="swlList">
+                            <cd:Record namexml="swlList">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="swl">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="swl">
+                                    <cd:Field name="azimuthTime">
+                                      <cd:Type namexml="azimuthTime">
+                                        <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="value">
+                                      <cd:Type namexml="value">
+                                        <cd:Float format="ascii">
+                                          <cd:NativeType>double</cd:NativeType>
+                                        </cd:Float>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="swstList">
+                            <cd:Record namexml="swstList">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="swst">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="swst">
+                                    <cd:Field name="azimuthTime">
+                                      <cd:Type namexml="azimuthTime">
+                                        <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="value">
+                                      <cd:Type namexml="value">
+                                        <cd:Float format="ascii">
+                                          <cd:NativeType>double</cd:NativeType>
+                                        </cd:Float>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="pointingStatusList">
+                            <cd:Record namexml="pointingStatusList">
+                              <cd:Attribute name="count"/>
+                              <cd:Field name="pointingStatus">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="pointingStatus">
+                                    <cd:Field name="azimuthTime">
+                                      <cd:Type namexml="azimuthTime">
+                                        <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="aocsOpMode">
+                                      <cd:Text namexml="aocsOpMode"/>
+                                    </cd:Field>
+                                    <cd:Field name="rollErrorFlag">
+                                      <cd:Type namexml="rollErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="pitchErrorFlag">
+                                      <cd:Type namexml="pitchErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                    <cd:Field name="yawErrorFlag">
+                                      <cd:Type namexml="yawErrorFlag">
+                                        <cd:Integer format="ascii">
+                                          <cd:NativeType>uint8</cd:NativeType>
+                                          <cd:Mapping string="false" value="0"/>
+                                          <cd:Mapping string="true" value="1"/>
+                                        </cd:Integer>
+                                      </cd:Type>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="orbitList">
+              <cd:Record namexml="orbitList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="orbit">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="orbit">
+                      <cd:Field name="time">
+                        <cd:Type namexml="time">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="position">
+                        <cd:Record namexml="position">
+                          <cd:Field name="x">
+                            <cd:Type namexml="x">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="y">
+                            <cd:Type namexml="y">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="z">
+                            <cd:Type namexml="z">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="velocity">
+                        <cd:Record namexml="velocity">
+                          <cd:Field name="x">
+                            <cd:Type namexml="x">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="y">
+                            <cd:Type namexml="y">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="z">
+                            <cd:Type namexml="z">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="attitudeList">
+              <cd:Record namexml="attitudeList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="attitude">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="attitude">
+                      <cd:Field name="time">
+                        <cd:Type namexml="time">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="q0">
+                        <cd:Type namexml="q0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="q1">
+                        <cd:Type namexml="q1">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="q2">
+                        <cd:Type namexml="q2">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="q3">
+                        <cd:Type namexml="q3">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="wx">
+                        <cd:Type namexml="wx">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="wy">
+                        <cd:Type namexml="wy">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="wz">
+                        <cd:Type namexml="wz">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="roll">
+                        <cd:Type namexml="roll">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="pitch">
+                        <cd:Type namexml="pitch">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="yaw">
+                        <cd:Type namexml="yaw">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="rawDataAnalysisList">
+              <cd:Record namexml="rawDataAnalysisList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="rawDataAnalysis">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="rawDataAnalysis">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="iBias">
+                        <cd:Type namexml="iBias">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="qBias">
+                        <cd:Type namexml="qBias">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="iqQuadratureDeparture">
+                        <cd:Type namexml="iqQuadratureDeparture">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="iqGainImbalance">
+                        <cd:Type namexml="iqGainImbalance">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="support">
+                        <cd:Record namexml="support">
+                          <cd:Field name="iBiasUpperBound">
+                            <cd:Type namexml="iBiasUpperBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iBiasLowerBound">
+                            <cd:Type namexml="iBiasLowerBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qBiasUpperBound">
+                            <cd:Type namexml="qBiasUpperBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qBiasLowerBound">
+                            <cd:Type namexml="qBiasLowerBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqGainUpperBound">
+                            <cd:Type namexml="iqGainUpperBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqGainLowerBound">
+                            <cd:Type namexml="iqGainLowerBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqQuadratureDepartureUpperBound">
+                            <cd:Type namexml="iqQuadratureDepartureUpperBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqQuadratureDepartureLowerBound">
+                            <cd:Type namexml="iqQuadratureDepartureLowerBound">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iBiasUsedForCorrection">
+                            <cd:Type namexml="iBiasUsedForCorrection">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="qBiasUsedForCorrection">
+                            <cd:Type namexml="qBiasUsedForCorrection">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqGainImbalanceUsedForCorrection">
+                            <cd:Type namexml="iqGainImbalanceUsedForCorrection">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="iqQuadratureDepartureUsedForCorrection">
+                            <cd:Type namexml="iqQuadratureDepartureUsedForCorrection">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="replicaInformationList">
+              <cd:Record namexml="replicaInformationList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="replicaInformation">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="replicaInformation">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="referenceReplica">
+                        <cd:Record namexml="referenceReplica">
+                          <cd:Field name="azimuthTime">
+                            <cd:Type namexml="azimuthTime">
+                              <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="chirpSource">
+                            <cd:Text namexml="chirpSource"/>
+                          </cd:Field>
+                          <cd:Field name="amplitudeCoefficients">
+                            <cd:Type namexml="amplitudeCoefficients">
+                              <cd:Attribute name="count"/>
+                              <cd:Array format="ascii">
+                                <cd:Dimension>int(str(@count))</cd:Dimension>
+                                <cd:Float>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="phaseCoefficients">
+                            <cd:Type namexml="phaseCoefficients">
+                              <cd:Attribute name="count"/>
+                              <cd:Array format="ascii">
+                                <cd:Dimension>int(str(@count))</cd:Dimension>
+                                <cd:Float>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Array>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="replicaList">
+                        <cd:Record namexml="replicaList">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="replica">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="replica">
+                                <cd:Field name="azimuthTime">
+                                  <cd:Type namexml="azimuthTime">
+                                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="crossCorrelationBandwidth">
+                                  <cd:Type namexml="crossCorrelationBandwidth">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="crossCorrelationPslr">
+                                  <cd:Type namexml="crossCorrelationPslr">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="crossCorrelationIslr">
+                                  <cd:Type namexml="crossCorrelationIslr">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="crossCorrelationPeakLocation">
+                                  <cd:Type namexml="crossCorrelationPeakLocation">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="reconstructedReplicaValidFlag">
+                                  <cd:Type namexml="reconstructedReplicaValidFlag">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="pgProductAmplitude">
+                                  <cd:Type namexml="pgProductAmplitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="pgProductPhase">
+                                  <cd:Type namexml="pgProductPhase">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="modelPgProductAmplitude">
+                                  <cd:Type namexml="modelPgProductAmplitude">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="modelPgProductPhase">
+                                  <cd:Type namexml="modelPgProductPhase">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="relativePgProductValidFlag">
+                                  <cd:Type namexml="relativePgProductValidFlag">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="absolutePgProductValidFlag">
+                                  <cd:Type namexml="absolutePgProductValidFlag">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="values">
+                                  <cd:Type namexml="values">
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                               </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="noiseList">
+              <cd:Record namexml="noiseList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="noise">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="noise">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="noisePowerCorrectionFactor">
+                        <cd:Type namexml="noisePowerCorrectionFactor">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="numberOfNoiseLines">
+                        <cd:Type namexml="numberOfNoiseLines">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="terrainHeightList">
+              <cd:Record namexml="terrainHeightList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="terrainHeight">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="terrainHeight">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="value">
+                        <cd:Type namexml="value">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="azimuthFmRateList">
+              <cd:Record namexml="azimuthFmRateList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="azimuthFmRate">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="azimuthFmRate">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="t0">
+                        <cd:Type namexml="t0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="c0">
+                        <cd:Type namexml="c0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="c1">
+                        <cd:Type namexml="c1">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="c2">
+                        <cd:Type namexml="c2">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="imageAnnotation">
+          <cd:Record namexml="imageAnnotation">
+            <cd:Field name="imageInformation">
+              <cd:Record namexml="imageInformation">
+                <cd:Field name="productFirstLineUtcTime">
+                  <cd:Type namexml="productFirstLineUtcTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="productLastLineUtcTime">
+                  <cd:Type namexml="productLastLineUtcTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ascendingNodeTime">
+                  <cd:Type namexml="ascendingNodeTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="anchorTime">
+                  <cd:Type namexml="anchorTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="productComposition">
+                  <cd:Text namexml="productComposition"/>
+                </cd:Field>
+                <cd:Field name="sliceNumber">
+                  <cd:Type namexml="sliceNumber">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="totalSlicesInSegment">
+                  <cd:Type namexml="totalSlicesInSegment">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="segmentStartTime">
+                  <cd:Type namexml="segmentStartTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="slantRangeTime">
+                  <cd:Type namexml="slantRangeTime">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="pixelValue">
+                  <cd:Text namexml="pixelValue"/>
+                </cd:Field>
+                <cd:Field name="outputPixels">
+                  <cd:Text namexml="outputPixels"/>
+                </cd:Field>
+                <cd:Field name="rangePixelSpacing">
+                  <cd:Type namexml="rangePixelSpacing">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="azimuthPixelSpacing">
+                  <cd:Type namexml="azimuthPixelSpacing">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="azimuthTimeInterval">
+                  <cd:Type namexml="azimuthTimeInterval">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="numberOfRangeSamples">
+                  <cd:Type namexml="numberOfRangeSamples">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="numberOfAzimuthLines">
+                  <cd:Type namexml="numberOfAzimuthLines">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="zeroDopMinusAcqTime">
+                  <cd:Type namexml="zeroDopMinusAcqTime">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="incidenceAngleMidSwath">
+                  <cd:Type namexml="incidenceAngleMidSwath">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="imageStatistics">
+                  <cd:Record namexml="imageStatistics">
+                    <cd:Field name="outputDataMean">
+                      <cd:Record namexml="outputDataMean">
+                        <cd:Field name="re">
+                          <cd:Type namexml="re">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="im">
+                          <cd:Type namexml="im">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="outputDataStdDev">
+                      <cd:Record namexml="outputDataStdDev">
+                        <cd:Field name="re">
+                          <cd:Type namexml="re">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="im">
+                          <cd:Type namexml="im">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="processingInformation">
+              <cd:Record namexml="processingInformation">
+                <cd:Field name="rawDataAnalysisUsed">
+                  <cd:Type namexml="rawDataAnalysisUsed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="orbitDataFileUsed">
+                  <cd:Type namexml="orbitDataFileUsed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="attitudeDataFileUsed">
+                  <cd:Type namexml="attitudeDataFileUsed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="antennaElevationPatternApplied">
+                  <cd:Type namexml="antennaElevationPatternApplied">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="antennaAzimuthPatternApplied">
+                  <cd:Type namexml="antennaAzimuthPatternApplied">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="antennaAzimuthElementPatternApplied">
+                  <cd:Type namexml="antennaAzimuthElementPatternApplied">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="dcMethod">
+                  <cd:Text namexml="dcMethod"/>
+                </cd:Field>
+                <cd:Field name="dcInputData">
+                  <cd:Text namexml="dcInputData"/>
+                </cd:Field>
+                <cd:Field name="rangeSpreadingLossCompensationApplied">
+                  <cd:Type namexml="rangeSpreadingLossCompensationApplied">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="srgrConversionApplied">
+                  <cd:Type namexml="srgrConversionApplied">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="detectionPerformed">
+                  <cd:Type namexml="detectionPerformed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="thermalNoiseCorrectionPerformed">
+                  <cd:Type namexml="thermalNoiseCorrectionPerformed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="chirpSource">
+                  <cd:Text namexml="chirpSource"/>
+                </cd:Field>
+                <cd:Field name="rrfSpectrum">
+                  <cd:Text namexml="rrfSpectrum"/>
+                </cd:Field>
+                <cd:Field name="applicationLutId">
+                  <cd:Text namexml="applicationLutId"/>
+                </cd:Field>
+                <cd:Field name="swathProcParamsList">
+                  <cd:Record namexml="swathProcParamsList">
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="swathProcParams">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="swathProcParams">
+                          <cd:Field name="swath">
+                            <cd:Text namexml="swath"/>
+                          </cd:Field>
+                          <cd:Field name="rangeProcessing">
+                            <cd:Record namexml="rangeProcessing">
+                              <cd:Field name="windowType">
+                                <cd:Text namexml="windowType"/>
+                              </cd:Field>
+                              <cd:Field name="windowCoefficient">
+                                <cd:Type namexml="windowCoefficient">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="totalBandwidth">
+                                <cd:Type namexml="totalBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="processingBandwidth">
+                                <cd:Type namexml="processingBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookBandwidth">
+                                <cd:Type namexml="lookBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookOverlap">
+                                <cd:Type namexml="lookOverlap">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="azimuthProcessing">
+                            <cd:Record namexml="azimuthProcessing">
+                              <cd:Field name="windowType">
+                                <cd:Text namexml="windowType"/>
+                              </cd:Field>
+                              <cd:Field name="windowCoefficient">
+                                <cd:Type namexml="windowCoefficient">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="totalBandwidth">
+                                <cd:Type namexml="totalBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="processingBandwidth">
+                                <cd:Type namexml="processingBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookBandwidth">
+                                <cd:Type namexml="lookBandwidth">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:NativeType>uint32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="lookOverlap">
+                                <cd:Type namexml="lookOverlap">
+                                  <cd:Float format="ascii">
+                                    <cd:NativeType>double</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="inputDimensionsList">
+                  <cd:Record namexml="inputDimensionsList">
+                    <cd:Attribute name="count"/>
+                    <cd:Field name="inputDimensions">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Record namexml="inputDimensions">
+                          <cd:Field name="azimuthTime">
+                            <cd:Type namexml="azimuthTime">
+                              <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="swath">
+                            <cd:Text namexml="swath"/>
+                          </cd:Field>
+                          <cd:Field name="numberOfInputSamples">
+                            <cd:Type namexml="numberOfInputSamples">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numberOfInputLines">
+                            <cd:Type namexml="numberOfInputLines">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Array>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="referenceRange">
+                  <cd:Type namexml="referenceRange">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ellipsoidName">
+                  <cd:Text namexml="ellipsoidName"/>
+                </cd:Field>
+                <cd:Field name="ellipsoidSemiMajorAxis">
+                  <cd:Type namexml="ellipsoidSemiMajorAxis">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="ellipsoidSemiMinorAxis">
+                  <cd:Type namexml="ellipsoidSemiMinorAxis">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="dopplerCentroid">
+          <cd:Record namexml="dopplerCentroid">
+            <cd:Field name="dcEstimateList">
+              <cd:Record namexml="dcEstimateList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="dcEstimate">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="dcEstimate">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="t0">
+                        <cd:Type namexml="t0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="geometryDcPolynomial">
+                        <cd:Type namexml="geometryDcPolynomial">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="dataDcPolynomial">
+                        <cd:Type namexml="dataDcPolynomial">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="dataDcSnr">
+                        <cd:Type namexml="dataDcSnr">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="dataDcSnrBelowThreshold">
+                        <cd:Type namexml="dataDcSnrBelowThreshold">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="fineDceAzimuthStartTime">
+                        <cd:Type namexml="fineDceAzimuthStartTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="fineDceAzimuthStopTime">
+                        <cd:Type namexml="fineDceAzimuthStopTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="fineDceList">
+                        <cd:Record namexml="fineDceList">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="fineDce">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="fineDce">
+                                <cd:Field name="slantRangeTime">
+                                  <cd:Type namexml="slantRangeTime">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="frequency">
+                                  <cd:Type namexml="frequency">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="snr">
+                                  <cd:Type namexml="snr">
+                                    <cd:Float format="ascii">
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="antennaPattern">
+          <cd:Record namexml="antennaPattern">
+            <cd:Field name="antennaPatternList">
+              <cd:Record namexml="antennaPatternList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="antennaPattern">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="antennaPattern">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="slantRangeTime">
+                        <cd:Type namexml="slantRangeTime">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="elevationAngle">
+                        <cd:Type namexml="elevationAngle">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="elevationPattern">
+                        <cd:Type namexml="elevationPattern">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="incidenceAngle">
+                        <cd:Type namexml="incidenceAngle">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="terrainHeight">
+                        <cd:Type namexml="terrainHeight">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="swathTiming">
+          <cd:Record namexml="swathTiming">
+            <cd:Field name="linesPerBurst">
+              <cd:Type namexml="linesPerBurst">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="samplesPerBurst">
+              <cd:Type namexml="samplesPerBurst">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="burstList">
+              <cd:Record namexml="burstList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="burst">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="burst">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="azimuthAnxTime">
+                        <cd:Type namexml="azimuthAnxTime">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="byteOffset">
+                        <cd:Type namexml="byteOffset">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="firstValidSample">
+                        <cd:Type namexml="firstValidSample">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="lastValidSample">
+                        <cd:Type namexml="lastValidSample">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Integer>
+                              <cd:NativeType>int32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="geolocationGrid">
+          <cd:Record namexml="geolocationGrid">
+            <cd:Field name="geolocationGridPointList">
+              <cd:Record namexml="geolocationGridPointList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="geolocationGridPoint">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="geolocationGridPoint">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="slantRangeTime">
+                        <cd:Type namexml="slantRangeTime">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="line">
+                        <cd:Type namexml="line">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="pixel">
+                        <cd:Type namexml="pixel">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="latitude">
+                        <cd:Type namexml="latitude">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="longitude">
+                        <cd:Type namexml="longitude">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="height">
+                        <cd:Type namexml="height">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="incidenceAngle">
+                        <cd:Type namexml="incidenceAngle">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="elevationAngle">
+                        <cd:Type namexml="elevationAngle">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="coordinateConversion">
+          <cd:Record namexml="coordinateConversion">
+            <cd:Field name="coordinateConversionList">
+              <cd:Record namexml="coordinateConversionList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="coordinateConversion">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="coordinateConversion">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="slantRangeTime">
+                        <cd:Type namexml="slantRangeTime">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="sr0">
+                        <cd:Type namexml="sr0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="srgrCoefficients">
+                        <cd:Type namexml="srgrCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="gr0">
+                        <cd:Type namexml="gr0">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="grsrCoefficients">
+                        <cd:Type namexml="grsrCoefficients">
+                          <cd:Attribute name="count"/>
+                          <cd:Array format="ascii">
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Float>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Array>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="swathMerging">
+          <cd:Record namexml="swathMerging">
+            <cd:Field name="swathMergeList">
+              <cd:Record namexml="swathMergeList">
+                <cd:Attribute name="count"/>
+                <cd:Field name="swathMerge">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="swathMerge">
+                      <cd:Field name="swath">
+                        <cd:Text namexml="swath"/>
+                      </cd:Field>
+                      <cd:Field name="swathBoundsList">
+                        <cd:Record namexml="swathBoundsList">
+                          <cd:Attribute name="count"/>
+                          <cd:Field name="swathBounds">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="swathBounds">
+                                <cd:Field name="azimuthTime">
+                                  <cd:Type namexml="azimuthTime">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="firstAzimuthLine">
+                                  <cd:Type namexml="firstAzimuthLine">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="firstRangeSample">
+                                  <cd:Type namexml="firstRangeSample">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lastAzimuthLine">
+                                  <cd:Type namexml="lastAzimuthLine">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="lastRangeSample">
+                                  <cd:Type namexml="lastRangeSample">
+                                    <cd:Integer format="ascii">
+                                      <cd:NativeType>uint32</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="staProcessingInformation">
+          <cd:Record namexml="staProcessingInformation">
+            <cd:Field name="coregistrationMethod">
+              <cd:Text namexml="coregistrationMethod"/>
+            </cd:Field>  
+            <cd:Field name="referenceImageUsed">
+              <cd:Text namexml="referenceImageUsed"/>
+            </cd:Field>  
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="originalGridRetrieval">
+          <cd:Record namexml="originalGridRetrieval">
+            <cd:Field name="originalGridRetrievalList">
+              <cd:Record namexml="originalGridRetrievalList">
+                <cd:Field name="originalGridRetrieval">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="originalGridRetrieval">
+                      <cd:Field name="azimuthTime">
+                        <cd:Type namexml="azimuthTime">
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="rgRef">
+                        <cd:Type namexml="rgRef">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="azRef">
+                        <cd:Type namexml="azRef">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="rgCoefficients">
+                        <cd:Record namexml="rgCoefficients">
+                          <cd:Field name="rg0">
+                            <cd:Type namexml="rg0">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rg1">
+                            <cd:Type namexml="rg1">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rg2">
+                            <cd:Type namexml="rg2">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rg3">
+                            <cd:Type namexml="rg3">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="azCoefficients">
+                        <cd:Record namexml="azCoefficients">
+                          <cd:Field name="az0">
+                            <cd:Type namexml="az0">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="az1">
+                            <cd:Type namexml="az1">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="az2">
+                            <cd:Type namexml="az2">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="az3">
+                            <cd:Type namexml="az3">
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
