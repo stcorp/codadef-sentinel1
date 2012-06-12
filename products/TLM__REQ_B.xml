@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="TLM__REQ_B" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="TLM__REQ_B" format="xml" last-modified="2012-06-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="ResponsePart">
       <cd:Record namexml="http://edds.egos.esa/model ResponsePart">
@@ -45,19 +45,40 @@
                     </cd:Field>
                   </cd:Record>
                 </cd:Field>
+                <cd:Field name="MinimumThreshold">
+                  <cd:Optional/>
+                  <cd:Type namexml="MinimumThreshold">
+                    <cd:Float type="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="MaximumThreshold">
+                  <cd:Optional/>
+                  <cd:Type namexml="MaximumThreshold">
+                    <cd:Float type="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
                 <cd:Field name="User">
+                  <cd:Optional/>
                   <cd:Text namexml="User"/>
                 </cd:Field>
                 <cd:Field name="RetrievalStart">
+                  <cd:Optional/>
                   <cd:Text namexml="RetrievalStart"/>
                 </cd:Field>
                 <cd:Field name="RetrievalStartDOY">
+                  <cd:Optional/>
                   <cd:Text namexml="RetrievalStartDOY"/>
                 </cd:Field>
                 <cd:Field name="RetrievalStop">
+                  <cd:Optional/>
                   <cd:Text namexml="RetrievalStop"/>
                 </cd:Field>
                 <cd:Field name="RetrievalStopDOY">
+                  <cd:Optional/>
                   <cd:Text namexml="RetrievalStopDOY"/>
                 </cd:Field>
               </cd:Record>
