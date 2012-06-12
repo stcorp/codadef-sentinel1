@@ -2354,8 +2354,11 @@
         </cd:Field>
         <cd:Field name="originalGridRetrieval">
           <cd:Record namexml="originalGridRetrieval">
-            <cd:Field name="originalGridRetrievalList">
-              <cd:Record namexml="originalGridRetrievalList">
+            <cd:Field name="staOriginalGridRetrievalList">
+              <cd:Record namexml="staOriginalGridRetrievalList">
+                <cd:Attribute name="length">
+                  <cd:Optional/>
+                </cd:Attribute>
                 <cd:Field name="originalGridRetrieval">
                   <cd:Array>
                     <cd:Dimension/>
