@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MPL_ORBPRE" format="xml" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="MPL_ORBPRE" format="xml" last-modified="2012-06-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="http://eop-cfi.esa.int/CFI Earth_Explorer_File">
@@ -19,8 +19,8 @@
                 <cd:Field name="Ref_Frame">
                   <cd:Text namexml="http://eop-cfi.esa.int/CFI Ref_Frame"/>
                 </cd:Field>
-                <cd:Field name="Time_Frame">
-                  <cd:Text namexml="http://eop-cfi.esa.int/CFI Time_Frame"/>
+                <cd:Field name="Time_Reference">
+                  <cd:Text namexml="http://eop-cfi.esa.int/CFI Time_Reference"/>
                 </cd:Field>
               </cd:Record>
             </cd:Field>
