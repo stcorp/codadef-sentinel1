@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_l0cn" format="xml" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest_l0cn" format="xml" last-modified="2012-06-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -456,7 +456,18 @@
                                         <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
                                           <cd:Field name="path">
                                             <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
-                                              <cd:Attribute name="following"/>
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
                                             </cd:Text>
                                           </cd:Field>
                                         </cd:Record>
@@ -482,7 +493,18 @@
                                         <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
                                           <cd:Field name="path">
                                             <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
-                                              <cd:Attribute name="following"/>
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
                                             </cd:Text>
                                           </cd:Field>
                                         </cd:Record>
