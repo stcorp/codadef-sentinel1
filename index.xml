@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2012-06-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2012-06-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest">
     <cd:Description>SAFE Manifest file for L1/L2/Aux products</cd:Description>
@@ -224,7 +224,7 @@
   <cd:ProductType name="SARStandardL0MeasurementData">
     <cd:Description>SAR Standard L0 Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0MeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -240,7 +240,7 @@
   <cd:ProductType name="SARStandardL0IndexData">
     <cd:Description>SAR Standard L0 Product - Index Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0IndexData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -256,7 +256,7 @@
   <cd:ProductType name="SARStandardL0AnnotationData">
     <cd:Description>SAR Standard L0 Product - Annotation Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0AnnotationData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -272,7 +272,7 @@
   <cd:ProductType name="SARL0CalMeasurementData">
     <cd:Description>SAR L0 Cal Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0CalMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
@@ -288,7 +288,7 @@
   <cd:ProductType name="SARL0NoiseMeasurementData">
     <cd:Description>SAR L0 Noise Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0NoiseMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
@@ -304,7 +304,7 @@
   <cd:ProductType name="SARL0AnnotationsMeasurementData">
     <cd:Description>SAR L0 Annotations Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0AnnotationsMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.3 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
@@ -1454,7 +1454,7 @@
   <cd:ProductType name="REP_MP_MP_">
     <cd:Description>Mission Plan Report</cd:Description>
     <cd:ProductDefinition id="REP_MP_MP_" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.5 of the CMC ICD S1PD.ICD.00148.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 2.6 of the CMC ICD S1PD.ICD.00148.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/MissionPlanReport"/>
       </cd:DetectionRule>
@@ -1538,6 +1538,33 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="AM__RQST__">
+    <cd:Description>Antenna Model - Parameter file</cd:Description>
+    <cd:ProductDefinition id="AM__RQST__" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__RQST__</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AM__OUTPUT">
+    <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
+    <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__OUTPUT</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AM__LOG___">
+    <cd:Description>Antenna Model - Antenna Model Log File</cd:Description>
+    <cd:ProductDefinition id="AM__LOG___" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__LOG___</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
 <!--
   products to implement:
     MPL_REQ_Tx Transponder Control File (TP-ICD)
@@ -1545,11 +1572,6 @@
 
     REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)
 
-    AM__RQST__ Antenna Model: Parameter file (AM-DESC)
-    AM__OUTPUT Antenna Model: Antenna Patterns (AM-DESC)
-    AM__LOG___ Antenna Model: Antenna Model Log File (AM-DESC)
-
-    S1 Coregistered Stack - Annotation Data Set (SPP-PFS)
     S1 Sigma-Nought Mosaic - Annotation Data Set (SPP-PFS)
 
     S1QC Internal Image format - header file (QC-ICD-002)

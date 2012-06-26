@@ -1,0 +1,341 @@
+<cd:Record name="AM_RequestedOutput" namexml="RequestedOutput" format="xml" last-modified="2012-06-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="Request_Description">
+    <cd:Text namexml="Request_Description"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_EBT">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_EBT"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_ABT">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_ABT"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_BST">
+    <cd:Text namexml="Fullpath_to_BST"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_NearFieldData">
+    <cd:Text namexml="Fullpath_to_NearFieldData"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_MisalignmentsTable">
+    <cd:Text namexml="Fullpath_to_MisalignmentsTable"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_PatternAssignmentTable">
+    <cd:Text namexml="Fullpath_to_PatternAssignmentTable"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_ErrorMatrixH">
+    <cd:Text namexml="Fullpath_to_ErrorMatrixH"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_ErrorMatrixV">
+    <cd:Text namexml="Fullpath_to_ErrorMatrixV"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_FailureMatrices">
+    <cd:Text namexml="Fullpath_to_FailureMatrices"/>
+  </cd:Field>
+  <cd:Field name="OutputFolder">
+    <cd:Text namexml="OutputFolder"/>
+  </cd:Field>
+  <cd:Field name="RequestedBeams">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="RequestedBeams">
+        <cd:Field name="EBT_Img_index">
+          <cd:Type namexml="EBT_Img_index">
+            <cd:Integer format="ascii">
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="ABT_index">
+          <cd:Type namexml="ABT_index">
+            <cd:Integer format="ascii">
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="BST_Table_index">
+          <cd:Type namexml="BST_Table_index">
+            <cd:Integer format="ascii">
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="BST_Entry_index">
+          <cd:Type namexml="BST_Entry_index">
+            <cd:Integer format="ascii">
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="RequestedOutputPoints">
+          <cd:Record namexml="RequestedOutputPoints">
+            <cd:Field name="Reference_Frame">
+              <cd:Text namexml="Reference_Frame"/>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_P_u_v">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_P_u_v">
+                <cd:Field name="u_v">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="u_v">
+                      <cd:Field name="var1">
+                        <cd:Type namexml="var1">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="var2">
+                        <cd:Type namexml="var2">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_P_theta_phi">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_P_theta_phi">
+                <cd:Field name="theta_phi">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="theta_phi">
+                      <cd:Field name="var1">
+                        <cd:Type namexml="var1">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="var2">
+                        <cd:Type namexml="var2">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>float</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_SSNP_u_v">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_SSNP_u_v">
+                <cd:Field name="u_v_start">
+                  <cd:Record namexml="u_v_start">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="u_v_stop">
+                  <cd:Record namexml="u_v_stop">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="u_v_number_of_points">
+                  <cd:Text namexml="u_v_number_of_points"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_SSNP_theta_phi">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_SSNP_theta_phi">
+                <cd:Field name="theta_phi_start">
+                  <cd:Record namexml="theta_phi_start">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="theta_phi_stop">
+                  <cd:Record namexml="theta_phi_stop">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="theta_phi_number_of_points">
+                  <cd:Text namexml="theta_phi_number_of_points"/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_SSNG_u_v">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_SSNG_u_v">
+                <cd:Field name="u_v_start">
+                  <cd:Record namexml="u_v_start">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="u_v_stop">
+                  <cd:Record namexml="u_v_stop">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="u_v_number_of_points">
+                  <cd:Record namexml="u_v_number_of_points">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="RequestedOutput_SSNG_theta_phi">
+              <cd:Optional/>
+              <cd:Record namexml="RequestedOutput_SSNG_theta_phi">
+                <cd:Field name="theta_phi_start">
+                  <cd:Record namexml="theta_phi_start">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="theta_phi_stop">
+                  <cd:Record namexml="theta_phi_stop">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+                <cd:Field name="theta_phi_number_of_points">
+                  <cd:Record namexml="theta_phi_number_of_points">
+                    <cd:Field name="var1">
+                      <cd:Type namexml="var1">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="var2">
+                      <cd:Type namexml="var2">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>

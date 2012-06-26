@@ -1,0 +1,215 @@
+<cd:Record name="AM_OutputPoints" namexml="OutputPoints" format="xml" last-modified="2012-06-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="Reference_Frame">
+    <cd:Text namexml="Reference_Frame"/>
+  </cd:Field>
+  <cd:Field name="Output_P_u_v">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_P_u_v">
+        <cd:Field name="u">
+          <cd:Type namexml="u">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="v">
+          <cd:Type namexml="v">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Output_P_theta_phi">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_P_theta_phi">
+        <cd:Field name="theta">
+          <cd:Type namexml="theta">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phi">
+          <cd:Type namexml="phi">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Output_SSNP_u_v">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_SSNP_u_v">
+        <cd:Field name="u">
+          <cd:Type namexml="u">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="v">
+          <cd:Type namexml="v">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Output_SSNP_theta_phi">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_SSNP_theta_phi">
+        <cd:Field name="theta">
+          <cd:Type namexml="theta">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phi">
+          <cd:Type namexml="phi">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Output_SSNG_u_v">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_SSNG_u_v">
+        <cd:Field name="u">
+          <cd:Type namexml="u">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="v">
+          <cd:Type namexml="v">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Output_SSNG_theta_phi">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Record namexml="Output_SSNG_theta_phi">
+        <cd:Field name="theta">
+          <cd:Type namexml="theta">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phi">
+          <cd:Type namexml="phi">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="gain">
+          <cd:Type namexml="gain">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="phase">
+          <cd:Type namexml="phase">
+            <cd:Float format="ascii">
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+      </cd:Record>
+    </cd:Array>
+  </cd:Field>
+</cd:Record>
