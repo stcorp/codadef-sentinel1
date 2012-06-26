@@ -1547,6 +1547,8 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+<!--
+  Disable for now, since the test data contains xml namespaces which wont work
   <cd:ProductType name="AM__OUTPUT">
     <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
     <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
@@ -1565,6 +1567,7 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+-->
 <!--
   products to implement:
     MPL_REQ_Tx Transponder Control File (TP-ICD)
