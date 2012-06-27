@@ -54,8 +54,8 @@
                                     </cd:Integer>
                                   </cd:Type>
                                 </cd:Field>
-                                <cd:Field name="ArrayRow_Element_status">
-                                  <cd:Type namexml="ArrayRow_Element_status">
+                                <cd:Field name="Status">
+                                  <cd:Type namexml="Status">
                                     <cd:Integer format="ascii">
                                       <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
@@ -96,8 +96,8 @@
                                     </cd:Integer>
                                   </cd:Type>
                                 </cd:Field>
-                                <cd:Field name="ArrayRow_Element_status">
-                                  <cd:Type namexml="ArrayRow_Element_status">
+                                <cd:Field name="Status">
+                                  <cd:Type namexml="Status">
                                     <cd:Integer format="ascii">
                                       <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
@@ -138,8 +138,8 @@
                                     </cd:Integer>
                                   </cd:Type>
                                 </cd:Field>
-                                <cd:Field name="ArrayRow_Element_status">
-                                  <cd:Type namexml="ArrayRow_Element_status">
+                                <cd:Field name="Status">
+                                  <cd:Type namexml="Status">
                                     <cd:Integer format="ascii">
                                       <cd:Description>If false then the TRM is in a failed state (for the specific mode and polarisation)</cd:Description>
                                       <cd:NativeType>uint8</cd:NativeType>
