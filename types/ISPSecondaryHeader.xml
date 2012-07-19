@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2012-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2012-07-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="coarseTime">
     <cd:Integer>
       <cd:Description>Coarse Time</cd:Description>
@@ -18,6 +18,7 @@
     <cd:Raw>
       <cd:Description>Sync Marker</cd:Description>
       <cd:BitSize>32</cd:BitSize>
+      <cd:FixedValue>5.\370S</cd:FixedValue>
     </cd:Raw>
   </cd:Field>
   <cd:Field name="dataTakeID">
