@@ -1,0 +1,230 @@
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="Id">
+    <cd:Type namexml="Id">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="StartupTransponderMode">
+    <cd:Type namexml="StartupTransponderMode">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="StartupAzimuth">
+    <cd:Type namexml="StartupAzimuth">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="StartupElevation">
+    <cd:Type namexml="StartupElevation">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="AzimuthCalibrationOffset">
+    <cd:Type namexml="AzimuthCalibrationOffset">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ElevationCalibrationOffset">
+    <cd:Type namexml="ElevationCalibrationOffset">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ModificationDate">
+    <cd:Type namexml="ModificationDate">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="CalId">
+    <cd:Type namexml="CalId">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SarCalibrationTimeoutSeconds">
+    <cd:Type namexml="SarCalibrationTimeoutSeconds">
+      <cd:Float format="ascii">
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="AdvanceTriggerInterval">
+    <cd:Type namexml="AdvanceTriggerInterval">
+      <cd:Float format="ascii">
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="WarmupTimeSeconds">
+    <cd:Type namexml="WarmupTimeSeconds">
+      <cd:Float format="ascii">
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="DacDcBias">
+    <cd:Type namexml="DacDcBias">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SarPulseThreshold">
+    <cd:Type namexml="SarPulseThreshold">
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="TransponderName">
+    <cd:Text namexml="TransponderName"/>
+  </cd:Field>
+  <cd:Field name="SurveyedLatitude">
+    <cd:Type namexml="SurveyedLatitude">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees_north</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SurveyedLongitude">
+    <cd:Type namexml="SurveyedLongitude">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees_east</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SurveyedElevation">
+    <cd:Type namexml="SurveyedElevation">
+      <cd:Float format="ascii">
+        <cd:Unit>m</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="FtpPollingInterval">
+    <cd:Type namexml="FtpPollingInterval">
+      <cd:Float format="ascii">
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="LastLogDumpTime">
+    <cd:Type namexml="LastLogDumpTime">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="NextLogDumpTime">
+    <cd:Type namexml="NextLogDumpTime">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="LogDumpIntervalHours">
+    <cd:Type namexml="LogDumpIntervalHours">
+      <cd:Float format="ascii">
+        <cd:Unit>hours</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="DefaultCalibrationFilters">
+    <cd:Record namexml="DefaultCalibrationFilters">
+      <cd:Field name="h0">
+        <cd:Record namexml="h0">
+          <cd:Field name="ComplexDouble">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="ComplexDouble">
+                <cd:Field name="re">
+                  <cd:Type namexml="re">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="im">
+                  <cd:Type namexml="im">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="h1">
+        <cd:Record namexml="h1">
+          <cd:Field name="ComplexDouble">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="ComplexDouble">
+                <cd:Field name="re">
+                  <cd:Type namexml="re">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="im">
+                  <cd:Type namexml="im">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="hdc">
+        <cd:Record namexml="hdc">
+          <cd:Field name="ComplexDouble">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="ComplexDouble">
+                <cd:Field name="re">
+                  <cd:Type namexml="re">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="im">
+                  <cd:Type namexml="im">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

@@ -1547,6 +1547,72 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="MPL_REQ_Tx">
+    <cd:Description>Transponder Control File</cd:Description>
+    <cd:ProductDefinition id="MPL_REQ_Tx" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type"/>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+        <cd:MatchFilename offset="9">MPL_REQ_T</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP_ACK___">
+    <cd:Description>Transponder Control Acknowledgement File</cd:Description>
+    <cd:ProductDefinition id="REP_ACK___" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">REP_ACK___</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP_CALRPT">
+    <cd:Description>Transponder SAR Calibration Report (DBL/DS1)</cd:Description>
+    <cd:ProductDefinition id="REP_CALRPT" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Data_Block/Transponder_Data"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP_CALRPT_HDR">
+    <cd:Description>Transponder SAR Calibration Report (HDR)</cd:Description>
+    <cd:ProductDefinition id="REP_CALRPT_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">REP_CALRPT</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP_CALRPT_DS2">
+    <cd:Description>Transponder SAR Calibration Report - Raw Sample Data (DS2)</cd:Description>
+    <cd:ProductDefinition id="REP_CALRPT_DS2" format="binary" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+        <cd:MatchFilename offset="9">REP_CALRPT</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP_IMGRPT_HDR">
+    <cd:Description>Transponder SAR Calibration Report Image File (HDR)</cd:Description>
+    <cd:ProductDefinition id="REP_IMGRPT_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">REP_IMGRPT</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="LOG_______">
+    <cd:Description>Transponder Log Report File</cd:Description>
+    <cd:ProductDefinition id="LOG_______" format="xml" version="0">
+      <cd:Description>This definition is based on version 4.4 of the GMES Sentinel-1 Transponder ICD R-10-030-734</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">LOG_______</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
 <!--
   Disable for now, since the test data contains xml namespaces which wont work
   <cd:ProductType name="AM__OUTPUT">
@@ -1570,7 +1636,6 @@
 -->
 <!--
   products to implement:
-    MPL_REQ_Tx Transponder Control File (TP-ICD)
     REP_CALRPT PDGS SAR Calibration Report File (TP-ICD)
 
     REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REP_CALRPT_HDR" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="Earth_Explorer_Header">
+      <cd:Record namexml="Earth_Explorer_Header">
+        <cd:Field name="Fixed_Header">
+          <cd:NamedType id="Fixed_Header"/>
+        </cd:Field>
+        <cd:Field name="Variable_Header">
+          <cd:Record namexml="Variable_Header"/>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

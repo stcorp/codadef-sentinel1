@@ -1,0 +1,38 @@
+<cd:Record name="TP_PdgsSarCalibrationParameter" namexml="PdgsSarCalibrationParameter" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="ExpectedArrivalTime">
+    <cd:Type namexml="ExpectedArrivalTime">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Description">
+    <cd:Text namexml="Description"/>
+  </cd:Field>
+  <cd:Field name="Azimuth">
+    <cd:Type namexml="Azimuth">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Elevation">
+    <cd:Type namexml="Elevation">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="CalibrationMode">
+    <cd:Text namexml="CalibrationMode"/>
+  </cd:Field>
+  <cd:Field name="SatelliteName">
+    <cd:Text namexml="SatelliteName"/>
+  </cd:Field>
+  <cd:Field name="SatelliteConstellation">
+    <cd:Text namexml="SatelliteConstellation"/>
+  </cd:Field>
+  <cd:Field name="ModeSwathId">
+    <cd:Text namexml="ModeSwathId"/>
+  </cd:Field>
+</cd:Record>

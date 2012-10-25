@@ -1,0 +1,35 @@
+<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="Id">
+    <cd:Type namexml="Id">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Level">
+    <cd:Text namexml="Level"/>
+  </cd:Field>
+  <cd:Field name="Logger">
+    <cd:Text namexml="Logger"/>
+  </cd:Field>
+  <cd:Field name="Message">
+    <cd:Text namexml="Message"/>
+  </cd:Field>
+  <cd:Field name="CallSite">
+    <cd:Text namexml="CallSite"/>
+  </cd:Field>
+  <cd:Field name="StackTrace">
+    <cd:Text namexml="StackTrace"/>
+  </cd:Field>
+  <cd:Field name="Exception">
+    <cd:Text namexml="Exception"/>
+  </cd:Field>
+  <cd:Field name="Timestamp">
+    <cd:Type namexml="Timestamp">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ErrorId">
+    <cd:Text namexml="ErrorId"/>
+  </cd:Field>
+</cd:Record>

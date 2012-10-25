@@ -1,0 +1,73 @@
+<cd:Record name="TP_PdgsSarCalibrationData" namexml="PdgsSarCalibrationData" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="CalibrationId">
+    <cd:Type namexml="CalibrationId">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SampleRate">
+    <cd:Type namexml="SampleRate">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="AcquisitionOffset">
+    <cd:Type namexml="AcquisitionOffset">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="IsSarCalibrationAborted">
+    <cd:Type namexml="IsSarCalibrationAborted">
+      <cd:Integer format="ascii">
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="true" value="1"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="AzimuthDiagramPoints">
+    <cd:Record namexml="AzimuthDiagramPoints">
+      <cd:Field name="LabelX">
+        <cd:Text namexml="LabelX"/>
+      </cd:Field>
+      <cd:Field name="LabelY">
+        <cd:Text namexml="LabelY"/>
+      </cd:Field>
+      <cd:Field name="Points">
+        <cd:Record namexml="Points">
+          <cd:Field name="PointOfdouble">
+            <cd:Array>
+              <cd:Dimension/>
+              <cd:Record namexml="PointOfdouble">
+                <cd:Field name="x">
+                  <cd:Type namexml="x">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="y">
+                  <cd:Type namexml="y">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Array>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="UnitsX">
+        <cd:Text namexml="UnitsX"/>
+      </cd:Field>
+      <cd:Field name="UnitsY">
+        <cd:Text namexml="UnitsY"/>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+</cd:Record>

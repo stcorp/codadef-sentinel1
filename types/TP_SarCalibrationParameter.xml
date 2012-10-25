@@ -1,0 +1,115 @@
+<cd:Record name="TP_SarCalibrationParameter" namexml="SarCalibrationParameter" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="Id">
+    <cd:Type namexml="Id">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ExpectedArrivalTime">
+    <cd:Type namexml="ExpectedArrivalTime">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Description">
+    <cd:Text namexml="Description"/>
+  </cd:Field>
+  <cd:Field name="Azimuth">
+    <cd:Type namexml="Azimuth">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="Elevation">
+    <cd:Type namexml="Elevation">
+      <cd:Float format="ascii">
+        <cd:Unit>degrees</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="PulseDelay">
+    <cd:Type namexml="PulseDelay">
+      <cd:Float format="ascii">
+        <cd:Unit>10^-6 s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ModificationDate">
+    <cd:Type namexml="ModificationDate">
+      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="CalibrationMode">
+    <cd:Text namexml="CalibrationMode"/>
+  </cd:Field>
+  <cd:Field name="ExpectedPowerDensity">
+    <cd:Type namexml="ExpectedPowerDensity">
+      <cd:Float format="ascii">
+        <cd:Unit>dB m/m2</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="DecimationRate">
+    <cd:Type namexml="DecimationRate">
+      <cd:Integer format="ascii">
+        <cd:NativeType>uint16</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="SarOrbitData">
+    <cd:Text namexml="SarOrbitData"/>
+  </cd:Field>
+  <cd:Field name="SatelliteName">
+    <cd:Text namexml="SatelliteName"/>
+  </cd:Field>
+  <cd:Field name="ExpectedPrf">
+    <cd:Type namexml="ExpectedPrf">
+      <cd:Float format="ascii">
+        <cd:Unit>Hz</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ExpectedPw">
+    <cd:Type namexml="ExpectedPw">
+      <cd:Float format="ascii">
+        <cd:Unit>10^-6 s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="UseFixedTimeWindowCaptureMode">
+    <cd:Type namexml="UseFixedTimeWindowCaptureMode">
+      <cd:Integer format="ascii">
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="true" value="1"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="FixedTimeWindow">
+    <cd:Type namexml="FixedTimeWindow">
+      <cd:Float format="ascii">
+        <cd:Unit>s</cd:Unit>
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
+    </cd:Type>
+  </cd:Field>
+  <cd:Field name="ModeSwathId">
+    <cd:Text namexml="ModeSwathId"/>
+  </cd:Field>
+  <cd:Field name="StoreUndecimatedSamples">
+    <cd:Type namexml="StoreUndecimatedSamples">
+      <cd:Integer format="ascii">
+        <cd:NativeType>uint8</cd:NativeType>
+        <cd:Mapping string="false" value="0"/>
+        <cd:Mapping string="true" value="1"/>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
+</cd:Record>

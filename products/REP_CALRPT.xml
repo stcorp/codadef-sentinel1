@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REP_CALRPT" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="Data_Block">
+      <cd:Record namexml="Data_Block">
+        <cd:Attribute name="type"/>
+        <cd:Field name="Transponder_Data">
+          <cd:Record namexml="Transponder_Data">
+            <cd:Field name="SarCalibrationParameter">
+              <cd:NamedType id="TP_SarCalibrationParameter"/>
+            </cd:Field>
+            <cd:Field name="PdgsSarCalibrationData">
+              <cd:NamedType id="TP_PdgsSarCalibrationData"/>
+            </cd:Field>
+            <cd:Field name="TransponderSetting">
+              <cd:NamedType id="TP_TransponderSetting"/>
+            </cd:Field>
+            <cd:Field name="AssociatedLogs">
+              <cd:Record namexml="AssociatedLogs">
+                <cd:Field name="Log">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:NamedType id="TP_Log"/>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="PreCalibrationStatus">
+              <cd:NamedType id="TP_PreCalibrationStatus"/>
+            </cd:Field>
+            <cd:Field name="PostCalibrationStatus">
+              <cd:NamedType id="TP_PostCalibrationStatus"/>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

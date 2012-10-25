@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REP_CALRPT_DS2" format="binary" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="Length">
+      <cd:Integer>
+        <cd:ByteSize>4</cd:ByteSize>
+        <cd:NativeType>uint32</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Integer>
+    </cd:Field>
+    <cd:Field name="SampleRate">
+      <cd:Float>
+        <cd:ByteSize>8</cd:ByteSize>
+        <cd:NativeType>double</cd:NativeType>
+        <cd:LittleEndian/>
+      </cd:Float>
+    </cd:Field>
+    <cd:Field name="Samples">
+      <cd:Array>
+        <cd:Dimension>int(../Length)</cd:Dimension>
+        <cd:Complex>
+          <cd:Integer>
+            <cd:ByteSize>2</cd:ByteSize>
+            <cd:NativeType>int16</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Complex>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
