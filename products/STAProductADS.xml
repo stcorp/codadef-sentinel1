@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="STAProductADS" format="xml" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="STAProductADS" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="staProduct">
       <cd:Record namexml="staProduct">
@@ -2371,14 +2371,14 @@
                       <cd:Field name="rgRef">
                         <cd:Type namexml="rgRef">
                           <cd:Float format="ascii">
-                            <cd:NativeType>double</cd:NativeType>
+                            <cd:NativeType>float</cd:NativeType>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
                       <cd:Field name="azRef">
                         <cd:Type namexml="azRef">
                           <cd:Float format="ascii">
-                            <cd:NativeType>double</cd:NativeType>
+                            <cd:NativeType>float</cd:NativeType>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -2387,28 +2387,28 @@
                           <cd:Field name="rg0">
                             <cd:Type namexml="rg0">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="rg1">
                             <cd:Type namexml="rg1">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="rg2">
                             <cd:Type namexml="rg2">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="rg3">
                             <cd:Type namexml="rg3">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -2419,28 +2419,28 @@
                           <cd:Field name="az0">
                             <cd:Type namexml="az0">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="az1">
                             <cd:Type namexml="az1">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="az2">
                             <cd:Type namexml="az2">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="az3">
                             <cd:Type namexml="az3">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>

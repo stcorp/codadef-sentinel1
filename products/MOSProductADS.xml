@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="MOSProductADS" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="mosProduct">
+      <cd:Record namexml="mosProduct">
+        <cd:Field name="mosAdsHeader">
+          <cd:Record namexml="mosAdsHeader">
+            <cd:Field name="missionId">
+              <cd:Text namexml="missionId"/>
+            </cd:Field>
+            <cd:Field name="swath">
+              <cd:Text namexml="swath"/>
+            </cd:Field>
+            <cd:Field name="polarisation">
+              <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="startTime">
+              <cd:Type namexml="startTime">
+                <cd:Attribute name="unit"/>
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="stopTime">
+              <cd:Type namexml="stopTime">
+                <cd:Attribute name="unit"/>
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="imageInformation">
+          <cd:Record namexml="imageInformation">
+            <cd:Field name="productFirstLatitude">
+              <cd:Type namexml="productFirstLatitude">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="productFirstLongitude">
+              <cd:Type namexml="productFirstLongitude">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="latitudePixelSpacing">
+              <cd:Type namexml="latitudePixelSpacing">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="longitudePixelSpacing">
+              <cd:Type namexml="longitudePixelSpacing">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="numberOfLines">
+              <cd:Type namexml="numberOfLines">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="numberOfSamples">
+              <cd:Type namexml="numberOfSamples">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="productLastLatitude">
+              <cd:Type namexml="productLastLatitude">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="productLastLongitude">
+              <cd:Type namexml="productLastLongitude">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="productPixelsDataType">
+              <cd:Text namexml="productPixelsDataType"/>
+            </cd:Field>
+            <cd:Field name="intToFloatScalingFactor">
+              <cd:Type namexml="intToFloatScalingFactor">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="intToFloatOffsetFactor">
+              <cd:Type namexml="intToFloatOffsetFactor">
+                <cd:Float format="ascii">
+                  <cd:NativeType>float</cd:NativeType>
+                </cd:Float>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="imageStatistics">
+              <cd:Record namexml="imageStatistics">
+                <cd:Field name="outputDataMean">
+                  <cd:Type namexml="outputDataMean">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="outputDataStdDev">
+                  <cd:Type namexml="outputDataStdDev">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="processingInformation">
+          <cd:Record namexml="processingInformation">
+            <cd:Field name="imageMosaicParameters">
+              <cd:Record namexml="imageMosaicParameters">
+                <cd:Field name="mosaicType">
+                  <cd:Text namexml="mosaicType"/>
+                </cd:Field>  
+                <cd:Field name="mosaicMethod">
+                  <cd:Text namexml="mosaicMethod"/>
+                </cd:Field>  
+                <cd:Field name="mosaicPatchesList">
+                  <cd:Record namexml="mosaicPatchesList">
+                    <cd:Attribute name="length"/>
+                    <cd:Field name="mosaicPatchProductName">
+                      <cd:Array>
+                        <cd:Dimension/>
+                        <cd:Text namexml="mosaicPatchProductName"/>
+                      </cd:Array>
+                    </cd:Field>  
+                  </cd:Record>
+                </cd:Field>  
+              </cd:Record>
+            </cd:Field>  
+            <cd:Field name="geocodingStepParameters">
+              <cd:Record namexml="geocodingStepParameters">
+                <cd:Field name="projectionUsed">
+                  <cd:Text namexml="projectionUsed"/>
+                </cd:Field>  
+                <cd:Field name="meanPixelGroundSpacing">
+                  <cd:Type namexml="meanPixelGroundSpacing">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="referenceEarthModel">
+                  <cd:Text namexml="referenceEarthModel"/>
+                </cd:Field>  
+                <cd:Field name="projectionCentreLatitude">
+                  <cd:Type namexml="projectionCentreLatitude">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                  <cd:Optional/>
+                </cd:Field>
+                <cd:Field name="projectionCentreLongitude">
+                  <cd:Type namexml="projectionCentreLongitude">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                  <cd:Optional/>
+                </cd:Field>
+                <cd:Field name="centralMeridianLongitude">
+                  <cd:Type namexml="centralMeridianLongitude">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                  <cd:Optional/>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>  
+            <cd:Field name="snNormalizationParameters">
+              <cd:Record namexml="snNormalizationParameters">
+                <cd:Field name="refIncidenceAngleUsed">
+                  <cd:Type namexml="refIncidenceAngleUsed">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="igbpMask">
+                  <cd:Text namexml="igbpMask"/>
+                </cd:Field>  
+                <cd:Field name="snNormCurves">
+                  <cd:Text namexml="snNormCurves"/>
+                </cd:Field>  
+              </cd:Record>
+            </cd:Field>  
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

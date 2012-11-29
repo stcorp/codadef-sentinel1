@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="PSCMeasurements" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="PSCMeasurements" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="pscProduct">
       <cd:Record namexml="pscProduct">
@@ -37,20 +37,22 @@
               </cd:Text>
             </cd:Field>
             <cd:Field name="startTime">
-              <cd:Text namexml="startTime">
+              <cd:Type namexml="startTime">
                 <cd:Attribute name="unit"/>
-              </cd:Text>
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
             </cd:Field>
             <cd:Field name="stopTime">
-              <cd:Text namexml="stopTime">
+              <cd:Type namexml="stopTime">
                 <cd:Attribute name="unit"/>
-              </cd:Text>
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
             </cd:Field>
             <cd:Field name="absoluteOrbitNumber">
               <cd:Type namexml="absoluteOrbitNumber">
                 <cd:Integer format="ascii">
                   <cd:Description>Absolute orbit number (take from the Master image).</cd:Description>
-                  <cd:NativeType>uint64</cd:NativeType>
+                  <cd:NativeType>uint32</cd:NativeType>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>
@@ -71,10 +73,11 @@
                         </cd:Text>
                       </cd:Field>
                       <cd:Field name="productUTCTime">
-                        <cd:Text namexml="productUTCTime">
+                        <cd:Type namexml="productUTCTime">
                           <cd:Attribute name="unit"/>
+                          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                           <cd:Description>Image UTC time (computed at mid azimuth) to which the calibration constant is referred.</cd:Description>
-                        </cd:Text>
+                        </cd:Type>
                       </cd:Field>
                       <cd:Field name="productANXTime">
                         <cd:Type namexml="productANXTime">
@@ -120,9 +123,10 @@
             <cd:Field name="psCalibrationParametersTrend">
               <cd:Record namexml="psCalibrationParametersTrend">
                 <cd:Field name="azRef">
-                  <cd:Text namexml="azRef">
+                  <cd:Type namexml="azRef">
                     <cd:Attribute name="unit"/>
-                  </cd:Text>
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
                 </cd:Field>
                 <cd:Field name="calibrationCoefficients">
                   <cd:Record namexml="calibrationCoefficients">
@@ -161,7 +165,7 @@
               <cd:Type namexml="calibrationSiteID">
                 <cd:Integer format="ascii">
                   <cd:Description>Calibration site identifier.</cd:Description>
-                  <cd:NativeType>uint64</cd:NativeType>
+                  <cd:NativeType>uint32</cd:NativeType>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>
@@ -209,7 +213,7 @@
               <cd:Type namexml="numberOfPS">
                 <cd:Integer format="ascii">
                   <cd:Description>Number of PS in the map.</cd:Description>
-                  <cd:NativeType>uint64</cd:NativeType>
+                  <cd:NativeType>uint32</cd:NativeType>
                 </cd:Integer>
               </cd:Type>
             </cd:Field>

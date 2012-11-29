@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="OBSMeasurements" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="OBSMeasurements" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="obsProduct">
       <cd:Record namexml="obsProduct">
@@ -52,9 +52,10 @@
                   </cd:Type>
                 </cd:Field>
                 <cd:Field name="referenceANXTime">
-                  <cd:Text namexml="referenceANXTime">
+                  <cd:Type namexml="referenceANXTime">
                     <cd:Attribute name="unit"/>
-                  </cd:Text>
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Type>
                 </cd:Field>
                 <cd:Field name="referenceGroundPointsGrid">
                   <cd:Record namexml="referenceGroundPointsGrid">
@@ -110,10 +111,11 @@
                 <cd:Record namexml="obsBaselineRecord">
                   <cd:Attribute name="n"/>
                   <cd:Field name="azimuthTime">
-                    <cd:Text namexml="azimuthTime">
+                    <cd:Type namexml="azimuthTime">
                       <cd:Attribute name="unit"/>
+                      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                       <cd:Description>Azimuth time at which the ground point in the first swath of swathList has been imaged by the input orbit.</cd:Description>
-                    </cd:Text>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="anxTime">
                     <cd:Type namexml="anxTime">
@@ -231,14 +233,15 @@
                     <cd:Type namexml="topsarAcquisitionIndex">
                       <cd:Integer format="ascii">
                         <cd:Description>Item of the L0 Annotation Products list to which the ground point is referred</cd:Description>
-                        <cd:NativeType>uint64</cd:NativeType>
+                        <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="azimuthTime">
-                    <cd:Text namexml="azimuthTime">
+                    <cd:Type namexml="azimuthTime">
                       <cd:Attribute name="unit"/>
-                    </cd:Text>
+                      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="anxTime">
                     <cd:Type namexml="anxTime">
