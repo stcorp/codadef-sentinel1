@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2012-12-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest">
     <cd:Description>SAFE Manifest file for L1/L2/Aux products</cd:Description>
@@ -1472,7 +1472,7 @@
   <cd:ProductType name="MET_DISCLM">
     <cd:Description>Quality Disclaimer Metadata File</cd:Description>
     <cd:ProductDefinition id="MET_DISCLM" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.2 of the QCSS External ICD ST-ESA-S1QC-ICD-001</cd:Description>
+      <cd:Description>This definition is based on version 1.3 of the QCSS External ICD ST-ESA-S1QC-ICD-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">MET_DISCLM</cd:MatchData>
       </cd:DetectionRule>
@@ -1556,6 +1556,27 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+<!--
+  Disable for now, since the test data contains xml namespaces which wont work
+  <cd:ProductType name="AM__OUTPUT">
+    <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
+    <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__OUTPUT</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AM__LOG___">
+    <cd:Description>Antenna Model - Antenna Model Log File</cd:Description>
+    <cd:ProductDefinition id="AM__LOG___" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__LOG___</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+-->
   <cd:ProductType name="MPL_REQ_Tx">
     <cd:Description>Transponder Control File</cd:Description>
     <cd:ProductDefinition id="MPL_REQ_Tx" format="xml" version="0">
@@ -1622,35 +1643,17 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-<!--
-  Disable for now, since the test data contains xml namespaces which wont work
-  <cd:ProductType name="AM__OUTPUT">
-    <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
-    <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+  <cd:ProductType name="S1QC_INTERNAL_HDR">
+    <cd:Description>Sentinel-1 QC Internal Format - Header File</cd:Description>
+    <cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.2 of the QCSS Internal ICD ST-ESA-S1QC-ICD-002</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__OUTPUT</cd:MatchData>
+        <cd:MatchData path="/AresysXmlDoc"/>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="AM__LOG___">
-    <cd:Description>Antenna Model - Antenna Model Log File</cd:Description>
-    <cd:ProductDefinition id="AM__LOG___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
-      <cd:DetectionRule>
-        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__LOG___</cd:MatchData>
-      </cd:DetectionRule>
-    </cd:ProductDefinition>
-  </cd:ProductType>
--->
 <!--
   products to implement:
-    REP_CALRPT PDGS SAR Calibration Report File (TP-ICD)
-
     REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)
-
-    S1 Sigma-Nought Mosaic - Annotation Data Set (SPP-PFS)
-
-    S1QC Internal Image format - header file (QC-ICD-002)
 -->
 </cd:ProductClass>

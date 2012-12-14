@@ -1,0 +1,1878 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" last-modified="2012-12-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="AresysXmlDoc">
+      <cd:Record namexml="AresysXmlDoc">
+        <cd:Field name="NumberOfChannels">
+          <cd:Type namexml="NumberOfChannels">
+            <cd:Integer format="ascii">
+              <cd:NativeType>uint32</cd:NativeType>
+            </cd:Integer>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="VersionNumber">
+          <cd:Type namexml="VersionNumber">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="Description">
+          <cd:Text namexml="Description"/>
+        </cd:Field>
+        <cd:Field name="Channel">
+          <cd:Array>
+            <cd:Dimension/>
+            <cd:Record namexml="Channel">
+              <cd:Attribute name="Number">
+                <cd:Optional/>
+              </cd:Attribute>
+              <cd:Attribute name="Total">
+                <cd:Optional/>
+              </cd:Attribute>
+              <cd:Field name="RasterInfo">
+                <cd:Record namexml="RasterInfo">
+                  <cd:Description>Information regarding binary file format and time coordinates of the image</cd:Description>
+                  <cd:Field name="FileName">
+                    <cd:Text namexml="FileName">
+                      <cd:Description>Name of the associated binary file</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="Lines">
+                    <cd:Type namexml="Lines">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Total number of lines (azimuth) of the image</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Samples">
+                    <cd:Type namexml="Samples">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Total number of samples (range) of the image</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="HeaderOffsetBytes">
+                    <cd:Type namexml="HeaderOffsetBytes">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Number of bytes at the beginning of the file containing the header information</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="RowPrefixBytes">
+                    <cd:Type namexml="RowPrefixBytes">
+                      <cd:Integer format="ascii">
+                        <cd:Description>Number of bytes at the beginning of each line containing header information</cd:Description>
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="ByteOrder">
+                    <cd:Text namexml="ByteOrder">
+                      <cd:Description>Endianness: BIGENDIAN or LITTLEENDIAN</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="CellType">
+                    <cd:Text namexml="CellType">
+                      <cd:Description>Byte format type: FLOAT_COMPLEX, FLOAT32, DOUBLE_COMPLEX, FLOAT64, INT16, SHORT_COMPLEX, INT32, INT_COMPLEX, INT8, INT8_COMPLEX</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="LinesStep">
+                    <cd:Type namexml="LinesStep">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Azimuth sampling step</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SamplesStep">
+                    <cd:Type namexml="SamplesStep">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Range sampling step</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="LinesStart">
+                    <cd:Text namexml="LinesStart">
+                      <cd:Attribute name="unit"/>
+                      <cd:Description>Azimuth absolute start time</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="SamplesStart">
+                    <cd:Type namexml="SamplesStart">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:Description>Range absolute start time</cd:Description>
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="ROI">
+                <cd:Optional/>
+                <cd:Record namexml="ROI">
+                  <cd:Description>Information regarding the region of interest related to the raster data</cd:Description>
+                  <cd:Field name="Lines">
+                    <cd:Type namexml="Lines">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Samples">
+                    <cd:Type namexml="Samples">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SlowStartTime">
+                    <cd:Type namexml="SlowStartTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SlowTimeLength">
+                    <cd:Type namexml="SlowTimeLength">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SlowTimeDelta">
+                    <cd:Type namexml="SlowTimeDelta">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="FastStartTime">
+                    <cd:Type namexml="FastStartTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="FastTimeLength">
+                    <cd:Type namexml="FastTimeLength">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="FastTimeDelta">
+                    <cd:Type namexml="FastTimeDelta">
+                      <cd:Attribute name="unit"/>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="DataSetInfo">
+                <cd:Optional/>
+                <cd:Record namexml="DataSetInfo">
+                  <cd:Description>Information regarding the dataset</cd:Description>
+                  <cd:Field name="SensorName">
+                    <cd:Text namexml="SensorName">
+                      <cd:Description>Name of the sensor used to acquire the image: ASAR, PALSAR, ...</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="Description">
+                    <cd:Text namexml="Description">
+                      <cd:Description>Description of the image</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="SenseDate">
+                    <cd:Text namexml="SenseDate">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image acquisition date</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionMode">
+                    <cd:Text namexml="AcquisitionMode">
+                      <cd:Attribute name="Polarization">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image acquisition mode: STRIPMAP, TOPSAR, ...</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ImageType">
+                    <cd:Text namexml="ImageType">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image type: RAW DATA, RANGE FOCUSED, AZIMUTH FOCUSED</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="Projection">
+                    <cd:Text namexml="Projection">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image projection: SLANT RANGE, GROUND RANGE</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionStation">
+                    <cd:Text namexml="AcquisitionStation">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image acquisition station</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ProcessingCenter">
+                    <cd:Text namexml="ProcessingCenter">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image processing center</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ProcessingDate">
+                    <cd:Text namexml="ProcessingDate">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image processing date</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ProcessingSoftware">
+                    <cd:Text namexml="ProcessingSoftware">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Image processing software</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="fc_hz">
+                    <cd:Type namexml="fc_hz">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Radar carrier frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SideLooking">
+                    <cd:Text namexml="SideLooking">
+                      <cd:Description>Radar side looking: LEFT, RIGHT</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ExternalCalibrationFactor">
+                    <cd:Type namexml="ExternalCalibrationFactor">
+                      <cd:Description>External calibration factor</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="DataTakeID">
+                    <cd:Type namexml="DataTakeID">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="SwathInfo">
+                <cd:Optional/>
+                <cd:Record namexml="SwathInfo">
+                  <cd:Field name="Swath">
+                    <cd:Text namexml="Swath">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Swath name</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="SwathAcquisitionOrder">
+                    <cd:Type namexml="SwathAcquisitionOrder">
+                      <cd:Description>Swath acquisition order</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Polarization">
+                    <cd:Text namexml="Polarization">
+                      <cd:Description>Polarization: H/H, H/V, V/H, V/V</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="Rank">
+                    <cd:Type namexml="Rank">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Rank</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>int32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="RangeDelayBias">
+                    <cd:Type namexml="RangeDelayBias">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Range delay bias</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionStartTime">
+                    <cd:Text namexml="AcquisitionStartTime">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Acquisition start time</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AzimuthSteeringRateReferenceTime">
+                    <cd:Type namexml="AzimuthSteeringRateReferenceTime">
+                      <cd:Attribute name="unit"/>
+                      <cd:Description>Azimuth antenna steering rate polynomial reference time</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="AzimuthSteeringRatePol">
+                    <cd:Record namexml="AzimuthSteeringRatePol">
+                      <cd:Description>Azimuth antenna steering rate polynomial coefficients: const [rad/s], az [rad/s^2], az^2 [rad/s^3]</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionPRF">
+                    <cd:Type namexml="AcquisitionPRF">
+                      <cd:Description>Acquisition Pulse Repetition Frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="EchoesPerBurst">
+                    <cd:Type namexml="EchoesPerBurst">
+                      <cd:Description>Number of echoes for each burst</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="ChannelDelay">
+                    <cd:Type namexml="ChannelDelay">
+                      <cd:Description>Range channel delay time</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="RxGain">
+                    <cd:Type namexml="RxGain">
+                      <cd:Description>Value of the commandable Rx attenuation in the receiver channel</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>float</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="SamplingConstants">
+                <cd:Optional/>
+                <cd:Record namexml="SamplingConstants">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="frg_hz">
+                    <cd:Type namexml="frg_hz">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Range sampling frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Brg_hz">
+                    <cd:Type namexml="Brg_hz">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Range bandwidth</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="faz_hz">
+                    <cd:Type namexml="faz_hz">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Azimuth sampling frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Baz_hz">
+                    <cd:Type namexml="Baz_hz">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Azimuth bandwidth</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="AcquisitionTimeLine">
+                <cd:Optional/>
+                <cd:Record namexml="AcquisitionTimeLine">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="MissingLines_number">
+                    <cd:Type namexml="MissingLines_number">
+                      <cd:Description>Number of missing lines</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="MissingLines_azimuthtimes">
+                    <cd:Record namexml="MissingLines_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each missing line</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="Swst_changes_number">
+                    <cd:Type namexml="Swst_changes_number">
+                      <cd:Description>Number of SWST changes</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Swst_changes_azimuthtimes">
+                    <cd:Record namexml="Swst_changes_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each SWST change</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="Swst_changes_values">
+                    <cd:Record namexml="Swst_changes_values">
+                      <cd:Description>SWST changes values</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="noise_packets_number">
+                    <cd:Type namexml="noise_packets_number">
+                      <cd:Description>Number of noise packets</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="noise_packets_azimuthtimes">
+                    <cd:Record namexml="noise_packets_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each noise packet</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="Internal_calibration_number">
+                    <cd:Type namexml="Internal_calibration_number">
+                      <cd:Description>Number of internal calibration packets</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Internal_calibration_azimuthtimes">
+                    <cd:Record namexml="Internal_calibration_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each internal calibration packet</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="DataStatistics">
+                <cd:Optional/>
+                <cd:Record namexml="DataStatistics">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="NumSamples">
+                    <cd:Type namexml="NumSamples">
+                      <cd:Description>Number of samples analyzed</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="MaxI">
+                    <cd:Type namexml="MaxI">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Max of I (real) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="MinI">
+                    <cd:Type namexml="MinI">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Min of I (real) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="MaxQ">
+                    <cd:Type namexml="MaxQ">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Max of Q (imaginary) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="MinQ">
+                    <cd:Type namexml="MinQ">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Min of Q (imaginary) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SumI">
+                    <cd:Type namexml="SumI">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Sum of I (real) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="SumQ">
+                    <cd:Type namexml="SumQ">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Sum of Q (imaginary) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Sum2I">
+                    <cd:Type namexml="Sum2I">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Square Sum of I (real) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Sum2Q">
+                    <cd:Type namexml="Sum2Q">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Square Sum of Q (imaginary) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="StdDevI">
+                    <cd:Type namexml="StdDevI">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Standard Deviation of I (real) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="StdDevQ">
+                    <cd:Type namexml="StdDevQ">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Standard Deviation of Q (imaginary) samples</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="StatisticsList">
+                    <cd:Record namexml="StatisticsList">
+                      <cd:Field name="DataBlockStatistic">
+                        <cd:Record namexml="DataStatistics">
+                          <cd:Attribute name="Number">
+                            <cd:Optional/>
+                          </cd:Attribute>
+                          <cd:Attribute name="Total">
+                            <cd:Optional/>
+                          </cd:Attribute>
+                          <cd:Attribute name="lineStart"/>
+                          <cd:Attribute name="lineStop"/>
+                          <cd:Field name="NumSamples">
+                            <cd:Type namexml="NumSamples">
+                              <cd:Description>Number of samples analyzed</cd:Description>
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="MaxI">
+                            <cd:Type namexml="MaxI">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Max of I (real) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="MinI">
+                            <cd:Type namexml="MinI">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Min of I (real) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="MaxQ">
+                            <cd:Type namexml="MaxQ">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Max of Q (imaginary) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="MinQ">
+                            <cd:Type namexml="MinQ">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Min of Q (imaginary) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SumI">
+                            <cd:Type namexml="SumI">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Sum of I (real) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SumQ">
+                            <cd:Type namexml="SumQ">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Sum of Q (imaginary) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Sum2I">
+                            <cd:Type namexml="Sum2I">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Square Sum of I (real) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="Sum2Q">
+                            <cd:Type namexml="Sum2Q">
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Description>Square Sum of Q (imaginary) samples</cd:Description>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                    <cd:Optional/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="BurstInfo">
+                <cd:Optional/>
+                <cd:Record namexml="BurstInfo">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="NumberOfBursts">
+                    <cd:Type namexml="NumberOfBursts">
+                      <cd:Description>Number of bursts in the swath</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="LinesPerBurst">
+                    <cd:Type namexml="LinesPerBurst">
+                      <cd:Description>Number of lines in each burst</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="BurstRepetitionFrequency">
+                    <cd:Type namexml="BurstRepetitionFrequency">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Burst repetition frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Burst">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Record namexml="Burst">
+                        <cd:Attribute name="N"/>
+                        <cd:Field name="RangeStartTime">
+                          <cd:Type namexml="RangeStartTime">
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Description>Range absolute start time</cd:Description>
+                            <cd:Float format="ascii">
+                              <cd:Unit>s</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                        <cd:Field name="AzimuthStartTime">
+                          <cd:Type namexml="AzimuthStartTime">
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Description>Azimuth start time relative to the absolute value reported in RasterInfo</cd:Description>
+                            <cd:Float format="ascii">
+                              <cd:Unit>s</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="StateVectorData">
+                <cd:Optional/>
+                <cd:Record namexml="StateVectorData">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="OrbitNumber">
+                    <cd:Type namexml="OrbitNumber">
+                      <cd:Description>Number of the orbit</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Track">
+                    <cd:Type namexml="Track">
+                      <cd:Description>Number of the track</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="OrbitDirection">
+                    <cd:Text namexml="OrbitDirection">
+                      <cd:Description>Direction of the orbit: ASCENDING, DESCENDING</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="pSV_m">
+                    <cd:Record namexml="pSV_m">
+                      <cd:Description>Orbit state vectors position coordinates (xyz)</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:Unit>m</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="vSV_mOs">
+                    <cd:Record namexml="vSV_mOs">
+                      <cd:Description>Orbit state vectors velocity coordinates</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:Unit>m/s</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="t_ref_Utc">
+                    <cd:Text namexml="t_ref_Utc">
+                      <cd:Description>Azimuth absolute start time for the first state vector</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="dtSV_s">
+                    <cd:Type namexml="dtSV_s">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Azimuth time interval between two consecutive state vectors</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="nSV_n">
+                    <cd:Type namexml="nSV_n">
+                      <cd:Description>Number of state vectors</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="AscendingNodeTime">
+                    <cd:Optional/>
+                    <cd:Text namexml="AscendingNodeTime">
+                      <cd:Description>Azimuth absolute time of the ascending node</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AscendingNodeCoords">
+                    <cd:Record namexml="AscendingNodeCoords">
+                      <cd:Description>Coordinates of the ascending node</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="DopplerCentroid">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="DopplerCentroid">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="DopplerRate">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="DopplerRate">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="TopsAzimuthModulationRate">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="TopsAzimuthModulationRate">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="SlantToGround">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="SlantToGround">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="GroundToSlant">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="GroundToSlant">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="SlantToIncidence">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="SlantToIncidence">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="SlantToElevation">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="SlantToElevation">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="pol">
+                      <cd:Record namexml="pol">
+                        <cd:Description>Polynomial coefficients: const, rg, az, az*rg, rg^2, rg^3, rg^4</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="AttitudeInfo">
+                <cd:Optional/>
+                <cd:Record namexml="AttitudeInfo">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="t_ref_Utc">
+                    <cd:Text namexml="t_ref_Utc">
+                      <cd:Description>Azimuth absolute start time for the first attitude value</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="dtYPR_s">
+                    <cd:Type namexml="dtYPR_s">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Azimuth time interval between two consecutive attitude values</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="nYPR_n">
+                    <cd:Type namexml="nYPR_n">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Number of attitude values</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>int32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="yaw_deg">
+                    <cd:Record namexml="yaw_deg">
+                      <cd:Description>Yaw angle values</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:Unit>deg</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="pitch_deg">
+                    <cd:Record namexml="pitch_deg">
+                      <cd:Description>Pitch angle values</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:Unit>deg</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="roll_deg">
+                    <cd:Record namexml="roll_deg">
+                      <cd:Description>Roll angle values</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:Unit>deg</cd:Unit>
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="referenceFrame">
+                    <cd:Text namexml="referenceFrame">
+                      <cd:Description>Reference frame: GEOCENTRIC, GEODETIC, ZERODOPPLER</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="rotationOrder">
+                    <cd:Text namexml="rotationOrder">
+                      <cd:Description>Rotation order: YPR, YRP, PRY, PYR, RPY, RYP</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AttitudeType">
+                    <cd:Text namexml="AttitudeType">
+                      <cd:Description>Attitude type: NOMINAL, REFINED</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="GroundCornerPoints">
+                <cd:Optional/>
+                <cd:Record namexml="GroundCornerPoints">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="EastingGridSize">
+                    <cd:Type namexml="EastingGridSize">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="NorthingGridSize">
+                    <cd:Type namexml="NorthingGridSize">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Float format="ascii">
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="NorthWest">
+                    <cd:Record namexml="NorthWest">
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="NorthEast">
+                    <cd:Record namexml="NorthEast">
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="SouthWest">
+                    <cd:Record namexml="SouthWest">
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="SouthEast">
+                    <cd:Record namexml="SouthEast">
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="Center">
+                    <cd:Record namexml="Center">
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="Pulse">
+                <cd:Optional/>
+                <cd:Record namexml="Pulse">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="PulseLength">
+                    <cd:Type namexml="PulseLength">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse length</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>s</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="Bandwidth">
+                    <cd:Type namexml="Bandwidth">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse bandwidth</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="PulseEnergy">
+                    <cd:Type namexml="PulseEnergy">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse energy</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>J</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="PulseSamplingRate">
+                    <cd:Type namexml="PulseSamplingRate">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse sampling rate</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="PulseStartFrequency">
+                    <cd:Type namexml="PulseStartFrequency">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse start frequency</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>Hz</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="PulseStartPhase">
+                    <cd:Type namexml="PulseStartPhase">
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Description>Pulse start phase</cd:Description>
+                      <cd:Float format="ascii">
+                        <cd:Unit>rad</cd:Unit>
+                        <cd:NativeType>double</cd:NativeType>
+                      </cd:Float>
+                    </cd:Type>
+                    <cd:Optional/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+              <cd:Field name="CoregPoly">
+                <cd:Array>
+                  <cd:Dimension/>
+                  <cd:Record namexml="CoregPoly">
+                    <cd:Attribute name="Number">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Attribute name="Total">
+                      <cd:Optional/>
+                    </cd:Attribute>
+                    <cd:Field name="polRg">
+                      <cd:Record namexml="polRg">
+                        <cd:Description>Polynomial coefficients of Range</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="polAz">
+                      <cd:Record namexml="polAz">
+                        <cd:Description>Polynomial coefficients of Azimuth</cd:Description>
+                        <cd:Field name="val">
+                          <cd:Array>
+                            <cd:Dimension/>
+                            <cd:Type namexml="val">
+                              <cd:Attribute name="N">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Attribute name="unit">
+                                <cd:Optional/>
+                              </cd:Attribute>
+                              <cd:Float format="ascii">
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Array>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Field>
+                    <cd:Field name="trg0_s">
+                      <cd:Type namexml="trg0_s">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial range reference time</cd:Description>
+                        <cd:Float format="ascii">
+                          <cd:Unit>s</cd:Unit>
+                          <cd:NativeType>double</cd:NativeType>
+                        </cd:Float>
+                      </cd:Type>
+                    </cd:Field>
+                    <cd:Field name="taz0_Utc">
+                      <cd:Text namexml="taz0_Utc">
+                        <cd:Attribute name="unit">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Description>Polynomial azimuth reference time</cd:Description>
+                      </cd:Text>
+                    </cd:Field>
+                  </cd:Record>
+                </cd:Array>
+                <cd:Optional/>
+              </cd:Field>
+              <cd:Field name="AntennaInfo">
+                <cd:Optional/>
+                <cd:Record namexml="AntennaInfo">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="SensorName">
+                    <cd:Text namexml="SensorName">
+                      <cd:Description>Sensor name: ASAR, PALSAR, ...</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="AcquisitionMode">
+                    <cd:Text namexml="AcquisitionMode">
+                      <cd:Description>Acquisition mode: STRIPMAP, TOPSAR, ...</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="BeamName">
+                    <cd:Text namexml="BeamName">
+                      <cd:Description>Acquisition beam name</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="Polarization">
+                    <cd:Text namexml="Polarization">
+                      <cd:Description>Antenna polarization (H/H, H/V...)</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Field>
+            </cd:Record>
+          </cd:Array>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
