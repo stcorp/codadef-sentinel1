@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="LOG_______" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="LOG_______" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation"/>
+        <cd:Attribute name="schemaVersion"/>
         <cd:Field name="Earth_Explorer_Header">
           <cd:Record namexml="Earth_Explorer_Header">
             <cd:Field name="Fixed_Header">

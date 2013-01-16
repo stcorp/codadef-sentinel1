@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="REP_CALRPT" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="REP_CALRPT" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="Data_Block">
       <cd:Record namexml="Data_Block">
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation"/>
+        <cd:Attribute name="schemaVersion"/>
         <cd:Attribute name="type"/>
         <cd:Field name="Transponder_Data">
           <cd:Record namexml="Transponder_Data">
@@ -30,6 +32,9 @@
             </cd:Field>
             <cd:Field name="PostCalibrationStatus">
               <cd:NamedType id="TP_PostCalibrationStatus"/>
+            </cd:Field>
+            <cd:Field name="PdgsSensorLogList">
+              <cd:NamedType id="TP_PdgsSensorLogList"/>
             </cd:Field>
           </cd:Record>
         </cd:Field>

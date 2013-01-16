@@ -1,4 +1,4 @@
-<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -45,9 +45,22 @@
       </cd:Float>
     </cd:Type>
   </cd:Field>
+  <cd:Field name="DefaultH0FilterCoeff">
+    <cd:Text namexml="DefaultH0FilterCoeff"/>
+  </cd:Field>
+  <cd:Field name="DefaultH1FilterCoeff">
+    <cd:Text namexml="DefaultH1FilterCoeff"/>
+  </cd:Field>
+  <cd:Field name="DefaultHdcFilterCoeff">
+    <cd:Text namexml="DefaultHdcFilterCoeff"/>
+  </cd:Field>
   <cd:Field name="ModificationDate">
     <cd:Type namexml="ModificationDate">
-      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
+        <cd:Text>
+          <cd:ByteSize>28</cd:ByteSize>
+        </cd:Text>
+      </cd:Time>
     </cd:Type>
   </cd:Field>
   <cd:Field name="CalId">
@@ -56,6 +69,9 @@
         <cd:NativeType>int32</cd:NativeType>
       </cd:Integer>
     </cd:Type>
+  </cd:Field>
+  <cd:Field name="SettingsName">
+    <cd:Text namexml="SettingsName"/>
   </cd:Field>
   <cd:Field name="SarCalibrationTimeoutSeconds">
     <cd:Type namexml="SarCalibrationTimeoutSeconds">
@@ -122,6 +138,12 @@
       </cd:Float>
     </cd:Type>
   </cd:Field>
+  <cd:Field name="FtpConfigurationUrl">
+    <cd:Text namexml="FtpConfigurationUrl"/>
+  </cd:Field>
+  <cd:Field name="FtpReportsUrl">
+    <cd:Text namexml="FtpReportsUrl"/>
+  </cd:Field>
   <cd:Field name="FtpPollingInterval">
     <cd:Type namexml="FtpPollingInterval">
       <cd:Float format="ascii">
@@ -132,12 +154,20 @@
   </cd:Field>
   <cd:Field name="LastLogDumpTime">
     <cd:Type namexml="LastLogDumpTime">
-      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
+        <cd:Text>
+          <cd:ByteSize>28</cd:ByteSize>
+        </cd:Text>
+      </cd:Time>
     </cd:Type>
   </cd:Field>
   <cd:Field name="NextLogDumpTime">
     <cd:Type namexml="NextLogDumpTime">
-      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
+        <cd:Text>
+          <cd:ByteSize>28</cd:ByteSize>
+        </cd:Text>
+      </cd:Time>
     </cd:Type>
   </cd:Field>
   <cd:Field name="LogDumpIntervalHours">
@@ -147,6 +177,15 @@
         <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sentinel1aPredictedOrbit">
+    <cd:Text namexml="Sentinel1aPredictedOrbit"/>
+  </cd:Field>
+  <cd:Field name="Sentinel1bPredictedOrbit">
+    <cd:Text namexml="Sentinel1bPredictedOrbit"/>
+  </cd:Field>
+  <cd:Field name="StaticSettingsXml">
+    <cd:Text namexml="StaticSettingsXml"/>
   </cd:Field>
   <cd:Field name="DefaultCalibrationFilters">
     <cd:Record namexml="DefaultCalibrationFilters">

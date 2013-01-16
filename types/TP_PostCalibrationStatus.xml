@@ -1,4 +1,4 @@
-<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2012-10-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -25,6 +25,14 @@
           </cd:Float>
         </cd:Type>
       </cd:Field>
+      <cd:Field name="CirculatorTemperature">
+        <cd:Type namexml="CirculatorTemperature">
+          <cd:Float format="ascii">
+            <cd:Unit>C</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+      </cd:Field>
       <cd:Field name="ConnectionStatus">
         <cd:Text namexml="ConnectionStatus"/>
       </cd:Field>
@@ -33,28 +41,33 @@
       </cd:Field>
       <cd:Field name="Inclination">
         <cd:Record namexml="Inclination">
-          <cd:Field name="InclinometerReading">
-            <cd:Record namexml="InclinometerReading">
-              <cd:Field name="InclinationX">
-                <cd:Type namexml="InclinationX">
-                  <cd:Float format="ascii">
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-              <cd:Field name="InclinationY">
-                <cd:Type namexml="InclinationY">
-                  <cd:Float format="ascii">
-                    <cd:NativeType>double</cd:NativeType>
-                  </cd:Float>
-                </cd:Type>
-              </cd:Field>
-            </cd:Record>
+          <cd:Field name="InclinationX">
+            <cd:Type namexml="InclinationX">
+              <cd:Float format="ascii">
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="InclinationY">
+            <cd:Type namexml="InclinationY">
+              <cd:Float format="ascii">
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Type>
           </cd:Field>
         </cd:Record>
       </cd:Field>
       <cd:Field name="IsLoopbackOpen">
         <cd:Type namexml="IsLoopbackOpen">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsTestSignalInputEnabled">
+        <cd:Type namexml="IsTestSignalInputEnabled">
           <cd:Integer format="ascii">
             <cd:NativeType>uint8</cd:NativeType>
             <cd:Mapping string="false" value="0"/>
@@ -72,6 +85,13 @@
       </cd:Field>
     </cd:Record>
   </cd:Field>
+  <cd:Field name="DatabaseRowCount">
+    <cd:Type namexml="DatabaseRowCount">
+      <cd:Integer format="ascii">
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
+  </cd:Field>
   <cd:Field name="DatabaseSizeMB">
     <cd:Type namexml="DatabaseSizeMB">
       <cd:Float format="ascii">
@@ -81,7 +101,7 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="DiagnosticStatus">
-    <cd:Text namexml="DatabaseSizeMB"/>
+    <cd:Text namexml="DiagnosticStatus"/>
   </cd:Field>
   <cd:Field name="DiskUsageMB">
     <cd:Type namexml="DiskUsageMB">
@@ -99,18 +119,42 @@
       </cd:Float>
     </cd:Type>
   </cd:Field>
+  <cd:Field name="EthernetSwitch">
+    <cd:Record namexml="EthernetSwitch">
+      <cd:Field name="ConnectionStatus">
+        <cd:Text namexml="ConnectionStatus"/>
+      </cd:Field>
+      <cd:Field name="Description">
+        <cd:Text namexml="Description"/>
+      </cd:Field>
+      <cd:Field name="DiagnosticStatus">
+        <cd:Text namexml="DiagnosticStatus"/>
+      </cd:Field>
+      <cd:Field name="IpAddress">
+        <cd:Text namexml="IpAddress"/>
+      </cd:Field>
+      <cd:Field name="MacAdddress">
+        <cd:Text namexml="MacAdddress"/>
+      </cd:Field>
+      <cd:Field name="NetworkInterfaceType">
+        <cd:Text namexml="NetworkInterfaceType"/>
+      </cd:Field>
+      <cd:Field name="OperationalStatus">
+        <cd:Text namexml="OperationalStatus"/>
+      </cd:Field>
+      <cd:Field name="Speed">
+        <cd:Type namexml="Speed">
+          <cd:Integer format="ascii">
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
   <cd:Field name="GpsStatus">
     <cd:Record namexml="GpsStatus">
       <cd:Field name="Altitude">
         <cd:Type namexml="Altitude">
-          <cd:Float format="ascii">
-            <cd:Unit>m</cd:Unit>
-            <cd:NativeType>double</cd:NativeType>
-          </cd:Float>
-        </cd:Type>
-      </cd:Field>
-      <cd:Field name="AntennaCableLength">
-        <cd:Type namexml="AntennaCableLength">
           <cd:Float format="ascii">
             <cd:Unit>m</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
@@ -125,18 +169,11 @@
       </cd:Field>
       <cd:Field name="CurrentTime">
         <cd:Type namexml="CurrentTime">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2_with_ref"/>
+          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
         </cd:Type>
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>
-      </cd:Field>
-      <cd:Field name="ExpectedNumSatsUsed">
-        <cd:Type namexml="ExpectedNumSatsUsed">
-          <cd:Integer format="ascii">
-            <cd:NativeType>int32</cd:NativeType>
-          </cd:Integer>
-        </cd:Type>
       </cd:Field>
       <cd:Field name="IsLocked">
         <cd:Type namexml="IsLocked">
@@ -170,8 +207,15 @@
           </cd:Integer>
         </cd:Type>
       </cd:Field>
-      <cd:Field name="NumSatsUsed">
-        <cd:Type namexml="NumSatsUsed">
+      <cd:Field name="NumSatsInView">
+        <cd:Type namexml="NumSatsInView">
+          <cd:Integer format="ascii">
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="NumSatsTracked">
+        <cd:Type namexml="NumSatsTracked">
           <cd:Integer format="ascii">
             <cd:NativeType>int32</cd:NativeType>
           </cd:Integer>
@@ -186,6 +230,33 @@
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>
+      </cd:Field>
+      <cd:Field name="IsAirConditionerEnabled">
+        <cd:Type namexml="IsAirConditionerEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsClockEnabled">
+        <cd:Type namexml="IsClockEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsDehydratorGood">
+        <cd:Type namexml="IsDehydratorGood">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
       </cd:Field>
       <cd:Field name="IsLoopbackOpen">
         <cd:Type namexml="IsLoopbackOpen">
@@ -205,6 +276,42 @@
           </cd:Integer>
         </cd:Type>
       </cd:Field>
+      <cd:Field name="IsPowerSupplyAEnabled">
+        <cd:Type namexml="IsPowerSupplyAEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsPowerSupplyBEnabled">
+        <cd:Type namexml="IsPowerSupplyBEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsReceiverEnabled">
+        <cd:Type namexml="IsReceiverEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsTransmitterEnabled">
+        <cd:Type namexml="IsTransmitterEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+      </cd:Field>
       <cd:Field name="PowerDetectorLevel">
         <cd:Type namexml="PowerDetectorLevel">
           <cd:Float format="ascii">
@@ -212,6 +319,68 @@
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
         </cd:Type>
+      </cd:Field>
+      <cd:Field name="PowerSupplyAStatus">
+        <cd:Record namexml="PowerSupplyAStatus">
+          <cd:Field name="DcPowerGood">
+            <cd:Type namexml="DcPowerGood">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="AcPowerFail">
+            <cd:Type namexml="AcPowerFail">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="OverTempWarning">
+            <cd:Type namexml="OverTempWarning">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+      </cd:Field>
+      <cd:Field name="PowerSupplyBStatus">
+        <cd:Record namexml="PowerSupplyBStatus">
+          <cd:Field name="DcPowerGood">
+            <cd:Type namexml="DcPowerGood">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="AcPowerFail">
+            <cd:Type namexml="AcPowerFail">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="OverTempWarning">
+            <cd:Type namexml="OverTempWarning">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
       </cd:Field>
       <cd:Field name="RxGain">
         <cd:Type namexml="RxGain">
@@ -227,6 +396,66 @@
             <cd:Unit>dB</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
+        </cd:Type>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="LoopbackPulseAdcData">
+    <cd:Record namexml="LoopbackPulseAdcData">
+      <cd:Field name="double">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Type namexml="double">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>    
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="LoopbackPulseDacData">
+    <cd:Record namexml="LoopbackPulseDacData">
+      <cd:Field name="double">
+        <cd:Array>
+          <cd:Dimension/>
+          <cd:Type namexml="double">
+            <cd:Float format="ascii">
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>    
+        </cd:Array>
+      </cd:Field>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="MediaConverter">
+    <cd:Record namexml="MediaConverter">
+      <cd:Field name="ConnectionStatus">
+        <cd:Text namexml="ConnectionStatus"/>
+      </cd:Field>
+      <cd:Field name="Description">
+        <cd:Text namexml="Description"/>
+      </cd:Field>
+      <cd:Field name="DiagnosticStatus">
+        <cd:Text namexml="DiagnosticStatus"/>
+      </cd:Field>
+      <cd:Field name="IpAddress">
+        <cd:Text namexml="IpAddress"/>
+      </cd:Field>
+      <cd:Field name="MacAdddress">
+        <cd:Text namexml="MacAdddress"/>
+      </cd:Field>
+      <cd:Field name="NetworkInterfaceType">
+        <cd:Text namexml="NetworkInterfaceType"/>
+      </cd:Field>
+      <cd:Field name="OperationalStatus">
+        <cd:Text namexml="OperationalStatus"/>
+      </cd:Field>
+      <cd:Field name="Speed">
+        <cd:Type namexml="Speed">
+          <cd:Integer format="ascii">
+            <cd:NativeType>int32</cd:NativeType>
+          </cd:Integer>
         </cd:Type>
       </cd:Field>
     </cd:Record>
@@ -327,13 +556,6 @@
         <cd:Text namexml="DiagnosticStatus"/>
       </cd:Field>
     </cd:Record>
-  </cd:Field>
-  <cd:Field name="RowCount">
-    <cd:Type namexml="RowCount">
-      <cd:Float format="ascii">
-        <cd:NativeType>double</cd:NativeType>
-      </cd:Float>
-    </cd:Type>
   </cd:Field>
   <cd:Field name="TemperatureStatus">
     <cd:Record namexml="TemperatureStatus">
