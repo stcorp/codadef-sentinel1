@@ -1,4 +1,4 @@
-<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2013-02-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -35,5 +35,8 @@
   </cd:Field>
   <cd:Field name="ErrorId">
     <cd:Text namexml="ErrorId"/>
+  </cd:Field>
+  <cd:Field name="UserName">
+    <cd:Text namexml="UserName"/>
   </cd:Field>
 </cd:Record>
