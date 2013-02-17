@@ -87,7 +87,7 @@
                     <cd:Type namexml="noiseLut">
                       <cd:Attribute name="count"/>
                       <cd:Array format="ascii">
-                        <cd:Dimension>int(str(.@count))</cd:Dimension>
+                        <cd:Dimension>int(str(@count))</cd:Dimension>
                         <cd:Float>
                           <cd:NativeType>float</cd:NativeType>
                         </cd:Float>
