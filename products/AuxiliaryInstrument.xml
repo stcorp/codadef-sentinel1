@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2011-05-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -233,18 +233,11 @@
                           <cd:Array format="ascii">
                             <cd:Description>Array of modeled complex PG model values.  The pattern contains attribute "count" complex floating point values separated by spaces.  The first value in the array corresponds to the time at the ascending node of the current orbit.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
-                            <cd:Record>
-                              <cd:Field name="re">
-                                <cd:Float>
-                                  <cd:NativeType>float</cd:NativeType>
-                                </cd:Float>
-                              </cd:Field>
-                              <cd:Field name="im">
-                                <cd:Float>
-                                  <cd:NativeType>float</cd:NativeType>
-                                </cd:Float>
-                              </cd:Field>
-                            </cd:Record>
+                            <cd:Complex>
+                              <cd:Float>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Complex>
                           </cd:Array>
                         </cd:Type>
                       </cd:Field>
