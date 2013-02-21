@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2013-02-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2013-02-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest">
     <cd:Description>SAFE Manifest file for L1/L2/Aux products</cd:Description>
@@ -1520,7 +1520,7 @@
   <cd:ProductType name="MPL_ORBPRE">
     <cd:Description>FOS Predicted Orbit File (EEF)</cd:Description>
     <cd:ProductDefinition id="MPL_ORBPRE" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{http://eop-cfi.esa.int/CFI}Earth_Explorer_File/{http://eop-cfi.esa.int/CFI}Earth_Explorer_Header/{http://eop-cfi.esa.int/CFI}Fixed_Header/{http://eop-cfi.esa.int/CFI}File_Type">MPL_ORBPRE</cd:MatchData>
         <cd:MatchFilename offset="0">S1</cd:MatchFilename>
@@ -1530,7 +1530,7 @@
   <cd:ProductType name="REP__MACP_">
     <cd:Description>Manoeuvre Acceleration Profile (DBL)</cd:Description>
     <cd:ProductDefinition id="REP__MACP_" format="ascii" version="0">
-      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">S1</cd:MatchFilename>
         <cd:MatchFilename offset="9">REP__MACP_</cd:MatchFilename>
@@ -1540,10 +1540,19 @@
   <cd:ProductType name="REP__MACP__HDR">
     <cd:Description>Manoeuvre Acceleration Profile (HDR)</cd:Description>
     <cd:ProductDefinition id="REP__MACP__HDR" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.0 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:Description>This definition is based on version 1.2 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_Header/Fixed_Header/File_Type">REP__MACP_</cd:MatchData>
         <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="REP__SUP__">
+    <cd:Description>FOS &amp; Satellite Unavailability Report (EEF)</cd:Description>
+    <cd:ProductDefinition id="REP__SUP__" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.2 of the FOS File Format Specification GM-IC-ESC-FS-3001</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">REP__SUP__</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -1650,8 +1659,4 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-<!--
-  products to implement:
-    REP__SUP__ FOS & Satellite Unavailability Report (FOS-PFS: html?)
--->
 </cd:ProductClass>
