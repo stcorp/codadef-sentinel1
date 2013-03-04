@@ -1,4 +1,4 @@
-<cd:Record name="TP_PdgsSarCalibrationData" namexml="PdgsSarCalibrationData" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PdgsSarCalibrationData" namexml="PdgsSarCalibrationData" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="CalibrationId">
     <cd:Type namexml="CalibrationId">
       <cd:Integer format="ascii">
@@ -21,6 +21,7 @@
         </cd:Text>
       </cd:Time>
     </cd:Type>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="AcquisitionOffset">
     <cd:Type namexml="AcquisitionOffset">
@@ -31,12 +32,15 @@
   </cd:Field>
   <cd:Field name="FilterH0Coefficients">
     <cd:Text namexml="FilterH0Coefficients"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="FilterH1Coefficients">
     <cd:Text namexml="FilterH1Coefficients"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="FilterHdcCoefficients">
     <cd:Text namexml="FilterHdcCoefficients"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="IsSarCalibrationAborted">
     <cd:Type namexml="IsSarCalibrationAborted">

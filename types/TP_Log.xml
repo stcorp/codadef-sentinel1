@@ -1,4 +1,4 @@
-<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2013-02-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -8,21 +8,27 @@
   </cd:Field>
   <cd:Field name="Level">
     <cd:Text namexml="Level"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Logger">
     <cd:Text namexml="Logger"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Message">
     <cd:Text namexml="Message"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="CallSite">
     <cd:Text namexml="CallSite"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="StackTrace">
     <cd:Text namexml="StackTrace"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Exception">
     <cd:Text namexml="Exception"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Timestamp">
     <cd:Type format="ascii" namexml="Timestamp">
@@ -35,8 +41,10 @@
   </cd:Field>
   <cd:Field name="ErrorId">
     <cd:Text namexml="ErrorId"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="UserName">
     <cd:Text namexml="UserName"/>
+    <cd:Optional/>
   </cd:Field>
 </cd:Record>

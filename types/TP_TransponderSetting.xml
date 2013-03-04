@@ -1,4 +1,4 @@
-<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -47,12 +47,15 @@
   </cd:Field>
   <cd:Field name="DefaultH0FilterCoeff">
     <cd:Text namexml="DefaultH0FilterCoeff"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="DefaultH1FilterCoeff">
     <cd:Text namexml="DefaultH1FilterCoeff"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="DefaultHdcFilterCoeff">
     <cd:Text namexml="DefaultHdcFilterCoeff"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="ModificationDate">
     <cd:Type namexml="ModificationDate">
@@ -72,6 +75,7 @@
   </cd:Field>
   <cd:Field name="SettingsName">
     <cd:Text namexml="SettingsName"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="SarCalibrationTimeoutSeconds">
     <cd:Type namexml="SarCalibrationTimeoutSeconds">
@@ -113,6 +117,7 @@
   </cd:Field>
   <cd:Field name="TransponderName">
     <cd:Text namexml="TransponderName"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="SurveyedLatitude">
     <cd:Type namexml="SurveyedLatitude">
@@ -140,9 +145,11 @@
   </cd:Field>
   <cd:Field name="FtpConfigurationUrl">
     <cd:Text namexml="FtpConfigurationUrl"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="FtpReportsUrl">
     <cd:Text namexml="FtpReportsUrl"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="FtpPollingInterval">
     <cd:Type namexml="FtpPollingInterval">
@@ -180,12 +187,15 @@
   </cd:Field>
   <cd:Field name="Sentinel1aPredictedOrbit">
     <cd:Text namexml="Sentinel1aPredictedOrbit"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Sentinel1bPredictedOrbit">
     <cd:Text namexml="Sentinel1bPredictedOrbit"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="StaticSettingsXml">
     <cd:Text namexml="StaticSettingsXml"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="DefaultCalibrationFilters">
     <cd:Record namexml="DefaultCalibrationFilters">

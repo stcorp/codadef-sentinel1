@@ -1,4 +1,4 @@
-<cd:Record name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -126,21 +126,26 @@
       </cd:Field>
       <cd:Field name="Description">
         <cd:Text namexml="Description"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>
       </cd:Field>
       <cd:Field name="IpAddress">
         <cd:Text namexml="IpAddress"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="MacAdddress">
         <cd:Text namexml="MacAdddress"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="NetworkInterfaceType">
         <cd:Text namexml="NetworkInterfaceType"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="OperationalStatus">
         <cd:Text namexml="OperationalStatus"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="Speed">
         <cd:Type namexml="Speed">
@@ -413,6 +418,7 @@
         </cd:Array>
       </cd:Field>
     </cd:Record>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="LoopbackPulseDacData">
     <cd:Record namexml="LoopbackPulseDacData">
@@ -427,6 +433,7 @@
         </cd:Array>
       </cd:Field>
     </cd:Record>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="MediaConverter">
     <cd:Record namexml="MediaConverter">
@@ -435,21 +442,26 @@
       </cd:Field>
       <cd:Field name="Description">
         <cd:Text namexml="Description"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>
       </cd:Field>
       <cd:Field name="IpAddress">
         <cd:Text namexml="IpAddress"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="MacAdddress">
         <cd:Text namexml="MacAdddress"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="NetworkInterfaceType">
         <cd:Text namexml="NetworkInterfaceType"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="OperationalStatus">
         <cd:Text namexml="OperationalStatus"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="Speed">
         <cd:Type namexml="Speed">

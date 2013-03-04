@@ -1,4 +1,4 @@
-<cd:Record name="TP_SarCalibrationParameter" namexml="SarCalibrationParameter" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_SarCalibrationParameter" namexml="SarCalibrationParameter" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -17,6 +17,7 @@
   </cd:Field>
   <cd:Field name="Description">
     <cd:Text namexml="Description"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="Azimuth">
     <cd:Type namexml="Azimuth">
@@ -71,6 +72,7 @@
   </cd:Field>
   <cd:Field name="SatelliteName">
     <cd:Text namexml="SatelliteName"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="ExpectedPrf">
     <cd:Type namexml="ExpectedPrf">
@@ -107,9 +109,11 @@
   </cd:Field>
   <cd:Field name="ModeSwathId">
     <cd:Text namexml="ModeSwathId"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="SatelliteConstellation">
     <cd:Text namexml="SatelliteConstellation"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="StoreUndecimatedSamples">
     <cd:Type namexml="StoreUndecimatedSamples">
