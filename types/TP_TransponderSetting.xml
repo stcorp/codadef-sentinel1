@@ -1,4 +1,4 @@
-<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-03-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -160,6 +160,12 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="LastLogDumpTime">
+    <cd:Text namexml="LastLogDumpTime">
+      <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
+        <cd:Optional/>
+      </cd:Attribute>
+    </cd:Text>
+<!--
     <cd:Type namexml="LastLogDumpTime">
       <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
         <cd:Text>
@@ -167,8 +173,15 @@
         </cd:Text>
       </cd:Time>
     </cd:Type>
+-->
   </cd:Field>
   <cd:Field name="NextLogDumpTime">
+    <cd:Text namexml="NextLogDumpTime">
+      <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
+        <cd:Optional/>
+      </cd:Attribute>
+    </cd:Text>
+<!--
     <cd:Type namexml="NextLogDumpTime">
       <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
         <cd:Text>
@@ -176,6 +189,7 @@
         </cd:Text>
       </cd:Time>
     </cd:Type>
+-->
   </cd:Field>
   <cd:Field name="LogDumpIntervalHours">
     <cd:Type namexml="LogDumpIntervalHours">
