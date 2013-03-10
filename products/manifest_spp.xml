@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cd:ProductDefinition id="manifest" format="xml" last-modified="2013-03-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="XFDU">
+      <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
+        <cd:Attribute name="version"/>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="informationPackageMap">
+          <cd:Record namexml="informationPackageMap">
+            <cd:Field name="contentUnit">
+              <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
+                <cd:Attribute name="ID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="order">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="unitType">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="textInfo">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="repID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="dmdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="pdiID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="anyMdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="behaviorID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Field name="contentUnit">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="order">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="unitType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="repID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="dmdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="pdiID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="anyMdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="behaviorID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Field name="dataObjectPointer">
+                        <cd:Record namexml="dataObjectPointer">
+                          <cd:Attribute name="dataObjectID"/>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="metadataSection">
+          <cd:Record namexml="metadataSection">
+            <cd:Field name="metadataObject">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="metadataObject">
+                  <cd:Attribute name="ID"/>
+                  <cd:Attribute name="classification">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="category">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="metadataReference">
+                    <cd:Optional/>
+                    <cd:Record namexml="metadataReference">
+                      <cd:Attribute name="href"/>
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locatorType"/>
+                      <cd:Attribute name="otherLocatorType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locator">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="metadataWrap">
+                    <cd:Optional/>
+                    <cd:Record namexml="metadataWrap">
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Field name="xmlData">
+                        <cd:Record namexml="xmlData">
+                          <cd:Field name="processing">
+                            <cd:Optional/>
+                            <cd:Record namexml="processing">
+                              <cd:Attribute name="name"/>
+                              <cd:Attribute name="start"/>
+                              <cd:Attribute name="stop"/>
+                              <cd:Field name="facility">
+                                <cd:Record namexml="facility">
+                                  <cd:Attribute name="country"/>
+                                  <cd:Attribute name="name"/>
+                                  <cd:Attribute name="organisation">
+                                    <cd:Optional/>
+                                  </cd:Attribute>
+                                  <cd:Attribute name="site"/>
+                                  <cd:Field name="software">
+                                    <cd:Optional/>
+                                    <cd:Record namexml="software">
+                                      <cd:Attribute name="name"/>
+                                      <cd:Attribute name="version"/>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="resource">
+                                <cd:Optional/>
+                                <cd:Record namexml="resource">
+                                  <cd:Attribute name="name"/>
+                                  <cd:Attribute name="role"/>
+                                  <cd:Field name="processing">
+                                    <cd:Record namexml="processing">
+                                      <cd:Attribute name="name"/>
+                                      <cd:Attribute name="start"/>
+                                      <cd:Attribute name="stop"/>
+                                      <cd:Field name="facility">
+                                        <cd:Record namexml="facility">
+                                          <cd:Attribute name="country"/>
+                                          <cd:Attribute name="name"/>
+                                          <cd:Attribute name="organisation"/>
+                                          <cd:Attribute name="site"/>
+                                          <cd:Field name="software">
+                                            <cd:Record namexml="software">
+                                              <cd:Attribute name="name"/>
+                                              <cd:Attribute name="version"/>
+                                            </cd:Record>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="resource">
+                                        <cd:Array>
+                                          <cd:Dimension/>
+                                          <cd:Record namexml="resource">
+                                            <cd:Attribute name="name"/>
+                                            <cd:Attribute name="role"/>
+                                            <cd:Field name="processing">
+                                              <cd:Optional/>
+                                              <cd:Record namexml="processing">
+                                                <cd:Attribute name="name"/>
+                                                <cd:Attribute name="start"/>
+                                                <cd:Attribute name="stop"/>
+                                                <cd:Field name="facility">
+                                                  <cd:Record namexml="facility">
+                                                    <cd:Attribute name="country"/>
+                                                    <cd:Attribute name="name"/>
+                                                    <cd:Attribute name="organisation"/>
+                                                    <cd:Attribute name="site"/>
+                                                    <cd:Field name="software">
+                                                      <cd:Record namexml="software">
+                                                        <cd:Attribute name="name"/>
+                                                        <cd:Attribute name="version"/>
+                                                      </cd:Record>
+                                                    </cd:Field>
+                                                  </cd:Record>
+                                                </cd:Field>
+                                                <cd:Field name="resource">
+                                                  <cd:Array>
+                                                    <cd:Dimension/>
+                                                    <cd:Record namexml="resource">
+                                                      <cd:Attribute name="name"/>
+                                                      <cd:Attribute name="role"/>
+                                                      <cd:Field name="processing">
+                                                        <cd:Optional/>
+                                                        <cd:Record namexml="processing">
+                                                          <cd:Attribute name="name"/>
+                                                          <cd:Attribute name="start"/>
+                                                          <cd:Attribute name="stop"/>
+                                                          <cd:Field name="facility">
+                                                            <cd:Record namexml="facility">
+                                                              <cd:Attribute name="country"/>
+                                                              <cd:Attribute name="name"/>
+                                                              <cd:Attribute name="organisation"/>
+                                                              <cd:Attribute name="site"/>
+                                                              <cd:Field name="software">
+                                                                <cd:Record namexml="software">
+                                                                  <cd:Attribute name="name"/>
+                                                                  <cd:Attribute name="version"/>
+                                                                </cd:Record>
+                                                              </cd:Field>
+                                                            </cd:Record>
+                                                          </cd:Field>
+                                                        </cd:Record>
+                                                      </cd:Field>
+                                                    </cd:Record>
+                                                  </cd:Array>
+                                                </cd:Field>
+                                              </cd:Record>
+                                            </cd:Field>
+                                          </cd:Record>
+                                        </cd:Array>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="acquisitionPeriod">
+                            <cd:Optional/>
+                            <cd:Record namexml="acquisitionPeriod">
+                              <cd:Field name="startTime">
+                                <cd:Text namexml="startTime">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="stopTime">
+                                <cd:Text namexml="stopTime">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="startTimeANX">
+                                <cd:Text namexml="startTimeANX">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="stopTimeANX">
+                                <cd:Text namexml="stopTimeANX">
+                                </cd:Text>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="platform">
+                            <cd:Optional/>
+                            <cd:Record namexml="platform">
+                              <cd:Field name="nssdcIdentifier">
+                                <cd:Text namexml="nssdcIdentifier">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="familyName">
+                                <cd:Text namexml="familyName">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="number">
+                                <cd:Text namexml="number">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="instrument">
+                                <cd:Record namexml="instrument">
+                                  <cd:Field name="familyName">
+                                    <cd:Text namexml="familyName">
+                                      <cd:Attribute name="abbreviation"/>
+                                    </cd:Text>
+                                  </cd:Field>
+                                  <cd:Field name="mode">
+                                    <cd:Optional/>
+                                    <cd:Text namexml="mode">
+                                    </cd:Text>
+                                  </cd:Field>
+                                  <cd:Field name="swath">
+                                    <cd:Optional/>
+                                    <cd:Array>
+                                      <cd:Dimension/>
+                                      <cd:Text namexml="swath">
+                                      </cd:Text>
+                                    </cd:Array>
+                                  </cd:Field>
+                                  <cd:Field name="swathNumber">
+                                    <cd:Optional/>
+                                    <cd:Text namexml="swathNumber">
+                                    </cd:Text>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="timeReference">
+                                <cd:Optional/>
+                                <cd:Record namexml="timeReference">
+                                  <cd:Field name="utc">
+                                    <cd:Text namexml="utc">
+                                    </cd:Text>
+                                  </cd:Field>
+                                  <cd:Field name="clock">
+                                    <cd:Text namexml="clock">
+                                    </cd:Text>
+                                  </cd:Field>
+                                  <cd:Field name="clockStep">
+                                    <cd:Text namexml="clockStep">
+                                    </cd:Text>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="orbitReference">
+                            <cd:Optional/>
+                            <cd:Record namexml="orbitReference">
+                              <cd:Field name="orbitNumber">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="orbitNumber">
+                                    <cd:Attribute name="type"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="relativeOrbitNumber">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="relativeOrbitNumber">
+                                    <cd:Attribute name="type"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="cycleNumber">
+                                <cd:Text namexml="cycleNumber">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="phaseIdentifier">
+                                <cd:Text namexml="phaseIdentifier">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="pass">
+                                <cd:Text namexml="pass">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="ascendingNodeTime">
+                                <cd:Text namexml="ascendingNodeTime">
+                                </cd:Text>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="frameSet">
+                            <cd:Optional/>
+                            <cd:Record namexml="frameSet">
+                              <cd:Field name="frame">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="frame">
+                                    <cd:Field name="number">
+                                      <cd:Text namexml="number">
+                                      </cd:Text>
+                                    </cd:Field>
+                                    <cd:Field name="footPrint">
+                                      <cd:Record namexml="footPrint">
+                                        <cd:Attribute name="srsName"/>
+                                        <cd:Field name="coordinates">
+                                          <cd:Text namexml="http://www.opengis.net/gml coordinates">
+                                          </cd:Text>
+                                        </cd:Field>
+                                      </cd:Record>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="generalProductInformation">
+                            <cd:Optional/>
+                            <cd:Record namexml="generalProductInformation">
+                              <cd:Field name="productType">
+                                <cd:Optional/>
+                                <cd:Text namexml="productType">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="instrumentConfigurationID">
+                                <cd:Optional/>
+                                <cd:Text namexml="instrumentConfigurationID">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="instrumentConfigurationID2">
+                                <cd:Optional/>
+                                <cd:Text namexml="instrumentConfigurationId">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="missionDataTakeID">
+                                <cd:Optional/>
+                                <cd:Text namexml="missionDataTakeID">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="transmitterReceiverPolarisation">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="transmitterReceiverPolarisation">
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="productTimelinessCategory">
+                                <cd:Optional/>
+                                <cd:Text namexml="productTimelinessCategory">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="sliceProductFlag">
+                                <cd:Optional/>
+                                <cd:Text namexml="sliceProductFlag">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="segmentStartTime">
+                                <cd:Optional/>
+                                <cd:Text namexml="segmentStartTime">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="sliceNumber">
+                                <cd:Optional/>
+                                <cd:Text namexml="sliceNumber">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="totalSlices">
+                                <cd:Optional/>
+                                <cd:Text namexml="totalSlices">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="validity">
+                                <cd:Optional/>
+                                <cd:Text namexml="validity">
+                                </cd:Text>
+                              </cd:Field>
+                              <cd:Field name="generation">
+                                <cd:Optional/>
+                                <cd:Text namexml="generation">
+                                </cd:Text>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="dataObjectPointer">
+                    <cd:Optional/>
+                    <cd:Record namexml="dataObjectPointer">
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="dataObjectID"/>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="dataObjectSection">
+          <cd:Record namexml="dataObjectSection">
+            <cd:Field name="dataObject">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="dataObject">
+                  <cd:Attribute name="ID"/>
+                  <cd:Attribute name="repID"/>
+                  <cd:Attribute name="size">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="combinationName">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registrationAuthority">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registeredID">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="byteStream">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Record namexml="byteStream">
+                        <cd:Attribute name="ID">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Attribute name="mimeType"/>
+                        <cd:Attribute name="size">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Field name="fileLocation">
+                          <cd:Record namexml="fileLocation">
+                            <cd:Attribute name="href"/>
+                            <cd:Attribute name="ID">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="textInfo">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locatorType"/>
+                            <cd:Attribute name="otherLocatorType">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locator">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="checksum">
+                          <cd:Text namexml="checksum">
+                            <cd:Attribute name="checksumName"/>
+                          </cd:Text>
+                        </cd:Field>
+                      </cd:Record>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
