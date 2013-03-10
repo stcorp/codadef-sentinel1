@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest" format="xml" last-modified="2013-03-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest_spp" format="xml" last-modified="2013-03-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -136,7 +136,9 @@
                           <cd:Field name="processing">
                             <cd:Optional/>
                             <cd:Record namexml="processing">
-                              <cd:Attribute name="name"/>
+                              <cd:Attribute name="name">
+                                <cd:Optional/>
+                              </cd:Attribute>
                               <cd:Attribute name="start"/>
                               <cd:Attribute name="stop"/>
                               <cd:Field name="facility">
@@ -158,10 +160,13 @@
                               </cd:Field>
                               <cd:Field name="resource">
                                 <cd:Optional/>
+                                <cd:Array>
+                                <cd:Dimension/>
                                 <cd:Record namexml="resource">
                                   <cd:Attribute name="name"/>
                                   <cd:Attribute name="role"/>
                                   <cd:Field name="processing">
+                                    <cd:Optional/>
                                     <cd:Record namexml="processing">
                                       <cd:Attribute name="name"/>
                                       <cd:Attribute name="start"/>
@@ -245,6 +250,7 @@
                                     </cd:Record>
                                   </cd:Field>
                                 </cd:Record>
+                              </cd:Array>
                               </cd:Field>
                             </cd:Record>
                           </cd:Field>
@@ -362,6 +368,7 @@
                                 </cd:Text>
                               </cd:Field>
                               <cd:Field name="ascendingNodeTime">
+                                <cd:Optional/>
                                 <cd:Text namexml="ascendingNodeTime">
                                 </cd:Text>
                               </cd:Field>
@@ -370,19 +377,28 @@
                           <cd:Field name="frameSet">
                             <cd:Optional/>
                             <cd:Record namexml="frameSet">
+                              <cd:Field name="cloudVoteNotationSystem">
+                                <cd:Optional/>
+                                <cd:Record namexml="cloudVoteNotationSystem">
+                                  <cd:Attribute name="ceil"/>
+                                  <cd:Attribute name="floor"/>
+                                </cd:Record>
+                              </cd:Field>
                               <cd:Field name="frame">
                                 <cd:Array>
                                   <cd:Dimension/>
                                   <cd:Record namexml="frame">
                                     <cd:Field name="number">
+                                      <cd:Optional/>
                                       <cd:Text namexml="number">
                                       </cd:Text>
                                     </cd:Field>
                                     <cd:Field name="footPrint">
+                                      <cd:Optional/>
                                       <cd:Record namexml="footPrint">
                                         <cd:Attribute name="srsName"/>
                                         <cd:Field name="coordinates">
-                                          <cd:Text namexml="http://www.opengis.net/gml coordinates">
+                                          <cd:Text namexml="coordinates">
                                           </cd:Text>
                                         </cd:Field>
                                       </cd:Record>
