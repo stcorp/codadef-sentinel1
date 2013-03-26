@@ -158,129 +158,136 @@
                                 </cd:Record>
                               </cd:Field>
                               <cd:Field name="resource">
-                                <cd:Optional/>
-                                <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                  <cd:Attribute name="name"/>
-                                  <cd:Attribute name="role"/>
-                                  <cd:Field name="processing">
-                                    <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                      <cd:Attribute name="name"/>
-                                      <cd:Attribute name="start"/>
-                                      <cd:Attribute name="stop"/>
-                                      <cd:Field name="facility">
-                                        <cd:Optional/>
-                                        <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                          <cd:Attribute name="country"/>
-                                          <cd:Attribute name="name"/>
-                                          <cd:Attribute name="organisation"/>
-                                          <cd:Attribute name="site"/>
-                                          <cd:Field name="software">
-                                            <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                              <cd:Attribute name="name"/>
-                                              <cd:Attribute name="version"/>
-                                            </cd:Record>
-                                          </cd:Field>
-                                        </cd:Record>
-                                      </cd:Field>
-                                      <cd:Field name="resource">
-                                        <cd:Array>
-                                          <cd:Dimension/>
-                                          <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
+                                    <cd:Attribute name="name"/>
+                                    <cd:Attribute name="role"/>
+                                    <cd:Field name="processing">
+                                      <cd:Optional/>
+                                      <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
+                                        <cd:Attribute name="name"/>
+                                        <cd:Attribute name="start"/>
+                                        <cd:Attribute name="stop"/>
+                                        <cd:Field name="facility">
+                                          <cd:Optional/>
+                                          <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
+                                            <cd:Attribute name="country"/>
                                             <cd:Attribute name="name"/>
-                                            <cd:Attribute name="role"/>
-                                            <cd:Field name="processing">
+                                            <cd:Attribute name="organisation"/>
+                                            <cd:Attribute name="site"/>
+                                            <cd:Field name="software">
                                               <cd:Optional/>
-                                              <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
+                                              <cd:Record namexml="http://www.esa.int/safe/1.2 software">
                                                 <cd:Attribute name="name"/>
-                                                <cd:Attribute name="start"/>
-                                                <cd:Attribute name="stop"/>
-                                                <cd:Field name="facility">
-                                                  <cd:Optional/>
-                                                  <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                    <cd:Attribute name="country"/>
-                                                    <cd:Attribute name="name"/>
-                                                    <cd:Attribute name="organisation"/>
-                                                    <cd:Attribute name="site"/>
-                                                    <cd:Field name="software">
-                                                      <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                        <cd:Attribute name="name"/>
-                                                        <cd:Attribute name="version"/>
-                                                      </cd:Record>
-                                                    </cd:Field>
-                                                  </cd:Record>
-                                                </cd:Field>
-                                                <cd:Field name="resource">
-                                                  <cd:Array>
-                                                    <cd:Dimension/>
-                                                    <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                                      <cd:Attribute name="name"/>
-                                                      <cd:Attribute name="role"/>
-                                                      <cd:Field name="processing">
-                                                        <cd:Optional/>
-                                                        <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                                          <cd:Attribute name="name"/>
-                                                          <cd:Attribute name="start"/>
-                                                          <cd:Attribute name="stop"/>
-                                                          <cd:Field name="facility">
-                                                            <cd:Optional/>
-                                                            <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                              <cd:Attribute name="country"/>
-                                                              <cd:Attribute name="name"/>
-                                                              <cd:Attribute name="organisation"/>
-                                                              <cd:Attribute name="site"/>
-                                                              <cd:Field name="software">
-                                                                <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                                  <cd:Attribute name="name"/>
-                                                                  <cd:Attribute name="version"/>
-                                                                </cd:Record>
-                                                              </cd:Field>
-                                                            </cd:Record>
-                                                          </cd:Field>
-                                                          <cd:Field name="resource">
-                                                            <cd:Array>
-                                                              <cd:Dimension/>
-                                                              <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                                                <cd:Attribute name="name"/>
-                                                                <cd:Attribute name="role"/>
-                                                                <cd:Field name="processing">
-                                                                  <cd:Optional/>
-                                                                  <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                                                    <cd:Attribute name="name"/>
-                                                                    <cd:Attribute name="start"/>
-                                                                    <cd:Attribute name="stop"/>
-                                                                    <cd:Field name="facility">
-                                                                      <cd:Optional/>
-                                                                      <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                                        <cd:Attribute name="country"/>
-                                                                        <cd:Attribute name="name"/>
-                                                                        <cd:Attribute name="organisation"/>
-                                                                        <cd:Attribute name="site"/>
-                                                                        <cd:Field name="software">
-                                                                          <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                                            <cd:Attribute name="name"/>
-                                                                            <cd:Attribute name="version"/>
-                                                                          </cd:Record>
-                                                                        </cd:Field>
-                                                                      </cd:Record>
-                                                                    </cd:Field>
-                                                                  </cd:Record>
-                                                                </cd:Field>
-                                                              </cd:Record>
-                                                            </cd:Array>
-                                                          </cd:Field>
-                                                        </cd:Record>
-                                                      </cd:Field>
-                                                    </cd:Record>
-                                                  </cd:Array>
-                                                </cd:Field>
+                                                <cd:Attribute name="version"/>
                                               </cd:Record>
                                             </cd:Field>
                                           </cd:Record>
-                                        </cd:Array>
-                                      </cd:Field>
-                                    </cd:Record>
-                                  </cd:Field>
-                                </cd:Record>
+                                        </cd:Field>
+                                        <cd:Field name="resource">
+                                          <cd:Array>
+                                            <cd:Dimension/>
+                                            <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
+                                              <cd:Attribute name="name"/>
+                                              <cd:Attribute name="role"/>
+                                              <cd:Field name="processing">
+                                                <cd:Optional/>
+                                                <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
+                                                  <cd:Attribute name="name"/>
+                                                  <cd:Attribute name="start"/>
+                                                  <cd:Attribute name="stop"/>
+                                                  <cd:Field name="facility">
+                                                    <cd:Optional/>
+                                                    <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
+                                                      <cd:Attribute name="country"/>
+                                                      <cd:Attribute name="name"/>
+                                                      <cd:Attribute name="organisation"/>
+                                                      <cd:Attribute name="site"/>
+                                                      <cd:Field name="software">
+                                                        <cd:Optional/>
+                                                        <cd:Record namexml="http://www.esa.int/safe/1.2 software">
+                                                          <cd:Attribute name="name"/>
+                                                          <cd:Attribute name="version"/>
+                                                        </cd:Record>
+                                                      </cd:Field>
+                                                    </cd:Record>
+                                                  </cd:Field>
+                                                  <cd:Field name="resource">
+                                                    <cd:Array>
+                                                      <cd:Dimension/>
+                                                      <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
+                                                        <cd:Attribute name="name"/>
+                                                        <cd:Attribute name="role"/>
+                                                        <cd:Field name="processing">
+                                                          <cd:Optional/>
+                                                          <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
+                                                            <cd:Attribute name="name"/>
+                                                            <cd:Attribute name="start"/>
+                                                            <cd:Attribute name="stop"/>
+                                                            <cd:Field name="facility">
+                                                              <cd:Optional/>
+                                                              <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
+                                                                <cd:Attribute name="country"/>
+                                                                <cd:Attribute name="name"/>
+                                                                <cd:Attribute name="organisation"/>
+                                                                <cd:Attribute name="site"/>
+                                                                <cd:Field name="software">
+                                                                  <cd:Optional/>
+                                                                  <cd:Record namexml="http://www.esa.int/safe/1.2 software">
+                                                                    <cd:Attribute name="name"/>
+                                                                    <cd:Attribute name="version"/>
+                                                                  </cd:Record>
+                                                                </cd:Field>
+                                                              </cd:Record>
+                                                            </cd:Field>
+                                                            <cd:Field name="resource">
+                                                              <cd:Array>
+                                                                <cd:Dimension/>
+                                                                <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
+                                                                  <cd:Attribute name="name"/>
+                                                                  <cd:Attribute name="role"/>
+                                                                  <cd:Field name="processing">
+                                                                    <cd:Optional/>
+                                                                    <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
+                                                                      <cd:Attribute name="name"/>
+                                                                      <cd:Attribute name="start"/>
+                                                                      <cd:Attribute name="stop"/>
+                                                                      <cd:Field name="facility">
+                                                                        <cd:Optional/>
+                                                                        <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
+                                                                          <cd:Attribute name="country"/>
+                                                                          <cd:Attribute name="name"/>
+                                                                          <cd:Attribute name="organisation"/>
+                                                                          <cd:Attribute name="site"/>
+                                                                          <cd:Field name="software">
+                                                                            <cd:Optional/>
+                                                                            <cd:Record namexml="http://www.esa.int/safe/1.2 software">
+                                                                              <cd:Attribute name="name"/>
+                                                                              <cd:Attribute name="version"/>
+                                                                            </cd:Record>
+                                                                          </cd:Field>
+                                                                        </cd:Record>
+                                                                      </cd:Field>
+                                                                    </cd:Record>
+                                                                  </cd:Field>
+                                                                </cd:Record>
+                                                              </cd:Array>
+                                                            </cd:Field>
+                                                          </cd:Record>
+                                                        </cd:Field>
+                                                      </cd:Record>
+                                                    </cd:Array>
+                                                  </cd:Field>
+                                                </cd:Record>
+                                              </cd:Field>
+                                            </cd:Record>
+                                          </cd:Array>
+                                        </cd:Field>
+                                      </cd:Record>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Array>
                               </cd:Field>
                             </cd:Record>
                           </cd:Field>
