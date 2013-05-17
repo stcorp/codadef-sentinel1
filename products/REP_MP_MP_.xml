@@ -1,10 +1,22 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="REP_MP_MP_" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="REP_MP_MP_" format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="MissionPlanReport">
       <cd:Record namexml="MissionPlanReport">
         <cd:Field name="ReportingTime">
-          <cd:Text namexml="ReportingTime"/>
+          <cd:Type namexml="ReportingTime">
+            <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="ValidityStart">
+          <cd:Type namexml="ValidityStart">
+            <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="ValidityStop">
+          <cd:Type namexml="ValidityStop">
+            <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
+          </cd:Type>
         </cd:Field>
         <cd:Field name="Datatakes">
           <cd:Record namexml="Datatakes">
@@ -36,10 +48,16 @@
                     <cd:Text namexml="CirculationCode"/>
                   </cd:Field>
                   <cd:Field name="TimelinessRequirement">
-                    <cd:Text namexml="TimelinessRequirement"/>
+                    <cd:Record namexml="TimelinessRequirement">
+                      <cd:Field name="timelinessEnum">
+                        <cd:Text namexml="timelinessEnum"/>
+                      </cd:Field>
+                    </cd:Record>
                   </cd:Field>
                   <cd:Field name="ObservationTimeStart">
-                    <cd:Text namexml="ObservationTimeStart"/>
+                    <cd:Type namexml="ObservationTimeStart">
+                      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="ObservationDuration">
                     <cd:Type namexml="ObservationDuration">
@@ -106,7 +124,9 @@
                               </cd:Record>
                             </cd:Field>
                             <cd:Field name="ObservationTime">
-                              <cd:Text namexml="ObservationTime"/>
+                              <cd:Type namexml="ObservationTime">
+                                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
+                              </cd:Type>
                             </cd:Field>
                           </cd:Record>
                         </cd:Array>

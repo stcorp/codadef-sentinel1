@@ -1,4 +1,4 @@
-<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-03-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -9,7 +9,7 @@
   <cd:Field name="StartupTransponderMode">
     <cd:Type namexml="StartupTransponderMode">
       <cd:Integer format="ascii">
-        <cd:NativeType>int32</cd:NativeType>
+        <cd:NativeType>int8</cd:NativeType>
       </cd:Integer>
     </cd:Type>
   </cd:Field>
@@ -67,11 +67,18 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="CalId">
+    <cd:Text namexml="CalId">
+      <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
+        <cd:Optional/>
+      </cd:Attribute>
+    </cd:Text>
+<!--
     <cd:Type namexml="CalId">
       <cd:Integer format="ascii">
         <cd:NativeType>int32</cd:NativeType>
       </cd:Integer>
     </cd:Type>
+-->
   </cd:Field>
   <cd:Field name="SettingsName">
     <cd:Text namexml="SettingsName"/>
@@ -199,18 +206,6 @@
       </cd:Float>
     </cd:Type>
   </cd:Field>
-  <cd:Field name="Sentinel1aPredictedOrbit">
-    <cd:Text namexml="Sentinel1aPredictedOrbit"/>
-    <cd:Optional/>
-  </cd:Field>
-  <cd:Field name="Sentinel1bPredictedOrbit">
-    <cd:Text namexml="Sentinel1bPredictedOrbit"/>
-    <cd:Optional/>
-  </cd:Field>
-  <cd:Field name="StaticSettingsXml">
-    <cd:Text namexml="StaticSettingsXml"/>
-    <cd:Optional/>
-  </cd:Field>
   <cd:Field name="DefaultCalibrationFilters">
     <cd:Record namexml="DefaultCalibrationFilters">
       <cd:Field name="h0">
@@ -289,5 +284,17 @@
         </cd:Record>
       </cd:Field>
     </cd:Record>
+  </cd:Field>
+  <cd:Field name="Sentinel1aPredictedOrbit">
+    <cd:Text namexml="Sentinel1aPredictedOrbit"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Sentinel1bPredictedOrbit">
+    <cd:Text namexml="Sentinel1bPredictedOrbit"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="StaticSettingsXml">
+    <cd:Text namexml="StaticSettingsXml"/>
+    <cd:Optional/>
   </cd:Field>
 </cd:Record>

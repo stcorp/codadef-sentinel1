@@ -8,9 +8,9 @@
   </cd:Field>
   <cd:Field name="SampleRate">
     <cd:Type namexml="SampleRate">
-      <cd:Integer format="ascii">
-        <cd:NativeType>int32</cd:NativeType>
-      </cd:Integer>
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
     </cd:Type>
   </cd:Field>
   <cd:Field name="AcquisitionTimestamp">
@@ -25,9 +25,9 @@
   </cd:Field>
   <cd:Field name="AcquisitionOffset">
     <cd:Type namexml="AcquisitionOffset">
-      <cd:Integer format="ascii">
-        <cd:NativeType>int32</cd:NativeType>
-      </cd:Integer>
+      <cd:Float format="ascii">
+        <cd:NativeType>double</cd:NativeType>
+      </cd:Float>
     </cd:Type>
   </cd:Field>
   <cd:Field name="FilterH0Coefficients">

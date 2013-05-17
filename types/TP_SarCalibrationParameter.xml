@@ -1,4 +1,4 @@
-<cd:Record name="TP_SarCalibrationParameter" namexml="SarCalibrationParameter" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_SarCalibrationParameter" namexml="SarCalibrationParameter" format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -53,7 +53,11 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="CalibrationMode">
-    <cd:Text namexml="CalibrationMode"/>
+    <cd:Type namexml="CalibrationMode">
+      <cd:Integer format="ascii">
+        <cd:NativeType>uint8</cd:NativeType>
+      </cd:Integer>
+    </cd:Type>
   </cd:Field>
   <cd:Field name="ExpectedPowerDensity">
     <cd:Type namexml="ExpectedPowerDensity">
@@ -100,12 +104,19 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="FixedTimeWindow">
+    <cd:Text namexml="FixedTimeWindow">
+      <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
+        <cd:Optional/>
+      </cd:Attribute>
+    </cd:Text>
+<!--
     <cd:Type namexml="FixedTimeWindow">
       <cd:Float format="ascii">
         <cd:Unit>s</cd:Unit>
         <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Type>
+-->
   </cd:Field>
   <cd:Field name="ModeSwathId">
     <cd:Text namexml="ModeSwathId"/>
