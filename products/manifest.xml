@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest" format="xml" last-modified="2013-03-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest" format="xml" last-modified="2013-05-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -98,6 +98,12 @@
                     <cd:Optional/>
                     <cd:Record namexml="metadataReference">
                       <cd:Attribute name="href"/>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
                       <cd:Attribute name="ID">
                         <cd:Optional/>
                       </cd:Attribute>
@@ -109,12 +115,6 @@
                         <cd:Optional/>
                       </cd:Attribute>
                       <cd:Attribute name="locator">
-                        <cd:Optional/>
-                      </cd:Attribute>
-                      <cd:Attribute name="vocabularyName">
-                        <cd:Optional/>
-                      </cd:Attribute>
-                      <cd:Attribute name="mimeType">
                         <cd:Optional/>
                       </cd:Attribute>
                     </cd:Record>
@@ -133,374 +133,374 @@
                       </cd:Attribute>
                       <cd:Field name="xmlData">
                         <cd:Record namexml="xmlData">
-                          <cd:Field name="processing">
+                          <cd:Field name="acquisitionPeriod">
                             <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                              <cd:Attribute name="name"/>
-                              <cd:Attribute name="start"/>
-                              <cd:Attribute name="stop"/>
-                              <cd:Field name="facility">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 acquisitionPeriod">
+                              <cd:Field name="startTime">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 startTime"/>
+                              </cd:Field>
+                              <cd:Field name="stopTime">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 stopTime"/>
+                              </cd:Field>
+                              <cd:Field name="extension">
                                 <cd:Optional/>
-                                <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                  <cd:Attribute name="country"/>
-                                  <cd:Attribute name="name"/>
-                                  <cd:Attribute name="organisation">
-                                    <cd:Optional/>
-                                  </cd:Attribute>
-                                  <cd:Attribute name="site"/>
-                                  <cd:Field name="software">
-                                    <cd:Optional/>
-                                    <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                      <cd:Attribute name="name"/>
-                                      <cd:Attribute name="version"/>
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="timeANX">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 timeANX">
+                                      <cd:Field name="startTimeANX">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 startTimeANX"/>
+                                      </cd:Field>
+                                      <cd:Field name="stopTimeANX">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 stopTimeANX"/>
+                                      </cd:Field>
                                     </cd:Record>
                                   </cd:Field>
                                 </cd:Record>
                               </cd:Field>
-                              <cd:Field name="resource">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                    <cd:Attribute name="name"/>
-                                    <cd:Attribute name="role"/>
-                                    <cd:Field name="processing">
-                                      <cd:Optional/>
-                                      <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                        <cd:Attribute name="name"/>
-                                        <cd:Attribute name="start"/>
-                                        <cd:Attribute name="stop"/>
-                                        <cd:Field name="facility">
-                                          <cd:Optional/>
-                                          <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                            <cd:Attribute name="country"/>
-                                            <cd:Attribute name="name"/>
-                                            <cd:Attribute name="organisation"/>
-                                            <cd:Attribute name="site"/>
-                                            <cd:Field name="software">
-                                              <cd:Optional/>
-                                              <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                <cd:Attribute name="name"/>
-                                                <cd:Attribute name="version"/>
-                                              </cd:Record>
-                                            </cd:Field>
-                                          </cd:Record>
-                                        </cd:Field>
-                                        <cd:Field name="resource">
-                                          <cd:Array>
-                                            <cd:Dimension/>
-                                            <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                              <cd:Attribute name="name"/>
-                                              <cd:Attribute name="role"/>
-                                              <cd:Field name="processing">
-                                                <cd:Optional/>
-                                                <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                                  <cd:Attribute name="name"/>
-                                                  <cd:Attribute name="start"/>
-                                                  <cd:Attribute name="stop"/>
-                                                  <cd:Field name="facility">
-                                                    <cd:Optional/>
-                                                    <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                      <cd:Attribute name="country"/>
-                                                      <cd:Attribute name="name"/>
-                                                      <cd:Attribute name="organisation"/>
-                                                      <cd:Attribute name="site"/>
-                                                      <cd:Field name="software">
-                                                        <cd:Optional/>
-                                                        <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                          <cd:Attribute name="name"/>
-                                                          <cd:Attribute name="version"/>
-                                                        </cd:Record>
-                                                      </cd:Field>
-                                                    </cd:Record>
-                                                  </cd:Field>
-                                                  <cd:Field name="resource">
-                                                    <cd:Array>
-                                                      <cd:Dimension/>
-                                                      <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                                        <cd:Attribute name="name"/>
-                                                        <cd:Attribute name="role"/>
-                                                        <cd:Field name="processing">
-                                                          <cd:Optional/>
-                                                          <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                                            <cd:Attribute name="name"/>
-                                                            <cd:Attribute name="start"/>
-                                                            <cd:Attribute name="stop"/>
-                                                            <cd:Field name="facility">
-                                                              <cd:Optional/>
-                                                              <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                                <cd:Attribute name="country"/>
-                                                                <cd:Attribute name="name"/>
-                                                                <cd:Attribute name="organisation"/>
-                                                                <cd:Attribute name="site"/>
-                                                                <cd:Field name="software">
-                                                                  <cd:Optional/>
-                                                                  <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                                    <cd:Attribute name="name"/>
-                                                                    <cd:Attribute name="version"/>
-                                                                  </cd:Record>
-                                                                </cd:Field>
-                                                              </cd:Record>
-                                                            </cd:Field>
-                                                            <cd:Field name="resource">
-                                                              <cd:Array>
-                                                                <cd:Dimension/>
-                                                                <cd:Record namexml="http://www.esa.int/safe/1.2 resource">
-                                                                  <cd:Attribute name="name"/>
-                                                                  <cd:Attribute name="role"/>
-                                                                  <cd:Field name="processing">
-                                                                    <cd:Optional/>
-                                                                    <cd:Record namexml="http://www.esa.int/safe/1.2 processing">
-                                                                      <cd:Attribute name="name"/>
-                                                                      <cd:Attribute name="start"/>
-                                                                      <cd:Attribute name="stop"/>
-                                                                      <cd:Field name="facility">
-                                                                        <cd:Optional/>
-                                                                        <cd:Record namexml="http://www.esa.int/safe/1.2 facility">
-                                                                          <cd:Attribute name="country"/>
-                                                                          <cd:Attribute name="name"/>
-                                                                          <cd:Attribute name="organisation"/>
-                                                                          <cd:Attribute name="site"/>
-                                                                          <cd:Field name="software">
-                                                                            <cd:Optional/>
-                                                                            <cd:Record namexml="http://www.esa.int/safe/1.2 software">
-                                                                              <cd:Attribute name="name"/>
-                                                                              <cd:Attribute name="version"/>
-                                                                            </cd:Record>
-                                                                          </cd:Field>
-                                                                        </cd:Record>
-                                                                      </cd:Field>
-                                                                    </cd:Record>
-                                                                  </cd:Field>
-                                                                </cd:Record>
-                                                              </cd:Array>
-                                                            </cd:Field>
-                                                          </cd:Record>
-                                                        </cd:Field>
-                                                      </cd:Record>
-                                                    </cd:Array>
-                                                  </cd:Field>
-                                                </cd:Record>
-                                              </cd:Field>
-                                            </cd:Record>
-                                          </cd:Array>
-                                        </cd:Field>
-                                      </cd:Record>
-                                    </cd:Field>
-                                  </cd:Record>
-                                </cd:Array>
-                              </cd:Field>
                             </cd:Record>
                           </cd:Field>
-                          <cd:Field name="acquisitionPeriod">
-                            <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 acquisitionPeriod">
-                              <cd:Field name="startTime">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 startTime">
-                                </cd:Text>
+                          <cd:Field name="standAloneProductInformation">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar standAloneProductInformation">
+                              <cd:Field name="productClass">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productClass"/>
                               </cd:Field>
-                              <cd:Field name="stopTime">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 stopTime">
-                                </cd:Text>
+                              <cd:Field name="productClassDescription">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productClassDescription"/>
                               </cd:Field>
-                              <cd:Field name="startTimeANX">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 startTimeANX">
-                                </cd:Text>
+                              <cd:Field name="productConsolidation">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productConsolidation"/>
                               </cd:Field>
-                              <cd:Field name="stopTimeANX">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 stopTimeANX">
-                                </cd:Text>
+                              <cd:Field name="calISPPresent">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar calISPPresent"/>
+                              </cd:Field>
+                              <cd:Field name="noiseISPPresent">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar noiseISPPresent"/>
+                              </cd:Field>
+                              <cd:Field name="instrumentConfigurationID">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar instrumentConfigurationID"/>
+                              </cd:Field>
+                              <cd:Field name="missionDataTakeID">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar missionDataTakeID"/>
+                              </cd:Field>
+                              <cd:Field name="circulationFlag">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar circulationFlag"/>
+                              </cd:Field>
+                              <cd:Field name="sliceProductFlag">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar sliceProductFlag"/>
+                              </cd:Field>
+                              <cd:Field name="sliceNumber">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar sliceNumber"/>
+                              </cd:Field>
+                              <cd:Field name="totalNumberOfSlice">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar totalNumberOfSlice"/>
+                              </cd:Field>
+                              <cd:Field name="theoreticalSliceLength">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar theoreticalSliceLength"/>
+                              </cd:Field>
+                              <cd:Field name="sliceOverlap">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar sliceOverlap"/>
+                              </cd:Field>
+                              <cd:Field name="dataTakeStartTime">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar dataTakeStartTime"/>
+                              </cd:Field>
+                              <cd:Field name="echoCompressionType">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar echoCompressionType"/>
+                              </cd:Field>
+                              <cd:Field name="noiseCompressionType">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar noiseCompressionType"/>
+                              </cd:Field>
+                              <cd:Field name="calCompressionType">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar calCompressionType"/>
+                              </cd:Field>
+                              <cd:Field name="transmitterReceiverPolarisation">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar transmitterReceiverPolarisation">
+                                    <cd:Attribute name="dataObjectID"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="packetStoreID">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar packetStoreID">
+                                    <cd:Attribute name="dataObjectID"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="byteOrder">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar byteOrder">
+                                    <cd:Attribute name="dataObjectID"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="averageBitRate">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar averageBitRate">
+                                    <cd:Attribute name="dataObjectID"/>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="firstBurstCycleNumber">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar firstBurstCycleNumber"/>
                               </cd:Field>
                             </cd:Record>
+                            <cd:Optional/>
                           </cd:Field>
                           <cd:Field name="platform">
                             <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 platform">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 platform">
                               <cd:Field name="nssdcIdentifier">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 nssdcIdentifier">
-                                </cd:Text>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 nssdcIdentifier"/>
                               </cd:Field>
                               <cd:Field name="familyName">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 familyName">
-                                </cd:Text>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 familyName"/>
                               </cd:Field>
                               <cd:Field name="number">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 number">
-                                </cd:Text>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 number"/>
                               </cd:Field>
                               <cd:Field name="instrument">
-                                <cd:Record namexml="http://www.esa.int/safe/1.2 instrument">
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 instrument">
                                   <cd:Field name="familyName">
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 familyName">
+                                    <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 familyName">
                                       <cd:Attribute name="abbreviation"/>
                                     </cd:Text>
                                   </cd:Field>
-                                  <cd:Field name="mode">
+                                  <cd:Field name="extension">
                                     <cd:Optional/>
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 mode">
-                                    </cd:Text>
-                                  </cd:Field>
-                                  <cd:Field name="swath">
-                                    <cd:Optional/>
-                                    <cd:Array>
-                                      <cd:Dimension/>
-                                      <cd:Text namexml="http://www.esa.int/safe/1.2 swath">
-                                      </cd:Text>
-                                    </cd:Array>
-                                  </cd:Field>
-                                  <cd:Field name="swathNumber">
-                                    <cd:Optional/>
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 swathNumber">
-                                    </cd:Text>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                      <cd:Field name="instrumentMode">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar instrumentMode">
+                                          <cd:Field name="mode">
+                                            <cd:Optional/>
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar mode"/>
+                                          </cd:Field>
+                                          <cd:Field name="swathNumber">
+                                            <cd:Optional/>
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar swathNumber"/>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
                                   </cd:Field>
                                 </cd:Record>
                               </cd:Field>
-                              <cd:Field name="timeReference">
+                              <cd:Field name="extension">
                                 <cd:Optional/>
-                                <cd:Record namexml="http://www.esa.int/safe/1.2 timeReference">
-                                  <cd:Field name="utc">
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 utc">
-                                    </cd:Text>
-                                  </cd:Field>
-                                  <cd:Field name="clock">
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 clock">
-                                    </cd:Text>
-                                  </cd:Field>
-                                  <cd:Field name="clockStep">
-                                    <cd:Text namexml="http://www.esa.int/safe/1.2 clockStep">
-                                    </cd:Text>
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="leapSecondInformation">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 leapSecondInformation">
+                                      <cd:Field name="utcTimeOfOccurrence">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 utcTimeOfOccurrence"/>
+                                      </cd:Field>
+                                      <cd:Field name="sign">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 sign"/>
+                                      </cd:Field>
+                                    </cd:Record>
                                   </cd:Field>
                                 </cd:Record>
                               </cd:Field>
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="orbitReference">
-                            <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 orbitReference">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 orbitReference">
                               <cd:Field name="orbitNumber">
                                 <cd:Array>
                                   <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/1.2 orbitNumber">
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 orbitNumber">
                                     <cd:Attribute name="type"/>
+                                    <cd:Attribute name="groundTrackDirection">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
                                   </cd:Text>
                                 </cd:Array>
                               </cd:Field>
                               <cd:Field name="relativeOrbitNumber">
                                 <cd:Array>
                                   <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/1.2 relativeOrbitNumber">
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 relativeOrbitNumber">
                                     <cd:Attribute name="type"/>
+                                    <cd:Attribute name="groundTrackDirection">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
                                   </cd:Text>
                                 </cd:Array>
                               </cd:Field>
                               <cd:Field name="cycleNumber">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 cycleNumber">
-                                </cd:Text>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 cycleNumber"/>
                               </cd:Field>
                               <cd:Field name="phaseIdentifier">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 phaseIdentifier">
-                                </cd:Text>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 phaseIdentifier"/>
                               </cd:Field>
-                              <cd:Field name="pass">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 pass">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="ascendingNodeTime">
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 ascendingNodeTime">
-                                </cd:Text>
+                              <cd:Field name="extension">
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="orbitProperties">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 orbitProperties">
+                                      <cd:Field name="pass">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 pass"/>
+                                      </cd:Field>
+                                      <cd:Field name="ascendingNodeTime">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 ascendingNodeTime"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
                               </cd:Field>
                             </cd:Record>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="processing">
+                            <cd:Optional/>
+                            <cd:NamedType id="manifest_processing"/>
                           </cd:Field>
                           <cd:Field name="frameSet">
-                            <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 frameSet">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 frameSet">
                               <cd:Field name="frame">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Record namexml="http://www.esa.int/safe/1.2 frame">
-                                    <cd:Field name="number">
-                                      <cd:Text namexml="http://www.esa.int/safe/1.2 number">
-                                      </cd:Text>
-                                    </cd:Field>
-                                    <cd:Field name="footPrint">
-                                      <cd:Record namexml="http://www.esa.int/safe/1.2 footPrint">
-                                        <cd:Attribute name="srsName"/>
-                                        <cd:Field name="coordinates">
-                                          <cd:Text namexml="http://www.opengis.net/gml coordinates">
-                                          </cd:Text>
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 frame">
+                                  <cd:Field name="footPrint">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 footPrint">
+                                      <cd:Attribute name="srsName"/>
+                                      <cd:Field name="coordinates">
+                                        <cd:Text namexml="http://www.opengis.net/gml coordinates"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="qualityInformation">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 qualityInformation">
+                                <cd:Field name="missingElements">
+                                  <cd:Array>
+                                    <cd:Dimension/>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 missingElements">
+                                      <cd:Field name="location">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
+                                          <cd:Field name="path">
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                            </cd:Text>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="count">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 count">
+                                          <cd:Attribute name="value"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="cause">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 cause">
+                                          <cd:Attribute name="type"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Array>
+                                </cd:Field>
+                                <cd:Field name="corruptedElements">
+                                  <cd:Array>
+                                    <cd:Dimension/>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 corruptedElements">
+                                      <cd:Field name="location">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
+                                          <cd:Field name="path">
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                            </cd:Text>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="count">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 count">
+                                          <cd:Attribute name="value"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="evidence">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 evidence">
+                                          <cd:Attribute name="type"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Array>
+                                </cd:Field>
+                                <cd:Field name="extension">
+                                  <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                    <cd:Field name="qualityProperties">
+                                      <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 qualityProperties">
+                                        <cd:Field name="dataObjectID">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 dataObjectID"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfMissingElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfMissingElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfCorruptedElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfCorruptedElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSIncorrigibleElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSIncorrigibleElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSCorrectedElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSCorrectedElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSCorrectedSymbols">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSCorrectedSymbols"/>
                                         </cd:Field>
                                       </cd:Record>
                                     </cd:Field>
                                   </cd:Record>
-                                </cd:Array>
-                              </cd:Field>
-                            </cd:Record>
-                          </cd:Field>
-                          <cd:Field name="generalProductInformation">
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
                             <cd:Optional/>
-                            <cd:Record namexml="http://www.esa.int/safe/1.2 generalProductInformation">
-                              <cd:Field name="productType">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 productType">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="instrumentConfigurationID">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 instrumentConfigurationID">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="instrumentConfigurationID2">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 instrumentConfigurationId">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="missionDataTakeID">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 missionDataTakeID">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="transmitterReceiverPolarisation">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/1.2 transmitterReceiverPolarisation">
-                                  </cd:Text>
-                                </cd:Array>
-                              </cd:Field>
-                              <cd:Field name="productTimelinessCategory">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 productTimelinessCategory">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="sliceProductFlag">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 sliceProductFlag">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="segmentStartTime">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 segmentStartTime">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="sliceNumber">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 sliceNumber">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="totalSlices">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 totalSlices">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="validity">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 validity">
-                                </cd:Text>
-                              </cd:Field>
-                              <cd:Field name="generation">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/1.2 generation">
-                                </cd:Text>
-                              </cd:Field>
-                            </cd:Record>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>
@@ -574,6 +574,12 @@
                             <cd:Attribute name="checksumName"/>
                           </cd:Text>
                         </cd:Field>
+<!---
+                        <cd:Field name="byteOrder">
+                          <cd:Optional/>
+                          <cd:Text namexml="byteOrder"/>
+                        </cd:Field>
+-->
                       </cd:Record>
                     </cd:Array>
                   </cd:Field>
