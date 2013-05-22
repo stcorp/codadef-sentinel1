@@ -1,4 +1,4 @@
-<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2013-05-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -241,8 +241,8 @@
           </cd:Integer>
         </cd:Type>
       </cd:Field>
-      <cd:Field name="IsAudioAlarmEnabled">
-        <cd:Type namexml="IsAudioAlarmEnabled">
+      <cd:Field name="IsAudibleAlarmEnabled">
+        <cd:Type namexml="IsAudibleAlarmEnabled">
           <cd:Integer format="ascii">
             <cd:NativeType>uint8</cd:NativeType>
             <cd:Mapping string="false" value="0"/>
