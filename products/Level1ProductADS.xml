@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2013-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="product">
       <cd:Record namexml="product">
@@ -179,6 +179,38 @@
                           </cd:Field>
                           <cd:Field name="instrumentMissingLinesSignificantFlag">
                             <cd:Type namexml="instrumentMissingLinesSignificantFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numSsbErrorInputDataGaps">
+                            <cd:Type namexml="numSsbErrorInputDataGaps">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="ssbErrorGapsInInputDataSignificantFlag">
+                            <cd:Type namexml="ssbErrorGapsInInputDataSignificantFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numSsbErrorInputMissingLines">
+                            <cd:Type namexml="numSsbErrorInputMissingLines">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="SsbErrorMissingLinesSignificantFlag">
+                            <cd:Type namexml="SsbErrorMissingLinesSignificantFlag">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
                                 <cd:Mapping string="false" value="0"/>
@@ -378,24 +410,6 @@
                               </cd:Field>
                             </cd:Record>
                           </cd:Field>
-                          <cd:Field name="outputDataMeanOutsideNominalRangeFlag">
-                            <cd:Type namexml="outputDataMeanOutsideNominalRangeFlag">
-                              <cd:Integer format="ascii">
-                                <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="true" value="1"/>
-                              </cd:Integer>
-                            </cd:Type>
-                          </cd:Field>
-                          <cd:Field name="outputDataStDevOutsideNominalRangeFlag">
-                            <cd:Type namexml="outputDataStDevOutsideNominalRangeFlag">
-                              <cd:Integer format="ascii">
-                                <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="true" value="1"/>
-                              </cd:Integer>
-                            </cd:Type>
-                          </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
@@ -473,6 +487,13 @@
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                         </cd:Type>
                       </cd:Field>
+                      <cd:Field name="prf">
+                        <cd:Type namexml="prf">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
                       <cd:Field name="bitErrorCount">
                         <cd:Record namexml="bitErrorCount">
                           <cd:Field name="numErrSyncMarker">
@@ -526,6 +547,13 @@
                           </cd:Field>
                           <cd:Field name="numErrPriCount">
                             <cd:Type namexml="numErrPriCount">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint32</cd:NativeType>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="numErrSsbErrorFlag">
+                            <cd:Type namexml="numErrSsbErrorFlag">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint32</cd:NativeType>
                               </cd:Integer>
@@ -946,6 +974,9 @@
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                         </cd:Type>
                       </cd:Field>
+                      <cd:Field name="frame">
+                        <cd:Text namexml="frame"/>
+                      </cd:Field>
                       <cd:Field name="position">
                         <cd:Record namexml="position">
                           <cd:Field name="x">
@@ -1012,6 +1043,9 @@
                         <cd:Type namexml="time">
                           <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
                         </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="frame">
+                        <cd:Text namexml="frame"/>
                       </cd:Field>
                       <cd:Field name="q0">
                         <cd:Type namexml="q0">
@@ -1395,19 +1429,6 @@
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
-                                <cd:Field name="values">
-                                  <cd:Type namexml="values">
-                                    <cd:Attribute name="count"/>
-                                    <cd:Array format="ascii">
-                                      <cd:Dimension>int(str(@count))</cd:Dimension>
-                                      <cd:Complex>
-                                        <cd:Float>
-                                          <cd:NativeType>double</cd:NativeType>
-                                        </cd:Float>
-                                      </cd:Complex>
-                                    </cd:Array>
-                                  </cd:Type>
-                               </cd:Field>
                               </cd:Record>
                             </cd:Array>
                           </cd:Field>
@@ -1620,6 +1641,13 @@
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
+                <cd:Field name="azimuthFrequency">
+                  <cd:Type namexml="azimuthFrequency">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Type>
+                </cd:Field>
                 <cd:Field name="numberOfSamples">
                   <cd:Type namexml="numberOfSamples">
                     <cd:Integer format="ascii">
@@ -1712,6 +1740,15 @@
                 </cd:Field>
                 <cd:Field name="attitudeDataFileUsed">
                   <cd:Type namexml="attitudeDataFileUsed">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="rxVariationCorrectionApplied">
+                  <cd:Type namexml="rxVariationCorrectionApplied">
                     <cd:Integer format="ascii">
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="false" value="0"/>
@@ -1978,14 +2015,23 @@
                     </cd:Float>
                   </cd:Type>
                 </cd:Field>
-                <cd:Field name="correctBistaticDelayFlag">
-                  <cd:Type namexml="correctBistaticDelayFlag">
+                <cd:Field name="bistaticDelayCorrectionApplied">
+                  <cd:Type namexml="bistaticDelayCorrectionApplied">
                     <cd:Integer format="ascii">
                       <cd:NativeType>uint8</cd:NativeType>
                       <cd:Mapping string="false" value="0"/>
                       <cd:Mapping string="true" value="1"/>
                     </cd:Integer>
                   </cd:Type>
+                </cd:Field>
+                <cd:Field name="topsFilterConvention">
+                  <cd:Text namexml="topsFilterConvention"/>
+                </cd:Field>
+                <cd:Field name="orbitSource">
+                  <cd:Text namexml="orbitSource"/>
+                </cd:Field>
+                <cd:Field name="attitudeSource">
+                  <cd:Text namexml="attitudeSource"/>
                 </cd:Field>
               </cd:Record>
             </cd:Field>
