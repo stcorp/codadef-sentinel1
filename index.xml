@@ -230,7 +230,7 @@
   <cd:ProductType name="SARStandardL0MeasurementData">
     <cd:Description>SAR Standard L0 Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0MeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -246,7 +246,7 @@
   <cd:ProductType name="SARStandardL0IndexData">
     <cd:Description>SAR Standard L0 Product - Index Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0IndexData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -262,7 +262,7 @@
   <cd:ProductType name="SARStandardL0AnnotationData">
     <cd:Description>SAR Standard L0 Product - Annotation Data file</cd:Description>
     <cd:ProductDefinition id="SARStandardL0AnnotationData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
@@ -278,7 +278,7 @@
   <cd:ProductType name="SARL0CalMeasurementData">
     <cd:Description>SAR L0 Cal Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0CalMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
@@ -294,7 +294,7 @@
   <cd:ProductType name="SARL0NoiseMeasurementData">
     <cd:Description>SAR L0 Noise Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0NoiseMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
@@ -310,7 +310,7 @@
   <cd:ProductType name="SARL0AnnotationsMeasurementData">
     <cd:Description>SAR L0 Annotations Product - Measurement Data file</cd:Description>
     <cd:ProductDefinition id="SARL0AnnotationsMeasurementData" format="binary" version="0">
-      <cd:Description>This definition is based on version 1.6 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
+      <cd:Description>This definition is based on version 1.7.1 of the S-1 Level-0 Product Format Specifications S1PD.SP.00110.ASTR</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
@@ -326,7 +326,7 @@
   <cd:ProductType name="Level1ProductADS">
     <cd:Description>Level 1 Product ADS</cd:Description>
     <cd:ProductDefinition id="Level1ProductADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/product/adsHeader/missionId">S1A</cd:MatchData>
       </cd:DetectionRule>
@@ -341,7 +341,7 @@
   <cd:ProductType name="Level1CalibrationADS">
     <cd:Description>Level 1 Calibration ADS</cd:Description>
     <cd:ProductDefinition id="Level1CalibrationADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/calibration/adsHeader/missionId"/>
       </cd:DetectionRule>
@@ -350,7 +350,7 @@
   <cd:ProductType name="Level1NoiseADS">
     <cd:Description>Level 1 Noise ADS</cd:Description>
     <cd:ProductDefinition id="Level1NoiseADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/noise/adsHeader/missionId"/>
       </cd:DetectionRule>
@@ -359,7 +359,7 @@
   <cd:ProductType name="AuxiliaryCalibration">
     <cd:Description>AUX_CAL auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryCalibration" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.7 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryCalibration"></cd:MatchData>
       </cd:DetectionRule>
@@ -368,7 +368,7 @@
   <cd:ProductType name="AuxiliaryInstrument">
     <cd:Description>AUX_INS auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryInstrument" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.7 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryInstrument"></cd:MatchData>
       </cd:DetectionRule>
@@ -377,7 +377,7 @@
   <cd:ProductType name="L1AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP1 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.7 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l1AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
@@ -386,7 +386,7 @@
   <cd:ProductType name="L2AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP2 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.7 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l2AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
@@ -1572,7 +1572,7 @@
     </cd:ProductDefinition>
   </cd:ProductType>
 <!--
-  Disable for now, since the test data contains xml namespaces which wont work
+  Disable for now, since the antenna model output data contains invalid xml namespaces
   <cd:ProductType name="AM__OUTPUT">
     <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
     <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
