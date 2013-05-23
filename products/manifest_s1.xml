@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cd:ProductDefinition id="manifest_s1" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="XFDU">
+      <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
+        <cd:Attribute name="version"/>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance schemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="informationPackageMap">
+          <cd:Record namexml="informationPackageMap">
+            <cd:Field name="contentUnit">
+              <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
+                <cd:Attribute name="ID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="order">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="unitType">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="textInfo">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="repID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="dmdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="pdiID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="anyMdID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Attribute name="behaviorID">
+                  <cd:Optional/>
+                </cd:Attribute>
+                <cd:Field name="contentUnit">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record namexml="urn:ccsds:schema:xfdu:1 contentUnit">
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="order">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="unitType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="repID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="dmdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="pdiID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="anyMdID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="behaviorID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Field name="dataObjectPointer">
+                        <cd:Record namexml="dataObjectPointer">
+                          <cd:Attribute name="dataObjectID"/>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="metadataSection">
+          <cd:Record namexml="metadataSection">
+            <cd:Field name="metadataObject">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="metadataObject">
+                  <cd:Attribute name="ID"/>
+                  <cd:Attribute name="classification">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="category">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="metadataReference">
+                    <cd:Optional/>
+                    <cd:Record namexml="metadataReference">
+                      <cd:Attribute name="href"/>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locatorType"/>
+                      <cd:Attribute name="otherLocatorType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="locator">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="metadataWrap">
+                    <cd:Optional/>
+                    <cd:Record namexml="metadataWrap">
+                      <cd:Attribute name="mimeType">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="textInfo">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="vocabularyName">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Field name="xmlData">
+                        <cd:Record namexml="xmlData">
+                          <cd:Field name="acquisitionPeriod">
+                            <cd:Optional/>
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 acquisitionPeriod">
+                              <cd:Field name="startTime">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 startTime"/>
+                              </cd:Field>
+                              <cd:Field name="stopTime">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 stopTime"/>
+                              </cd:Field>
+                              <cd:Field name="extension">
+                                <cd:Optional/>
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="timeANX">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 timeANX">
+                                      <cd:Field name="startTimeANX">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 startTimeANX"/>
+                                      </cd:Field>
+                                      <cd:Field name="stopTimeANX">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 stopTimeANX"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="standAloneProductInformation">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image standAloneProductInformation">
+                              <cd:Field name="instrumentConfigurationID">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image instrumentConfigurationID">
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
+                              <cd:Field name="missionDataTakeID">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image missionDataTakeID">
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
+                              <cd:Field name="transmitterReceiverPolarisation">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image transmitterReceiverPolarisation"/>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="productClass">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image productClass"/>
+                              </cd:Field>
+                              <cd:Field name="productClassDescription">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image productClassDescription"/>
+                              </cd:Field>
+                              <cd:Field name="productComposition">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image productComposition"/>
+                              </cd:Field>
+                              <cd:Field name="productType">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image productType"/>
+                              </cd:Field>
+                              <cd:Field name="productTimelinessCategory">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image productTimelinessCategory"/>
+                              </cd:Field>
+                              <cd:Field name="sliceProductFlag">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image sliceProductFlag">
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Field>
+                              <cd:Field name="segmentStartTime">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image segmentStartTime"/>
+                              </cd:Field>
+                              <cd:Field name="sliceNumber">
+                                <cd:Optional/>
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image sliceNumber">
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
+                              <cd:Field name="totalSlices">
+                                <cd:Optional/>
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image totalSlices">
+                                  <cd:NativeType>uint32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
+                            </cd:Record>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="platform">
+                            <cd:Optional/>
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 platform">
+                              <cd:Field name="nssdcIdentifier">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 nssdcIdentifier"/>
+                              </cd:Field>
+                              <cd:Field name="familyName">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 familyName"/>
+                              </cd:Field>
+                              <cd:Field name="number">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 number"/>
+                              </cd:Field>
+                              <cd:Field name="instrument">
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 instrument">
+                                  <cd:Field name="familyName">
+                                    <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 familyName">
+                                      <cd:Attribute name="abbreviation"/>
+                                    </cd:Text>
+                                  </cd:Field>
+                                  <cd:Field name="extension">
+                                    <cd:Optional/>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                      <cd:Field name="instrumentMode">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image instrumentMode">
+                                          <cd:Field name="mode">
+                                            <cd:Optional/>
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image mode"/>
+                                          </cd:Field>
+                                          <cd:Field name="swath">
+                                            <cd:Optional/>
+                                            <cd:Array>
+                                              <cd:Dimension/>
+                                              <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image swath"/>
+                                            </cd:Array>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                              <cd:Field name="extension">
+                                <cd:Optional/>
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="leapSecondInformation">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 leapSecondInformation">
+                                      <cd:Field name="utcTimeOfOccurrence">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 utcTimeOfOccurrence"/>
+                                      </cd:Field>
+                                      <cd:Field name="sign">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 sign"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="orbitReference">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 orbitReference">
+                              <cd:Field name="orbitNumber">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 orbitNumber">
+                                    <cd:Attribute name="type"/>
+                                    <cd:Attribute name="groundTrackDirection">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="relativeOrbitNumber">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 relativeOrbitNumber">
+                                    <cd:Attribute name="type"/>
+                                    <cd:Attribute name="groundTrackDirection">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                  </cd:Text>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="cycleNumber">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 cycleNumber"/>
+                              </cd:Field>
+                              <cd:Field name="phaseIdentifier">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 phaseIdentifier"/>
+                              </cd:Field>
+                              <cd:Field name="extension">
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                  <cd:Field name="orbitProperties">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 orbitProperties">
+                                      <cd:Field name="pass">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 pass"/>
+                                      </cd:Field>
+                                      <cd:Field name="ascendingNodeTime">
+                                        <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 ascendingNodeTime"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="processing">
+                            <cd:Optional/>
+                            <cd:NamedType id="manifest_processing"/>
+                          </cd:Field>
+                          <cd:Field name="frameSet">
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 frameSet">
+                              <cd:Field name="number">
+                                <cd:Optional/>
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0 number">
+                                  <cd:NativeType>int32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
+                              <cd:Field name="frame">
+                                <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 frame">
+                                  <cd:Field name="footPrint">
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 footPrint">
+                                      <cd:Attribute name="srsName"/>
+                                      <cd:Field name="coordinates">
+                                        <cd:Text namexml="http://www.opengis.net/gml coordinates"/>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Field>
+                                </cd:Record>
+                              </cd:Field>
+                            </cd:Record>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="qualityInformation">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 qualityInformation">
+                                <cd:Field name="missingElements">
+                                  <cd:Array>
+                                    <cd:Dimension/>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 missingElements">
+                                      <cd:Field name="location">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
+                                          <cd:Field name="path">
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                            </cd:Text>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="count">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 count">
+                                          <cd:Attribute name="value"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="cause">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 cause">
+                                          <cd:Attribute name="type"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Array>
+                                </cd:Field>
+                                <cd:Field name="corruptedElements">
+                                  <cd:Array>
+                                    <cd:Dimension/>
+                                    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 corruptedElements">
+                                      <cd:Field name="location">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 location">
+                                          <cd:Field name="path">
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0 path">
+                                              <cd:Attribute name="preceding">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="following">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="before">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                              <cd:Attribute name="after">
+                                                <cd:Optional/>
+                                              </cd:Attribute>
+                                            </cd:Text>
+                                          </cd:Field>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="count">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 count">
+                                          <cd:Attribute name="value"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                      <cd:Field name="evidence">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 evidence">
+                                          <cd:Attribute name="type"/>
+                                        </cd:Record>
+                                      </cd:Field>
+                                    </cd:Record>
+                                  </cd:Array>
+                                </cd:Field>
+                                <cd:Field name="extension">
+                                  <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
+                                    <cd:Field name="qualityProperties">
+                                      <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 qualityProperties">
+                                        <cd:Field name="dataObjectID">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 dataObjectID"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfMissingElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfMissingElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfCorruptedElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfCorruptedElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSIncorrigibleElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSIncorrigibleElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSCorrectedElements">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSCorrectedElements"/>
+                                        </cd:Field>
+                                        <cd:Field name="numOfRSCorrectedSymbols">
+                                          <cd:Optional/>
+                                          <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1 numOfRSCorrectedSymbols"/>
+                                        </cd:Field>
+                                      </cd:Record>
+                                    </cd:Field>
+                                  </cd:Record>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                            <cd:Optional/>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="dataObjectPointer">
+                    <cd:Optional/>
+                    <cd:Record namexml="dataObjectPointer">
+                      <cd:Attribute name="ID">
+                        <cd:Optional/>
+                      </cd:Attribute>
+                      <cd:Attribute name="dataObjectID"/>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="dataObjectSection">
+          <cd:Record namexml="dataObjectSection">
+            <cd:Field name="dataObject">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="dataObject">
+                  <cd:Attribute name="ID"/>
+                  <cd:Attribute name="repID"/>
+                  <cd:Attribute name="size">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="combinationName">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registrationAuthority">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="registeredID">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Field name="byteStream">
+                    <cd:Array>
+                      <cd:Dimension/>
+                      <cd:Record namexml="byteStream">
+                        <cd:Attribute name="ID">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Attribute name="mimeType"/>
+                        <cd:Attribute name="size">
+                          <cd:Optional/>
+                        </cd:Attribute>
+                        <cd:Field name="fileLocation">
+                          <cd:Record namexml="fileLocation">
+                            <cd:Attribute name="href"/>
+                            <cd:Attribute name="ID">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="textInfo">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locatorType"/>
+                            <cd:Attribute name="otherLocatorType">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="locator">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                          </cd:Record>
+                        </cd:Field>
+                        <cd:Field name="checksum">
+                          <cd:Text namexml="checksum">
+                            <cd:Attribute name="checksumName"/>
+                          </cd:Text>
+                        </cd:Field>
+<!---
+                        <cd:Field name="byteOrder">
+                          <cd:Optional/>
+                          <cd:Text namexml="byteOrder"/>
+                        </cd:Field>
+-->
+                      </cd:Record>
+                    </cd:Array>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
