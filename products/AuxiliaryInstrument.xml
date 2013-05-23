@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-02-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -62,13 +62,6 @@
                 <cd:Dimension/>
                 <cd:Record namexml="swathParams">
                   <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
-                  <cd:Field name="swathNumber">
-                    <cd:Type namexml="swathNumber">
-                      <cd:Integer format="ascii">
-                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used as an index to select the applicable swathParams record. The IPF uses the swath number and the swath name (below) from this record to perform the mapping between the swathNumber in the downlink and swath name within the AUX_INS, AUX_PP1 and AUX_CAL data.</cd:Description>
-                      </cd:Integer>
-                    </cd:Type>
-                  </cd:Field>
                   <cd:Field name="swath">
                     <cd:Text namexml="swath">
                       <cd:Description>Canonical name of the swath for this swathNumber.</cd:Description>
@@ -137,6 +130,71 @@
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
+                  <cd:Field name="rxVariationCorrectionParamsList">
+                    <cd:Record namexml="rxVariationCorrectionParamsList">
+                      <cd:Field name="rxVariationCorrectionParams">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="rxVariationCorrectionParams">
+                            <cd:Field name="rxPolarisation">
+                              <cd:Text namexml="rxPolarisation">
+                                <cd:Description>Polarisation to which this set of receive correction parameters applies. "H" or "V".</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="gainOvershootCoefficients">
+                              <cd:Type namexml="gainOvershootCoefficients">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>Gain overshoot correction coefficients.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Float>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="gainTrendCoefficients">
+                              <cd:Type namexml="gainTrendCoefficients">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>Gain trend correction coefficients.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Float>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="gainOffsetCoefficients">
+                              <cd:Type namexml="gainOffsetCoefficients">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>Gain offset correction coefficients.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Float>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="phaseCoefficients">
+                              <cd:Type namexml="phaseCoefficients">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>Phase correction coefficients. Note: There is no evidence so far that a phase correction needs to be applied but phase correction coefficients are provided in the spec for possible future use.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Float>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                      <cd:Attribute name="count"/>
+                    </cd:Record>
+                  </cd:Field>
                 </cd:Record>
               </cd:Array>
             </cd:Field>
@@ -151,13 +209,6 @@
                 <cd:Dimension/>
                 <cd:Record namexml="internalCalibrationParams">
                   <cd:Description>Internal calibration instrument parameters. This record contains swath/polarisation channel dependent parameters related to the instrument. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
-                  <cd:Field name="swathNumber">
-                    <cd:Type namexml="swathNumber">
-                      <cd:Integer format="ascii">
-                        <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation to index the applicable internalCalibrationParams record.</cd:Description>
-                      </cd:Integer>
-                    </cd:Type>
-                  </cd:Field>
                   <cd:Field name="swath">
                     <cd:Text namexml="swath">
                       <cd:Description>Canonical name of the swath.</cd:Description>
@@ -345,13 +396,6 @@
                                     <cd:Dimension/>
                                     <cd:Record namexml="isp">
                                       <cd:Description>The ISP element describes one unique, or a series of unique transmission packets. The packets are identified by the packet signal type and contain the number of PRIs expected for this packet type.</cd:Description>
-                                      <cd:Field name="swathNumber">
-                                        <cd:Type namexml="swathNumber">
-                                          <cd:Integer format="ascii">
-                                            <cd:Description>SPPDU [A-12] swath number identifier of the swath used to acquire the packet(s).</cd:Description>
-                                          </cd:Integer>
-                                        </cd:Type>
-                                      </cd:Field>
                                       <cd:Field name="swath">
                                         <cd:Text namexml="swath">
                                           <cd:Description>Canonical name of the swath to which this packet belongs.</cd:Description>
@@ -362,26 +406,10 @@
                                           <cd:Description>Signal type.</cd:Description>
                                         </cd:Text>
                                       </cd:Field>
-                                      <cd:Field name="numSilentPriPre">
-                                        <cd:Type namexml="numSilentPriPre">
-                                          <cd:Integer format="ascii">
-                                            <cd:Description>The number of PRIs that are expected to be suppressed by the instrument immediately before this ISP. Silent PRIs do not show up in the downlinked L0 product but must be known in order to correctly predict the value of the PRI counter for every packet in the reconstructed timeline.</cd:Description>
-                                            <cd:NativeType>uint32</cd:NativeType>
-                                          </cd:Integer>
-                                        </cd:Type>
-                                      </cd:Field>
                                       <cd:Field name="numPri">
                                         <cd:Type namexml="numPri">
                                           <cd:Integer format="ascii">
                                             <cd:Description>The number of packets of this signal type expected in series.</cd:Description>
-                                            <cd:NativeType>uint32</cd:NativeType>
-                                          </cd:Integer>
-                                        </cd:Type>
-                                      </cd:Field>
-                                      <cd:Field name="numSilentPriPost">
-                                        <cd:Type namexml="numSilentPriPost">
-                                          <cd:Integer format="ascii">
-                                            <cd:Description>The number of PRIs that are expected to be suppressed by the instrument immediately following this ISP. Silent PRIs do not show up in the downlinked L0 product but must be known in order to correctly predict the value of the PRI counter for every packet in the reconstructed timeline.</cd:Description>
                                             <cd:NativeType>uint32</cd:NativeType>
                                           </cd:Integer>
                                         </cd:Type>
@@ -391,6 +419,32 @@
                                 </cd:Field>
                                 <cd:Attribute name="count"/>
                               </cd:Record>
+                            </cd:Field>
+                          </cd:Record>
+                        </cd:Array>
+                      </cd:Field>
+                      <cd:Attribute name="count"/>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="swathMapList">
+                    <cd:Record namexml="swathMapList">
+                      <cd:Description>Swath mapping list. This element is a list of the swaths applicable to this ECC program and provides a mapping between the swath number fields in the source packet headers and the logical instrument swath name to which they apply.</cd:Description>
+                      <cd:Field name="swathMap">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="swathMap">
+                            <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
+                            <cd:Field name="swathNumber">
+                              <cd:Type namexml="swathNumber">
+                                <cd:Integer format="ascii">
+                                  <cd:Description>The swath number from the source packet secondary header to map to a particular logical swath within the instrument mode.</cd:Description>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="swath">
+                              <cd:Text namexml="swath">
+                                <cd:Description>Canonical name of the swath to which this packet belongs.</cd:Description>
+                              </cd:Text>
                             </cd:Field>
                           </cd:Record>
                         </cd:Array>

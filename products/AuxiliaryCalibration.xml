@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2012-05-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Calibration auxiliary file definition (AUX_CAL)</cd:Description>
     <cd:Field name="auxiliaryCalibration">
@@ -12,13 +12,6 @@
                 <cd:Dimension/>
                 <cd:Record namexml="calibrationParams">
                   <cd:Description>Calibration parameter record. There must be one record per swath (16 nominal swaths) per polarisation (4 polarisation combinations for SM, IW or EW, 2 for WV) for a minimum total of 58. There are 128 possible swath number values supported by the downlink, so the maximum number of combinations of swath number and polarisation that can be defined is 512.</cd:Description>
-                  <cd:Field name="swathNumber">
-                    <cd:Type namexml="swathNumber">
-                      <cd:Integer format="ascii">
-	                <cd:Description>SPPDU [A-12] swath number identifier. The swath number extracted from the downlink is used along with the polarisation to index the applicable calibrationParams record.</cd:Description>
-	              </cd:Integer>
-                    </cd:Type>
-                  </cd:Field>
                   <cd:Field name="swath">
                     <cd:Text namexml="swath">
                       <cd:Description>Canonical name of the swath to which this set of calibration parameters applies. </cd:Description>
@@ -137,8 +130,8 @@
 	              </cd:Float>
                     </cd:Type>
                   </cd:Field>
-                  <cd:Field name="kNoise">
-                    <cd:Type namexml="kNoise">
+                  <cd:Field name="noiseCalibrationFactor">
+                    <cd:Type namexml="noiseCalibrationFactor">
                       <cd:Float format="ascii">
 	                <cd:Description>Noise calibration factor used in the estimation of the thermal noise.</cd:Description>
 	                <cd:Unit>dB</cd:Unit>
