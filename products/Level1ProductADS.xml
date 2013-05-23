@@ -209,8 +209,8 @@
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
-                          <cd:Field name="SsbErrorMissingLinesSignificantFlag">
-                            <cd:Type namexml="SsbErrorMissingLinesSignificantFlag">
+                          <cd:Field name="ssbErrorMissingLinesSignificantFlag">
+                            <cd:Type namexml="ssbErrorMissingLinesSignificantFlag">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
                                 <cd:Mapping string="false" value="0"/>
@@ -409,6 +409,24 @@
                                 </cd:Record>
                               </cd:Field>
                             </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="outputDataMeanOutsideNominalRangeFlag">
+                            <cd:Type namexml="outputDataMeanOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="outputDataStDevOutsideNominalRangeFlag">
+                            <cd:Type namexml="outputDataStDevOutsideNominalRangeFlag">
+                              <cd:Integer format="ascii">
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>
