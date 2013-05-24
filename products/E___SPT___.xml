@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="E___SPT___" format="xml" last-modified="2011-12-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="E___SPT___" format="xml" last-modified="2013-05-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -33,6 +33,14 @@
                   <cd:Array>
                     <cd:Dimension/>
                     <cd:Record namexml="Swath_Parameters_Table">
+                      <cd:Field name="Apply_Delta_SWL">
+                        <cd:Type namexml="Apply_Delta_SWL">
+                          <cd:Integer format="ascii">
+                            <cd:NativeType>uint8</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Type>
+                        <cd:Optional/>
+                      </cd:Field>
                       <cd:Field name="Swath_Number">
                         <cd:Type namexml="Swath_Number">
                           <cd:Integer format="ascii">

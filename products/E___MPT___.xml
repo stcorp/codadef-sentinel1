@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="E___MPT___" format="xml" last-modified="2011-12-17" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="E___MPT___" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -239,6 +239,13 @@
                 </cd:Field>
                 <cd:Field name="RxM_V_ADC_FSR">
                   <cd:Type namexml="RxM_V_ADC_FSR">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint16</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
+                <cd:Field name="SWST_Guard_Time">
+                  <cd:Type namexml="SWST_Guard_Time">
                     <cd:Integer format="ascii">
                       <cd:NativeType>uint16</cd:NativeType>
                     </cd:Integer>
