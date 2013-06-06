@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_l0" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest_l2" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -160,115 +160,60 @@
                             </cd:Record>
                           </cd:Field>
                           <cd:Field name="standAloneProductInformation">
-                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar standAloneProductInformation">
-                              <cd:Field name="productClass">
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productClass"/>
-                              </cd:Field>
-                              <cd:Field name="productClassDescription">
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productClassDescription"/>
-                              </cd:Field>
-                              <cd:Field name="productConsolidation">
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productConsolidation"/>
-                              </cd:Field>
-                              <cd:Field name="calISPPresent">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar calISPPresent"/>
-                              </cd:Field>
-                              <cd:Field name="noiseISPPresent">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar noiseISPPresent"/>
-                              </cd:Field>
+                            <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 standAloneProductInformation">
                               <cd:Field name="instrumentConfigurationID">
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar instrumentConfigurationID">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 instrumentConfigurationID">
                                   <cd:NativeType>uint32</cd:NativeType>
                                 </cd:Integer>
                               </cd:Field>
                               <cd:Field name="missionDataTakeID">
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar missionDataTakeID">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 missionDataTakeID">
                                   <cd:NativeType>uint32</cd:NativeType>
                                 </cd:Integer>
                               </cd:Field>
-                              <cd:Field name="circulationFlag">
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar circulationFlag"/>
+                              <cd:Field name="transmitterReceiverPolarisation">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 transmitterReceiverPolarisation"/>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="productClass">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 productClass"/>
+                              </cd:Field>
+                              <cd:Field name="productClassDescription">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 productClassDescription"/>
+                              </cd:Field>
+                              <cd:Field name="productComposition">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 productComposition"/>
+                              </cd:Field>
+                              <cd:Field name="productType">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 productType"/>
+                              </cd:Field>
+                              <cd:Field name="productTimelinessCategory">
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 productTimelinessCategory"/>
                               </cd:Field>
                               <cd:Field name="sliceProductFlag">
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image sliceProductFlag">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 sliceProductFlag">
                                   <cd:NativeType>uint8</cd:NativeType>
                                   <cd:Mapping string="false" value="0"/>
                                   <cd:Mapping string="true" value="1"/>
                                 </cd:Integer>
                               </cd:Field>
+                              <cd:Field name="segmentStartTime">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 segmentStartTime"/>
+                              </cd:Field>
                               <cd:Field name="sliceNumber">
                                 <cd:Optional/>
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image sliceNumber">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 sliceNumber">
                                   <cd:NativeType>uint32</cd:NativeType>
                                 </cd:Integer>
                               </cd:Field>
-                              <cd:Field name="totalNumberOfSlice">
+                              <cd:Field name="totalSlices">
                                 <cd:Optional/>
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image totalNumberOfSlice">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 totalSlices">
                                   <cd:NativeType>uint32</cd:NativeType>
                                 </cd:Integer>
-                              </cd:Field>
-                              <cd:Field name="theoreticalSliceLength">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar theoreticalSliceLength"/>
-                              </cd:Field>
-                              <cd:Field name="sliceOverlap">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar sliceOverlap"/>
-                              </cd:Field>
-                              <cd:Field name="dataTakeStartTime">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar dataTakeStartTime"/>
-                              </cd:Field>
-                              <cd:Field name="echoCompressionType">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar echoCompressionType"/>
-                              </cd:Field>
-                              <cd:Field name="noiseCompressionType">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar noiseCompressionType"/>
-                              </cd:Field>
-                              <cd:Field name="calCompressionType">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar calCompressionType"/>
-                              </cd:Field>
-                              <cd:Field name="transmitterReceiverPolarisation">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar transmitterReceiverPolarisation">
-                                    <cd:Attribute name="dataObjectID"/>
-                                  </cd:Text>
-                                </cd:Array>
-                              </cd:Field>
-                              <cd:Field name="packetStoreID">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar packetStoreID">
-                                    <cd:Attribute name="dataObjectID"/>
-                                  </cd:Text>
-                                </cd:Array>
-                              </cd:Field>
-                              <cd:Field name="byteOrder">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar byteOrder">
-                                    <cd:Attribute name="dataObjectID"/>
-                                  </cd:Text>
-                                </cd:Array>
-                              </cd:Field>
-                              <cd:Field name="averageBitRate">
-                                <cd:Array>
-                                  <cd:Dimension/>
-                                  <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar averageBitRate">
-                                    <cd:Attribute name="dataObjectID"/>
-                                  </cd:Text>
-                                </cd:Array>
-                              </cd:Field>
-                              <cd:Field name="firstBurstCycleNumber">
-                                <cd:Optional/>
-                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar firstBurstCycleNumber"/>
                               </cd:Field>
                             </cd:Record>
                             <cd:Optional/>
@@ -296,14 +241,17 @@
                                     <cd:Optional/>
                                     <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 extension">
                                       <cd:Field name="instrumentMode">
-                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar instrumentMode">
+                                        <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 instrumentMode">
                                           <cd:Field name="mode">
                                             <cd:Optional/>
-                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar mode"/>
+                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 mode"/>
                                           </cd:Field>
-                                          <cd:Field name="swathNumber">
+                                          <cd:Field name="swath">
                                             <cd:Optional/>
-                                            <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar swathNumber"/>
+                                            <cd:Array>
+                                              <cd:Dimension/>
+                                              <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/level-2 swath"/>
+                                            </cd:Array>
                                           </cd:Field>
                                         </cd:Record>
                                       </cd:Field>
@@ -381,6 +329,12 @@
                           </cd:Field>
                           <cd:Field name="frameSet">
                             <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 frameSet">
+                              <cd:Field name="number">
+                                <cd:Optional/>
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0 number">
+                                  <cd:NativeType>int32</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Field>
                               <cd:Field name="frame">
                                 <cd:Array>
                                   <cd:Dimension/>
