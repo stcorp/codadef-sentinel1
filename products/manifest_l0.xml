@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_l0" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest_l0" format="xml" last-modified="2013-06-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -194,8 +194,8 @@
                               <cd:Field name="sliceProductFlag">
                                 <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar/image sliceProductFlag">
                                   <cd:NativeType>uint8</cd:NativeType>
-                                  <cd:Mapping string="false" value="0"/>
-                                  <cd:Mapping string="true" value="1"/>
+                                  <cd:Mapping string="FALSE" value="0"/>
+                                  <cd:Mapping string="TRUE" value="1"/>
                                 </cd:Integer>
                               </cd:Field>
                               <cd:Field name="sliceNumber">
