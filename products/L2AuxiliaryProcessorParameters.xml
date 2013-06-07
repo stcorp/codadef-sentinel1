@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2012-05-14" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -251,6 +251,9 @@
             </cd:Field>
           </cd:Record>
         </cd:Field>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
       </cd:Record>
     </cd:Field>
   </cd:Record>
