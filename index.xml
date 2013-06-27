@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2013-06-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -48,6 +48,18 @@
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/calnoise/wvsp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/standard/andp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/standard/ansp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/standard/endp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/standard/ensp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-0/standard/ewdp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
@@ -78,6 +90,18 @@
     <cd:ProductDefinition id="manifest_l1" format="xml" version="0">
       <cd:Description>This definition is based on a specific tailoring of the SAFE Sentinel v1.0 manifest standard for Sentinel-1</cd:Description>
       <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/andp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/ansp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/endp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/ensp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/ewdp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
@@ -97,6 +121,18 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/annotations/wvsp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/andp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/ansp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/endp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/ensp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/ewdp</cd:MatchData>
@@ -120,6 +156,18 @@
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/grd/standard/wvsp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/andp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/ansp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/endp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/ensp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/ewdp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
@@ -139,6 +187,18 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/annotations/wvsp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/standard/andp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/standard/ansp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/standard/endp</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/standard/ensp</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/level-1/slc/standard/ewdp</cd:MatchData>
