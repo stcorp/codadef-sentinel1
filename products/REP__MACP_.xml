@@ -1,13 +1,15 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="REP__MACP_" format="ascii" last-modified="2012-06-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="REP__MACP_" format="ascii" last-modified="2012-06-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="ascii">
     <cd:Field name="header">
       <cd:Record>
         <cd:Field name="Time">
-          <cd:Text>
-            <cd:Description>File update time as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
-            <cd:ByteSize>23</cd:ByteSize>
-          </cd:Text>
+          <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy/MM/dd-HH:mm:ss.SSS&quot;)">
+            <cd:Text>
+              <cd:Description>File update time as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
+              <cd:ByteSize>23</cd:ByteSize>
+            </cd:Text>
+          </cd:Time>
         </cd:Field>
         <cd:Field name="Space">
           <cd:Hidden/>
@@ -36,10 +38,12 @@
         <cd:Dimension><![CDATA[$num_records]]></cd:Dimension>
         <cd:Record>
           <cd:Field name="Epoch">
-            <cd:Text>
-              <cd:Description>Burn start or stop time, as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
-              <cd:ByteSize>23</cd:ByteSize>
-            </cd:Text>
+            <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy/MM/dd-HH:mm:ss.SSS&quot;)">
+              <cd:Text>
+                <cd:Description>Burn start or stop time, as: YYYY/MM/DD-HH:MM:SS.SSS</cd:Description>
+                <cd:ByteSize>23</cd:ByteSize>
+              </cd:Text>
+            </cd:Time>
           </cd:Field>
           <cd:Field name="Space_1">
             <cd:Hidden/>
