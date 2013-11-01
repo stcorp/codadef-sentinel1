@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="E___PTT___" format="xml" last-modified="2011-12-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="E___PTT___" format="xml" last-modified="2013-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -11,13 +11,14 @@
             </cd:Field>
             <cd:Field name="Variable_Header">
               <cd:Record namexml="Variable_Header">
-                 <cd:Field name="Configuration_Identifier">
-                   <cd:Type namexml="Configuration_Identifier">
-                     <cd:Integer format="ascii">
-                       <cd:NativeType>uint32</cd:NativeType>
-                     </cd:Integer>
-                   </cd:Type>
-                 </cd:Field>
+                <cd:Field name="Configuration_Identifier">
+                  <cd:Type namexml="Configuration_Identifier">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                      <ct:NamedTest id="RangeConfigurationIdentifier"/>
+                    </cd:Integer>
+                  </cd:Type>
+                </cd:Field>
               </cd:Record>
             </cd:Field>
           </cd:Record>
@@ -44,6 +45,7 @@
                         <cd:Type namexml="Spare">
                           <cd:Integer format="ascii">
                             <cd:NativeType>uint8</cd:NativeType>
+                            <ct:NamedTest id="FixedValue0"/>
                           </cd:Integer>
                         </cd:Type>
                         <cd:Hidden/>
@@ -54,6 +56,7 @@
                             <cd:Type namexml="Spare_1">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -62,6 +65,7 @@
                             <cd:Type namexml="Pulse_Trigger">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -69,6 +73,7 @@
                             <cd:Type namexml="SAS_Tx_Gate">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -76,6 +81,7 @@
                             <cd:Type namexml="TGU_Tx_Enable">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -83,6 +89,7 @@
                             <cd:Type namexml="SAS_Rx_Gate_Tx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -90,6 +97,7 @@
                             <cd:Type namexml="SAS_Rx_Gate_Rx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -97,6 +105,7 @@
                             <cd:Type namexml="Sample_Trigger_Tx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -104,6 +113,7 @@
                             <cd:Type namexml="Sample_Trigger_Rx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -111,6 +121,7 @@
                             <cd:Type namexml="SES_SSB_1">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -118,6 +129,7 @@
                             <cd:Type namexml="Spare_2">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -126,6 +138,7 @@
                             <cd:Type namexml="SAS_SSB_1">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -133,6 +146,7 @@
                             <cd:Type namexml="Spare_3">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -141,6 +155,7 @@
                             <cd:Type namexml="Latch_Time_Tx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -148,6 +163,7 @@
                             <cd:Type namexml="Latch_Time_Rx">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="Range1bitUnsigned"/>
                               </cd:Integer>
                             </cd:Type>
                           </cd:Field>
@@ -155,6 +171,7 @@
                             <cd:Type namexml="Spare_4">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -163,6 +180,7 @@
                             <cd:Type namexml="Spare_5">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -171,6 +189,7 @@
                             <cd:Type namexml="Spare_6">
                               <cd:Integer format="ascii">
                                 <cd:NativeType>uint8</cd:NativeType>
+                                <ct:NamedTest id="FixedValue0"/>
                               </cd:Integer>
                             </cd:Type>
                             <cd:Hidden/>
@@ -178,6 +197,7 @@
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="RangePTTEntryCount"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>

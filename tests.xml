@@ -1,13 +1,84 @@
 <?xml version="1.0"?>
-<ct:Tests last-modified="2011-07-26" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<ct:Tests last-modified="2013-11-01" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <ct:Test name="FileNameCheckEOF" criticality="Error" description="The name of the EOF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EOF"]]></ct:Test>
   <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
   <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(25, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
   <ct:Test name="FileNameMatchFileClass" criticality="Error" description="The file class in the product name should be consistent with the file class field in the header"><![CDATA[substr(4, 4, str(.)) == str(../File_Class)]]></ct:Test>
   <ct:Test name="FileNameMatchFileType" criticality="Error" description="The file type in the product name should be consistent with the file type field in the header"><![CDATA[substr(9, 10, str(.)) == str(../File_Type)]]></ct:Test>
   <ct:Test name="FileNameMatchSystem" criticality="Error" description="The site centre in the product name should be consistent with the system field in the header"><![CDATA[substr(20, 4, str(.)) == str(../Source/System)]]></ct:Test>
-  <ct:Test name="FixedValueSentinel1" criticality="Error" description="The value should be 'Sentinel-1'"><![CDATA[str(.) == "Sentinel-1"]]></ct:Test>
+  <ct:Test name="FixedValueSentinel1x" criticality="Error" description="The value should be either 'Sentinel-1A' or 'Sentinel-1B'"><![CDATA[str(.) == "Sentinel-1A" || str(.) == "Sentinel-1B"]]></ct:Test>
+  <ct:Test name="FixedValue0" criticality="Error" description="The value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
+  <ct:Test name="FixedValue2" criticality="Error" description="The value should be 2"><![CDATA[int(.) == 2]]></ct:Test>
+  <ct:Test name="FixedValue3" criticality="Error" description="The value should be 3"><![CDATA[int(.) == 3]]></ct:Test>
+  <ct:Test name="FixedValue20" criticality="Error" description="The value should be 20"><![CDATA[int(.) == 20]]></ct:Test>
+  <ct:Test name="FixedValue23" criticality="Error" description="The value should be 23"><![CDATA[int(.) == 23]]></ct:Test>
+  <ct:Test name="FixedValue24" criticality="Error" description="The value should be 24"><![CDATA[int(.) == 24]]></ct:Test>
+  <ct:Test name="FixedValue27" criticality="Error" description="The value should be 27"><![CDATA[int(.) == 27]]></ct:Test>
+  <ct:Test name="FixedValue29" criticality="Error" description="The value should be 29"><![CDATA[int(.) == 29]]></ct:Test>
   <ct:Test name="PhysicalFileSizeCheck" criticality="Error" description="The value of this field should match the actual file size"><![CDATA[filesize() == int(.)]]></ct:Test>
   <ct:Test name="ValidityPeriodOrder" description="Validity start time should be before (or equal to) validity stop time" criticality="Error"><![CDATA[float(./Validity_Start) <= float(./Validity_Stop)]]></ct:Test>
   <ct:Test name="ValueOfCountAttributeForParent" criticality="Error" description="The value for the count attribute of the parent List_of_... element should equal the number of occurences of this element"><![CDATA[int(str(..@count)) == numelements(.)]]></ct:Test>
+  <ct:Test name="IndexValue" criticality="Error" description="The index value should be the one-based index of the item in the array of XML elements"><![CDATA[int(.) == index(..) + 1]]></ct:Test>
+  <ct:Test name="IndexValue2" criticality="Error" description="The index value should be the one-based index of the item in the array of XML elements using a stride of 2"><![CDATA[int(.) == 2 * index(..) + 1]]></ct:Test>
+  <ct:Test name="Range1bitUnsigned" criticality="Error" description="The value should fit in a 1 bit unsigned integer"><![CDATA[int(.) >= 0 && int(.) <= 1]]></ct:Test>
+  <ct:Test name="Range2bitUnsigned" criticality="Error" description="The value should fit in a 2 bit unsigned integer"><![CDATA[int(.) >= 0 && int(.) <= 3]]></ct:Test>
+  <ct:Test name="Range4bitUnsigned" criticality="Error" description="The value should fit in a 4 bit unsigned integer"><![CDATA[int(.) >= 0 && int(.) <= 15]]></ct:Test>
+  <ct:Test name="Range5bitUnsigned" criticality="Error" description="The value should fit in a 6 bit unsigned integer"><![CDATA[int(.) >= 0 && int(.) <= 31]]></ct:Test>
+  <ct:Test name="RangeAmplitudePredistortion" criticality="Error" description="The value should be &gt;= 645 and &lt;= 1023"><![CDATA[int(.) >= 645 && int(.) <= 1023]]></ct:Test>
+  <ct:Test name="RangeBAQBlockSize" criticality="Error" description="The value should be &gt;= 3 and &lt;= 31"><![CDATA[int(.) >= 3 && int(.) <= 31]]></ct:Test>
+  <ct:Test name="RangeBitrateValueCount" criticality="Error" description="The number of Bitrate_Value elements should be &gt;= 1 and &lt;= 8192"><![CDATA[numelements(.) >= 1 && numelements(.) <= 8192]]></ct:Test>
+  <ct:Test name="RangeBitrateValue" criticality="Error" description="The value should be &gt;= 0 and &lt;= 8191"><![CDATA[int(.) >= 0 && int(.) <= 8191]]></ct:Test>
+  <ct:Test name="RangeBRTEntryCount" criticality="Error" description="The number of BRT_Entry elements should be &gt;= 1 and &lt;= 3"><![CDATA[numelements(.) >= 1 && numelements(.) <= 3]]></ct:Test>
+  <ct:Test name="RangeBRTIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 2"><![CDATA[int(.) >= 0 && int(.) <= 2]]></ct:Test>
+  <ct:Test name="RangeBSTCount" criticality="Error" description="The number of BST elements should be &gt;= 0 and &lt;= 32"><![CDATA[numelements(.) >= 0 && numelements(.) <= 32]]></ct:Test>
+  <ct:Test name="RangeBSTEntryCount" criticality="Error" description="The number of BST_Entry elements should be &gt;= 0 and &lt;= 2048"><![CDATA[numelements(.) >= 0 && numelements(.) <= 2048]]></ct:Test>
+  <ct:Test name="RangeConfigurationIdentifier" criticality="Error" description="The value should be &gt;= 0 and &lt;= 99999999"><![CDATA[int(.) >= 0 && int(.) <= 99999999]]></ct:Test>
+  <ct:Test name="RangeCompressionDataType" criticality="Error" description="The value should be &gt;= 0 and &lt;= 7"><![CDATA[int(.) >= 0 && int(.) <= 7]]></ct:Test>
+  <ct:Test name="RangeCompressionIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 3839"><![CDATA[int(.) >= 0 && int(.) <= 3839]]></ct:Test>
+  <ct:Test name="RangeCompressionValuesCount" criticality="Error" description="The number of Compression_Values elements should be &gt;= 1 and &lt;= 3840"><![CDATA[numelements(.) >= 1 && numelements(.) <= 3840]]></ct:Test>
+  <ct:Test name="RangeCPTEntryCount" criticality="Error" description="The number of CPT_Entry elements should be &gt;= 1 and &lt;= 8"><![CDATA[numelements(.) >= 1 && numelements(.) <= 8]]></ct:Test>
+  <ct:Test name="RangeECCLongProgCount" criticality="Error" description="The number of ECC_Short_Prog elements should be &gt;= 0 and &lt;= 16"><![CDATA[numelements(.) >= 0 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeECCLongProgElementCount" criticality="Error" description="The number of ECC_Program_Element elements should be &gt;= 1 and &lt;= 576"><![CDATA[numelements(.) >= 1 && numelements(.) <= 576]]></ct:Test>
+  <ct:Test name="RangeECCLongProgElementNumber" criticality="Error" description="The value should be &gt;= 1 and &lt;= 576"><![CDATA[int(.) >= 1 && int(.) <= 576]]></ct:Test>
+  <ct:Test name="RangeECCLongProgNumber" criticality="Error" description="The value should be &gt;= 32 and &lt;= 47"><![CDATA[int(.) >= 32 && int(.) <= 47]]></ct:Test>
+  <ct:Test name="RangeECCShortProgCount" criticality="Error" description="The number of ECC_Short_Prog elements should be &gt;= 0 and &lt;= 32"><![CDATA[numelements(.) >= 0 && numelements(.) <= 32]]></ct:Test>
+  <ct:Test name="RangeECCShortProgElementCount" criticality="Error" description="The number of ECC_Program_Element elements should be &gt;= 1 and &lt;= 288"><![CDATA[numelements(.) >= 1 && numelements(.) <= 288]]></ct:Test>
+  <ct:Test name="RangeECCShortProgElementNumber" criticality="Error" description="The value should be &gt;= 1 and &lt;= 288"><![CDATA[int(.) >= 1 && int(.) <= 288]]></ct:Test>
+  <ct:Test name="RangeECCShortProgNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 31"><![CDATA[int(.) >= 0 && int(.) <= 31]]></ct:Test>
+  <ct:Test name="RangeECTEntryCount8" criticality="Error" description="The number of ECT_Entry elements should be 8"><![CDATA[numelements(.) == 8]]></ct:Test>
+  <ct:Test name="RangeECTEntryCount16" criticality="Error" description="The number of ECT_Entry elements should be 16"><![CDATA[numelements(.) == 16]]></ct:Test>
+  <ct:Test name="RangeDTPEntryCount" criticality="Error" description="The number of DTP_Entry elements should be &gt;= 1 and &lt;= 5120"><![CDATA[numelements(.) >= 1 && numelements(.) <= 5120]]></ct:Test>
+  <ct:Test name="RangeFCRTEntryCount" criticality="Error" description="The number of FCRT_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeFCTEntryCount" criticality="Error" description="The number of FCT_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeFCTPhaseCount" criticality="Error" description="The number of FCT_Phase elements should be &gt;= 1 and &lt;= 8"><![CDATA[numelements(.) >= 1 && numelements(.) <= 8]]></ct:Test>
+  <ct:Test name="RangeFCTPhaseNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 7"><![CDATA[int(.) >= 0 && int(.) <= 7]]></ct:Test>
+  <ct:Test name="RangeFCTSectionCount" criticality="Error" description="The number of FCT_Section elements should be &gt;= 1 and &lt;= 8"><![CDATA[numelements(.) >= 1 && numelements(.) <= 8]]></ct:Test>
+  <ct:Test name="RangeFCTSectionNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 7"><![CDATA[int(.) >= 0 && int(.) <= 7]]></ct:Test>
+  <ct:Test name="RangeFCTValueCount" criticality="Error" description="The number of FCT_Value elements should be &gt;= 1 and &lt;= 40"><![CDATA[numelements(.) >= 1 && numelements(.) <= 40]]></ct:Test>
+  <ct:Test name="RangeFPPOTEntryCount" criticality="Error" description="The number of FPPOT_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 0 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeFilterNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 15"><![CDATA[int(.) >= 0 && int(.) <= 15]]></ct:Test>
+  <ct:Test name="RangeFilterProgramPointer" criticality="Error" description="The value should be &gt;= 0 and &lt;= 255"><![CDATA[int(.) >= 0 && int(.) <= 255]]></ct:Test>
+  <ct:Test name="RangeFPPRTEntryCount" criticality="Error" description="The number of FPPRT_Entry elements should be &gt;= 1 and &lt;= 252"><![CDATA[numelements(.) >= 0 && numelements(.) <= 252]]></ct:Test>
+  <ct:Test name="RangeFPPRTIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 251"><![CDATA[int(.) >= 0 && int(.) <= 251]]></ct:Test>
+  <ct:Test name="RangeFilterProgramEntry" criticality="Error" description="The value should be &gt;= 0 and &lt;= 1073741823"><![CDATA[int(.) >= 0 && int(.) <= 1073741823]]></ct:Test>
+  <ct:Test name="RangePDTEntryCount" criticality="Error" description="The number of PDT_Entry elements should be 64"><![CDATA[numelements(.) == 64]]></ct:Test>
+  <ct:Test name="RangePTTEntryCount" criticality="Error" description="The number of PTT_Entry elements should be &gt;= 1 and &lt;= 32"><![CDATA[numelements(.) >= 1 && numelements(.) <= 32]]></ct:Test>
+  <ct:Test name="RangePRIEntryCount" criticality="Error" description="The number of PRI_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeRxGainEntryCount" criticality="Error" description="The number of Rx_Gain_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="RangeRTITEntryCount" criticality="Error" description="The number of RTIT_Entry elements should be &gt;= 1 and &lt;= 1024"><![CDATA[numelements(.) >= 1 && numelements(.) <= 1024]]></ct:Test>
+  <ct:Test name="RangeRTITIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 1023"><![CDATA[int(.) >= 0 && int(.) <= 1023]]></ct:Test>
+  <ct:Test name="RangeRZWTEntryCount" criticality="Error" description="The number of RZWT_Entry elements should be &gt;= 1 and &lt;= 128"><![CDATA[numelements(.) >= 1 && numelements(.) <= 128]]></ct:Test>
+  <ct:Test name="RangeRZWTIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 127"><![CDATA[int(.) >= 0 && int(.) <= 127]]></ct:Test>
+  <ct:Test name="RangeSwathNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 127"><![CDATA[int(.) >= 0 && int(.) <= 127]]></ct:Test>
+  <ct:Test name="RangeSwathParametersTableCount" criticality="Error" description="The number of Swath_Parameters_Table
+ elements should be &gt;= 1 and &lt;= 128"><![CDATA[numelements(.) >= 1 && numelements(.) <= 128]]></ct:Test>
+  <ct:Test name="RangeSWLEntryCount" criticality="Error" description="The number of SWL_Entry elements should be &gt;= 1 and &lt;= 64"><![CDATA[numelements(.) >= 1 && numelements(.) <= 64]]></ct:Test>
+  <ct:Test name="RangeSWSTEntryCount" criticality="Error" description="The number of SWST_Entry elements should be &gt;= 1 and &lt;= 256"><![CDATA[numelements(.) >= 1 && numelements(.) <= 256]]></ct:Test>
+  <ct:Test name="RangeSignalType" criticality="Error" description="The value should be one of 0, 1, 8, 9, 10, 11, 12, 13, 14, 15"><![CDATA[int(.) == 0 || int(.) == 1 || (int(.) >= 8 && int(.) <= 15)]]></ct:Test>
+  <ct:Test name="RangeTestPatternGeneratorDataLength" criticality="Error" description="The value should be &gt;= 1 and &lt;= 2560"><![CDATA[int(.) >= 1 && int(.) <= 2560]]></ct:Test>
+  <ct:Test name="RangeTotalNoOrbitSwathDataWindows" criticality="Error" description="The value should be &gt;= 5500 and &lt;= 6500"><![CDATA[int(.) >= 5500 && int(.) <= 6500]]></ct:Test>
+  <ct:Test name="RangeTPLUTEntryCount" criticality="Error" description="The number of TPLUT_Entry elements should be 32"><![CDATA[numelements(.) == 32]]></ct:Test>
+  <ct:Test name="RangeTPTEntryCount" criticality="Error" description="The number of TPT_Entry elements should be &gt;= 1 and &lt;= 32"><![CDATA[numelements(.) >= 1 && numelements(.) <= 32]]></ct:Test>
+  <ct:Test name="RangeTxPulseRxBandwithEntryCount" criticality="Error" description="The number of Tx_Pulse_Rx_Bandwith_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
+  <ct:Test name="ECCProgramElementOptionalFieldCount" criticality="Error" description="Only one of the optional elements in the ECC_Program_Element can be present"><![CDATA[int(exists(./ECC_Entry)) + int(exists(./ECC_Repeat_Instruction)) + int(exists(./ECC_Until_Instruction)) + int(exists(./ECC_Variable_Until_Instruction)) + int(exists(./ECC_Start_Warmup_Instruction)) + int(exists(./ECC_End_Warmup_Instruction)) + int(exists(./ECC_Stop_Instruction)) == 1]]></ct:Test>
 </ct:Tests> 
