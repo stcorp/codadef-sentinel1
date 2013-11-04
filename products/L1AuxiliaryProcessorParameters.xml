@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -154,6 +154,7 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>                      
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                           <cd:Attribute name="count"/>
@@ -486,6 +487,7 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                           <cd:Attribute name="count"/>
@@ -567,6 +569,7 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                           <cd:Attribute name="count"/>
@@ -642,6 +645,7 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                           <cd:Attribute name="count"/>
@@ -790,6 +794,7 @@
                     </cd:Record>
                   </cd:Field>
                 </cd:Record>
+                <ct:NamedTest id="ValueOfCountAttributeForParent"/>
               </cd:Array>
             </cd:Field>
             <cd:Attribute name="count"/>
@@ -852,12 +857,14 @@
                               </cd:Type>
                             </cd:Field>
                           </cd:Record>
+                          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                         </cd:Array>
                       </cd:Field>
                       <cd:Attribute name="count"/>
                     </cd:Record>
                   </cd:Field>
                 </cd:Record>
+                <ct:NamedTest id="ValueOfCountAttributeForParent"/>
               </cd:Array>
             </cd:Field>
             <cd:Attribute name="count"/>

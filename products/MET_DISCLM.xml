@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MET_DISCLM" format="xml" last-modified="2012-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="MET_DISCLM" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record>
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -11,6 +11,10 @@
             <cd:Field name="Variable_Header">
               <cd:Record namexml="Variable_Header"/>
             </cd:Field>
+            <ct:NamedTest id="FileNameCheckEOF" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchSystem" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FileNameMatchCreationDate" path="Fixed_Header/File_Name"/>
+            <ct:NamedTest id="FixedValueSentinel1x" path="Fixed_Header/Mission"/>
           </cd:Record>
         </cd:Field>
         <cd:Field name="Data_Block">
@@ -45,6 +49,7 @@
                         <cd:Text namexml="Degradation">
                           <cd:Description>Allowed values: DEGRADED_PRODUCT_RADIOMETRY, DEGRADED_PRODUCT_GEOLOCATION, DEGRADED_RADIOMETRIC_CALIBRATION, DEGRADED_PLATFORM_POINTING, DEGRADED_ORBIT_CONTROL, DEGRADED_PERFORMANCE_INSTRUMENT_ANOMALY, COMPLETE_PRODUCT_DEGRADATION, SLICE_PRODUCT_NON_CONCATENABLE, ...</cd:Description>
                         </cd:Text>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
@@ -118,6 +123,7 @@
                         <cd:Text namexml="Product_Type">
                           <cd:Description>Allowed values: EW_RAW__0S IW_RAW__0S SM_RAW__0S WV_RAW__0S RF_RAW__0S GP_RAW__0_ HK_RAW__0_ EW_SLC__1S IW_SLC__1S SM_SLC__1S WV_SLC__1S EW_GRDH_1S EW_GRDM_1S IW_GRDH_1S IW_GRDM_1S SM_GRDF_1S SM_GRDH_1S SM_GRDM_1S WV_GRDM_1S EW_OCN__2S IW_OCN__2S WV_OCN__2S SM_OCN__2S EW_CSS__SS IW_CSS__SS SM_CSS__SS EW_CSGH_SS EW_CSGM_SS IW_CSGH_SS IW_CSGM_SS SM_CSGF_SS SM_CSGH_SS SM_CSGM_SS EW_PSC__SS IW_PSC__SS SM_PSC__SS EW_MOSL_SS EW_MOSM_SS IW_MOSL_SS IW_MOSM_SS SM_MOSL_SS SM_MOSM_SS</cd:Description>
                         </cd:Text>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>

@@ -1,13 +1,11 @@
 <?xml version="1.0"?>
-<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2013-11-01" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Earth Explorer Fixed Header</cd:Description>
   <cd:Field name="File_Name">
     <cd:Text namexml="File_Name">
       <cd:Description>The Logical File Name, i.e. the File Name excluding the extension</cd:Description>
       <ct:NamedTest id="FileNameMatchFileClass"/>
       <ct:NamedTest id="FileNameMatchFileType"/>
-      <ct:NamedTest id="FileNameMatchSystem"/>
-      <ct:NamedTest id="FileNameMatchCreationDate"/>
     </cd:Text>
   </cd:Field>
   <cd:Field name="File_Description">
@@ -23,7 +21,6 @@
   <cd:Field name="Mission">
     <cd:Text namexml="Mission">
       <cd:Description>A 1-word description of the Mission, coherent with the Mission element in the File Name.</cd:Description>
-      <ct:NamedTest id="FixedValueSentinel1x"/>
     </cd:Text>
   </cd:Field>
   <cd:Field name="File_Class">

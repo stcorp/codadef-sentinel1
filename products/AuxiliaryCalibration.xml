@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2013-05-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryCalibration" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Calibration auxiliary file definition (AUX_CAL)</cd:Description>
     <cd:Field name="auxiliaryCalibration">
@@ -56,7 +56,7 @@
                         <cd:Type namexml="values">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
-                            <cd:Description>Two-way antenna elevation pattern gain values. The centre value in the vector corresponds to the referenceAntennaAngle in the Roll Steering parameters described in the Instrument auxiliary file (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of elevationAngleIncrement from the centre value. The pattern contains attribute “count” floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * elevationAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * elevationAngleIncrement degrees.</cd:Description>
+                            <cd:Description>Two-way antenna elevation pattern gain values. The centre value in the vector corresponds to the referenceAntennaAngle in the Roll Steering parameters described in the Instrument auxiliary file (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of elevationAngleIncrement from the centre value. The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to -((count  - 1)/2) * elevationAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * elevationAngleIncrement degrees.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
                             <cd:Float>
                               <cd:Unit>dB</cd:Unit>
@@ -83,7 +83,7 @@
                         <cd:Type namexml="values">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
-                            <cd:Description>Two way azimuth antenna pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
+                            <cd:Description>Two way azimuth antenna pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to -((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
                             <cd:Float>
                               <cd:Unit>dB</cd:Unit>
@@ -110,7 +110,7 @@
                         <cd:Type namexml="values">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
-                            <cd:Description>Two way azimuth antenna element pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to –((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
+                            <cd:Description>Two way azimuth antenna element pattern values. The centre value of the vector corresponds to 0 degrees (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of azimuthAngleIncrement degrees from the centre value.  The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to -((count  - 1)/2) * azimuthAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * azimuthAngleIncrement degrees.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
                             <cd:Float>
                               <cd:Unit>dB</cd:Unit>
@@ -140,6 +140,7 @@
                     </cd:Type>
                   </cd:Field>
                 </cd:Record>
+                <ct:NamedTest id="ValueOfCountAttributeForParent"/>
               </cd:Array>
             </cd:Field>
             <cd:Attribute name="count"/>

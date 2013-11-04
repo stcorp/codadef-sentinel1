@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="STAProductADS" format="xml" last-modified="2013-06-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="STAProductADS" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="staProduct">
       <cd:Record namexml="staProduct">
@@ -431,6 +431,7 @@
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -922,6 +923,7 @@
                                       </cd:Type>
                                     </cd:Field>
                                   </cd:Record>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                                 </cd:Array>
                               </cd:Field>
                             </cd:Record>
@@ -969,6 +971,7 @@
                                       </cd:Type>
                                     </cd:Field>
                                   </cd:Record>
+                                  <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                                 </cd:Array>
                               </cd:Field>
                             </cd:Record>
@@ -976,6 +979,7 @@
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1046,6 +1050,7 @@
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1136,6 +1141,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1269,6 +1275,7 @@
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1448,11 +1455,13 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1487,6 +1496,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1511,6 +1521,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1556,6 +1567,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -1621,6 +1633,7 @@
                             </cd:Type>
                           </cd:Field>
                         </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
@@ -1971,6 +1984,7 @@
                             </cd:Type>
                           </cd:Field>
                         </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
@@ -2005,6 +2019,7 @@
                             </cd:Type>
                           </cd:Field>
                         </cd:Record>
+                        <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                       </cd:Array>
                     </cd:Field>
                   </cd:Record>
@@ -2146,11 +2161,13 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -2226,6 +2243,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -2302,6 +2320,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -2379,6 +2398,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -2443,6 +2463,7 @@
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
@@ -2504,11 +2525,13 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                              <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>
                     </cd:Record>
+                    <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                   </cd:Array>
                 </cd:Field>
               </cd:Record>
