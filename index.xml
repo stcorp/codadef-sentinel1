@@ -271,6 +271,15 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="manifest_spp">
+    <cd:Description>SAFE Manifest file for SPP products</cd:Description>
+    <cd:ProductDefinition id="manifest_spp" format="xml" version="0">
+      <cd:Description>This definition is based on a specific tailoring of the SAFE Sentinel v1.0 manifest standard for Sentinel-1</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/sentinel-1.0/sentinel-1/sar/spp</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="manifest_aux">
     <cd:Description>SAFE Manifest file for Sentinel-1 AUX IPF products</cd:Description>
     <cd:ProductDefinition id="manifest_aux" format="xml" version="0">
@@ -298,18 +307,6 @@
       <cd:Description>This definition is based on SAFE version 1.2</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/1.2</cd:MatchData>
-      </cd:DetectionRule>
-    </cd:ProductDefinition>
-  </cd:ProductType>
-  <cd:ProductType name="manifest_spp">
-    <cd:Description>SAFE Manifest file for SPP products</cd:Description>
-    <cd:ProductDefinition id="manifest_spp" format="xml" version="0">
-      <cd:Description>This definition is based on SAFE version 1.2</cd:Description>
-      <cd:DetectionRule>
-        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/1.2/sentinel-1/sar/level-S/mos</cd:MatchData>
-      </cd:DetectionRule>
-      <cd:DetectionRule>
-        <cd:MatchData path="/{urn:ccsds:schema:xfdu:1}XFDU@version">esa/safe/1.2/sentinel-1/sar/level-S/sta</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
