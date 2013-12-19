@@ -101,10 +101,15 @@
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="LinesStart">
-                    <cd:Text namexml="LinesStart">
+                    <cd:Type namexml="LinesStart">
                       <cd:Attribute name="unit"/>
-                      <cd:Description>Azimuth absolute start time</cd:Description>
-                    </cd:Text>
+                      <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                        <cd:Description>Azimuth absolute start time</cd:Description>
+                        <cd:Text>
+                          <cd:ByteSize>33</cd:ByteSize>
+                        </cd:Text>
+                      </cd:Time>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="SamplesStart">
                     <cd:Type namexml="SamplesStart">
