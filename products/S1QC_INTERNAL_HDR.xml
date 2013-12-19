@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" last-modified="2013-12-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" last-modified="2013-12-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="AresysXmlDoc">
       <cd:Record namexml="AresysXmlDoc">
@@ -1078,9 +1078,14 @@
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="t_ref_Utc">
-                    <cd:Text namexml="t_ref_Utc">
-                      <cd:Description>Azimuth absolute start time for the first state vector</cd:Description>
-                    </cd:Text>
+                    <cd:Type namexml="t_ref_Utc">
+                      <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                        <cd:Description>Azimuth absolute start time for the first state vector</cd:Description>
+                        <cd:Text>
+                          <cd:ByteSize>33</cd:ByteSize>
+                        </cd:Text>
+                      </cd:Time>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="dtSV_s">
                     <cd:Type namexml="dtSV_s">
@@ -1176,12 +1181,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1231,12 +1241,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1286,12 +1301,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1341,12 +1361,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1396,12 +1421,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>  
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1451,12 +1481,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1506,12 +1541,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
@@ -1527,9 +1567,14 @@
                     <cd:Optional/>
                   </cd:Attribute>
                   <cd:Field name="t_ref_Utc">
-                    <cd:Text namexml="t_ref_Utc">
-                      <cd:Description>Azimuth absolute start time for the first attitude value</cd:Description>
-                    </cd:Text>
+                    <cd:Type namexml="t_ref_Utc">
+                      <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                        <cd:Description>Azimuth absolute start time for the first attitude value</cd:Description>
+                        <cd:Text>
+                          <cd:ByteSize>33</cd:ByteSize>
+                        </cd:Text>
+                      </cd:Time>
+                    </cd:Type>
                   </cd:Field>
                   <cd:Field name="dtYPR_s">
                     <cd:Type namexml="dtYPR_s">
@@ -1888,12 +1933,17 @@
                       </cd:Type>
                     </cd:Field>
                     <cd:Field name="taz0_Utc">
-                      <cd:Text namexml="taz0_Utc">
+                      <cd:Type namexml="taz0_Utc">
                         <cd:Attribute name="unit">
                           <cd:Optional/>
                         </cd:Attribute>
-                        <cd:Description>Polynomial azimuth reference time</cd:Description>
-                      </cd:Text>
+                        <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
+                          <cd:Description>Polynomial azimuth reference time</cd:Description>
+                          <cd:Text>
+                            <cd:ByteSize>33</cd:ByteSize>
+                          </cd:Text>
+                        </cd:Time>
+                      </cd:Type>
                     </cd:Field>
                   </cd:Record>
                 </cd:Array>
