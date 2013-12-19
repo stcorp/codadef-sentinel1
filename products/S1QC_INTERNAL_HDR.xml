@@ -1724,6 +1724,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="val">
+                                <cd:Attribute name="unit">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:NativeType>double</cd:NativeType>
                                 </cd:Float>
@@ -1742,6 +1745,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="val">
+                                <cd:Attribute name="unit">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:NativeType>double</cd:NativeType>
                                 </cd:Float>
@@ -1760,6 +1766,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="val">
+                                <cd:Attribute name="unit">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:NativeType>double</cd:NativeType>
                                 </cd:Float>
@@ -1778,6 +1787,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="val">
+                                <cd:Attribute name="unit">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:NativeType>double</cd:NativeType>
                                 </cd:Float>
@@ -1796,6 +1808,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="val">
+                                <cd:Attribute name="unit">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Float format="ascii">
                                   <cd:NativeType>double</cd:NativeType>
                                 </cd:Float>
