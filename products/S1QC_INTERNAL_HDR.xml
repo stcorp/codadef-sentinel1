@@ -1718,71 +1718,91 @@
                   </cd:Field>
                   <cd:Field name="NorthWest">
                     <cd:Record namexml="NorthWest">
-                      <cd:Field name="val">
-                        <cd:Array>
-                          <cd:Dimension/>
-                          <cd:Type namexml="val">
-                            <cd:Float format="ascii">
-                              <cd:NativeType>double</cd:NativeType>
-                            </cd:Float>
-                          </cd:Type>
-                        </cd:Array>
+                      <cd:Field name="Point">
+                        <cd:Record namexml="Point">
+                          <cd:Field name="val">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="val">
+                                <cd:Float format="ascii">
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="NorthEast">
                     <cd:Record namexml="NorthEast">
-                      <cd:Field name="val">
-                        <cd:Array>
-                          <cd:Dimension/>
-                          <cd:Type namexml="val">
-                            <cd:Float format="ascii">
-                              <cd:NativeType>double</cd:NativeType>
-                            </cd:Float>
-                          </cd:Type>
-                        </cd:Array>
+                      <cd:Field name="Point">
+                        <cd:Record namexml="Point">
+                          <cd:Field name="val">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="val">
+                                <cd:Float format="ascii">
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="SouthWest">
                     <cd:Record namexml="SouthWest">
-                      <cd:Field name="val">
-                        <cd:Array>
-                          <cd:Dimension/>
-                          <cd:Type namexml="val">
-                            <cd:Float format="ascii">
-                              <cd:NativeType>double</cd:NativeType>
-                            </cd:Float>
-                          </cd:Type>
-                        </cd:Array>
+                      <cd:Field name="Point">
+                        <cd:Record namexml="Point">
+                          <cd:Field name="val">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="val">
+                                <cd:Float format="ascii">
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="SouthEast">
                     <cd:Record namexml="SouthEast">
-                      <cd:Field name="val">
-                        <cd:Array>
-                          <cd:Dimension/>
-                          <cd:Type namexml="val">
-                            <cd:Float format="ascii">
-                              <cd:NativeType>double</cd:NativeType>
-                            </cd:Float>
-                          </cd:Type>
-                        </cd:Array>
+                      <cd:Field name="Point">
+                        <cd:Record namexml="Point">
+                          <cd:Field name="val">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="val">
+                                <cd:Float format="ascii">
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
                   <cd:Field name="Center">
                     <cd:Record namexml="Center">
-                      <cd:Field name="val">
-                        <cd:Array>
-                          <cd:Dimension/>
-                          <cd:Type namexml="val">
-                            <cd:Float format="ascii">
-                              <cd:NativeType>double</cd:NativeType>
-                            </cd:Float>
-                          </cd:Type>
-                        </cd:Array>
+                      <cd:Field name="Point">
+                        <cd:Record namexml="Point">
+                          <cd:Field name="val">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="val">
+                                <cd:Float format="ascii">
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
