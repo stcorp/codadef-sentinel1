@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_aux" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="manifest_aux" format="xml" last-modified="2013-12-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -144,8 +144,8 @@
                               <cd:Field name="generation">
                                 <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/auxiliary/sar generation"/>
                               </cd:Field>
-                              <cd:Field name="instrumentConfigurationID">
-                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/auxiliary/sar instrumentConfigurationID">
+                              <cd:Field name="instrumentConfigurationId">
+                                <cd:Integer format="ascii" namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/auxiliary/sar instrumentConfigurationId">
                                   <cd:NativeType>uint32</cd:NativeType>
                                 </cd:Integer>
                               </cd:Field>

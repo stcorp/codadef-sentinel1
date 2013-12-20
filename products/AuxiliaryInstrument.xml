@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-12-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -17,6 +17,15 @@
           <cd:Type namexml="deltaTGuard1">
             <cd:Float format="ascii">
               <cd:Description>DeltaT Guard 1 parameter from the instrument radar database [s]. This parameter is used to calculate the internal time delay of the extracted reconstructed replicas.</cd:Description>
+              <cd:Unit>s</cd:Unit>
+              <cd:NativeType>double</cd:NativeType>
+            </cd:Float>
+          </cd:Type>
+        </cd:Field>
+        <cd:Field name="deltaTSuppr">
+          <cd:Type namexml="deltaTSuppr">
+            <cd:Float format="ascii">
+              <cd:Description>DeltaT Suppr parameter from the SSPPDU document [s]. This parameter is used to calculate the times within the PRI for the echo, calibration and noise data.</cd:Description>
               <cd:Unit>s</cd:Unit>
               <cd:NativeType>double</cd:NativeType>
             </cd:Float>
@@ -82,12 +91,12 @@
                   </cd:Field>
                   <cd:Field name="pulseParams">
                     <cd:Record namexml="pulseParams">
-                      <cd:Description>Pulse parameters. This DSR contains the characteristics for the nominal pulse within this swath.</cd:Description>
+                      <cd:Description>Replica pulse parameters. This DSR contains the characteristics for the nominal imaging replica pulse within this swath.</cd:Description>
                       <cd:Field name="amplitudeCoefficients">
                         <cd:Type namexml="amplitudeCoefficients">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
-                            <cd:Description>Pulse amplitude coefficients of nominal chirp replica.</cd:Description>
+                            <cd:Description>Pulse amplitude coefficients of the nominal imaging chirp replica.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
                             <cd:Float>
                               <cd:NativeType>float</cd:NativeType>
@@ -99,7 +108,7 @@
                         <cd:Type namexml="phaseCoefficients">
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
-                            <cd:Description>Pulse phase coefficients of nominal chirp replica.</cd:Description>
+                            <cd:Description>Pulse phase coefficients of the nominal imaging chirp replica.</cd:Description>
                             <cd:Dimension>int(str(@count))</cd:Dimension>
                             <cd:Float>
                               <cd:NativeType>float</cd:NativeType>
@@ -107,24 +116,11 @@
                           </cd:Array>
                         </cd:Type>
                       </cd:Field>
-                    </cd:Record>
-                  </cd:Field>
-                  <cd:Field name="electronicLosses">
-                    <cd:Record namexml="electronicLosses">
-                      <cd:Description>Electronic losses vectors.</cd:Description>
-                      <cd:Field name="lShort">
-                        <cd:Type namexml="lShort">
+                      <cd:Field name="nominalTxPulseLength">
+                        <cd:Type namexml="nominalTxPulseLength">
                           <cd:Float format="ascii">
-                            <cd:Description>Electronic loss characterisation Lshort.</cd:Description>
-                            <cd:NativeType>float</cd:NativeType>
-                          </cd:Float>
-                        </cd:Type>
-                      </cd:Field>
-                      <cd:Field name="lCp">
-                        <cd:Type namexml="lCp">
-                          <cd:Float format="ascii">
-                            <cd:Description>Electronic loss characterisation LCP.</cd:Description>
-                            <cd:NativeType>float</cd:NativeType>
+                            <cd:Description>Nominal transmit pulse length [s]. This parameter is used by the pre-processor and the DCE and SLC processors if it is smaller than the Tx Pulse Length (TXPL) extracted from the ISP headers. The nominal transmit pulse length can be set such that the chirp processed bandwidth is small enough to filter out the spurious signals at ±37.5 MHz.</cd:Description>
+                            <cd:NativeType>double</cd:NativeType>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
@@ -141,18 +137,6 @@
                                 <cd:Description>Polarisation to which this set of receive correction parameters applies. "H" or "V".</cd:Description>
                               </cd:Text>
                             </cd:Field>
-                            <cd:Field name="gainOvershootCoefficients">
-                              <cd:Type namexml="gainOvershootCoefficients">
-                                <cd:Attribute name="count"/>
-                                <cd:Array format="ascii">
-                                  <cd:Description>Gain overshoot correction coefficients.</cd:Description>
-                                  <cd:Dimension>int(str(@count))</cd:Dimension>
-                                  <cd:Float>
-                                    <cd:NativeType>float</cd:NativeType>
-                                  </cd:Float>
-                                </cd:Array>
-                              </cd:Type>
-                            </cd:Field>
                             <cd:Field name="gainTrendCoefficients">
                               <cd:Type namexml="gainTrendCoefficients">
                                 <cd:Attribute name="count"/>
@@ -165,23 +149,11 @@
                                 </cd:Array>
                               </cd:Type>
                             </cd:Field>
-                            <cd:Field name="gainOffsetCoefficients">
-                              <cd:Type namexml="gainOffsetCoefficients">
+                            <cd:Field name="gainOvershootCoefficients">
+                              <cd:Type namexml="gainOvershootCoefficients">
                                 <cd:Attribute name="count"/>
                                 <cd:Array format="ascii">
-                                  <cd:Description>Gain offset correction coefficients.</cd:Description>
-                                  <cd:Dimension>int(str(@count))</cd:Dimension>
-                                  <cd:Float>
-                                    <cd:NativeType>float</cd:NativeType>
-                                  </cd:Float>
-                                </cd:Array>
-                              </cd:Type>
-                            </cd:Field>
-                            <cd:Field name="phaseCoefficients">
-                              <cd:Type namexml="phaseCoefficients">
-                                <cd:Attribute name="count"/>
-                                <cd:Array format="ascii">
-                                  <cd:Description>Phase correction coefficients. Note: There is no evidence so far that a phase correction needs to be applied but phase correction coefficients are provided in the spec for possible future use.</cd:Description>
+                                  <cd:Description>Gain overshoot correction coefficients.</cd:Description>
                                   <cd:Dimension>int(str(@count))</cd:Dimension>
                                   <cd:Float>
                                     <cd:NativeType>float</cd:NativeType>
@@ -324,15 +296,6 @@
                       </cd:Float>
                     </cd:Type>
                   </cd:Field>
-                  <cd:Field name="deltaTDecFilter">
-                    <cd:Type namexml="deltaTDecFilter">
-                      <cd:Float format="ascii">
-                        <cd:Description>Time delay related to the selected decimation filter [s]. This parameter is subtracted from the calculation of the internal time delay of the extracted reconstructed replicas.</cd:Description>
-                        <cd:Unit>s</cd:Unit>
-                        <cd:NativeType>double</cd:NativeType>
-                      </cd:Float>
-                    </cd:Type>
-                  </cd:Field>
                   <cd:Field name="noise">
                     <cd:Type namexml="noise">
                       <cd:Float format="ascii">
@@ -340,6 +303,80 @@
                         <cd:NativeType>double</cd:NativeType>
                       </cd:Float>
                     </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="replicaPccParamsList">
+                    <cd:Record namexml="replicaPccParamsList">
+                      <cd:Attribute name="count"/>
+                      <cd:Description>List of PCC decoding control parameters for the extracted replicas at nominal imaging bandwidth.</cd:Description>
+                      <cd:Field name="pccParams">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="pccParams">
+                            <cd:Description>PCC decoding parameters for controlling the order and way in which calibration pulses are decoded during processing. There are a minimum of 5 entries in the list, one for each nominal calibration pulse, and a maximum of 6 entries in the list for the transmit H polarisation which includes an additional isolation pulse.</cd:Description>
+                            <cd:Field name="signal">
+                              <cd:Text namexml="signal">
+                                <cd:Description>Signal type.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="order">
+                              <cd:Type namexml="order">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>PCC pulse selection order. This is a list of integers separated by spaces that defines the order in which the pulses are combined using the method below.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Integer>
+                                    <cd:NativeType>int32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="method">
+                              <cd:Text namexml="method">
+                                <cd:Description>Method to use to combine the calibration pulses selected by the order above. The PCC2 method subtracts the pulses in order and averages over the number of pulses. The Average method adds the pulses in order and averages over the number of pulses. The Isolation Subtraction method finds the PCC parameters record for the corresponding isolation pulse and subtracts the selected isolation pulse from the selected nominal pulse.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                          </cd:Record>
+                          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="pgPccParamsList">
+                    <cd:Record namexml="pgPccParamsList">
+                      <cd:Attribute name="count"/>
+                      <cd:Description>List of PCC decoding control parameters for the PG replicas at 100 MHz bandwidth</cd:Description>
+                      <cd:Field name="pccParams">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Record namexml="pccParams">
+                            <cd:Description>PCC decoding parameters for controlling the order and way in which calibration pulses are decoded during processing. There are a minimum of 5 entries in the list, one for each nominal calibration pulse, and a maximum of 6 entries in the list for the transmit H polarisation which includes an additional isolation pulse.</cd:Description>
+                            <cd:Field name="signal">
+                              <cd:Text namexml="signal">
+                                <cd:Description>Signal type.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                            <cd:Field name="order">
+                              <cd:Type namexml="order">
+                                <cd:Attribute name="count"/>
+                                <cd:Array format="ascii">
+                                  <cd:Description>PCC pulse selection order. This is a list of integers separated by spaces that defines the order in which the pulses are combined using the method below.</cd:Description>
+                                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  <cd:Integer>
+                                    <cd:NativeType>int32</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Array>
+                              </cd:Type>
+                            </cd:Field>
+                            <cd:Field name="method">
+                              <cd:Text namexml="method">
+                                <cd:Description>Method to use to combine the calibration pulses selected by the order above. The PCC2 method subtracts the pulses in order and averages over the number of pulses. The Average method adds the pulses in order and averages over the number of pulses. The Isolation Subtraction method finds the PCC parameters record for the corresponding isolation pulse and subtracts the selected isolation pulse from the selected nominal pulse.</cd:Description>
+                              </cd:Text>
+                            </cd:Field>
+                          </cd:Record>
+                          <ct:NamedTest id="ValueOfCountAttributeForParent"/>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
                   </cd:Field>
                 </cd:Record>
                 <ct:NamedTest id="ValueOfCountAttributeForParent"/>
@@ -407,6 +444,11 @@
                                       <cd:Field name="signal">
                                         <cd:Text namexml="signal">
                                           <cd:Description>Signal type.</cd:Description>
+                                        </cd:Text>
+                                      </cd:Field>
+                                      <cd:Field name="bandwidth">
+                                        <cd:Text namexml="bandwidth">
+                                          <cd:Description>Signal bandwidth type.</cd:Description>
                                         </cd:Text>
                                       </cd:Field>
                                       <cd:Field name="numPri">
@@ -575,32 +617,33 @@
                 </cd:Array>
               </cd:Type>
             </cd:Field>
-            <cd:Field name="dValuesLutList">
-              <cd:Record namexml="dValuesLutList">
-                <cd:Description>Values D LUT. This LUT is used to obtain the D value given the Filter Number and the Value C. There is one entry for each Filter Number. Note that for Filter Number 2 the "count" attribute for this element shall be set to 0.</cd:Description>
-                <cd:Field name="dValuesLut">
+            <cd:Field name="thresholdLutList">
+              <cd:Record namexml="thresholdLutList">
+                <cd:Description>Raw data decoding control LUT list. This element contains the parameters required to decode the BAQ and FDBAQ encoded data.</cd:Description>
+                <cd:Field name="thresholdLut">
                   <cd:Array>
                     <cd:Dimension/>
-                    <cd:Record namexml="dValuesLut">
-                      <cd:Description>Normalised Reconstruction Levels LUT. This LUT contains the NRL values used to retrieve the normalised reconstructed sample values from the BAQ encoded data. The NRL in the table are indexed by: 1- the Bit Rate Code extracted from the BAQ data block for FDBAQ compression; and, 2- the BAQ mode (3-bit, 4-bit or 5-bit) for BAQ compression.</cd:Description>
-                      <cd:Field name="filterNumber">
-                        <cd:Type namexml="filterNumber">
+                    <cd:Record namexml="thresholdLut">
+                      <cd:Description>Threshold LUT containing the thresholds needed to decode the BAQ and FDBAQ encoded data. There is one record for each of the BAQ-modes/FDBAQ-BRCs for a total of 8.</cd:Description>
+                      <cd:Field name="baqCode">
+                        <cd:Text namexml="baqCode">
+                          <cd:Description>BAQ-mode/FDBAQ-BRC to which this set of thresholds applies.</cd:Description>
+                        </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="thidxThreshold">
+                        <cd:Type namexml="thidxThreshold">
                           <cd:Integer format="ascii">
-                            <cd:Description>The Filter Number extracted from the ISP to which this set of D Values applies.</cd:Description>
-                            <cd:NativeType>uint32</cd:NativeType>
+                            <cd:Description>THIDX threshold used to determine whether to use the simple reconstruction method or the normal reconstruction method. If the THIDX extracted from the data is less than or equal to this threshold, then the simple reconstruction method is used; otherwise, the normal reconstruction method is used.</cd:Description>
+                            <cd:NativeType>int32</cd:NativeType>
                           </cd:Integer>
                         </cd:Type>
                       </cd:Field>
-                      <cd:Field name="dValues">
-                        <cd:Type namexml="dValues">
-                          <cd:Attribute name="count"/>
-                          <cd:Array format="ascii">
-                            <cd:Description>D Value LUT values. This element contains 26 int values separated by spaces, one entry for each C Value. The "count" attribute indicates the number of D values for this filterNumber.</cd:Description>
-                            <cd:Dimension>int(str(@count))</cd:Dimension>
-                            <cd:Integer>
-                              <cd:NativeType>int32</cd:NativeType>
-                            </cd:Integer>
-                          </cd:Array>
+                      <cd:Field name="mCodeThreshold">
+                        <cd:Type namexml="mCodeThreshold">
+                          <cd:Integer format="ascii">
+                            <cd:Description>Mcode threshold used in simple reconstruction to determine whether to use the extracted Mcode or the the simple reconstruction LUT. If the Mcode extracted from the data is less than this threshold, then the extracted Mcode is used; otherwise, the simple reconstruction LUT is used.</cd:Description>
+                            <cd:NativeType>int32</cd:NativeType>
+                          </cd:Integer>
                         </cd:Type>
                       </cd:Field>
                     </cd:Record>
@@ -609,6 +652,30 @@
                 </cd:Field>
                 <cd:Attribute name="count"/>
               </cd:Record>
+            </cd:Field>
+            <cd:Field name="tguLut">
+              <cd:Type namexml="tguLut">
+                <cd:Attribute name="count"/>
+                <cd:Array format="ascii">
+                  <cd:Description>TGU temperature LUT. This LUT contains the values that are used to convert the TGU temperature codes extracted from the sub-commutated ancillary data in the ISP headers into the correct temperature value [degrees C]. The LUT contains a list of 128 single-precision floating values separated by spaces with the index of each entry, numbered 0 .. 127, corresponding to the code for which the temperature value applies. The index of each entry represents the code to convert, with the first entry in the list starting at index/code 0 and incrementing by 1 for each subsequent entry.</cd:Description>
+                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                  <cd:Float>
+                    <cd:NativeType>float</cd:NativeType>
+                  </cd:Float>
+                </cd:Array>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="tileLut">
+              <cd:Type namexml="tileLut">
+                <cd:Attribute name="count"/>
+                <cd:Array format="ascii">
+                  <cd:Description>Tile temperature LUT. This LUT contains the values that are used to convert the EFE and active TA temperature codes extracted from the sub-commutated ancillary data in the ISP headers into the correct temperature value [degrees C]. The LUT contains a list of 256 single-precision floating values separated by spaces with the index of each entry, numbered 0 .. 255, corresponding to the code for which the temperature value applies. The index of each entry represents the code to convert, with the first entry in the list starting at index/code 0 and incrementing by 1 for each subsequent entry.</cd:Description>
+                  <cd:Dimension>int(str(@count))</cd:Dimension>
+                  <cd:Float>
+                    <cd:NativeType>float</cd:NativeType>
+                  </cd:Float>
+                </cd:Array>
+              </cd:Type>
             </cd:Field>
           </cd:Record>
         </cd:Field>
