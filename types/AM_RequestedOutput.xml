@@ -1,4 +1,4 @@
-<cd:Record name="AM_RequestedOutput" namexml="RequestedOutput" format="xml" last-modified="2012-06-26" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="AM_RequestedOutput" namexml="RequestedOutput" format="xml" last-modified="2014-01-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Request_Description">
     <cd:Text namexml="Request_Description"/>
   </cd:Field>
@@ -16,6 +16,60 @@
   </cd:Field>
   <cd:Field name="Fullpath_to_BST">
     <cd:Text namexml="Fullpath_to_BST"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_RCT">
+    <cd:Text namexml="Fullpath_to_RCT"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_GlobalSettings">
+    <cd:Text namexml="Fullpath_to_GlobalSettings"/>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_SOTIMG_A">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_SOTIMG_A"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_SOTIMG_B">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_SOTIMG_B"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_SOTCAL_A">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_SOTCAL_A"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_SOTCAL_B">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_SOTCAL_B"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_MoM_SOT_A_H">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_MoM_SOT_A_H"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_MoM_SOT_A_V">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_MoM_SOT_A_V"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_MoM_SOT_B_H">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_MoM_SOT_B_H"/>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="Fullpath_to_MoM_SOT_B_V">
+    <cd:Array>
+      <cd:Dimension/>
+      <cd:Text namexml="Fullpath_to_MoM_SOT_B_V"/>
+    </cd:Array>
   </cd:Field>
   <cd:Field name="Fullpath_to_NearFieldData">
     <cd:Text namexml="Fullpath_to_NearFieldData"/>

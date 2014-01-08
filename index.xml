@@ -1738,18 +1738,16 @@
   <cd:ProductType name="AM__RQST__">
     <cd:Description>Antenna Model - Parameter file</cd:Description>
     <cd:ProductDefinition id="AM__RQST__" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__RQST__</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-<!--
-  Disable for now, since the antenna model output data contains invalid xml namespaces
   <cd:ProductType name="AM__OUTPUT">
     <cd:Description>Antenna Model - Antenna Patterns</cd:Description>
     <cd:ProductDefinition id="AM__OUTPUT" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__OUTPUT</cd:MatchData>
       </cd:DetectionRule>
@@ -1758,13 +1756,12 @@
   <cd:ProductType name="AM__LOG___">
     <cd:Description>Antenna Model - Antenna Model Log File</cd:Description>
     <cd:ProductDefinition id="AM__LOG___" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
+      <cd:Description>This definition is based on version 1.6 of the Sentinel-1 Antenna Model ICD S1-IF-ESA-PL-167</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AM__LOG___</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
--->
   <cd:ProductType name="MPL_REQ_Tx">
     <cd:Description>Transponder Control File</cd:Description>
     <cd:ProductDefinition id="MPL_REQ_Tx" format="xml" version="0">
