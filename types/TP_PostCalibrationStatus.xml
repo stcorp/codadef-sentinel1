@@ -1,4 +1,4 @@
-<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PostCalibrationStatus" namexml="PostCalibrationStatus" format="xml" last-modified="2014-01-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -10,20 +10,24 @@
         </cd:Type>
       </cd:Field>
       <cd:Field name="AntennaTemperature">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="AntennaTemperature">
           <cd:Float format="ascii">
             <cd:Unit>C</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
         </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="AntennaTransmitPower">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="AntennaTransmitPower">
           <cd:Float format="ascii">
             <cd:Unit>dBm</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
         </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="CirculatorTemperature">
         <cd:Type namexml="CirculatorTemperature">
@@ -38,6 +42,16 @@
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>
+      </cd:Field>
+      <cd:Field name="EnclosureTemperature">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="EnclosureTemperature">
+          <cd:Float format="ascii">
+            <cd:Unit>C</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="Inclination">
         <cd:Record namexml="Inclination">
@@ -245,6 +259,17 @@
           </cd:Integer>
         </cd:Type>
       </cd:Field>
+      <cd:Field name="IsAudibleAlarmEnabled">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="IsAudibleAlarmEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
       <cd:Field name="IsClockEnabled">
         <cd:Type namexml="IsClockEnabled">
           <cd:Integer format="ascii">
@@ -282,6 +307,7 @@
         </cd:Type>
       </cd:Field>
       <cd:Field name="IsPowerSupplyAEnabled">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="IsPowerSupplyAEnabled">
           <cd:Integer format="ascii">
             <cd:NativeType>uint8</cd:NativeType>
@@ -289,8 +315,10 @@
             <cd:Mapping string="true" value="1"/>
           </cd:Integer>
         </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="IsPowerSupplyBEnabled">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="IsPowerSupplyBEnabled">
           <cd:Integer format="ascii">
             <cd:NativeType>uint8</cd:NativeType>
@@ -298,6 +326,18 @@
             <cd:Mapping string="true" value="1"/>
           </cd:Integer>
         </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="IsPositionerPowerSupplyEnabled">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="IsPositionerPowerSupplyEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="IsReceiverEnabled">
         <cd:Type namexml="IsReceiverEnabled">
@@ -308,6 +348,17 @@
           </cd:Integer>
         </cd:Type>
       </cd:Field>
+      <cd:Field name="IsTransceiverPowerSupplyEnabled">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="IsTransceiverPowerSupplyEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
       <cd:Field name="IsTransmitterEnabled">
         <cd:Type namexml="IsTransmitterEnabled">
           <cd:Integer format="ascii">
@@ -316,6 +367,50 @@
             <cd:Mapping string="true" value="1"/>
           </cd:Integer>
         </cd:Type>
+      </cd:Field>
+      <cd:Field name="IsVisualAlarmEnabled">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="IsVisualAlarmEnabled">
+          <cd:Integer format="ascii">
+            <cd:NativeType>uint8</cd:NativeType>
+            <cd:Mapping string="false" value="0"/>
+            <cd:Mapping string="true" value="1"/>
+          </cd:Integer>
+        </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="PositionerPowerSupplyStatus">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Record namexml="PositionerPowerSupplyStatus">
+          <cd:Field name="DcPowerGood">
+            <cd:Type namexml="DcPowerGood">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="AcPowerFail">
+            <cd:Type namexml="AcPowerFail">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="OverTempWarning">
+            <cd:Type namexml="OverTempWarning">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="PowerDetectorLevel">
         <cd:Type namexml="PowerDetectorLevel">
@@ -326,6 +421,7 @@
         </cd:Type>
       </cd:Field>
       <cd:Field name="PowerSupplyAStatus">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Record namexml="PowerSupplyAStatus">
           <cd:Field name="DcPowerGood">
             <cd:Type namexml="DcPowerGood">
@@ -355,8 +451,10 @@
             </cd:Type>
           </cd:Field>
         </cd:Record>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="PowerSupplyBStatus">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Record namexml="PowerSupplyBStatus">
           <cd:Field name="DcPowerGood">
             <cd:Type namexml="DcPowerGood">
@@ -386,22 +484,88 @@
             </cd:Type>
           </cd:Field>
         </cd:Record>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="RxGain">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="RxGain">
           <cd:Float format="ascii">
             <cd:Unit>dB</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
         </cd:Type>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="TxGain">
+        <!-- Remove for TP ICD 4.6 -->
         <cd:Type namexml="TxGain">
           <cd:Float format="ascii">
             <cd:Unit>dB</cd:Unit>
             <cd:NativeType>double</cd:NativeType>
           </cd:Float>
         </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="RxDAT">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="RxDAT">
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="TransceiverPowerSupplyStatus">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Record namexml="TransceiverPowerSupplyStatus">
+          <cd:Field name="DcPowerGood">
+            <cd:Type namexml="DcPowerGood">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="AcPowerFail">
+            <cd:Type namexml="AcPowerFail">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+          <cd:Field name="OverTempWarning">
+            <cd:Type namexml="OverTempWarning">
+              <cd:Integer format="ascii">
+                <cd:NativeType>uint8</cd:NativeType>
+                <cd:Mapping string="false" value="0"/>
+                <cd:Mapping string="true" value="1"/>
+              </cd:Integer>
+            </cd:Type>
+          </cd:Field>
+        </cd:Record>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="TransceiverTemperature">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="TransceiverTemperature">
+          <cd:Float format="ascii">
+            <cd:Unit>C</cd:Unit>
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+        <cd:Optional/>
+      </cd:Field>
+      <cd:Field name="TxDAT">
+        <!-- Make mandatory for TP ICD 4.6 -->
+        <cd:Type namexml="TxDAT">
+          <cd:Float format="ascii">
+            <cd:NativeType>double</cd:NativeType>
+          </cd:Float>
+        </cd:Type>
+        <cd:Optional/>
       </cd:Field>
     </cd:Record>
   </cd:Field>
