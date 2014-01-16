@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests last-modified="2013-11-04" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<ct:Tests last-modified="2014-01-16" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <ct:Test name="FileNameCheckEOF" criticality="Error" description="The name of the EOF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EOF"]]></ct:Test>
   <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
   <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(25, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
@@ -9,6 +9,7 @@
   <ct:Test name="FileNameMatchSystem" criticality="Error" description="The site centre in the product name should be consistent with the system field in the header"><![CDATA[substr(20, 4, str(.)) == str(../Source/System)]]></ct:Test>
   <ct:Test name="FixedValueSentinel1" criticality="Error" description="The value should be 'Sentinel-1'"><![CDATA[str(.) == "Sentinel-1"]]></ct:Test>
   <ct:Test name="FixedValueSentinel1x" criticality="Error" description="The value should be either 'Sentinel-1A' or 'Sentinel-1B'"><![CDATA[str(.) == "Sentinel-1A" || str(.) == "Sentinel-1B"]]></ct:Test>
+  <ct:Test name="FixedValueSentinel1x_space" criticality="Error" description="The value should be either 'Sentinel 1A' or 'Sentinel 1B'"><![CDATA[str(.) == "Sentinel 1A" || str(.) == "Sentinel 1B"]]></ct:Test>
   <ct:Test name="FixedValue0" criticality="Error" description="The value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
   <ct:Test name="FixedValue2" criticality="Error" description="The value should be 2"><![CDATA[int(.) == 2]]></ct:Test>
   <ct:Test name="FixedValue3" criticality="Error" description="The value should be 3"><![CDATA[int(.) == 3]]></ct:Test>
