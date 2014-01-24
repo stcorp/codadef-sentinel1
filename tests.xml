@@ -8,6 +8,7 @@
   <ct:Test name="FileNameMatchInstrumentConfigId" criticality="Error" description="The instrument configuration identifier in the product name should be consistent with the identifier in the variable header"><![CDATA[int(substr(42, 8, str(.))) == int(../../Variable_Header/Configuration_Identifier)]]></ct:Test>
   <ct:Test name="FileNameMatchSystem" criticality="Error" description="The site centre in the product name should be consistent with the system field in the header"><![CDATA[substr(20, 4, str(.)) == str(../Source/System)]]></ct:Test>
   <ct:Test name="FixedValueSentinel1" criticality="Error" description="The value should be 'Sentinel-1'"><![CDATA[str(.) == "Sentinel-1"]]></ct:Test>
+  <ct:Test name="FixedValueSentinel1_space" criticality="Error" description="The value should be 'Sentinel 1'"><![CDATA[str(.) == "Sentinel 1"]]></ct:Test>
   <ct:Test name="FixedValueSentinel1x" criticality="Error" description="The value should be either 'Sentinel-1A' or 'Sentinel-1B'"><![CDATA[str(.) == "Sentinel-1A" || str(.) == "Sentinel-1B"]]></ct:Test>
   <ct:Test name="FixedValueSentinel1x_space" criticality="Error" description="The value should be either 'Sentinel 1A' or 'Sentinel 1B'"><![CDATA[str(.) == "Sentinel 1A" || str(.) == "Sentinel 1B"]]></ct:Test>
   <ct:Test name="FixedValue0" criticality="Error" description="The value should be 0"><![CDATA[int(.) == 0]]></ct:Test>
