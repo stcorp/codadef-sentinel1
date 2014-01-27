@@ -369,7 +369,9 @@
                   </cd:Field>
                   <cd:Field name="AcquisitionStartTime">
                     <cd:Type namexml="AcquisitionStartTime">
-                      <cd:Attribute name="unit"/>
+                      <cd:Attribute name="unit">
+                        <cd:Optional/>
+                      </cd:Attribute>
                       <cd:Time format="ascii" timeformat="time(str(.),&quot;dd-MMM-yyyy HH:mm:ss.SSSSSSSSSSSS&quot;)">
                       <cd:Description>Acquisition start time</cd:Description>
                         <cd:Text>
