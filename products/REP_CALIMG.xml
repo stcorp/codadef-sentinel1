@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="REP_CALIMG" format="binary" last-modified="2014-01-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Raw format="binary">
+    <cd:Description>Uninterpreted PNG data</cd:Description>
+    <cd:BitSize><![CDATA[8 * filesize()]]></cd:BitSize>
+  </cd:Raw>
+</cd:ProductDefinition>
