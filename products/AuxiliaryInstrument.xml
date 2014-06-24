@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2013-12-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2014-06-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -196,7 +196,7 @@
                   <cd:Field name="timeDelay">
                     <cd:Type namexml="timeDelay">
                       <cd:Float format="ascii">
-                        <cd:Description>Internal time delay [s] to be applied to the nominal chirp used for range processing. The IPF only uses this parameter when the time delay cannot be derived from the extracted replica due to invalid (poor quality) reconstructed replicas. Nominally, the time delay is estimated from the extracted replicas and it compensates for the dual polarisation mis-registration.</cd:Description>
+                        <cd:Description>Internal time delay [s] to be applied to the reference chirp used for range processing. The IPF only uses this parameter when the time delay cannot be derived from the extracted PG replicas due to invalid (poor quality) reconstructed PG replicas. Nominally, the time delay is estimated as the average internal time delay from the all of the extracted PG replicas and it compensates for the dual polarisation mis-registration.</cd:Description>
                         <cd:Unit>s</cd:Unit>
                         <cd:NativeType>double</cd:NativeType>
                       </cd:Float>

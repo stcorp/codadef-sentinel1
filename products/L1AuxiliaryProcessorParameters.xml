@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2013-12-20" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2014-06-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -147,10 +147,16 @@
                                 </cd:Field>
                                 <cd:Field name="maxFdc">
                                   <cd:Type namexml="maxFdc">
-                                    <cd:Float format="ascii">
+                                    <cd:Attribute name="count">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Array format="ascii">
                                       <cd:Description>Maximum expected Doppler centroid frequency [Hz]. Used to calculate the SM SLC azimuth matched filter throwaway component of azimuth block overlap as applicable to all azimuth blocks in a segment.</cd:Description>
-                                      <cd:NativeType>float</cd:NativeType>
-                                    </cd:Float>
+                                      <cd:Dimension>if(exists(@count),int(str(@count)),1)</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>float</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>                      
@@ -470,10 +476,16 @@
                                 </cd:Field>
                                 <cd:Field name="gain">
                                   <cd:Type namexml="gain">
-                                    <cd:Float format="ascii">
+                                    <cd:Attribute name="count">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Array format="ascii">
                                       <cd:Description>Product specific gain. This parameter defines the gain that is applied to each output sample during azimuth processing.</cd:Description>
-                                      <cd:NativeType>double</cd:NativeType>
-                                    </cd:Float>
+                                      <cd:Dimension>if(exists(@count),int(str(@count)),1)</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="instantaneousBandwidth">

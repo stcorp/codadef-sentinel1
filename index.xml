@@ -454,7 +454,7 @@
   <cd:ProductType name="AuxiliaryCalibration">
     <cd:Description>AUX_CAL auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryCalibration" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8Draft of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryCalibration"></cd:MatchData>
       </cd:DetectionRule>
@@ -463,7 +463,7 @@
   <cd:ProductType name="AuxiliaryInstrument">
     <cd:Description>AUX_INS auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryInstrument" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8Draft of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryInstrument"></cd:MatchData>
       </cd:DetectionRule>
@@ -472,7 +472,7 @@
   <cd:ProductType name="L1AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP1 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8Draft of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on both versions 2.8Draft and 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l1AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
@@ -481,7 +481,7 @@
   <cd:ProductType name="L2AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP2 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8Draft of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l2AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
