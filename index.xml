@@ -421,7 +421,7 @@
   <cd:ProductType name="Level1ProductADS">
     <cd:Description>Level 1 Product ADS</cd:Description>
     <cd:ProductDefinition id="Level1ProductADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/product/adsHeader/missionId">S1A</cd:MatchData>
       </cd:DetectionRule>
@@ -436,7 +436,7 @@
   <cd:ProductType name="Level1CalibrationADS">
     <cd:Description>Level 1 Calibration ADS</cd:Description>
     <cd:ProductDefinition id="Level1CalibrationADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/calibration/adsHeader/missionId"/>
       </cd:DetectionRule>
@@ -445,7 +445,7 @@
   <cd:ProductType name="Level1NoiseADS">
     <cd:Description>Level 1 Noise ADS</cd:Description>
     <cd:ProductDefinition id="Level1NoiseADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.6 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/noise/adsHeader/missionId"/>
       </cd:DetectionRule>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2013-10-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1ProductADS" format="xml" last-modified="2014-06-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="product">
       <cd:Record namexml="product">
@@ -1321,7 +1321,7 @@
                           <cd:Field name="timeDelay">
                             <cd:Type namexml="timeDelay">
                               <cd:Float format="ascii">
-                                <cd:NativeType>double</cd:NativeType>
+                                <cd:NativeType>float</cd:NativeType>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -1360,28 +1360,28 @@
                                 <cd:Field name="crossCorrelationBandwidth">
                                   <cd:Type namexml="crossCorrelationBandwidth">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="crossCorrelationPslr">
                                   <cd:Type namexml="crossCorrelationPslr">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="crossCorrelationIslr">
                                   <cd:Type namexml="crossCorrelationIslr">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="crossCorrelationPeakLocation">
                                   <cd:Type namexml="crossCorrelationPeakLocation">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
@@ -1397,28 +1397,28 @@
                                 <cd:Field name="pgProductAmplitude">
                                   <cd:Type namexml="pgProductAmplitude">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="pgProductPhase">
                                   <cd:Type namexml="pgProductPhase">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="modelPgProductAmplitude">
                                   <cd:Type namexml="modelPgProductAmplitude">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
                                 <cd:Field name="modelPgProductPhase">
                                   <cd:Type namexml="modelPgProductPhase">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
@@ -1443,7 +1443,7 @@
                                 <cd:Field name="internalTimeDelay">
                                   <cd:Type namexml="internalTimeDelay">
                                     <cd:Float format="ascii">
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Field>
@@ -1475,7 +1475,7 @@
                       <cd:Field name="noisePowerCorrectionFactor">
                         <cd:Type namexml="noisePowerCorrectionFactor">
                           <cd:Float format="ascii">
-                            <cd:NativeType>double</cd:NativeType>
+                            <cd:NativeType>float</cd:NativeType>
                           </cd:Float>
                         </cd:Type>
                       </cd:Field>
