@@ -1,12 +1,8 @@
-<cd:Record name="TP_PdgsSarCalibrationParameter" namexml="PdgsSarCalibrationParameter" format="xml" last-modified="2013-06-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PdgsSarCalibrationParameter" namexml="PdgsSarCalibrationParameter" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="ExpectedArrivalTime">
-    <cd:Type namexml="ExpectedArrivalTime">
-      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)">
-        <cd:Text>
-          <cd:ByteSize>20</cd:ByteSize>
-        </cd:Text>
-      </cd:Time>
-    </cd:Type>
+    <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)">
+      <cd:Text namexml="ExpectedArrivalTime"/>
+    </cd:Time>
   </cd:Field>
   <cd:Field name="Description">
     <cd:Text namexml="Description"/>

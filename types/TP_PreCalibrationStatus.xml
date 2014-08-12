@@ -1,4 +1,4 @@
-<cd:Record name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2014-01-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -187,9 +187,9 @@
         <cd:Text namexml="ConnectionStatus"/>
       </cd:Field>
       <cd:Field name="CurrentTime">
-        <cd:Type namexml="CurrentTime">
-          <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1"/>
-        </cd:Type>
+        <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SS'Z'|yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)">
+          <cd:Text namexml="CurrentTime"/>
+        </cd:Time>
       </cd:Field>
       <cd:Field name="DiagnosticStatus">
         <cd:Text namexml="DiagnosticStatus"/>

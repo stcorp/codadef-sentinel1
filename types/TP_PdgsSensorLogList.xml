@@ -1,4 +1,4 @@
-<cd:Record name="TP_PdgsSensorLogList" namexml="PdgsSensorLogList" format="xml" last-modified="2013-01-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PdgsSensorLogList" namexml="PdgsSensorLogList" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="PdgsSensorLogEntry">
     <cd:Array>
       <cd:Dimension/>
@@ -12,13 +12,9 @@
           </cd:Type>
         </cd:Field>
         <cd:Field name="SensorLogDateTime">
-          <cd:Type namexml="SensorLogDateTime">
-            <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
-              <cd:Text>
-                <cd:ByteSize>28</cd:ByteSize>
-              </cd:Text>
-            </cd:Time>
-          </cd:Type>
+          <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SS'Z'|yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)">
+            <cd:Text namexml="SensorLogDateTime"/>
+          </cd:Time>
         </cd:Field>
       </cd:Record>
     </cd:Array>

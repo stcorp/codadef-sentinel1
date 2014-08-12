@@ -1,4 +1,4 @@
-<cd:Record name="TP_PdgsSarCalibrationData" namexml="PdgsSarCalibrationData" format="xml" last-modified="2013-03-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_PdgsSarCalibrationData" namexml="PdgsSarCalibrationData" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="CalibrationId">
     <cd:Type namexml="CalibrationId">
       <cd:Integer format="ascii">
@@ -14,13 +14,9 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="AcquisitionTimestamp">
-    <cd:Type namexml="AcquisitionTimestamp">
-      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS&quot;)">
-        <cd:Text>
-          <cd:ByteSize>29</cd:ByteSize>
-        </cd:Text>
-      </cd:Time>
-    </cd:Type>
+    <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSSSS&quot;)">
+      <cd:Text namexml="AcquisitionTimestamp"/>
+    </cd:Time>
     <cd:Optional/>
   </cd:Field>
   <cd:Field name="AcquisitionOffset">
@@ -55,9 +51,11 @@
     <cd:Record namexml="AzimuthDiagramPoints">
       <cd:Field name="LabelX">
         <cd:Text namexml="LabelX"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="LabelY">
         <cd:Text namexml="LabelY"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="Points">
         <cd:Record namexml="Points">
@@ -83,12 +81,15 @@
             </cd:Array>
           </cd:Field>
         </cd:Record>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="UnitsX">
         <cd:Text namexml="UnitsX"/>
+        <cd:Optional/>
       </cd:Field>
       <cd:Field name="UnitsY">
         <cd:Text namexml="UnitsY"/>
+        <cd:Optional/>
       </cd:Field>
     </cd:Record>
   </cd:Field>

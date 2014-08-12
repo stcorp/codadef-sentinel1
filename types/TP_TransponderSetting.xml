@@ -1,4 +1,4 @@
-<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:Record name="TP_TransponderSetting" namexml="TransponderSetting" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">
@@ -58,27 +58,20 @@
     <cd:Optional/>
   </cd:Field>
   <cd:Field name="ModificationDate">
-    <cd:Type namexml="ModificationDate">
-      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
-        <cd:Text>
-          <cd:ByteSize>28</cd:ByteSize>
-        </cd:Text>
-      </cd:Time>
-    </cd:Type>
+    <cd:Time timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SS'Z'|yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;)">
+      <cd:Text namexml="ModificationDate"/>
+    </cd:Time>
   </cd:Field>
   <cd:Field name="CalId">
-    <cd:Text namexml="CalId">
+    <cd:Type namexml="CalId">
       <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
         <cd:Optional/>
       </cd:Attribute>
-    </cd:Text>
-<!--
-    <cd:Type namexml="CalId">
       <cd:Integer format="ascii">
         <cd:NativeType>int32</cd:NativeType>
+        <cd:Mapping string="" value="-1"/>
       </cd:Integer>
     </cd:Type>
--->
   </cd:Field>
   <cd:Field name="SettingsName">
     <cd:Text namexml="SettingsName"/>
@@ -167,36 +160,20 @@
     </cd:Type>
   </cd:Field>
   <cd:Field name="LastLogDumpTime">
-    <cd:Text namexml="LastLogDumpTime">
+    <cd:Time timeformat="if(length(.)==0,nan,time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SS'Z'|yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;))">
       <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
         <cd:Optional/>
       </cd:Attribute>
-    </cd:Text>
-<!--
-    <cd:Type namexml="LastLogDumpTime">
-      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
-        <cd:Text>
-          <cd:ByteSize>28</cd:ByteSize>
-        </cd:Text>
-      </cd:Time>
-    </cd:Type>
--->
+      <cd:Text namexml="LastLogDumpTime"/>
+    </cd:Time>
   </cd:Field>
   <cd:Field name="NextLogDumpTime">
-    <cd:Text namexml="NextLogDumpTime">
+    <cd:Time timeformat="if(length(.)==0,nan,time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SSS'Z'|yyyy-MM-dd'T'HH:mm:ss.SS'Z'|yyyy-MM-dd'T'HH:mm:ss.S'Z'|yyyy-MM-dd'T'HH:mm:ss'Z'&quot;))">
       <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance nil">
         <cd:Optional/>
       </cd:Attribute>
-    </cd:Text>
-<!--
-    <cd:Type namexml="NextLogDumpTime">
-      <cd:Time format="ascii" timeformat="time(str(.),&quot;yyyy-MM-dd'T'HH:mm:ss.SSSSSSS'Z'&quot;)">
-        <cd:Text>
-          <cd:ByteSize>28</cd:ByteSize>
-        </cd:Text>
-      </cd:Time>
-    </cd:Type>
--->
+      <cd:Text namexml="NextLogDumpTime"/>
+    </cd:Time>
   </cd:Field>
   <cd:Field name="LogDumpIntervalHours">
     <cd:Type namexml="LogDumpIntervalHours">
@@ -205,6 +182,18 @@
         <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Type>
+  </cd:Field>
+  <cd:Field name="Sentinel1aPredictedOrbit">
+    <cd:Text namexml="Sentinel1aPredictedOrbit"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="Sentinel1bPredictedOrbit">
+    <cd:Text namexml="Sentinel1bPredictedOrbit"/>
+    <cd:Optional/>
+  </cd:Field>
+  <cd:Field name="StaticSettingsXml">
+    <cd:Text namexml="StaticSettingsXml"/>
+    <cd:Optional/>
   </cd:Field>
   <cd:Field name="DefaultCalibrationFilters">
     <cd:Record namexml="DefaultCalibrationFilters">
@@ -284,17 +273,5 @@
         </cd:Record>
       </cd:Field>
     </cd:Record>
-  </cd:Field>
-  <cd:Field name="Sentinel1aPredictedOrbit">
-    <cd:Text namexml="Sentinel1aPredictedOrbit"/>
-    <cd:Optional/>
-  </cd:Field>
-  <cd:Field name="Sentinel1bPredictedOrbit">
-    <cd:Text namexml="Sentinel1bPredictedOrbit"/>
-    <cd:Optional/>
-  </cd:Field>
-  <cd:Field name="StaticSettingsXml">
-    <cd:Text namexml="StaticSettingsXml"/>
-    <cd:Optional/>
   </cd:Field>
 </cd:Record>
