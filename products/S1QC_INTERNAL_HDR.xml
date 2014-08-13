@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" last-modified="2014-01-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="S1QC_INTERNAL_HDR" format="xml" last-modified="2014-08-13" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="AresysXmlDoc">
       <cd:Record namexml="AresysXmlDoc">
