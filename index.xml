@@ -451,6 +451,22 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="Level2MeasurementData">
+    <cd:Description>SAR Standard L2 Product - Measurement Data file</cd:Description>
+    <cd:ProductDefinition id="Level2MeasurementData" format="binary" version="0">
+      <cd:Description>The format definition for this product is taken from the netCDF file itself.</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchFilename offset="63">.nc</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchFilename offset="63">.nc</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="AuxiliaryCalibration">
     <cd:Description>AUX_CAL auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryCalibration" format="xml" version="0">
