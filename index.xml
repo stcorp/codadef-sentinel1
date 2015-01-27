@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2014-11-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2015-01-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -420,34 +420,58 @@
   </cd:ProductType>
   <cd:ProductType name="Level1ProductADS">
     <cd:Description>Level 1 Product ADS</cd:Description>
-    <cd:ProductDefinition id="Level1ProductADS" format="xml" version="0">
+    <cd:ProductDefinition id="Level1ProductADS_v0" format="xml" version="0">
       <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/product/adsHeader/missionId">S1A</cd:MatchData>
+        <cd:MatchData path="/product"/>
+        <cd:MatchFilename offset="0">s1a</cd:MatchFilename>
       </cd:DetectionRule>
       <cd:DetectionRule>
-        <cd:MatchData path="/product/adsHeader/missionId">S1B</cd:MatchData>
+        <cd:MatchData path="/product"/>
+        <cd:MatchFilename offset="0">s1b</cd:MatchFilename>
       </cd:DetectionRule>
       <cd:DetectionRule>
-        <cd:MatchData path="/product/adsHeader/missionId">ASA</cd:MatchData>
+        <cd:MatchData path="/product"/>
+        <cd:MatchFilename offset="0">asa</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level1ProductADS_v1" format="xml" version="1">
+      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial"/>
+        <cd:MatchFilename offset="0">s1a</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial"/>
+        <cd:MatchFilename offset="0">s1b</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level1CalibrationADS">
     <cd:Description>Level 1 Calibration ADS</cd:Description>
     <cd:ProductDefinition id="Level1CalibrationADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.8/2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/calibration/adsHeader/missionId"/>
+        <cd:MatchData path="/calibration"/>
+        <cd:MatchFilename offset="0">calibration-s1a</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/calibration"/>
+        <cd:MatchFilename offset="0">calibration-s1b</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level1NoiseADS">
     <cd:Description>Level 1 Noise ADS</cd:Description>
     <cd:ProductDefinition id="Level1NoiseADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.8 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:Description>This definition is based on version 2.8/2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/noise/adsHeader/missionId"/>
+        <cd:MatchData path="/noise"/>
+        <cd:MatchFilename offset="0">noise-s1a</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/noise"/>
+        <cd:MatchFilename offset="0">noise-s1b</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -495,7 +519,7 @@
   <cd:ProductType name="AuxiliaryInstrument">
     <cd:Description>AUX_INS auxiliary data file</cd:Description>
     <cd:ProductDefinition id="AuxiliaryInstrument" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.9/2.10 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryInstrument"></cd:MatchData>
       </cd:DetectionRule>
@@ -504,7 +528,7 @@
   <cd:ProductType name="L1AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP1 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on both versions 2.8Draft and 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on both versions 2.8Draft and 2.9/2.10 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l1AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
@@ -513,7 +537,7 @@
   <cd:ProductType name="L2AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP2 auxiliary data file</cd:Description>
     <cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:Description>This definition is based on version 2.9/2.10 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l2AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
