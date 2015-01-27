@@ -479,10 +479,16 @@
   </cd:ProductType>
   <cd:ProductType name="AuxiliaryCalibration">
     <cd:Description>AUX_CAL auxiliary data file</cd:Description>
-    <cd:ProductDefinition id="AuxiliaryCalibration" format="xml" version="0">
+    <cd:ProductDefinition id="AuxiliaryCalibration_v0" format="xml" version="0">
       <cd:Description>This definition is based on version 2.9 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryCalibration"></cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AuxiliaryCalibration_v1" format="xml" version="1">
+      <cd:Description>This definition is based on version 2.10 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/auxiliaryCalibration@schemaVersion">2.10</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
