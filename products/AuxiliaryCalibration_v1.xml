@@ -58,11 +58,13 @@
                           <cd:Attribute name="count"/>
                           <cd:Array format="ascii">
                             <cd:Description>Two-way antenna elevation pattern gain values. The centre value in the vector corresponds to the referenceAntennaAngle in the Roll Steering parameters described in the Instrument auxiliary file (the vector must contain an odd number of values), and the values before and after the centre value correspond to steps of elevationAngleIncrement from the centre value. The pattern contains attribute "count" floating point values separated by spaces.  The first value in the antenna pattern vector corresponds to -((count  - 1)/2) * elevationAngleIncrement degrees, and the last value corresponds to +((count  - 1)/2) * elevationAngleIncrement degrees.</cd:Description>
-                            <cd:Dimension>2*int(str(@count))</cd:Dimension>
-                            <cd:Float>
-                              <cd:Unit>dB</cd:Unit>
-                              <cd:NativeType>float</cd:NativeType>
-                            </cd:Float>
+                            <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Complex>
+                              <cd:Float>
+                                <cd:Unit>dB</cd:Unit>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Complex>
                           </cd:Array>
                         </cd:Type>
                       </cd:Field>
