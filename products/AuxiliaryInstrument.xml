@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2014-06-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AuxiliaryInstrument" format="xml" last-modified="2015-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
       <cd:Record namexml="auxiliaryInstrument">
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>
         <cd:Field name="radarFrequency">
           <cd:Type namexml="radarFrequency">
             <cd:Float format="ascii">

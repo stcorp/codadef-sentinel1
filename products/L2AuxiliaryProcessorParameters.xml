@@ -1,8 +1,11 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2013-06-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2015-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>
         <cd:Field name="productList">
           <cd:Record namexml="productList">
             <cd:Attribute name="count"/>
