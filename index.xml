@@ -542,7 +542,7 @@
   <cd:ProductType name="STAProductADS">
     <cd:Description>Coregistered Stack Annotation Data Sets</cd:Description>
     <cd:ProductDefinition id="STAProductADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.3 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:Description>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/staProduct"/>
       </cd:DetectionRule>
@@ -551,7 +551,7 @@
   <cd:ProductType name="MOSProductADS">
     <cd:Description>Sigma-Nought Mosaic Annotation Data Sets</cd:Description>
     <cd:ProductDefinition id="MOSProductADS" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.3 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:Description>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/mosProduct"/>
       </cd:DetectionRule>
@@ -560,7 +560,7 @@
   <cd:ProductType name="PSCMeasurements">
     <cd:Description>S1 PS Calibration Product - PSC Measurements file</cd:Description>
     <cd:ProductDefinition id="PSCMeasurements" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.3 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:Description>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/pscProduct"/>
       </cd:DetectionRule>
@@ -569,7 +569,7 @@
   <cd:ProductType name="PSMask">
     <cd:Description>S1 PS Calibration Product - PS Mask file</cd:Description>
     <cd:ProductDefinition id="PSMask" format="binary" version="0">
-      <cd:Description>This definition is based on version 2.3 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:Description>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">ps-mask-</cd:MatchFilename>
       </cd:DetectionRule>
@@ -578,7 +578,7 @@
   <cd:ProductType name="OBSMeasurements">
     <cd:Description>S1 Orbit Baseline and Burst Synchronization Processor Product - OBS Measurements file</cd:Description>
     <cd:ProductDefinition id="OBSMeasurements" format="xml" version="0">
-      <cd:Description>This definition is based on version 2.3 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
+      <cd:Description>This definition is based on version 2.5 of the SPP File Format Specification S1PD.TCN.00095.ASRT</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/obsProduct"/>
       </cd:DetectionRule>

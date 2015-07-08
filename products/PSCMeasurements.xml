@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="PSCMeasurements" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="PSCMeasurements" format="xml" last-modified="2015-07-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="pscProduct">
       <cd:Record namexml="pscProduct">
@@ -224,6 +224,24 @@
                   <cd:NativeType>float</cd:NativeType>
                 </cd:Float>
               </cd:Type>
+            </cd:Field>
+            <cd:Field name="numberOfLines">
+              <cd:Type namexml="numberOfLines">
+                <cd:Integer format="ascii">
+                  <cd:Description>Total number of lines in the map.</cd:Description>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="numberOfSamples">
+              <cd:Type namexml="numberOfSamples">
+                <cd:Integer format="ascii">
+                  <cd:Description>Total number of samples in the map.</cd:Description>
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+              <cd:Optional/>
             </cd:Field>
           </cd:Record>
         </cd:Field>
