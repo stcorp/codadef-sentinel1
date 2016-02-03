@@ -1,7 +1,3 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementData" format="binary" last-modified="2014-09-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
-  <cd:Raw>
-    <cd:Description>Uninterpreted netCDF data</cd:Description>
-    <cd:BitSize><![CDATA[8 * filesize()]]></cd:BitSize>
-  </cd:Raw>
+<cd:ProductDefinition id="Level2MeasurementData" format="netcdf" last-modified="2016-02-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
 </cd:ProductDefinition>

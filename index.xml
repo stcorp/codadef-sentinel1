@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2015-01-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2016-02-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -473,7 +473,7 @@
   </cd:ProductType>
   <cd:ProductType name="Level2MeasurementData">
     <cd:Description>SAR Standard L2 Product - Measurement Data file</cd:Description>
-    <cd:ProductDefinition id="Level2MeasurementData" format="binary" version="0">
+    <cd:ProductDefinition id="Level2MeasurementData" format="netcdf" version="0">
       <cd:Description>The format definition for this product is taken from the netCDF file itself.</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
