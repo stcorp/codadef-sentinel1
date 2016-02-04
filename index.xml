@@ -434,12 +434,10 @@
     <cd:ProductDefinition id="Level1ProductADS_v1" format="xml" version="1">
       <cd:Description>This definition is based on version 2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial"/>
-        <cd:MatchFilename offset="0">s1a</cd:MatchFilename>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
-        <cd:MatchData path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial"/>
-        <cd:MatchFilename offset="0">s1b</cd:MatchFilename>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
