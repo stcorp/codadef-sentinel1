@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2016-02-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2016-02-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -434,7 +434,13 @@
     <cd:ProductDefinition id="Level1ProductADS_v1" format="xml" version="1">
       <cd:Description>This definition is based on version 2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
         <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
