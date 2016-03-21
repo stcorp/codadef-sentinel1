@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" last-modified="2015-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters_v1" format="xml" last-modified="2016-03-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -209,6 +209,16 @@
                                 <cd:Description>Probability of false alarm for the removal of bright target.</cd:Description>
                                 <cd:NativeType>double</cd:NativeType>
                               </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="activateNoiseCorrection">
+                            <cd:Type namexml="activateNoiseCorrection">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Allow activating the noise correction, value=True to activate the noise correction, otherwise False.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
                             </cd:Type>
                           </cd:Field>
                         </cd:Record>

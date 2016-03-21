@@ -542,6 +542,12 @@
         <cd:MatchData path="/l2AuxiliaryProcessorParameters"></cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="L2AuxiliaryProcessorParameters_v1" format="xml" version="1">
+      <cd:Description>This definition is based on version 3.0 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/l2AuxiliaryProcessorParameters@schemaVersion">3.0</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="STAProductADS">
     <cd:Description>Coregistered Stack Annotation Data Sets</cd:Description>
