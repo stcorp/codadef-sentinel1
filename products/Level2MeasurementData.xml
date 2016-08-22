@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementData" format="netcdf" last-modified="2016-03-24" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="Level2MeasurementData" format="netcdf" last-modified="2016-08-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="title">
+      <!-- the specification uses 'Title' which seems to be wrong -->
       <cd:Text/>
     </cd:Attribute>
     <cd:Attribute name="sourceProduct">
@@ -60,16 +61,15 @@
     </cd:Attribute>
     <cd:Attribute name="stokesSource">
       <cd:Text/>
-      <cd:Optional/>
     </cd:Attribute>
     <cd:Attribute name="windSource">
       <cd:Text/>
-      <cd:Optional/>
     </cd:Attribute>
     <cd:Attribute name="statevectorUtc">
       <cd:Text/>
     </cd:Attribute>
     <cd:Attribute name="statevectorPos">
+      <!-- the specification defines this as a scalar, but it is actually an array -->
       <cd:Array>
         <cd:Dimension>3</cd:Dimension>
         <cd:Float>
@@ -78,6 +78,7 @@
       </cd:Array>
     </cd:Attribute>
     <cd:Attribute name="statevectorVel">
+      <!-- the specification defines this as a scalar, but it is actually an array -->
       <cd:Array>
         <cd:Dimension>3</cd:Dimension>
         <cd:Float>
@@ -86,6 +87,7 @@
       </cd:Array>
     </cd:Attribute>
     <cd:Attribute name="statevectorAcc">
+      <!-- the specification defines this as a scalar, but it is actually an array -->
       <cd:Array>
         <cd:Dimension>3</cd:Dimension>
         <cd:Float>
@@ -101,7 +103,6 @@
     </cd:Attribute>
     <cd:Attribute name="owiNoiseCorrection">
       <cd:Text/>
-      <cd:Optional/>
     </cd:Attribute>
     <cd:Field name="oswPolSpec">
       <cd:Array>
@@ -1421,6 +1422,48 @@
       </cd:Array>
     </cd:Field>
     <cd:Field name="owiWindSeaHs">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="owiElevationAngle">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="owiNesz">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Float>
