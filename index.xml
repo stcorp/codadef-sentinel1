@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass name="Sentinel1" last-modified="2016-09-22" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductClass name="Sentinel1" last-modified="2016-09-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -496,24 +496,62 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="Level2MeasurementData">
-    <cd:Description>SAR Standard L2 Product - Measurement Data file</cd:Description>
-    <cd:ProductDefinition id="Level2MeasurementData" format="netcdf" version="0">
+  <cd:ProductType name="Level2MeasurementDataEW">
+    <cd:Description>SAR Standard L2 Product - Measurement Data file for EW</cd:Description>
+    <cd:ProductDefinition id="Level2MeasurementDataEW" format="netcdf" version="0">
       <cd:Description>This definition is based on version 3.2 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441 (with modifications to correct for issues in the specification)</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level2MeasurementDataIW">
+    <cd:Description>SAR Standard L2 Product - Measurement Data file for IW</cd:Description>
+    <cd:ProductDefinition id="Level2MeasurementDataIW" format="netcdf" version="0">
+      <cd:Description>This definition is based on version 3.2 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441 (with modifications to correct for issues in the specification)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level2MeasurementDataSM">
+    <cd:Description>SAR Standard L2 Product - Measurement Data file for SM</cd:Description>
+    <cd:ProductDefinition id="Level2MeasurementDataSM" format="netcdf" version="0">
+      <cd:Description>This definition is based on version 3.2 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441 (with modifications to correct for issues in the specification)</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
       </cd:DetectionRule>
       <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level2MeasurementDataWV">
+    <cd:Description>SAR Standard L2 Product - Measurement Data file for WV</cd:Description>
+    <cd:ProductDefinition id="Level2MeasurementDataWV" format="netcdf" version="0">
+      <cd:Description>This definition is based on version 3.2 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441 (with modifications to correct for issues in the specification)</cd:Description>
+      <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
-        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-      </cd:DetectionRule>
-      <cd:DetectionRule>
-        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
