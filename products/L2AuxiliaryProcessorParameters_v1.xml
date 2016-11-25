@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L2AuxiliaryProcessorParameters_v1" format="xml" last-modified="2016-03-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="L2AuxiliaryProcessorParameters_v1" format="xml" last-modified="2016-11-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -220,6 +220,7 @@
                                 <cd:Mapping string="true" value="1"/>
                               </cd:Integer>
                             </cd:Type>
+                            <cd:Optional/>
                           </cd:Field>
                         </cd:Record>
                       </cd:Field>

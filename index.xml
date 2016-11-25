@@ -591,7 +591,7 @@
   </cd:ProductType>
   <cd:ProductType name="L2AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP2 auxiliary data file</cd:Description>
-    <cd:ProductDefinition id="L2AuxiliaryProcessorParameters" format="xml" version="0">
+    <cd:ProductDefinition id="L2AuxiliaryProcessorParameters_v0" format="xml" version="0">
       <cd:Description>This definition is based on version 2.9/2.10 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l2AuxiliaryProcessorParameters"></cd:MatchData>
