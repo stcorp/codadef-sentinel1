@@ -484,14 +484,25 @@
   </cd:ProductType>
   <cd:ProductType name="Level1NoiseADS">
     <cd:Description>Level 1 Noise ADS</cd:Description>
-    <cd:ProductDefinition id="Level1NoiseADS" format="xml" version="0">
+    <cd:ProductDefinition id="Level1NoiseADS_v0" format="xml" version="0">
       <cd:Description>This definition is based on version 2.8/2.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/noise"/>
+        <cd:MatchData path="/noise/noiseVectorList"/>
         <cd:MatchFilename offset="0">noise-s1a</cd:MatchFilename>
       </cd:DetectionRule>
       <cd:DetectionRule>
-        <cd:MatchData path="/noise"/>
+        <cd:MatchData path="/noise/noiseVectorList"/>
+        <cd:MatchFilename offset="0">noise-s1b</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level1NoiseADS_v1" format="xml" version="1">
+      <cd:Description>This definition is based on version 3.4 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/noise/noiseRangeVectorList"/>
+        <cd:MatchFilename offset="0">noise-s1a</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/noise/noiseRangeVectorList"/>
         <cd:MatchFilename offset="0">noise-s1b</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>

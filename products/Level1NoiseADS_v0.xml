@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="Level1NoiseADS_v0" format="xml" last-modified="2015-02-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+  <cd:Record format="xml">
+    <cd:Field name="noise">
+      <cd:Record namexml="noise">
+        <cd:Field name="adsHeader">
+          <cd:Record namexml="adsHeader">
+            <cd:Field name="missionId">
+              <cd:Text namexml="missionId"/>
+            </cd:Field>
+            <cd:Field name="productType">
+              <cd:Text namexml="productType"/>
+            </cd:Field>
+            <cd:Field name="polarisation">
+              <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="mode">
+              <cd:Text namexml="mode"/>
+            </cd:Field>
+            <cd:Field name="swath">
+              <cd:Text namexml="swath"/>
+            </cd:Field>
+            <cd:Field name="startTime">
+              <cd:Type namexml="startTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="stopTime">
+              <cd:Type namexml="stopTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="absoluteOrbitNumber">
+              <cd:Type namexml="absoluteOrbitNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="missionDataTakeId">
+              <cd:Type namexml="missionDataTakeId">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="imageNumber">
+              <cd:Type namexml="imageNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="noiseVectorList">
+          <cd:Record namexml="noiseVectorList">
+            <cd:Attribute name="count"/>
+            <cd:Field name="noiseVector">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="noiseVector">
+                  <cd:Field name="azimuthTime">
+                    <cd:Type namexml="azimuthTime">
+                      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="line">
+                    <cd:Type namexml="line">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>int32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="pixel">
+                    <cd:Type namexml="pixel">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                        <cd:Integer>
+                          <cd:NativeType>int32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="noiseLut">
+                    <cd:Type namexml="noiseLut">
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                        <cd:Float>
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Array>
+                    </cd:Type>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
