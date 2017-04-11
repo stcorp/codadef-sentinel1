@@ -106,16 +106,46 @@
               <cd:Array>
                 <cd:Dimension/>
                 <cd:Record namexml="noiseAzimuthVector">
-                  <cd:Field name="azimuthTime">
-                    <cd:Type namexml="azimuthTime">
-                      <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  <cd:Field name="swath">
+                    <cd:Text namexml="swath"/>
+                  </cd:Field>
+                  <cd:Field name="firstAzimuthLine">
+                    <cd:Type namexml="firstAzimuthLine">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="firstRangeSample">
+                    <cd:Type namexml="firstRangeSample">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="lastAzimuthLine">
+                    <cd:Type namexml="lastAzimuthLine">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="lastRangeSample">
+                    <cd:Type namexml="lastRangeSample">
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="line">
                     <cd:Type namexml="line">
-                      <cd:Integer format="ascii">
-                        <cd:NativeType>int32</cd:NativeType>
-                      </cd:Integer>
+                      <cd:Attribute name="count"/>
+                      <cd:Array format="ascii">
+                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                        <cd:Integer>
+                          <cd:NativeType>int32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Array>
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="noiseAzimuthLut">
