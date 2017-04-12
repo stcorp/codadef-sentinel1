@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="Fixed_Header" format="xml" namexml="Fixed_Header" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Description>Earth Explorer Fixed Header</cd:Description>
   <cd:Field name="File_Name">
     <cd:Text namexml="File_Name">
@@ -40,7 +40,6 @@
             <cd:Description>This is the UTC Validity Start Time, coherent with the Validity Start Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "beginning of mission" (without an absolute time specified)</cd:Description>
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -50,7 +49,6 @@
             <cd:Description>This is the UTC Validity Stop Time, coherent with the Validity Stop Time in the File Name, but in CCSDS ASCII format with time reference. Note that this can have the special value indicating "end of mission" (without an absolute time specified)</cd:Description>
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>
@@ -89,7 +87,6 @@
             <cd:Description>This is the UTC Creation Date, in CCSDS ASCII format with time reference</cd:Description>
             <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
             <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-            <cd:Mapping string="" value="nan"/>
           </cd:Time>
         </cd:Type>
       </cd:Field>

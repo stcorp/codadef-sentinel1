@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AUX_CALSIT" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="AUX_CALSIT" format="xml" last-modified="2017-04-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -77,7 +77,6 @@
                                     <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
                                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                                      <cd:Mapping string="" value="nan"/>
                                     </cd:Time>
                                   </cd:Type>
                                 </cd:Field>
@@ -86,7 +85,6 @@
                                     <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd1_with_ref">
                                       <cd:Mapping string="UTC=0000-00-00T00:00:00" value="-inf"/>
                                       <cd:Mapping string="UTC=9999-99-99T99:99:99" value="+inf"/>
-                                      <cd:Mapping string="" value="nan"/>
                                     </cd:Time>
                                   </cd:Type>
                                 </cd:Field>
