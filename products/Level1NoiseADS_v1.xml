@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1NoiseADS_v1" format="xml" last-modified="2017-04-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="Level1NoiseADS_v1" format="xml" last-modified="2017-08-11" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="noise">
       <cd:Record namexml="noise">
@@ -108,6 +108,7 @@
                 <cd:Record namexml="noiseAzimuthVector">
                   <cd:Field name="swath">
                     <cd:Text namexml="swath"/>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="firstAzimuthLine">
                     <cd:Type namexml="firstAzimuthLine">
@@ -115,6 +116,7 @@
                         <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="firstRangeSample">
                     <cd:Type namexml="firstRangeSample">
@@ -122,6 +124,7 @@
                         <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="lastAzimuthLine">
                     <cd:Type namexml="lastAzimuthLine">
@@ -129,6 +132,7 @@
                         <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="lastRangeSample">
                     <cd:Type namexml="lastRangeSample">
@@ -136,6 +140,7 @@
                         <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="line">
                     <cd:Type namexml="line">
