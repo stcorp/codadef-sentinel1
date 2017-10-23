@@ -1422,9 +1422,9 @@
         <cd:Attribute name="valid_range">
           <cd:Array>
             <cd:Dimension>2</cd:Dimension>
-            <cd:Integer>
-              <cd:NativeType>int8</cd:NativeType>
-            </cd:Integer>
+            <cd:Float>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
           </cd:Array>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
@@ -1802,6 +1802,7 @@
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$owiPolarisation]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1820,7 +1821,7 @@
         </cd:Attribute>
         <cd:Attribute name="values">
           <cd:Array>
-            <cd:Dimension>4</cd:Dimension>
+            <cd:Dimension/>
             <cd:Integer>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
@@ -2382,6 +2383,23 @@
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="rvlSwathNumber">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
   </cd:Record>

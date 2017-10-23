@@ -1428,9 +1428,9 @@
         <cd:Attribute name="valid_range">
           <cd:Array>
             <cd:Dimension>2</cd:Dimension>
-            <cd:Integer>
-              <cd:NativeType>int8</cd:NativeType>
-            </cd:Integer>
+            <cd:Float>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
           </cd:Array>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
@@ -1811,11 +1811,11 @@
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$owiPolarisation]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
       </cd:Array>
-      <cd:Optional/>
     </cd:Field>
     <cd:Field name="owiPolarisationName">
       <cd:Array>
@@ -1830,7 +1830,7 @@
         </cd:Attribute>
         <cd:Attribute name="values">
           <cd:Array>
-            <cd:Dimension>4</cd:Dimension>
+            <cd:Dimension/>
             <cd:Integer>
               <cd:NativeType>int8</cd:NativeType>
             </cd:Integer>
@@ -1860,6 +1860,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1880,6 +1881,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1900,6 +1902,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1920,6 +1923,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1940,6 +1944,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1960,6 +1965,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1980,6 +1986,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2000,6 +2007,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2020,6 +2028,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2040,6 +2049,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2060,6 +2070,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2080,6 +2091,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2100,6 +2112,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2120,6 +2133,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2140,6 +2154,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2160,6 +2175,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2180,6 +2196,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2200,6 +2217,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2220,6 +2238,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2240,6 +2259,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2260,6 +2280,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2280,6 +2301,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2298,6 +2320,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Text/>
       </cd:Array>
     </cd:Field>
@@ -2316,6 +2339,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2336,6 +2360,7 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2368,6 +2393,9 @@
   </cd:ProductVariable>
   <cd:ProductVariable name="owiPolarisation">
     <cd:Init><![CDATA[$owiPolarisation = dim(/owiNrcs, 2)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="rvlRaSize">
+    <cd:Init><![CDATA[$rvlRaSize = dim(/rvlLon, 1)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="rvlAzSize">
     <cd:Init><![CDATA[$rvlAzSize = dim(/rvlLon, 0)]]></cd:Init>
