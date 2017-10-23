@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementDataWV" format="netcdf" last-modified="2016-10-03" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="Level2MeasurementDataEW_v1" format="netcdf" last-modified="2017-10-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -61,11 +61,9 @@
     </cd:Attribute>
     <cd:Attribute name="stokesSource">
       <cd:Text/>
-      <cd:Optional/>
     </cd:Attribute>
     <cd:Attribute name="windSource">
       <cd:Text/>
-      <cd:Optional/>
     </cd:Attribute>
     <cd:Attribute name="statevectorUtc">
       <cd:Text/>
@@ -102,7 +100,9 @@
     </cd:Attribute>
     <cd:Attribute name="owiNoiseCorrection">
       <cd:Text/>
-      <cd:Optional/>
+    </cd:Attribute>
+    <cd:Attribute name="IPFversion">
+      <cd:Text/>
     </cd:Attribute>
     <cd:Field name="oswPolSpec">
       <cd:Array>
@@ -130,9 +130,9 @@
     <cd:Field name="oswPartitions">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
-          <cd:Float>
-            <cd:NativeType>float</cd:NativeType>
-          </cd:Float>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
           <cd:Optional/>
         </cd:Attribute>
         <cd:Attribute name="units">
@@ -145,9 +145,9 @@
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswAngularBinSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswWavenumberBinSize]]></cd:Dimension>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="oswQualityCrossSpectraRe">
@@ -316,7 +316,6 @@
         </cd:Attribute>
         <cd:Attribute name="standard_name">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
@@ -341,7 +340,6 @@
         </cd:Attribute>
         <cd:Attribute name="standard_name">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
@@ -462,9 +460,9 @@
     <cd:Field name="oswIconf">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
-          <cd:Float>
-            <cd:NativeType>float</cd:NativeType>
-          </cd:Float>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
           <cd:Optional/>
         </cd:Attribute>
         <cd:Attribute name="units">
@@ -473,12 +471,31 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="oswLookSeparationTime">
@@ -786,11 +803,10 @@
         <cd:Attribute name="valid_range">
           <cd:Array>
             <cd:Dimension>2</cd:Dimension>
-            <cd:Integer>
-              <cd:NativeType>int8</cd:NativeType>
-            </cd:Integer>
+            <cd:Float>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
           </cd:Array>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
@@ -802,9 +818,9 @@
     <cd:Field name="oswLandFlag">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
-          <cd:Float>
-            <cd:NativeType>float</cd:NativeType>
-          </cd:Float>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
           <cd:Optional/>
         </cd:Attribute>
         <cd:Attribute name="units">
@@ -813,11 +829,30 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="oswIncidenceAngle">
@@ -904,6 +939,300 @@
         </cd:Float>
       </cd:Array>
     </cd:Field>
+    <cd:Field name="oswCartSpecRe">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswCartSpecIm">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswKxBinSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswKyBinSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswLag]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswKx">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswKxBinSize]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswKy">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswKyBinSize]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswTotalHs">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswQualityFlagPartition">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension/>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswQualityFlag">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension/>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswGroupDir">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswEllipsLength">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswEllipsLengthStdDev">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswEllipsWidth">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="oswEllipsWidthStdDev">
+      <cd:Array>
+        <cd:Attribute name="FillValue" real_name="_FillValue">
+          <cd:Float>
+            <cd:NativeType>float</cd:NativeType>
+          </cd:Float>
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Float>
+          <cd:NativeType>float</cd:NativeType>
+        </cd:Float>
+      </cd:Array>
+    </cd:Field>
     <cd:Field name="owiLon">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
@@ -984,7 +1313,6 @@
         </cd:Attribute>
         <cd:Attribute name="Unsigned" real_name="_Unsigned">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
@@ -1225,7 +1553,6 @@
         </cd:Attribute>
         <cd:Attribute name="Unsigned" real_name="_Unsigned">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
@@ -1266,7 +1593,6 @@
         </cd:Attribute>
         <cd:Attribute name="Unsigned" real_name="_Unsigned">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
@@ -1291,7 +1617,6 @@
         </cd:Attribute>
         <cd:Attribute name="standard_name">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
@@ -1316,7 +1641,6 @@
         </cd:Attribute>
         <cd:Attribute name="standard_name">
           <cd:Text/>
-          <cd:Optional/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
@@ -1354,9 +1678,9 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1376,9 +1700,9 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1398,9 +1722,9 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$oswPartitions]]></cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1420,8 +1744,8 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$owiAzSize]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$owiRaSize]]></cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
+        <cd:Dimension>1</cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1447,7 +1771,6 @@
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
       </cd:Array>
-      <cd:Optional/>
     </cd:Field>
     <cd:Field name="owiNesz">
       <cd:Array>
@@ -1469,7 +1792,6 @@
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
       </cd:Array>
-      <cd:Optional/>
     </cd:Field>
     <cd:Field name="rvlLon">
       <cd:Array>
@@ -1485,6 +1807,8 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Dimension></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
         <cd:Dimension></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
@@ -1506,6 +1830,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1526,6 +1852,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1546,6 +1874,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1566,6 +1896,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1586,6 +1918,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1606,6 +1940,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1626,6 +1962,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1646,6 +1984,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1666,6 +2006,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1686,6 +2028,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1706,6 +2050,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1726,6 +2072,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1746,6 +2094,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1766,6 +2116,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1786,6 +2138,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1806,6 +2160,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1826,6 +2182,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1846,6 +2204,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1866,6 +2226,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1886,6 +2248,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1906,6 +2270,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1924,6 +2290,11 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension></cd:Dimension>
+        <!-- CODA treats the last dimension as string length, which is in this case the rvlSwath dimension
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
+        -->
         <cd:Text/>
       </cd:Array>
     </cd:Field>
@@ -1942,6 +2313,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1962,6 +2335,8 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1974,6 +2349,15 @@
   <cd:ProductVariable name="oswAzSize">
     <cd:Init><![CDATA[$oswAzSize = dim(/oswPolSpec, 0)]]></cd:Init>
   </cd:ProductVariable>
+  <cd:ProductVariable name="oswKxBinSize">
+    <cd:Init><![CDATA[$oswKxBinSize = dim(/oswCartSpecRe, 2)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="oswKyBinSize">
+    <cd:Init><![CDATA[$oswKyBinSize = dim(/oswCartSpecRe, 3)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="oswLag">
+    <cd:Init><![CDATA[$oswLag = dim(/oswCartSpecRe, 4)]]></cd:Init>
+  </cd:ProductVariable>
   <cd:ProductVariable name="owiRaSize">
     <cd:Init><![CDATA[$owiRaSize = dim(/owiLon, 1)]]></cd:Init>
   </cd:ProductVariable>
@@ -1983,8 +2367,14 @@
   <cd:ProductVariable name="owiIncSize">
     <cd:Init><![CDATA[$owiIncSize = dim(/owiCalConstObsi, 0)]]></cd:Init>
   </cd:ProductVariable>
+  <cd:ProductVariable name="rvlRaSize">
+    <cd:Init><![CDATA[$rvlRaSize = dim(/rvlLon, 1)]]></cd:Init>
+  </cd:ProductVariable>
   <cd:ProductVariable name="rvlAzSize">
     <cd:Init><![CDATA[$rvlAzSize = dim(/rvlLon, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="rvlSwath">
+    <cd:Init><![CDATA[$rvlSwath = dim(/rvlLon, 2)]]></cd:Init>
   </cd:ProductVariable>
   <cd:ProductVariable name="oswWavenumberBinSize">
     <cd:Init><![CDATA[$oswWavenumberBinSize = dim(/oswPolSpec, 3)]]></cd:Init>

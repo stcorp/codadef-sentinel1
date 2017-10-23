@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementDataIW" format="netcdf" last-modified="2016-09-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="Level2MeasurementDataIW_v0" format="netcdf" last-modified="2016-09-28" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
