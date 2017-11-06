@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementDataWV_v1" format="netcdf" last-modified="2017-10-23" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="Level2MeasurementDataWV_v1" format="netcdf" last-modified="2017-11-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -1828,7 +1828,7 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Attribute name="values">
+        <cd:Attribute name="flag_values">
           <cd:Array>
             <cd:Dimension/>
             <cd:Integer>
@@ -1836,7 +1836,7 @@
             </cd:Integer>
           </cd:Array>
         </cd:Attribute>
-        <cd:Attribute name="meanings">
+        <cd:Attribute name="flag_meanings">
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$owiPolarisation]]></cd:Dimension>
@@ -1857,6 +1857,9 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="standard_name">
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension></cd:Dimension>
@@ -1880,6 +1883,9 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="standard_name">
+          <cd:Text/>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
@@ -1901,6 +1907,14 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Float>
+              <cd:NativeType>float</cd:NativeType>
+            </cd:Float>
+          </cd:Array>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
         <cd:Float>
@@ -1911,9 +1925,9 @@
     <cd:Field name="rvlLandFlag">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
-          <cd:Float>
-            <cd:NativeType>float</cd:NativeType>
-          </cd:Float>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
           <cd:Optional/>
         </cd:Attribute>
         <cd:Attribute name="units">
@@ -1922,11 +1936,30 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension/>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="rvlIncidenceAngle">
@@ -2037,9 +2070,9 @@
     <cd:Field name="rvlConfDcObs">
       <cd:Array>
         <cd:Attribute name="FillValue" real_name="_FillValue">
-          <cd:Float>
-            <cd:NativeType>float</cd:NativeType>
-          </cd:Float>
+          <cd:Integer>
+            <cd:NativeType>int8</cd:NativeType>
+          </cd:Integer>
           <cd:Optional/>
         </cd:Attribute>
         <cd:Attribute name="units">
@@ -2048,11 +2081,30 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
+        <cd:Attribute name="valid_range">
+          <cd:Array>
+            <cd:Dimension>2</cd:Dimension>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_values">
+          <cd:Array>
+            <cd:Dimension/>
+            <cd:Integer>
+              <cd:NativeType>int8</cd:NativeType>
+            </cd:Integer>
+          </cd:Array>
+        </cd:Attribute>
+        <cd:Attribute name="flag_meanings">
+          <cd:Text/>
+        </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int8</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="rvlRadVel">
