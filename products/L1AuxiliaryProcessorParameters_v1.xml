@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters" format="xml" last-modified="2015-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition id="L1AuxiliaryProcessorParameters_v1" format="xml" last-modified="2017-11-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -62,6 +62,12 @@
                             <cd:Mapping string="true" value="1"/>
                           </cd:Integer>
                         </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="correctBistaticDelayMethod">
+                        <cd:Text namexml="correctBistaticDelayMethod">
+                          <cd:Description>Method used to compensate for the bi-static delay. If set to "Coarse" then only the coarse bistatic delay correction is applied; otherwise, if set to "Fine" then the full correction is applied. Flag introduced starting from IPF V290.</cd:Description>
+                          <ct:NamedTest id="EnumCorrectBistaticDelayMethod"/>
+                        </cd:Text>
                       </cd:Field>
                       <cd:Field name="correctRxVariationFlag">
                         <cd:Type namexml="correctRxVariationFlag">
@@ -386,6 +392,16 @@
                         <cd:Text namexml="pgSource">
                           <cd:Description>PG source to use during processing.  The PG derived from the extracted replica will be used if this parameter is set to "Extracted" and the IPF determines that the reconstructed replica is valid; otherwise, the pgModel from the AUX_INS data will be used if this field is set to "Model" or the reconstructed replica is deemed invalid.</cd:Description>
                         </cd:Text>
+                      </cd:Field>
+                      <cd:Field name="estimateNoiseEquivalentPowerFlag">
+                        <cd:Type namexml="estimateNoiseEquivalentPowerFlag">
+                          <cd:Integer format="ascii">
+                          <cd:Description>Flag introduced starting from IPF V290 to manage the new L0N products format including also noise-equivalent echoes. If set to true, then the noise power is estimated also from the noise equivalent echoes; otherwise, if set to false only pure noise echoes are used.</cd:Description>
+                            <cd:NativeType>uint8</cd:NativeType>
+                            <cd:Mapping string="false" value="0"/>
+                            <cd:Mapping string="true" value="1"/>
+                          </cd:Integer>
+                        </cd:Type>
                       </cd:Field>
                     </cd:Record>
                     <cd:Optional/>

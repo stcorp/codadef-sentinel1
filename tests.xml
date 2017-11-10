@@ -85,4 +85,5 @@
   <ct:Test name="RangeTPTEntryCount" criticality="Error" description="The number of TPT_Entry elements should be &gt;= 1 and &lt;= 32"><![CDATA[numelements(.) >= 1 && numelements(.) <= 32]]></ct:Test>
   <ct:Test name="RangeTxPulseRxBandwithEntryCount" criticality="Error" description="The number of Tx_Pulse_Rx_Bandwith_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
   <ct:Test name="ECCProgramElementOptionalFieldCount" criticality="Error" description="Only one of the optional elements in the ECC_Program_Element can be present"><![CDATA[int(exists(./ECC_Entry)) + int(exists(./ECC_Repeat_Instruction)) + int(exists(./ECC_Until_Instruction)) + int(exists(./ECC_Variable_Until_Instruction)) + int(exists(./ECC_Start_Warmup_Instruction)) + int(exists(./ECC_End_Warmup_Instruction)) + int(exists(./ECC_Stop_Instruction)) == 1]]></ct:Test>
+  <ct:Test name="EnumCorrectBistaticDelayMethod" criticality="Error" description=""><![CDATA[str(.) == "Coarse" || str(.) == "Fine"]]></ct:Test>
 </ct:Tests> 
