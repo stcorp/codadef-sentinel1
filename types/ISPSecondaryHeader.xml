@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2012-07-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2018-03-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="coarseTime">
     <cd:Integer>
       <cd:Description>Coarse Time</cd:Description>
@@ -35,7 +35,7 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spareBit">
+  <cd:Field name="spareFAD">
     <cd:Raw>
       <cd:BitSize>1</cd:BitSize>
     </cd:Raw>
@@ -90,9 +90,16 @@
       <cd:NativeType>uint32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare3Bit">
+  <cd:Field name="errorFlag">
+    <cd:Integer>
+      <cd:Description>Error Flag</cd:Description>
+      <cd:BitSize>1</cd:BitSize>
+      <cd:NativeType>uint8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spareRCSS1">
     <cd:Raw>
-      <cd:BitSize>3</cd:BitSize>
+      <cd:BitSize>2</cd:BitSize>
     </cd:Raw>
     <cd:Hidden/>
   </cd:Field>
@@ -110,7 +117,7 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spareByte">
+  <cd:Field name="spareRCSS2">
     <cd:Raw>
       <cd:BitSize>8</cd:BitSize>
     </cd:Raw>
@@ -151,7 +158,7 @@
       <cd:NativeType>uint32</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare3Bit2">
+  <cd:Field name="spareRCSS3">
     <cd:Raw>
       <cd:BitSize>3</cd:BitSize>
     </cd:Raw>
@@ -206,18 +213,24 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare4Bit">
+  <cd:Field name="spareSAS1">
     <cd:Raw>
-      <cd:BitSize>4</cd:BitSize>
+      <cd:BitSize>2</cd:BitSize>
     </cd:Raw>
     <cd:Hidden/>
   </cd:Field>
   <cd:Field name="elevationBeamAddress">
     <cd:Integer>
-      <cd:Description>Elevation Beam Address of SASTest+CalType</cd:Description>
+      <cd:Description>Elevation Beam Address or SASTest+CalType</cd:Description>
       <cd:BitSize>4</cd:BitSize>
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spareSAS2">
+    <cd:Raw>
+      <cd:BitSize>2</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
   <cd:Field name="beamAddress">
     <cd:Integer>
@@ -233,6 +246,12 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
+  <cd:Field name="spareSES1">
+    <cd:Raw>
+      <cd:BitSize>1</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
   <cd:Field name="TXPulseNumber">
     <cd:Integer>
       <cd:Description>TX Pulse Number</cd:Description>
@@ -240,18 +259,18 @@
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="spare4Bit2">
-    <cd:Raw>
-      <cd:BitSize>4</cd:BitSize>
-    </cd:Raw>
-    <cd:Hidden/>
-  </cd:Field>
   <cd:Field name="signalType">
     <cd:Integer>
       <cd:Description>Signal Type</cd:Description>
       <cd:BitSize>4</cd:BitSize>
       <cd:NativeType>uint8</cd:NativeType>
     </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spareSES2">
+    <cd:Raw>
+      <cd:BitSize>3</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
   <cd:Field name="swap">
     <cd:Integer>
