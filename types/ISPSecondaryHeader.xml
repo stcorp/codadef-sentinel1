@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2018-03-06" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record name="ISPSecondaryHeader" format="binary" last-modified="2018-03-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
   <cd:Field name="coarseTime">
     <cd:Integer>
       <cd:Description>Coarse Time</cd:Description>
@@ -293,11 +293,10 @@
       <cd:NativeType>uint16</cd:NativeType>
     </cd:Integer>
   </cd:Field>
-  <cd:Field name="fillerOctet">
-    <cd:Integer>
-      <cd:Description>Filler Octet</cd:Description>
+  <cd:Field name="spareRSCS">
+    <cd:Raw>
       <cd:BitSize>8</cd:BitSize>
-      <cd:NativeType>uint8</cd:NativeType>
-    </cd:Integer>
+    </cd:Raw>
+    <cd:Hidden/>
   </cd:Field>
 </cd:Record>
