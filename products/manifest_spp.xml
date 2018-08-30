@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_spp" format="xml" last-modified="2013-12-18" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="manifest_spp" format="xml" last-modified="2013-12-18">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">

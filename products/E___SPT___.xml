@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="E___SPT___" format="xml" last-modified="2013-11-04" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="E___SPT___" format="xml" last-modified="2013-11-04">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -95,7 +95,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -147,7 +147,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -163,7 +163,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -199,7 +199,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -215,7 +215,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -231,7 +231,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -267,7 +267,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -317,7 +317,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>
@@ -333,7 +333,7 @@
                                     <cd:Integer format="ascii">
                                       <cd:NativeType>uint8</cd:NativeType>
                                       <ct:NamedTest id="FixedValue0"/>
-                                   </cd:Integer>
+                                    </cd:Integer>
                                   </cd:Type>
                                   <cd:Hidden/>
                                 </cd:Field>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level1ProductADS_v1" format="xml" last-modified="2015-01-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="Level1ProductADS_v1" format="xml" last-modified="2015-01-27">
   <cd:Record format="xml">
     <cd:Field name="product">
       <cd:Record namexml="product">

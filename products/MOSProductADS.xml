@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="MOSProductADS" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="MOSProductADS" format="xml" last-modified="2012-11-29">
   <cd:Record format="xml">
     <cd:Field name="mosProduct">
       <cd:Record namexml="mosProduct">
@@ -131,10 +131,10 @@
               <cd:Record namexml="imageMosaicParameters">
                 <cd:Field name="mosaicType">
                   <cd:Text namexml="mosaicType"/>
-                </cd:Field>  
+                </cd:Field>
                 <cd:Field name="mosaicMethod">
                   <cd:Text namexml="mosaicMethod"/>
-                </cd:Field>  
+                </cd:Field>
                 <cd:Field name="mosaicPatchesList">
                   <cd:Record namexml="mosaicPatchesList">
                     <cd:Attribute name="length"/>
@@ -143,16 +143,16 @@
                         <cd:Dimension/>
                         <cd:Text namexml="mosaicPatchProductName"/>
                       </cd:Array>
-                    </cd:Field>  
+                    </cd:Field>
                   </cd:Record>
-                </cd:Field>  
+                </cd:Field>
               </cd:Record>
-            </cd:Field>  
+            </cd:Field>
             <cd:Field name="geocodingStepParameters">
               <cd:Record namexml="geocodingStepParameters">
                 <cd:Field name="projectionUsed">
                   <cd:Text namexml="projectionUsed"/>
-                </cd:Field>  
+                </cd:Field>
                 <cd:Field name="meanPixelGroundSpacing">
                   <cd:Type namexml="meanPixelGroundSpacing">
                     <cd:Float format="ascii">
@@ -162,7 +162,7 @@
                 </cd:Field>
                 <cd:Field name="referenceEarthModel">
                   <cd:Text namexml="referenceEarthModel"/>
-                </cd:Field>  
+                </cd:Field>
                 <cd:Field name="projectionCentreLatitude">
                   <cd:Type namexml="projectionCentreLatitude">
                     <cd:Float format="ascii">
@@ -188,7 +188,7 @@
                   <cd:Optional/>
                 </cd:Field>
               </cd:Record>
-            </cd:Field>  
+            </cd:Field>
             <cd:Field name="snNormalizationParameters">
               <cd:Record namexml="snNormalizationParameters">
                 <cd:Field name="refIncidenceAngleUsed">
@@ -200,12 +200,12 @@
                 </cd:Field>
                 <cd:Field name="igbpMask">
                   <cd:Text namexml="igbpMask"/>
-                </cd:Field>  
+                </cd:Field>
                 <cd:Field name="snNormCurves">
                   <cd:Text namexml="snNormCurves"/>
-                </cd:Field>  
+                </cd:Field>
               </cd:Record>
-            </cd:Field>  
+            </cd:Field>
           </cd:Record>
         </cd:Field>
       </cd:Record>

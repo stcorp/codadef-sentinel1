@@ -1,4 +1,5 @@
-<cd:Record name="TP_Log" namexml="Log"  format="xml" last-modified="2013-05-15" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="TP_Log" namexml="Log" format="xml" last-modified="2013-05-15">
   <cd:Field name="Id">
     <cd:Type namexml="Id">
       <cd:Integer format="ascii">

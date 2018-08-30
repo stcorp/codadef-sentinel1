@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests last-modified="2014-01-24" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2014-01-24">
   <ct:Test name="FileNameCheckEOF" criticality="Error" description="The name of the EOF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EOF"]]></ct:Test>
   <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
   <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(25, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
@@ -74,8 +74,7 @@
   <ct:Test name="RangeRZWTEntryCount" criticality="Error" description="The number of RZWT_Entry elements should be &gt;= 1 and &lt;= 128"><![CDATA[numelements(.) >= 1 && numelements(.) <= 128]]></ct:Test>
   <ct:Test name="RangeRZWTIndex" criticality="Error" description="The value should be &gt;= 0 and &lt;= 127"><![CDATA[int(.) >= 0 && int(.) <= 127]]></ct:Test>
   <ct:Test name="RangeSwathNumber" criticality="Error" description="The value should be &gt;= 0 and &lt;= 127"><![CDATA[int(.) >= 0 && int(.) <= 127]]></ct:Test>
-  <ct:Test name="RangeSwathParametersTableCount" criticality="Error" description="The number of Swath_Parameters_Table
- elements should be &gt;= 1 and &lt;= 128"><![CDATA[numelements(.) >= 1 && numelements(.) <= 128]]></ct:Test>
+  <ct:Test name="RangeSwathParametersTableCount" criticality="Error" description="The number of Swath_Parameters_Table elements should be &gt;= 1 and &lt;= 128"><![CDATA[numelements(.) >= 1 && numelements(.) <= 128]]></ct:Test>
   <ct:Test name="RangeSWLEntryCount" criticality="Error" description="The number of SWL_Entry elements should be &gt;= 1 and &lt;= 64"><![CDATA[numelements(.) >= 1 && numelements(.) <= 64]]></ct:Test>
   <ct:Test name="RangeSWSTEntryCount" criticality="Error" description="The number of SWST_Entry elements should be &gt;= 1 and &lt;= 256"><![CDATA[numelements(.) >= 1 && numelements(.) <= 256]]></ct:Test>
   <ct:Test name="RangeSignalType" criticality="Error" description="The value should be one of 0, 1, 8, 9, 10, 11, 12, 13, 14, 15"><![CDATA[int(.) == 0 || int(.) == 1 || (int(.) >= 8 && int(.) <= 15)]]></ct:Test>
@@ -86,4 +85,4 @@
   <ct:Test name="RangeTxPulseRxBandwithEntryCount" criticality="Error" description="The number of Tx_Pulse_Rx_Bandwith_Entry elements should be &gt;= 1 and &lt;= 16"><![CDATA[numelements(.) >= 1 && numelements(.) <= 16]]></ct:Test>
   <ct:Test name="ECCProgramElementOptionalFieldCount" criticality="Error" description="Only one of the optional elements in the ECC_Program_Element can be present"><![CDATA[int(exists(./ECC_Entry)) + int(exists(./ECC_Repeat_Instruction)) + int(exists(./ECC_Until_Instruction)) + int(exists(./ECC_Variable_Until_Instruction)) + int(exists(./ECC_Start_Warmup_Instruction)) + int(exists(./ECC_End_Warmup_Instruction)) + int(exists(./ECC_Stop_Instruction)) == 1]]></ct:Test>
   <ct:Test name="EnumCorrectBistaticDelayMethod" criticality="Error" description=""><![CDATA[str(.) == "Coarse" || str(.) == "Fine"]]></ct:Test>
-</ct:Tests> 
+</ct:Tests>

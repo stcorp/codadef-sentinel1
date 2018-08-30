@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliaryInstrument_v1" format="xml" last-modified="2017-11-10" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="AuxiliaryInstrument_v1" format="xml" last-modified="2017-11-10">
   <cd:Record format="xml">
     <cd:Description>Instrument auxiliary file definition (AUX_INS).  This file includes information related to the instrument required for processing.  It is required for data decompression and ISP decoding.</cd:Description>
     <cd:Field name="auxiliaryInstrument">
@@ -122,7 +122,7 @@
                       <cd:Field name="nominalTxPulseLength">
                         <cd:Type namexml="nominalTxPulseLength">
                           <cd:Float format="ascii">
-                            <cd:Description>Nominal transmit pulse length [s]. This parameter is used by the pre-processor and the DCE and SLC processors if it is smaller than the Tx Pulse Length (TXPL) extracted from the ISP headers. The nominal transmit pulse length can be set such that the chirp processed bandwidth is small enough to filter out the spurious signals at ±37.5 MHz.</cd:Description>
+                            <cd:Description>Nominal transmit pulse length [s]. This parameter is used by the pre-processor and the DCE and SLC processors if it is smaller than the Tx Pulse Length (TXPL) extracted from the ISP headers. The nominal transmit pulse length can be set such that the chirp processed bandwidth is small enough to filter out the spurious signals at &#xB1;37.5 MHz.</cd:Description>
                             <cd:NativeType>double</cd:NativeType>
                           </cd:Float>
                         </cd:Type>
@@ -433,7 +433,7 @@
                             <cd:Field name="repeat">
                               <cd:Type namexml="repeat">
                                 <cd:Integer format="ascii">
-                                  <cd:Description>Sequence repeat flag. For the imaging sequence, this field shall be set to “true” to indentify the ispList that represents the imaging operation. This field shall be set to “false” for all other sequences.</cd:Description>
+                                  <cd:Description>Sequence repeat flag. For the imaging sequence, this field shall be set to &#x201C;true&#x201D; to indentify the ispList that represents the imaging operation. This field shall be set to &#x201C;false&#x201D; for all other sequences.</cd:Description>
                                   <cd:NativeType>uint8</cd:NativeType>
                                   <cd:Mapping string="false" value="0"/>
                                   <cd:Mapping string="true" value="1"/>

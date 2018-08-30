@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="Level2MeasurementDataIW_v1" format="netcdf" last-modified="2017-11-09" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataIW_v1" format="netcdf" last-modified="2017-11-09">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -118,10 +118,10 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
+        <cd:Dimension/>
+        <cd:Dimension/>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -361,7 +361,7 @@
         </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -946,9 +946,9 @@
         </cd:Attribute>
         <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswRaSize]]></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
+        <cd:Dimension/>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1241,8 +1241,8 @@
         <cd:Attribute name="standard_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1458,7 +1458,7 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -1850,9 +1850,9 @@
         <cd:Attribute name="standard_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
+        <cd:Dimension/>
+        <cd:Dimension/>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
         </cd:Float>
@@ -2374,7 +2374,7 @@
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$rvlRaSize]]></cd:Dimension>
-        <cd:Dimension></cd:Dimension>
+        <cd:Dimension/>
         <!-- CODA treats the last dimension as string length, which is in this case the rvlSwath dimension
         <cd:Dimension><![CDATA[$rvlSwath]]></cd:Dimension>
         -->

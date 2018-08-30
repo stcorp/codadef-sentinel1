@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="OBSMeasurements" format="xml" last-modified="2012-11-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="OBSMeasurements" format="xml" last-modified="2012-11-29">
   <cd:Record>
     <cd:Field name="obsProduct">
       <cd:Record namexml="obsProduct">

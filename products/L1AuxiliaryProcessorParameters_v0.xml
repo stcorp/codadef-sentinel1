@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="L1AuxiliaryProcessorParameters_v0" format="xml" last-modified="2015-03-19" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v0" format="xml" last-modified="2015-03-19">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -162,7 +162,7 @@
                                     </cd:Array>
                                   </cd:Type>
                                 </cd:Field>
-                              </cd:Record>                      
+                              </cd:Record>
                               <ct:NamedTest id="ValueOfCountAttributeForParent"/>
                             </cd:Array>
                           </cd:Field>
@@ -375,7 +375,7 @@
                       <cd:Field name="performInternalCalibrationFlag">
                         <cd:Type namexml="performInternalCalibrationFlag">
                           <cd:Integer format="ascii">
-                          <cd:Description>Flag controlling the calculation of the internal calibration from the calibration pulses extracted from the downlink. If this flag is set to true then the internal calibration information will be calculated by the IPF using the calibration pulses extracted from the downlink. If this flag is set to false then the internal calibration information will not be calculated from the calibration pulses extracted from the downlink. In addition, if this flag is set to false, the values provided for chirpReplicaSource and pgSource will be ignored and set to "Nominal" and "Model" espectively.</cd:Description>
+                            <cd:Description>Flag controlling the calculation of the internal calibration from the calibration pulses extracted from the downlink. If this flag is set to true then the internal calibration information will be calculated by the IPF using the calibration pulses extracted from the downlink. If this flag is set to false then the internal calibration information will not be calculated from the calibration pulses extracted from the downlink. In addition, if this flag is set to false, the values provided for chirpReplicaSource and pgSource will be ignored and set to "Nominal" and "Model" espectively.</cd:Description>
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="true" value="1"/>
@@ -770,7 +770,7 @@
                       <cd:Field name="createQlImageFlag">
                         <cd:Type namexml="createQlImageFlag">
                           <cd:Integer format="ascii">
-                          <cd:Description>Create Quick-look image flag. This flag controls the creation of a Quick-look image. It is set to true if a Quick-look image should be created; or, false otherwise.</cd:Description>
+                            <cd:Description>Create Quick-look image flag. This flag controls the creation of a Quick-look image. It is set to true if a Quick-look image should be created; or, false otherwise.</cd:Description>
                             <cd:NativeType>uint8</cd:NativeType>
                             <cd:Mapping string="false" value="0"/>
                             <cd:Mapping string="true" value="1"/>

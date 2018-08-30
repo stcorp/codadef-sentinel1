@@ -1,4 +1,5 @@
-<cd:Record name="AM_Request_Output" namexml="Request_Output" format="xml" last-modified="2014-01-08" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="AM_Request_Output" namexml="Request_Output" format="xml" last-modified="2014-01-08">
   <cd:Field name="Request_Description">
     <cd:Text namexml="Request_Description"/>
   </cd:Field>

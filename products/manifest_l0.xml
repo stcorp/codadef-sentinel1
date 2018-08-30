@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition id="manifest_l0" format="xml" last-modified="2013-06-07" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="manifest_l0" format="xml" last-modified="2013-06-07">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -589,7 +589,7 @@
                             <cd:Attribute name="checksumName"/>
                           </cd:Text>
                         </cd:Field>
-<!---
+                        <!---
                         <cd:Field name="byteOrder">
                           <cd:Optional/>
                           <cd:Text namexml="byteOrder"/>

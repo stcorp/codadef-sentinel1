@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:Record name="ISPPrimaryHeader" format="binary" last-modified="2012-05-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" name="ISPPrimaryHeader" format="binary" last-modified="2012-05-29">
   <cd:Field name="packetVersionNumber">
     <cd:Integer>
       <cd:Description>Packet Version Number</cd:Description>

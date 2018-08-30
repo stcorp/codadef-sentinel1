@@ -1,4 +1,5 @@
-<cd:Record name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2014-08-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="TP_PreCalibrationStatus" namexml="PreCalibrationStatus" format="xml" last-modified="2014-08-12">
   <cd:Field name="AntennaStatus">
     <cd:Record namexml="AntennaStatus">
       <cd:Field name="AntennaPressure">
@@ -578,7 +579,7 @@
             <cd:Float format="ascii">
               <cd:NativeType>double</cd:NativeType>
             </cd:Float>
-          </cd:Type>    
+          </cd:Type>
         </cd:Array>
       </cd:Field>
     </cd:Record>
@@ -593,7 +594,7 @@
             <cd:Float format="ascii">
               <cd:NativeType>double</cd:NativeType>
             </cd:Float>
-          </cd:Type>    
+          </cd:Type>
         </cd:Array>
       </cd:Field>
     </cd:Record>
