@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2019-06-27">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2020-01-04">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -1981,8 +1981,18 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="AUX_PREORB">
+    <cd:Description>POD Predicted Orbit File</cd:Description>
+    <cd:ProductDefinition id="AUX_PREORB" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.13 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_PREORB</cd:MatchData>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="AUX_RESORB">
-    <cd:Description>POD Restituted Orbit Orbit File</cd:Description>
+    <cd:Description>POD Restituted Orbit File</cd:Description>
     <cd:ProductDefinition id="AUX_RESORB" format="xml" version="0">
       <cd:Description>This definition is based on version 1.13 of the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
       <cd:DetectionRule>
