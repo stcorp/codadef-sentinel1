@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="L2AuxiliaryProcessorParameters_v2" format="xml" last-modified="2017-11-10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="L2AuxiliaryProcessorParameters_v2" format="xml" last-modified="2020-01-13">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -186,6 +186,9 @@
                             <cd:Array>
                               <cd:Dimension/>
                               <cd:Type namexml="gmfIndex">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
                                 <cd:Integer format="ascii">
                                   <cd:Description>Index of the Geophysical Model Function (GMF) to be used for the wind inversion, used for either for VV or HH polarisation data. Options supported are integers in the range [0, 8]. 0=cmod2_i3_nn, 1=cmod_ifr2_nn, 2=cmod_ifr2_bc_nn, 3=cmod4_nn, 4=cmod2_i3, 5=cmod_ifr2, 6=cmod_ifr2_bc, 7=cmod4, 8=cmod5. The concerned polarisation is discriminated by the attribute named Polarisation with supported value 'VV' or 'HH'</cd:Description>
                                   <cd:NativeType>uint8</cd:NativeType>
