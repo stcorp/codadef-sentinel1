@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataWV_v3" format="netcdf" last-modified="2020-01-14">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataWV_v3" format="netcdf" last-modified="2020-02-10">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -160,6 +160,9 @@
             <cd:NativeType>int8</cd:NativeType>
           </cd:Integer>
           <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="units">
+          <cd:Text/>
         </cd:Attribute>
         <cd:Attribute name="long_name">
           <cd:Text/>
@@ -1083,7 +1086,6 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswKxBinSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
@@ -1104,7 +1106,6 @@
         <cd:Attribute name="long_name">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$oswAzSize]]></cd:Dimension>
         <cd:Dimension><![CDATA[$oswKyBinSize]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
