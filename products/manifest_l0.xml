@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="manifest_l0" format="xml" last-modified="2013-06-07">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="manifest_l0" format="xml" last-modified="2020-04-30">
   <cd:Record>
     <cd:Field name="XFDU">
       <cd:Record namexml="urn:ccsds:schema:xfdu:1 XFDU">
@@ -169,6 +169,10 @@
                               </cd:Field>
                               <cd:Field name="productConsolidation">
                                 <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productConsolidation"/>
+                              </cd:Field>
+                              <cd:Field name="productSensingConsolidation">
+                                <cd:Optional/>
+                                <cd:Text namexml="http://www.esa.int/safe/sentinel-1.0/sentinel-1/sar productSensingConsolidation"/>
                               </cd:Field>
                               <cd:Field name="calISPPresent">
                                 <cd:Optional/>
