@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2021-01-22">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2021-04-16">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -852,6 +852,12 @@
         <cd:MatchData path="/auxiliaryInstrument@schemaVersion">3.3</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="AuxiliaryInstrument_v2" format="xml" version="2">
+      <cd:Description>This definition is based on version 3.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/auxiliaryInstrument@schemaVersion">3.4</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="L1AuxiliaryProcessorParameters">
     <cd:Description>AUX_PP1 auxiliary data file</cd:Description>
@@ -865,6 +871,12 @@
       <cd:Description>This definition is based on both version 3.3 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/l1AuxiliaryProcessorParameters@schemaVersion">3.3</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="L1AuxiliaryProcessorParameters_v2" format="xml" version="2">
+      <cd:Description>This definition is based on both version 3.4 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/l1AuxiliaryProcessorParameters@schemaVersion">3.4</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
