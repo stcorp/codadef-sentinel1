@@ -467,6 +467,25 @@
         <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level1ProductADS_v2" format="xml" version="2">
+      <cd:Description>This definition is based on version 3.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1a"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level1CalibrationADS">
     <cd:Description>Level 1 Calibration ADS</cd:Description>
@@ -504,6 +523,20 @@
       <cd:DetectionRule>
         <cd:MatchData path="/noise/noiseRangeVectorList"/>
         <cd:MatchFilename offset="0">noise-s1b</cd:MatchFilename>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="Level1RFIADS">
+    <cd:Description>Level 1 RFI ADS</cd:Description>
+    <cd:ProductDefinition id="Level1RFIADS_v0" format="xml" version="0">
+      <cd:Description>This definition is based on version 3.9 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/rfi"/>
+        <cd:MatchFilename offset="0">rfi-s1a</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/rfi"/>
+        <cd:MatchFilename offset="0">rfi-s1b</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

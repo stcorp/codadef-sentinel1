@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="Level1RFIADS_v0" format="xml" last-modified="2021-04-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="rfi">
+      <cd:Record>
+        <cd:Field name="adsHeader">
+          <cd:Record namexml="adsHeader">
+            <cd:Field name="missionId">
+              <cd:Text namexml="missionId"/>
+            </cd:Field>
+            <cd:Field name="productType">
+              <cd:Text namexml="productType"/>
+            </cd:Field>
+            <cd:Field name="polarisation">
+              <cd:Text namexml="polarisation"/>
+            </cd:Field>
+            <cd:Field name="mode">
+              <cd:Text namexml="mode"/>
+            </cd:Field>
+            <cd:Field name="swath">
+              <cd:Text namexml="swath"/>
+            </cd:Field>
+            <cd:Field name="startTime">
+              <cd:Type namexml="startTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="stopTime">
+              <cd:Type namexml="stopTime">
+                <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="absoluteOrbitNumber">
+              <cd:Type namexml="absoluteOrbitNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="missionDataTakeId">
+              <cd:Type namexml="missionDataTakeId">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+            <cd:Field name="imageNumber">
+              <cd:Type namexml="imageNumber">
+                <cd:Integer format="ascii">
+                  <cd:NativeType>uint32</cd:NativeType>
+                </cd:Integer>
+              </cd:Type>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="rfiMitigationApplied">
+          <cd:Text/>
+        </cd:Field>
+        <cd:Field name="rfiDetectionFromNoiseReportList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="rfiDetectionFromNoiseReport">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="noiseSensingTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Field>
+                  <cd:Field name="rfiDetected">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint8</cd:NativeType>
+                      <cd:Mapping string="false" value="0"/>
+                      <cd:Mapping string="true" value="1"/>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="maxKLDivergence">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="maxFisherZ">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="maxRfiPsd">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <cd:Optional/>
+        </cd:Field>
+        <cd:Field name="rfiBurstReportList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="rfiBurstReport">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="azimuthTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Field>
+                  <cd:Field name="inBandOutBandPowerRatio">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="timeDomainRfiReport">
+                    <cd:Record>
+                      <cd:Field name="percentageAffectedLines">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="avgPercentageAffectedSamples">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="maxPercentageAffectedSamples">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                    </cd:Record>
+                    <cd:Optional/>
+                  </cd:Field>
+                  <cd:Field name="frequencyDomainRfiBurstReport">
+                    <cd:Record>
+                      <cd:Field name="numSubBlocks">
+                        <cd:Integer format="ascii">
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="subBlockSize">
+                        <cd:Integer format="ascii">
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="isolatedRfiReport">
+                        <cd:Record>
+                          <cd:Field name="percentageAffectedLines">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Field>
+                          <cd:Field name="maxPercentageAffectedBW">
+                            <cd:Float format="ascii">
+                              <cd:NativeType>float</cd:NativeType>
+                            </cd:Float>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="percentageBlocksPersistentRfi">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="maxPercentageBWAffectedPersistentRfi">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                    </cd:Record>
+                    <cd:Optional/>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <cd:Optional/>
+        </cd:Field>
+        <cd:Field name="timeDomainRfiBlockReportList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="timeDomainRfiBlockReport">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="azimuthTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Field>
+                  <cd:Field name="timeDomainBlockSize">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="timeDomainRfiReport">
+                    <cd:Record>
+                      <cd:Field name="percentageAffectedLines">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="avgPercentageAffectedSamples">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="maxPercentageAffectedSamples">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <cd:Optional/>
+        </cd:Field>
+        <cd:Field name="frequencyDomainRfiBlockReportList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="frequencyDomainRfiBlockReport">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="azimuthTime">
+                    <cd:Time format="ascii" timeformat="ascii_ccsds_datetime_ymd2"/>
+                  </cd:Field>
+                  <cd:Field name="frequencyDomainBlockSize">
+                    <cd:Integer format="ascii">
+                      <cd:NativeType>uint32</cd:NativeType>
+                    </cd:Integer>
+                  </cd:Field>
+                  <cd:Field name="frequencyDomainIsolatedRfiReport">
+                    <cd:Record>
+                      <cd:Field name="percentageAffectedLines">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="maxPercentageAffectedBW">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="percentageAffectedBWPersistentRFI">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>float</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="frequencyDomainPersistentRfiFrequencyMask">
+                    <cd:Record>
+                      <cd:Field name="frequencyAxisLen">
+                        <cd:Integer format="ascii">
+                          <cd:NativeType>uint32</cd:NativeType>
+                        </cd:Integer>
+                      </cd:Field>
+                      <cd:Field name="frequencyAxisStep">
+                        <cd:Float format="ascii">
+                          <cd:NativeType>float</cd:NativeType>
+                        </cd:Float>
+                      </cd:Field>
+                      <cd:Field name="rfiMask">
+                        <cd:Array format="ascii">
+                          <cd:Attribute name="count"/>
+                          <cd:Dimension>int(str(@count))</cd:Dimension>
+                          <cd:Integer>
+                            <cd:NativeType>int32</cd:NativeType>
+                          </cd:Integer>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+              <cd:Optional/>
+            </cd:Field>
+          </cd:Record>
+          <cd:Optional/>
+        </cd:Field>
+      </cd:Record>
+      <cd:Optional/>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
