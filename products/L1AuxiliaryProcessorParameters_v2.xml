@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v2" format="xml" last-modified="2021-04-16">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v2" format="xml" last-modified="2021-05-28">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -483,7 +483,7 @@
                       </cd:Field>
                       <cd:Field name="rfiMitigationDomain">
                         <cd:Text namexml="rfiMitigationDomain">
-                          <cd:Description>In case the RFI mitigation step is performed, this flag indicates in what domain it has to be applied: "Time", "Frequency", "TimeFrequency".</cd:Description>
+                          <cd:Description>In case the RFI mitigation step is performed, this flag indicates in what domain it has to be applied: "Time", "Frequency", "TimeAndFrequency".</cd:Description>
                         </cd:Text>
                       </cd:Field>
                       <cd:Field name="rrfSpectrum">
