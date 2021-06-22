@@ -2423,8 +2423,14 @@
   </cd:ProductType>
   <cd:ProductType name="AuxiliaryWaveWatchIII">
     <cd:Description>WAVEWATCH III model stokes drift auxiliary product</cd:Description>
-    <cd:ProductDefinition id="AuxiliaryWaveWatchIII" format="netcdf" version="0">
+    <cd:ProductDefinition id="AuxiliaryWaveWatchIII_netcdf" format="netcdf" version="0">
       <cd:Description>The format definition for this product is taken from the netCDF3 file itself.</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/@product_name">osi_saf_ice_edge</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="AuxiliaryWaveWatchIII_hdf5" format="hdf5" version="1">
+      <cd:Description>The format definition for this product is taken from the HDF5 file itself.</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/@product_name">osi_saf_ice_edge</cd:MatchData>
       </cd:DetectionRule>
