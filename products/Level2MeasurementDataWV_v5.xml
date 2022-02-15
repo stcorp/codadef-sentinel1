@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataWV_v5" format="netcdf" last-modified="2022-02-1">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataWV_v5" format="netcdf" last-modified="2022-02-15">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -2142,6 +2142,9 @@
           <cd:Text/>
         </cd:Attribute>
         <cd:Attribute name="long_name">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="scaled">
           <cd:Text/>
         </cd:Attribute>
         <cd:Dimension><![CDATA[$rvlAzSize]]></cd:Dimension>
