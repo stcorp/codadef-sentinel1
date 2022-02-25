@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration" format="xml" last-modified="2022-02-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="auxiliarySetap">
+      <cd:Record>
+        <cd:Attribute name="schemaVersion">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="noNamespaceSchemaLocation" real_name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Field name="instrumentTimingCalibrationList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="instrumentTimingCalibration">
+              <cd:Array>
+                <cd:Dimension>int(str(@count))</cd:Dimension>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="polarisation">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="rangeCalibration">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="azimuthCalibration">
+                    <cd:Float format="ascii">
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SETAPAuxiliaryConfiguration" format="xml" last-modified="2022-02-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="ipfConf">
+      <cd:Record>
+        <cd:Field name="generalProcessorConf">
+          <cd:Record>
+            <cd:Field name="pathSettings">
+              <cd:Record>
+                <cd:Field name="binDir">
+                  <cd:Text/>
+                </cd:Field>
+                <cd:Field name="etcDir">
+                  <cd:Text/>
+                </cd:Field>
+                <cd:Field name="pcfDir">
+                  <cd:Text/>
+                </cd:Field>
+                <cd:Field name="demDir">
+                  <cd:Text/>
+                </cd:Field>
+                <cd:Field name="kernelDir">
+                  <cd:Text/>
+                </cd:Field>
+                <cd:Field name="geoidDir">
+                  <cd:Text/>
+                </cd:Field>
+              </cd:Record>
+              <cd:Optional/>
+            </cd:Field>
+            <cd:Field name="listOfDynParamsGlobal">
+              <cd:Record>
+                <cd:Field name="concurrentProgramExecution">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="multithreadedProgramExecution">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="numberOfThreads">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>int16</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="troposphericDelayCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="ionosphericDelayCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="solidEarthTideCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="taskRelatedConf">
+          <cd:Record>
+            <cd:Field name="listOfTasks">
+              <cd:Record>
+                <cd:Attribute name="count">
+                  <cd:Text/>
+                </cd:Attribute>
+                <cd:Field name="task">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record>
+                      <cd:Field name="name">
+                        <cd:Text/>
+                      </cd:Field>
+                      <cd:Field name="listOfDynTaskParams">
+                        <cd:Record>
+                          <cd:Field name="correctionGridRangeSampling">
+                            <cd:Integer format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:NativeType>int16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="correctionGridAzimuthSampling">
+                            <cd:Integer format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:NativeType>int16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="bistaticAzimuthCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="dopplerShiftRangeCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="fmMismatchAzimuthCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

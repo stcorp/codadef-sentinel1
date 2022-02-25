@@ -1114,6 +1114,24 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
+  <cd:ProductType name="SETAPAuxiliaryConfiguration">
+    <cd:Description>AUX_SCF auxiliary data file</cd:Description>
+    <cd:ProductDefinition id="SETAPAuxiliaryConfiguration" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/ipfConf/generalProcessorConf"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="SETAPAuxiliaryInstrumentTimingCalibration">
+    <cd:Description>AUX_ITC auxiliary data file</cd:Description>
+    <cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.4 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/auxiliarySetap"/>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
   <cd:ProductType name="STAProductADS">
     <cd:Description>Coregistered Stack Annotation Data Sets</cd:Description>
     <cd:ProductDefinition id="STAProductADS" format="xml" version="0">
