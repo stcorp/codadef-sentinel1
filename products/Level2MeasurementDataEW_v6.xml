@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataEW_v6" format="netcdf" last-modified="2022-10-26">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="Level2MeasurementDataEW_v6" format="netcdf" last-modified="2022-11-14">
   <cd:Record>
     <cd:Attribute name="title">
       <cd:Text/>
@@ -94,7 +94,7 @@
     </cd:Attribute>
     <cd:Attribute name="groundVelocity">
       <cd:Float>
-        <cd:NativeType>float</cd:NativeType>
+        <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Attribute>
     <cd:Attribute name="prf">
@@ -105,17 +105,17 @@
     </cd:Attribute>
     <cd:Attribute name="radarFrequency">
       <cd:Float>
-        <cd:NativeType>float</cd:NativeType>
+        <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Attribute>
     <cd:Attribute name="raSamplingFreq">
       <cd:Float>
-        <cd:NativeType>float</cd:NativeType>
+        <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Attribute>
     <cd:Attribute name="azSamplingFreq">
       <cd:Float>
-        <cd:NativeType>float</cd:NativeType>
+        <cd:NativeType>double</cd:NativeType>
       </cd:Float>
     </cd:Attribute>
     <cd:Attribute name="owiNoiseCorrection">
