@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2022-10-26">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2022-11-16">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -369,6 +369,11 @@
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
         <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SARStandardL0IndexData">
@@ -382,6 +387,11 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-index.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
         <cd:MatchFilename offset="61">-index.dat</cd:MatchFilename>
       </cd:DetectionRule>
@@ -401,6 +411,11 @@
         <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
         <cd:MatchFilename offset="61">-annot.dat</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1C-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-s-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">-annot.dat</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SARL0CalMeasurementData">
@@ -414,6 +429,11 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-c-</cd:MatchFilename>
         <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
       </cd:DetectionRule>
@@ -433,6 +453,11 @@
         <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
         <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-n-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SARL0AnnotationsMeasurementData">
@@ -446,6 +471,11 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
+        <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="6">-raw-a-</cd:MatchFilename>
         <cd:MatchFilename offset="61">.dat</cd:MatchFilename>
       </cd:DetectionRule>
@@ -497,6 +527,14 @@
         <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
         <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1b"</cd:MatchExpression>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1c"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1c"</cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchExpression path="/product/generalAnnotation/azimuthFmRateList/azimuthFmRate[0]/azimuthFmRatePolynomial">substr(0, 3, filename()) == "s1c"</cd:MatchExpression>
+        <cd:MatchExpression path="/product/imageAnnotation/processingInformation/rfiMitigationPerformed">substr(0, 3, filename()) == "s1c"</cd:MatchExpression>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level1CalibrationADS">
@@ -510,6 +548,10 @@
       <cd:DetectionRule>
         <cd:MatchData path="/calibration"/>
         <cd:MatchFilename offset="0">calibration-s1b</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/calibration"/>
+        <cd:MatchFilename offset="0">calibration-s1c</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -536,6 +578,10 @@
         <cd:MatchData path="/noise/noiseRangeVectorList"/>
         <cd:MatchFilename offset="0">noise-s1b</cd:MatchFilename>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/noise/noiseRangeVectorList"/>
+        <cd:MatchFilename offset="0">noise-s1c</cd:MatchFilename>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level1RFIADS">
@@ -549,6 +595,10 @@
       <cd:DetectionRule>
         <cd:MatchData path="/rfi"/>
         <cd:MatchFilename offset="0">rfi-s1b</cd:MatchFilename>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/rfi"/>
+        <cd:MatchFilename offset="0">rfi-s1c</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
@@ -672,6 +722,11 @@
         <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion"/>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level2MeasurementDataIW">
@@ -791,6 +846,11 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion"/>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
@@ -936,6 +996,12 @@
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion"/>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level2MeasurementDataWV">
@@ -1074,6 +1140,12 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion"/>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
