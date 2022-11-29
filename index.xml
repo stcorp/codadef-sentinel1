@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2022-11-24">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2022-11-29">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -702,12 +702,22 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataEW_v6" format="netcdf" version="6">
@@ -829,12 +839,22 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataIW_v6" format="netcdf" version="6">
@@ -973,13 +993,25 @@
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataSM_v6" format="netcdf" version="6">
@@ -1121,13 +1153,25 @@
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion">003.50</cd:MatchData>
+        <cd:MatchData path="@IPFversion">003.51</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchData path="@IPFversion">003.52</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataWV_v6" format="netcdf" version="6">
