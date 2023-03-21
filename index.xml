@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2022-11-29">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2023-03-21">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -1289,18 +1289,24 @@
   <cd:ProductType name="SETAPAuxiliaryConfiguration">
     <cd:Description>AUX_SCF auxiliary data file</cd:Description>
     <cd:ProductDefinition id="SETAPAuxiliaryConfiguration" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
+      <cd:Description>This definition is based on version 1.5 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/setapConf/generalProcessorConf"/>
+        <cd:MatchData path="/setapConf@schemaVersion">1.5</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="SETAPAuxiliaryInstrumentTimingCalibration">
     <cd:Description>AUX_ITC auxiliary data file</cd:Description>
-    <cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration" format="xml" version="0">
-      <cd:Description>This definition is based on version 1.4 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
+    <cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration_v0" format="xml" version="0">
+      <cd:Description>This definition is based on version 1.5 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
       <cd:DetectionRule>
-        <cd:MatchData path="/auxiliarySetap"/>
+        <cd:MatchData path="/auxiliarySetap@schemaVersion">1.5</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration_v1" format="xml" version="1">
+      <cd:Description>This definition is based on version 1.6 of the S1-ETAD Processor Configuration Description Document ETAD-DLR-DD-0009</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/auxiliarySetap@schemaVersion">1.6</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>

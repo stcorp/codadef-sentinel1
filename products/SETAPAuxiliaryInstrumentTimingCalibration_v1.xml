@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SETAPAuxiliaryInstrumentTimingCalibration_v1" format="xml" last-modified="2023-03-21" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="auxiliarySetap">
+      <cd:Record>
+        <cd:Attribute name="schemaVersion">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="noNamespaceSchemaLocation" real_name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Field name="instrumentTimingCalibrationReference">
+          <cd:Record>
+            <cd:Field name="rangeCalibration">
+              <cd:Float format="ascii">
+                <cd:Attribute name="unit"/>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+            <cd:Field name="azimuthCalibration">
+              <cd:Float format="ascii">
+                <cd:Attribute name="unit"/>
+                <cd:NativeType>double</cd:NativeType>
+              </cd:Float>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="instrumentTimingCalibrationOffsetList">
+          <cd:Record>
+            <cd:Attribute name="count"/>
+            <cd:Field name="instrumentTimingCalibrationOffset">
+              <cd:Array>
+                <cd:Dimension>int(str(@count))</cd:Dimension>
+                <cd:Record>
+                  <cd:Field name="swath">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="polarisation">
+                    <cd:Text/>
+                  </cd:Field>
+                  <cd:Field name="rangeOffset">
+                    <cd:Float format="ascii">
+                      <cd:Attribute name="unit"/>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                  <cd:Field name="azimuthOffset">
+                    <cd:Float format="ascii">
+                      <cd:Attribute name="unit"/>
+                      <cd:NativeType>double</cd:NativeType>
+                    </cd:Float>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
