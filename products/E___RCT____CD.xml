@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="E___RCT___" format="xml" last-modified="2013-11-04">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="E___RCT____CD" format="xml" last-modified="2023-06-06">
   <cd:Record format="xml">
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -62,8 +62,8 @@
                         </cd:Integer>
                       </cd:Type>
                     </cd:Field>
-                    <cd:Field name="TGU_Redundancy">
-                      <cd:Type namexml="TGU_Redundancy">
+                    <cd:Field name="Spare_5">
+                      <cd:Type namexml="Spare_5">
                         <cd:Integer format="ascii">
                           <cd:NativeType>uint8</cd:NativeType>
                           <ct:NamedTest id="Range1bitUnsigned"/>
