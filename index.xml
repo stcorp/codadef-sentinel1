@@ -1680,6 +1680,90 @@
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_14EBTI_B</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_02EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_03EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_04EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_05EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_06EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_07EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_08EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_09EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_10EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_11EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_12EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_13EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_14EBTIN_</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_01EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_02EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_03EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_04EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_05EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_06EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_07EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_08EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_09EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_10EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_11EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_12EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_13EBTINB</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">A_14EBTINB</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="RDBA_EBTCAL">
@@ -1914,6 +1998,90 @@
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB14SOTIMG</cd:MatchData>
       </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA01SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA02SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA03SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA04SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA05SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA06SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA07SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA08SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA09SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA10SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA11SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA12SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA13SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA14SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB01SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB02SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB03SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB04SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB05SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB06SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB07SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB08SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB09SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB10SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB11SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB12SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB13SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB14SOTI_B</cd:MatchData>
+      </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="RDBA_SOTCAL">
@@ -2003,6 +2171,90 @@
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB14SOTCAL</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA01SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA02SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA03SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA04SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA05SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA06SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA07SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA08SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA09SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA10SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA11SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA12SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA13SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AA14SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB01SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB02SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB03SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB04SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB05SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB06SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB07SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB08SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB09SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB10SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB11SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB12SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB13SOTC_B</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AB14SOTC_B</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
