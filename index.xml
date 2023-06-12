@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2023-06-06">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2023-06-12">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -1229,6 +1229,15 @@
       <cd:Description>This definition is based on version 3.7 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/auxiliaryInstrument@schemaVersion">3.7</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AuxiliarySimulatedCrossSpectra">
+    <cd:Description>AUX_SCS auxiliary data files (netcdf format)</cd:Description>
+    <cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra" format="hdf5" version="0">
+      <cd:Description>This definition is based on version 3.11 of the Sentinel-1 IPF Auxiliary Product Specification S1-RS-MDA-52-7443</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1--aux-scs-</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
