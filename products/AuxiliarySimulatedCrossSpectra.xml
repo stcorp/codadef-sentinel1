@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra" format="hdf5" last-modified="2023-06-12" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra" format="hdf5" last-modified="2023-06-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="compress">
       <cd:Array>
@@ -52,19 +52,19 @@
     <cd:Attribute name="mtfwv">
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
-        <cd:Integer>
-          <cd:NativeType>int64</cd:NativeType>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
           <cd:LittleEndian/>
-        </cd:Integer>
+        </cd:Float>
       </cd:Array>
     </cd:Attribute>
     <cd:Attribute name="reshalfwidth">
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
-        <cd:Integer>
-          <cd:NativeType>int64</cd:NativeType>
+        <cd:Float>
+          <cd:NativeType>double</cd:NativeType>
           <cd:LittleEndian/>
-        </cd:Integer>
+        </cd:Float>
       </cd:Array>
     </cd:Attribute>
     <cd:Attribute name="resgrowthrate">
@@ -109,6 +109,18 @@
           </cd:Array>
           <cd:Optional/>
         </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
             <cd:Dimension>1</cd:Dimension>
@@ -127,40 +139,12 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-          <cd:Optional/>
-        </cd:Attribute>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
-    </cd:Field>
-    <cd:Field name="dir_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
     </cd:Field>
     <cd:Field name="dsigma">
       <cd:Array>
@@ -191,9 +175,15 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -229,9 +219,15 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -249,6 +245,18 @@
             </cd:Integer>
           </cd:Array>
           <cd:Optional/>
+        </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
         </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
@@ -268,33 +276,12 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
-    </cd:Field>
-    <cd:Field name="iwa_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
     </cd:Field>
     <cd:Field name="jx">
       <cd:Array>
@@ -326,7 +313,7 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$kx_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$kx]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -363,7 +350,13 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$ky_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$ky]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -382,6 +375,18 @@
           </cd:Array>
           <cd:Optional/>
         </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
             <cd:Dimension>1</cd:Dimension>
@@ -400,33 +405,12 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$kx_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$kx]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
-    </cd:Field>
-    <cd:Field name="kx_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
     </cd:Field>
     <cd:Field name="ky">
       <cd:Array>
@@ -440,6 +424,18 @@
           </cd:Array>
           <cd:Optional/>
         </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
             <cd:Dimension>1</cd:Dimension>
@@ -458,33 +454,12 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$ky_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$ky]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
-    </cd:Field>
-    <cd:Field name="ky_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
     </cd:Field>
     <cd:Field name="lambda">
       <cd:Array>
@@ -515,10 +490,16 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$tau_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$tau]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -554,12 +535,18 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$tau_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$y_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$x_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$tau]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$ky]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$kx]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -595,12 +582,18 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$tau_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$y_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$x_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$tau]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$ky]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$kx]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -636,9 +629,15 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$dir_size]]></cd:Dimension>
-        <cd:Dimension><![CDATA[$iwa_size]]></cd:Dimension>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$dir]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$iwa]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
@@ -657,6 +656,18 @@
           </cd:Array>
           <cd:Optional/>
         </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
             <cd:Dimension>1</cd:Dimension>
@@ -675,33 +686,12 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$tau_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$tau]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
-    </cd:Field>
-    <cd:Field name="tau_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
     </cd:Field>
     <cd:Field name="u10">
       <cd:Array>
@@ -715,6 +705,18 @@
           </cd:Array>
           <cd:Optional/>
         </cd:Attribute>
+        <cd:Attribute name="CLASS">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="NAME">
+          <cd:Text/>
+        </cd:Attribute>
+        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
+          <cd:Integer>
+            <cd:NativeType>int32</cd:NativeType>
+            <cd:LittleEndian/>
+          </cd:Integer>
+        </cd:Attribute>
         <cd:Attribute name="FillValue" real_name="_FillValue">
           <cd:Array>
             <cd:Dimension>1</cd:Dimension>
@@ -733,99 +735,30 @@
         <cd:Attribute name="units">
           <cd:Text/>
         </cd:Attribute>
-        <cd:Dimension><![CDATA[$u10_size]]></cd:Dimension>
+        <cd:Dimension><![CDATA[$u10]]></cd:Dimension>
         <cd:Float>
           <cd:NativeType>float</cd:NativeType>
           <cd:Conversion numerator="1" denominator="1" invalid="-999"/>
         </cd:Float>
       </cd:Array>
     </cd:Field>
-    <cd:Field name="u10_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
-    </cd:Field>
-    <cd:Field name="x_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
-    </cd:Field>
-    <cd:Field name="y_size">
-      <cd:Array>
-        <cd:Attribute name="CLASS">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="NAME">
-          <cd:Text/>
-        </cd:Attribute>
-        <cd:Attribute name="Netcdf4Dimid" real_name="_Netcdf4Dimid">
-          <cd:Integer>
-            <cd:NativeType>int32</cd:NativeType>
-            <cd:LittleEndian/>
-          </cd:Integer>
-        </cd:Attribute>
-        <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
-      </cd:Array>
-      <cd:Hidden/>
-    </cd:Field>
   </cd:Record>
-  <cd:ProductVariable name="u10_size">
-    <cd:Init><![CDATA[$u10_size = dim(/u10_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="u10">
+    <cd:Init><![CDATA[$u10 = dim(/u10, 0)]]></cd:Init>
   </cd:ProductVariable>
-  <cd:ProductVariable name="dir_size">
-    <cd:Init><![CDATA[$dir_size = dim(/dir_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="dir">
+    <cd:Init><![CDATA[$dir = dim(/dir, 0)]]></cd:Init>
   </cd:ProductVariable>
-  <cd:ProductVariable name="iwa_size">
-    <cd:Init><![CDATA[$iwa_size = dim(/iwa_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="iwa">
+    <cd:Init><![CDATA[$iwa = dim(/iwa, 0)]]></cd:Init>
   </cd:ProductVariable>
-  <cd:ProductVariable name="tau_size">
-    <cd:Init><![CDATA[$tau_size = dim(/tau_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="tau">
+    <cd:Init><![CDATA[$tau = dim(/tau, 0)]]></cd:Init>
   </cd:ProductVariable>
-  <cd:ProductVariable name="y_size">
-    <cd:Init><![CDATA[$y_size = dim(/y_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="ky">
+    <cd:Init><![CDATA[$ky = dim(/ky, 0)]]></cd:Init>
   </cd:ProductVariable>
-  <cd:ProductVariable name="x_size">
-    <cd:Init><![CDATA[$x_size = dim(/x_size, 0)]]></cd:Init>
-  </cd:ProductVariable>
-  <cd:ProductVariable name="ky_size">
-    <cd:Init><![CDATA[$ky_size = dim(/ky_size, 0)]]></cd:Init>
-  </cd:ProductVariable>
-  <cd:ProductVariable name="kx_size">
-    <cd:Init><![CDATA[$kx_size = dim(/kx_size, 0)]]></cd:Init>
+  <cd:ProductVariable name="kx">
+    <cd:Init><![CDATA[$kx = dim(/kx, 0)]]></cd:Init>
   </cd:ProductVariable>
 </cd:ProductDefinition>
