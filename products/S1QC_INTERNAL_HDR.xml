@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="S1QC_INTERNAL_HDR" format="xml" last-modified="2014-08-13">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="S1QC_INTERNAL_HDR" format="xml" last-modified="2024-03-06">
   <cd:Record>
     <cd:Field name="AresysXmlDoc">
       <cd:Record namexml="AresysXmlDoc">
@@ -30,9 +30,18 @@
               <cd:Attribute name="Total">
                 <cd:Optional/>
               </cd:Attribute>
+              <cd:Attribute name="ContentID">
+                <cd:Optional/>
+              </cd:Attribute>
               <cd:Field name="RasterInfo">
                 <cd:Record namexml="RasterInfo">
                   <cd:Description>Information regarding binary file format and time coordinates of the image</cd:Description>
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
                   <cd:Field name="FileName">
                     <cd:Text namexml="FileName">
                       <cd:Description>Name of the associated binary file</cd:Description>
@@ -123,6 +132,25 @@
                       <cd:Description>Raster Format of the Data. One of ARESYS_RASTER (default), ARESYS_GEOTIFF, RASTER</cd:Description>
                     </cd:Text>
                   </cd:Field>
+                  <cd:Field name="InvalidValue">
+                    <cd:Optional/>
+                    <cd:Record namexml="InvalidValue">
+                      <cd:Field name="RealValue">
+                        <cd:Type namexml="RealValue">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                      <cd:Field name="ImaginaryValue">
+                        <cd:Type namexml="ImaginaryValue">
+                          <cd:Float format="ascii">
+                            <cd:NativeType>double</cd:NativeType>
+                          </cd:Float>
+                        </cd:Type>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
                 </cd:Record>
                 <cd:Optional/>
               </cd:Field>
@@ -198,6 +226,12 @@
                 <cd:Optional/>
                 <cd:Record namexml="DataSetInfo">
                   <cd:Description>Information regarding the dataset</cd:Description>
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
                   <cd:Field name="SensorName">
                     <cd:Text namexml="SensorName">
                       <cd:Description>Name of the sensor used to acquire the image: ASAR, PALSAR, ...</cd:Description>
@@ -239,6 +273,10 @@
                       </cd:Attribute>
                       <cd:Description>Image projection: SLANT RANGE, GROUND RANGE</cd:Description>
                     </cd:Text>
+                  </cd:Field>
+                  <cd:Field name="ProjectionParameters">
+                    <cd:Text namexml="ProjectionParameters"/>
+                    <cd:Optional/>
                   </cd:Field>
                   <cd:Field name="AcquisitionStation">
                     <cd:Text namexml="AcquisitionStation">
@@ -319,6 +357,12 @@
               <cd:Field name="SwathInfo">
                 <cd:Optional/>
                 <cd:Record namexml="SwathInfo">
+                  <cd:Attribute name="Number">
+                    <cd:Optional/>
+                  </cd:Attribute>
+                  <cd:Attribute name="Total">
+                    <cd:Optional/>
+                  </cd:Attribute>
                   <cd:Field name="Swath">
                     <cd:Text namexml="Swath">
                       <cd:Attribute name="unit">
@@ -536,6 +580,90 @@
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
+                  <cd:Field name="DuplicatedLines_number">
+                    <cd:Optional/>
+                    <cd:Type namexml="DuplicatedLines_number">
+                      <cd:Description>Number of duplicated lines</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="DuplicatedLines_azimuthtimes">
+                    <cd:Optional/>
+                    <cd:Record namexml="DuplicatedLines_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each duplicated line</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="PRF_changes_number">
+                    <cd:Optional/>
+                    <cd:Type namexml="PRF_changes_number">
+                      <cd:Description>Number of PRF changes</cd:Description>
+                      <cd:Integer format="ascii">
+                        <cd:NativeType>uint32</cd:NativeType>
+                      </cd:Integer>
+                    </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="PRF_changes_azimuthtimes">
+                    <cd:Optional/>
+                    <cd:Record namexml="PRF_changes_azimuthtimes">
+                      <cd:Description>Azimuth relative times for each PRF change</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                  <cd:Field name="PRF_changes_values">
+                    <cd:Optional/>
+                    <cd:Record namexml="PRF_changes_values">
+                      <cd:Description>PRF changes values</cd:Description>
+                      <cd:Field name="val">
+                        <cd:Array>
+                          <cd:Dimension/>
+                          <cd:Type namexml="val">
+                            <cd:Attribute name="N">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Attribute name="unit">
+                              <cd:Optional/>
+                            </cd:Attribute>
+                            <cd:Float format="ascii">
+                              <cd:NativeType>double</cd:NativeType>
+                            </cd:Float>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
                   <cd:Field name="Swst_changes_number">
                     <cd:Type namexml="Swst_changes_number">
                       <cd:Description>Number of SWST changes</cd:Description>
@@ -694,6 +822,12 @@
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
+                  <cd:Field name="ChirpPeriod">
+                    <cd:Optional/>
+                    <cd:Text namexml="ChirpPeriod">
+                      <cd:Description>Periodic list of chirp indexes related to multi-chirp image acquisition</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
                 </cd:Record>
               </cd:Field>
               <cd:Field name="DataStatistics">
@@ -824,6 +958,7 @@
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="StatisticsList">
+                    <cd:Optional/>
                     <cd:Record namexml="StatisticsList">
                       <cd:Field name="DataBlockStatistic">
                         <cd:Record namexml="DataStatistics">
@@ -956,12 +1091,28 @@
                     </cd:Type>
                   </cd:Field>
                   <cd:Field name="LinesPerBurst">
+                    <cd:Optional/>
                     <cd:Type namexml="LinesPerBurst">
                       <cd:Description>Number of lines in each burst</cd:Description>
                       <cd:Integer format="ascii">
                         <cd:NativeType>uint32</cd:NativeType>
                       </cd:Integer>
                     </cd:Type>
+                  </cd:Field>
+                  <cd:Field name="LinesPerBurstChangeList">
+                    <cd:Optional/>
+                    <cd:Record namexml="LinesPerBurstChangeList">
+                      <cd:Field name="Lines">
+                        <cd:Array namexml="Lines">
+                          <cd:Type>
+                            <cd:Attribute name="FromBurst"/>
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint32</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Type>
+                        </cd:Array>
+                      </cd:Field>
+                    </cd:Record>
                   </cd:Field>
                   <cd:Field name="BurstRepetitionFrequency">
                     <cd:Type namexml="BurstRepetitionFrequency">
@@ -1793,6 +1944,12 @@
                   <cd:Attribute name="Total">
                     <cd:Optional/>
                   </cd:Attribute>
+                  <cd:Field name="Direction">
+                    <cd:Optional/>
+                    <cd:Text namexml="Direction">
+                      <cd:Description>Pulse direction (UP, DOWN</cd:Description>
+                    </cd:Text>
+                  </cd:Field>
                   <cd:Field name="PulseLength">
                     <cd:Type namexml="PulseLength">
                       <cd:Attribute name="unit">
