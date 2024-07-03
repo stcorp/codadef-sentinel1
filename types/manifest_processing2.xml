@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="manifest_processing2" format="xml" namexml="http://www.esa.int/safe/sentinel-1.0 processing" last-modified="2013-06-06">
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="manifest_processing2" format="xml" namexml="http://www.esa.int/safe/sentinel-1.0 processing" last-modified="2024-07-03">
   <cd:Attribute name="name"/>
   <cd:Attribute name="start">
     <cd:Optional/>
@@ -28,6 +28,17 @@
         </cd:Record>
       </cd:Field>
     </cd:Record>
+  </cd:Field>
+  <cd:Field name="software">
+    <cd:Optional/>
+    <cd:Record namexml="http://www.esa.int/safe/sentinel-1.0 software">
+      <cd:Attribute name="name"/>
+      <cd:Attribute name="version"/>
+    </cd:Record>
+  </cd:Field>
+  <cd:Field name="processing">
+    <cd:Optional/>
+    <cd:NamedType id="manifest_processing3"/>
   </cd:Field>
   <cd:Field name="resource">
     <cd:Optional/>
