@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v3" format="xml" last-modified="2024-04-03">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v3" format="xml" last-modified="2024-08-26">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -408,7 +408,7 @@
                   </cd:Field>
                   <cd:Field name="rfiProcParams">
                     <cd:Record namexml="rfiProcParams">
-                      <cd:Description>TODO: Check product specification</cd:Description>
+                      <cd:Description>RFI detection and mitigation parameters.</cd:Description>
                       <cd:Field name="rfiTimeDomainParams">
                         <cd:Record namexml="rfiTimeDomainParams">
                           <cd:Description>The parameters needed for RFI mitigation in time domain.</cd:Description>
