@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra" format="hdf5" last-modified="2023-06-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra_v0" format="hdf5" last-modified="2023-06-16" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="compress">
       <cd:Array>
