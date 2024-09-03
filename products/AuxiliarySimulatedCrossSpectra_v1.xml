@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra_v1" format="hdf5" last-modified="2024-08-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="AuxiliarySimulatedCrossSpectra_v1" format="hdf5" last-modified="2024-08-29" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Attribute name="compress">
       <cd:Array>
@@ -23,7 +23,7 @@
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
         <cd:Float>
-          <cd:NativeType>double</cd:NativeType>
+          <cd:NativeType>float</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Float>
       </cd:Array>
@@ -41,7 +41,7 @@
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
         <cd:Float>
-          <cd:NativeType>double</cd:NativeType>
+          <cd:NativeType>float</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Float>
       </cd:Array>
@@ -53,7 +53,7 @@
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
         <cd:Float>
-          <cd:NativeType>double</cd:NativeType>
+          <cd:NativeType>float</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Float>
       </cd:Array>
@@ -62,7 +62,7 @@
       <cd:Array>
         <cd:Dimension>1</cd:Dimension>
         <cd:Float>
-          <cd:NativeType>double</cd:NativeType>
+          <cd:NativeType>float</cd:NativeType>
           <cd:LittleEndian/>
         </cd:Float>
       </cd:Array>
@@ -140,9 +140,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="dsigma">
@@ -273,9 +273,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="jx">
@@ -637,9 +637,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="u10">
@@ -694,9 +694,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="windspeed">
@@ -751,9 +751,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="hseff_ratio">
@@ -843,9 +843,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
     <cd:Field name="y_size">
@@ -863,9 +863,9 @@
           </cd:Integer>
         </cd:Attribute>
         <cd:Dimension/>
-        <cd:Float>
-          <cd:NativeType>float</cd:NativeType>
-        </cd:Float>
+        <cd:Integer>
+          <cd:NativeType>int64</cd:NativeType>
+        </cd:Integer>
       </cd:Array>
     </cd:Field>
   </cd:Record>
