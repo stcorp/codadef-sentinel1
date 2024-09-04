@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="L2AuxiliaryProcessorParameters_v6" format="xml" last-modified="2024-08-26">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="L2AuxiliaryProcessorParameters_v6" format="xml" last-modified="2024-09-04">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -81,7 +81,7 @@
                                 <cd:Type namexml="shortestWavelength">
                                   <cd:Float format="ascii">
                                     <cd:Description>Shortest wavelength of output polar grid.</cd:Description>
-                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:NativeType>float</cd:NativeType>
                                     <cd:Unit>m</cd:Unit>
                                   </cd:Float>
                                 </cd:Type>
@@ -90,7 +90,7 @@
                                 <cd:Type namexml="longestWavelength">
                                   <cd:Float format="ascii">
                                     <cd:Description>Longest wavelength of output polar grid.</cd:Description>
-                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:NativeType>float</cd:NativeType>
                                     <cd:Unit>m</cd:Unit>
                                   </cd:Float>
                                 </cd:Type>
@@ -111,45 +111,123 @@
                                   </cd:Integer>
                                 </cd:Type>
                               </cd:Field>
-                              <cd:Field name="velthresh">
+                              <cd:Field name="vel_thr">
                                 <cd:Array>
                                   <cd:Dimension/>
-                                  <cd:Type namexml="velthresh">
+                                  <cd:Type namexml="vel_thr">
                                     <cd:Attribute name="beam">
                                       <cd:Optional/>
                                     </cd:Attribute>
                                     <cd:Float format="ascii">
-                                      <cd:Description>Number of directional bins in polar grid.</cd:Description>
-                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Description>Parameters relative to velocity bunching.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
                                     </cd:Float>
                                   </cd:Type>
                                 </cd:Array>
                               </cd:Field>
-                              <cd:Field name="activateAlphaCorrection">
-                                <cd:Type namexml="activateAlphaCorrection">
-                                  <cd:Attribute name="beam">
-                                    <cd:Optional/>
-                                  </cd:Attribute>
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Range Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1,WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
-                                    <cd:NativeType>uint8</cd:NativeType>
-                                    <cd:Mapping string="false" value="0"/>
-                                    <cd:Mapping string="true" value="1"/>
-                                  </cd:Integer>
-                                </cd:Type>
+                              <cd:Field name="activateAlfaCorrection">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="activateAlfaCorrection">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Range Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1,WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
                               </cd:Field>
                               <cd:Field name="activateBetaCorrection">
-                                <cd:Type namexml="activateBetaCorrection">
-                                  <cd:Attribute name="beam">
-                                    <cd:Optional/>
-                                  </cd:Attribute>
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Eff Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1,WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
-                                    <cd:NativeType>uint8</cd:NativeType>
-                                    <cd:Mapping string="false" value="0"/>
-                                    <cd:Mapping string="true" value="1"/>
-                                  </cd:Integer>
-                                </cd:Type>
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="activateBetaCorrection">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Eff Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1,WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_thr_low">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_thr_low">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Value of the contrast between two partitions below which they should be merged during the removal of the low frequency noise (non-wave signatures).</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_thr_fac">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_thr_fac">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Factor applied to the contrast between two partitions below which they should be merged during the swell spectrum partitioning.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_close">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_close">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Decide or not to merge partitions during the swell spectrum partitioning for which the spectral distance between the integral parameters is above the variable merge_close_thr (row below).</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_close_thr">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_close_thr">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Factor applied to the contrast between two partitions below which they should be merged during the swell spectrum partitioning.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="discard_thr">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="discard_thr">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>During the partitioning process, value for which swell spectrum values are not considered to present any relevant peak for the detection of the local peak.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
                               </cd:Field>
                             </cd:Record>
                           </cd:Field>
