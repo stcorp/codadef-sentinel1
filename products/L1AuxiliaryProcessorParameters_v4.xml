@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v4" format="xml" last-modified="2024-10-09">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L1AuxiliaryProcessorParameters_v4" format="xml" last-modified="2024-10-14">
   <cd:Record format="xml">
     <cd:Field name="l1AuxiliaryProcessorParameters">
       <cd:Record namexml="l1AuxiliaryProcessorParameters">
@@ -88,6 +88,7 @@
                             <cd:Mapping string="true" value="1"/>
                           </cd:Integer>
                         </cd:Type>
+                        <cd:Optional/>
                       </cd:Field>
                       <cd:Field name="ellipsoidParams">
                         <cd:Record namexml="ellipsoidParams">
