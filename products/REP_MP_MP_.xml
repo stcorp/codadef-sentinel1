@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="REP_MP_MP_" format="xml" last-modified="2020-06-10">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="REP_MP_MP_" format="xml" last-modified="2024-12-13">
   <cd:Record format="xml">
     <cd:Field name="MissionPlanReport">
       <cd:Record namexml="MissionPlanReport">
@@ -140,12 +140,15 @@
                       </cd:Field>
                       <cd:Field name="Mode">
                         <cd:Text namexml="Mode"/>
+                        <cd:Optional/>
                       </cd:Field>
                       <cd:Field name="Swath">
                         <cd:Text namexml="Swath"/>
+                        <cd:Optional/>
                       </cd:Field>
                       <cd:Field name="Polarisation">
                         <cd:Text namexml="Polarisation"/>
+                        <cd:Optional/>
                       </cd:Field>
                     </cd:Record>
                   </cd:Field>
