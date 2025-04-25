@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2024-12-02">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2025-04-25">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -2868,6 +2868,16 @@
       <cd:Description>This definition is based on version 1.3 of the QCSS External ICD ST-ESA-S1QC-ICD-001</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">MET_DISCLM</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AUX_MOEORB">
+    <cd:Description>POD Short Time Critical (STC) Orbit File</cd:Description>
+    <cd:ProductDefinition id="AUX_MOEORB" format="xml" version="0">
+      <cd:Description>This definition is based on the POD File Format Specification GMES-GSEG-EOPG-FS-10-0075</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData path="/Earth_Explorer_File/Earth_Explorer_Header/Fixed_Header/File_Type">AUX_MOEORB</cd:MatchData>
+        <cd:MatchFilename offset="0">S1</cd:MatchFilename>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
