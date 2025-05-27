@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition id="SETAPAuxiliaryConfiguration_v1" format="xml" last-modified="2025-05-27" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Record>
+    <cd:Field name="setapConf">
+      <cd:Record>
+        <cd:Attribute name="schemaVersion"/>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="generalProcessorConf">
+          <cd:Record>
+            <cd:Field name="listOfGlobalParams">
+              <cd:Record>
+                <cd:Field name="troposphericDelayCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="ionosphericDelayCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="solidEarthTideCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="oceanTidalLoadingCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="orbitStateVectorExtractionExtension">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="ionosphereScalingFactorOrbitHeight">
+                  <cd:Float format="ascii">
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="troposphereIntegrationStepSizeTropopause">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="troposphereIntegrationStepSizeStratosphere">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="troposphereIntegrationStepSizeMesosphere">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="troposphereModelLayerReductionFactor">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfCompression">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfCompressionLevel">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfQuantization">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                    <cd:Mapping string="false" value="0"/>
+                    <cd:Mapping string="true" value="1"/>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfNSDLocation">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfNSDHeight">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfNSDAzCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="etadProductNetcdfNSDRgCorrection">
+                  <cd:Integer format="ascii">
+                    <cd:NativeType>uint8</cd:NativeType>
+                  </cd:Integer>
+                </cd:Field>
+                <cd:Field name="fDcRmsThreshold">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+            <cd:Field name="listOfCorrectionQualityLimits">
+              <cd:Record>
+                <cd:Field name="dTauTropoDelayMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauTropoDelayMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauTropoDelayGradientMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauTropoDelayGradientMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauIonoDelayMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauIonoDelayMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauAccuracyIonoDelayMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauSolidEarthTideMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauSolidEarthTideMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTSolidEarthTideMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTSolidEarthTideMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauOceanTidalLoadingMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauOceanTidalLoadingMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTOceanTidalLoadingMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTOceanTidalLoadingMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTBistaticAzShiftMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTBistaticAzShiftMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauDopplerRgShiftMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauDopplerRgShiftMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTFmRateMismatchMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTFmRateMismatchMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauSumCorrectionRgMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTauSumCorrectionRgMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTSumCorrectionAzMin">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+                <cd:Field name="dTSumCorrectionAzMax">
+                  <cd:Float format="ascii">
+                    <cd:Attribute name="unit"/>
+                    <cd:NativeType>double</cd:NativeType>
+                  </cd:Float>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Field name="modeRelatedConf">
+          <cd:Record>
+            <cd:Field name="listOfModes">
+              <cd:Record>
+                <cd:Attribute name="count">
+                  <cd:Text/>
+                </cd:Attribute>
+                <cd:Field name="mode">
+                  <cd:Array>
+                    <cd:Dimension/>
+                    <cd:Record>
+                      <cd:Field name="name">
+                        <cd:Text/>
+                      </cd:Field>
+                      <cd:Field name="listOfModeParams">
+                        <cd:Record>
+                          <cd:Field name="correctionGridRangeSampling">
+                            <cd:Integer format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:NativeType>int16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="correctionGridAzimuthSampling">
+                            <cd:Integer format="ascii">
+                              <cd:Attribute name="unit"/>
+                              <cd:NativeType>int16</cd:NativeType>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="bistaticAzimuthCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="dopplerShiftRangeCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                          <cd:Field name="fmMismatchAzimuthCorrection">
+                            <cd:Integer format="ascii">
+                              <cd:NativeType>uint8</cd:NativeType>
+                              <cd:Mapping string="false" value="0"/>
+                              <cd:Mapping string="true" value="1"/>
+                            </cd:Integer>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Array>
+                </cd:Field>
+              </cd:Record>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>

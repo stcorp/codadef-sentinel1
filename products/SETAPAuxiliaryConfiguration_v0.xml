@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition id="SETAPAuxiliaryConfiguration" format="xml" last-modified="2022-08-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+<cd:ProductDefinition id="SETAPAuxiliaryConfiguration_v0" format="xml" last-modified="2022-08-05" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
   <cd:Record>
     <cd:Field name="setapConf">
       <cd:Record>
