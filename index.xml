@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2025-05-28">
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="Sentinel1" last-modified="2025-06-06">
   <cd:Description>Sentinel-1 products</cd:Description>
   <cd:ProductType name="manifest_l0">
     <cd:Description>SAFE Manifest file for Sentinel-1 Level 0 products</cd:Description>
@@ -1344,6 +1344,9 @@
       <cd:Description>This definition is based on version 1.20 of the Sentinel-1 ETAD Auxiliary Product Specification ESA-EOPG-CSCOP-TN-80</cd:Description>
       <cd:DetectionRule>
         <cd:MatchData path="/setapConf@schemaVersion">1.20</cd:MatchData>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchData path="/setapConf@schemaVersion">1.21</cd:MatchData>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
