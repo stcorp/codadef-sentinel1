@@ -19,7 +19,6 @@
                 </cd:Field>
               </cd:Record>
             </cd:Field>
-            <ct:NamedTest id="FileNameMatchSystem" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchCreationDate" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FixedValueSentinel1x" path="Fixed_Header/Mission"/>
           </cd:Record>

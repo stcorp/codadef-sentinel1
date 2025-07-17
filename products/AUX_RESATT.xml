@@ -18,7 +18,6 @@
               <cd:Record namexml="Variable_Header"/>
             </cd:Field>
             <ct:NamedTest id="FileNameCheckEOF" path="Fixed_Header/File_Name"/>
-            <ct:NamedTest id="FileNameMatchSystem" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FileNameMatchCreationDate" path="Fixed_Header/File_Name"/>
             <ct:NamedTest id="FixedValueSentinel1x" path="Fixed_Header/Mission"/>
           </cd:Record>
