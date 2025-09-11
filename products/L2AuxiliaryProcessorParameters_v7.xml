@@ -1,0 +1,904 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L2AuxiliaryProcessorParameters_v7" format="xml" last-modified="2025-09-11">
+  <cd:Record>
+    <cd:Field name="l2AuxiliaryProcessorParameters">
+      <cd:Record namexml="l2AuxiliaryProcessorParameters">
+        <cd:Attribute name="schemaVersion">
+          <cd:Optional/>
+        </cd:Attribute>
+        <cd:Field name="productList">
+          <cd:Record namexml="productList">
+            <cd:Attribute name="count"/>
+            <cd:Field name="product">
+              <cd:Array>
+                <cd:Dimension/>
+                <cd:Record namexml="product">
+                  <cd:Field name="productId">
+                    <cd:Text namexml="productId"/>
+                  </cd:Field>
+                  <cd:Field name="ocnProcParams">
+                    <cd:Record namexml="ocnProcParams">
+                      <cd:Field name="oswProcParams">
+                        <cd:Record namexml="oswProcParams">
+                          <ct:NamedTest id="TopsOnlyActivateXspecEstimationTops"/>
+                          <cd:Field name="spectralEstimationParams">
+                            <cd:Record namexml="spectralEstimationParams">
+                              <cd:Field name="frequencySeparation">
+                                <cd:Type namexml="frequencySeparation">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Frequency separation of neighbouring looks.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="rangeLookFilterWidth">
+                                <cd:Type namexml="rangeLookFilterWidth">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Range look filter width.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="azimuthLookFilterWidth">
+                                <cd:Type namexml="azimuthLookFilterWidth">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Azimuth look filter width.</cd:Description>
+                                    <cd:NativeType>double</cd:NativeType>
+                                    <cd:Unit>Hz</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numberOfLooks">
+                                <cd:Type namexml="numberOfLooks">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of individual looks.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numRangePixels">
+                                <cd:Type namexml="numRangePixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of range pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numAzimuthPixels">
+                                <cd:Type namexml="numAzimuthPixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of azimuth pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numAzimuthPixelsCartesianSpec">
+                                <cd:Type namexml="numAzimuthPixelsCartesianSpec">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of azimuth pixels in cartesian co- and cross-spectra [pixels]: N_x=256</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="numRangePixelsCartesianSpec">
+                                <cd:Type namexml="numRangePixelsCartesianSpec">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of range pixels in cartesian co- and cross-spectra [pixels]: N_y=256</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="xHanningPixels">
+                                <cd:Type namexml="xHanningPixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Order of Hanning window function over the range axis: β_x=1</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="yHanningPixels">
+                                <cd:Type namexml="yHanningPixels">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Order of Hanning window function over the azimuth axis: β_y=1</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="detrendFilterWindow">
+                                <cd:Type namexml="detrendFilterWindow" format="ascii">
+                                  <cd:Attribute name="count"/>
+                                  <cd:Array>
+                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Width of low-pass filter for detrending of SLC image. The default value are: filerwidth=(500 ,500)</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Array>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="sizePeriodogrammeXspecTops">
+                                <cd:Type namexml="sizePeriodogrammeXspecTops" format="ascii">
+                                  <cd:Attribute name="count"/>
+                                  <cd:Array>
+                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Specifies the periodogram size used to estimate the cross-spectra in TOPS mode, applied over the azimuth and range dimensions [Pixel]. Default value: (300,600 )</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Array>
+                                </cd:Type>
+                                <cd:Optional/>
+                              </cd:Field>
+                              <cd:Field name="sizeEstimationAreaXspecTops">
+                                <cd:Type namexml="sizeEstimationAreaXspecTops" format="ascii">
+                                  <cd:Attribute name="count"/>
+                                  <cd:Array>
+                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Specifies the maximum size, over azimuth and range dimension, of the estimation area form intra/inter-Burst to estimate the cross-spectra in TOPS mode [Pixel]. Default value: (2000, 3000 )</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Array>
+                                </cd:Type>
+                                <cd:Optional/>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="spectralInversionParams">
+                            <cd:Record namexml="spectralInversionParams">
+                              <cd:Field name="shortestWavelength">
+                                <cd:Type namexml="shortestWavelength">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Shortest wavelength of output polar grid.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:Unit>m</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="longestWavelength">
+                                <cd:Type namexml="longestWavelength">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Longest wavelength of output polar grid.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:Unit>m</cd:Unit>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="waveNumberBins">
+                                <cd:Type namexml="waveNumberBins">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of wavenumber bins in polar grid.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="directionalBins">
+                                <cd:Type namexml="directionalBins">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Number of directional bins in polar grid.</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="vel_thr">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="vel_thr">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Parameters relative to velocity bunching.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="activateAlfaCorrection">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="activateAlfaCorrection">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Range Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1, WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="activateBetaCorrection">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="activateBetaCorrection">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Parameters relative to the calibration of the MTF to compensate for wind-dependent Hs Eff Ratio. The parameter has an attribute named "beam" to allow decoupling the activation depending on the beam for WV (i.e: allowed attribute value WV1, WV2, S1, S2, S3, S4, S5, S6)</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_thr_low">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_thr_low">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Value of the contrast between two partitions below which they should be merged during the removal of the low frequency noise (non-wave signatures).</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_thr_fac">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_thr_fac">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Factor applied to the contrast between two partitions below which they should be merged during the swell spectrum partitioning.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_close">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_close">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Decide or not to merge partitions during the swell spectrum partitioning for which the spectral distance between the integral parameters is above the variable merge_close_thr (row below).</cd:Description>
+                                      <cd:NativeType>uint8</cd:NativeType>
+                                      <cd:Mapping string="false" value="0"/>
+                                      <cd:Mapping string="true" value="1"/>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="merge_close_thr">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="merge_close_thr">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Factor applied to the contrast between two partitions below which they should be merged during the swell spectrum partitioning.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="discard_thr">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="discard_thr">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>During the partitioning process, value for which swell spectrum values are not considered to present any relevant peak for the detection of the local peak.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="numberOfPartitions">
+                                <cd:Type namexml="numberOfPartitions">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>Maximal number of partitions to be retrieved from the wave spectrum. The default value is: npart=5</cd:Description>
+                                    <cd:NativeType>uint64</cd:NativeType>
+                                  </cd:Integer>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="effectiveRangeResolution">
+                                <cd:Type namexml="effectiveRangeResolution">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>Effective range resolution used to tune the RAR MTF. The default value: L_res=20</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                </cd:Type>
+                              </cd:Field>
+                              <cd:Field name="alphaThreshold">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="alphaThreshold">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>The lowest wavenumber used in the low frequency filtering process. α_h=2π/800</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="resamplingGrowthRate">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="resamplingGrowthRate">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Resampling growth rate for cartesian spectrum compression from linear to sinh grid. The default value is: resGrowthRate=32</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="resamplingHalfWidth">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="resamplingHalfWidth">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>The half width of the lowpass filter for cartesian cross spectra resampling. The default value is 1</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="ambiguityFactor">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="ambiguityFactor">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>This factor is used to adjust the MTF, with a default value of 1100</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="snrThreshold">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="snrThreshold">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Signal-to-noise ratio threshold for ambiguity removal. The default value is: γ_amb=0.02</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="lowFrequencyMtfThreshold">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="lowFrequencyMtfThreshold">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Parameter used to tune the MTF for low wavenumbers. The default value is: α_mtf=0.25</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="clutterFactorRegion">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="clutterFactorRegion" format="ascii">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array>
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float format="ascii">
+                                        <cd:Description>Factors specifying the spectral clutter estimation region (range/azimuth sizes, azimuth position). The default values are: cultreg=[0.15, 0.04, 0.9]</cd:Description>
+                                        <cd:NativeType>float</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                              <cd:Field name="lambdaScaling">
+                                <cd:Array>
+                                  <cd:Dimension/>
+                                  <cd:Type namexml="lambdaScaling">
+                                    <cd:Attribute name="beam">
+                                      <cd:Optional/>
+                                    </cd:Attribute>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Scaling lambda to give the ROI in azimuth. The default value is: njy=6.911504</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Array>
+                              </cd:Field>
+                            </cd:Record>
+                          </cd:Field>
+                          <cd:Field name="activateTotalHs">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="activateTotalHs">
+                                <cd:Attribute name="beam">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Allow activating the computation of the total significant wave height, value=True to activate the calculation, otherwise False</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="activateGroupDir">
+                            <cd:Type namexml="activateGroupDir">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Allow activating the computation of the peak direction from Group analysis, value=True to activate the calculation, otherwise False</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="activateNoiseCorrection">
+                            <cd:Type namexml="activateNoiseCorrection">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Allow to trigger the denoising on OSW</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="seaCoverageThreshold">
+                            <cd:Type namexml="seaCoverageThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Threshold on percentage of Sea Coverage. Imagettes having a percentage of Sea Coverage below this threshold will not be processed with a full OSW inversion. Variables not generated will contain fill values. Default is 0%.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                            <cd:Optional/>
+                          </cd:Field>
+                          <cd:Field name="useOnlyInference">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="useOnlyInference">
+                                <cd:Attribute name="for">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>If true, the model inference is performed using the models provided in AUX_ML2 auxiliary product, and if a failure is occurring, the LOP process stops with error. If false, the model inference is performed using the models provided in AUX_ML2 auxiliary product, however, if a failure is occurring, the LOP continues the processing either replacing the result of inference by legacy inversion process (if existing), or by using fill values. The model it applies to can be selected by the "for" attribute, with allowed values "TotalHS" and "Quality Flag"</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="useAncillaryWind">
+                            <cd:Type namexml="useAncillaryWind">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Use the wind direction from ECMWF. The default value is set to True.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="hsWindSeaMethod">
+                            <cd:Text namexml="hsWindSeaMethod">
+                              <cd:Description>"legacy_empirical": Uses an empirical algorithm that has been implemented since the start of the mission (for IPF versions earlier than 4.0). "deep_learning": Uses a deep learning model to estimate the Hs wind sea (available for IPF versions 4.0 and later). "None": No Hs wind sea computation is performed for the product.</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="useBathy">
+                            <cd:Type namexml="useBathy">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Use bathymetry data. The default value is set to True. </cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="useLandMask">
+                            <cd:Type namexml="useLandMask">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Use land mask data. The default value is set to True..</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="activateXspecEstimationTops">
+                            <cd:Type namexml="activateXspecEstimationTops">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Estimate the Cross-spectra estimation from TOPS mode. The default value is set to False.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                            <cd:Optional/>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="owiProcParams">
+                        <cd:Record namexml="owiProcParams">
+                          <cd:Field name="rangeCellSize">
+                            <cd:Type namexml="rangeCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the SAR derived wind field in the range direction. Wind cells should typically be square therefore nominally rangeCellSize = azimuthCellSize.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthCellSize">
+                            <cd:Type namexml="azimuthCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the SAR derived wind field in the azimuth direction. Wind cells should typically be square therefore nominally azimuthCellSize = rangeCellSize.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="distanceToShore">
+                            <cd:Type namexml="distanceToShore">
+                              <cd:Float format="ascii">
+                                <cd:Description>Distance to shore where the processing is not performed.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>km</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="windSpeedStdDev">
+                            <cd:Type namexml="windSpeedStdDev">
+                              <cd:Float format="ascii">
+                                <cd:Description>Standard deviation error of the wind speed provided by ancillary wind information.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m/s</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="windDirStdDev">
+                            <cd:Type namexml="windDirStdDev">
+                              <cd:Float format="ascii">
+                                <cd:Description>Standard deviation error of the wind direction provided by ancillary wind information.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>degrees</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="gmfIndex">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="gmfIndex">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Index or name of the Geophysical Model Function (GMF) to be used for the wind inversion, used for either for VV or HH polarisation data. Options supported are integers in the range [ 0, 21]: 0=gmf_cmod2_i3_nn, 1= gmf_cmod_ifr2_nn, 2=gmf_cmod_ifr2_bc_nn,3=gmf_cmod4_nn, 4=gmf_cmod2_i3, 5=gmf_cmod_ifr2, 6=gmf_cmod_ifr2_bc, 7=gmf_cmod4, 8=gmf_cmod5, 9=gmf_cmodcross2pol, 10=gmf_cmodrs2cross4pol, 11=gmf_cmodrs2cross4pol_vachon, 12=gmf_cmod5n, 13=gmf_cmod5h, 14=gmf_cmod5na, 15=gmf_cmod6, 16=gmf_sarmodVV, 17=gmf_sarmodHH, 18=gmf_cmodcross_h14e, 19=gmf_cmodcross_h14s, 20=gmf_cmodcross_ms1a, 21=gmf_cmodrs2cross2pol. The concerned polarisation is discriminated by the attribute named "polarisation" with supported value 'VV' or 'HH'</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="gmf">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Text namexml="gmf">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Description>Name of the Geophysical Model Function (GMF) to be used for the wind inversion, used for either for VV or HH polarisation data. One GMF per polarisation (VV and HH) described as an attribute. Allowed values are cmod2_i3_nn, cmod_ifr2_nn, cmod_ifr2_bc_nn, cmod4_nn, cmod2_i3, cmod_ifr2, mod_ifr2_bc, mod4, mod5, modcross2pol, cmodrs2cross4pol, cmodrs2cross4pol_vachon, cmod5n, cmod5h, cmod5na, cmod6, sarmodVV, sarmodHH, cmodcross_h14e, cmodcross_h14s, cmodcross_ms1a, cmodrs2cross2pol</cd:Description>
+                              </cd:Text>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="polarisationRatio">
+                            <cd:Text namexml="polarisationRatio">
+                              <cd:Description>Name of the polarization ratio to be used for the wind inversion. It is considered only for HH polarisation. Allowed values are mouch1_ and zhang_2.</cd:Description>
+                            </cd:Text>
+                          </cd:Field>
+                          <cd:Field name="inversionQualityThreshold">
+                            <cd:Type namexml="inversionQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which minimization in the inversion is considered low quality. Valid value range is between 0 and 1e29.</cd:Description>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="calibrationQualityThreshold">
+                            <cd:Type namexml="calibrationQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which the calibration of the product is considered to be incorrect. Valid value range is between 0 and 10 dB.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="nrcsQualityThreshold">
+                            <cd:Type namexml="nrcsQualityThreshold">
+                              <cd:Float format="ascii">
+                                <cd:Description>Value above which the NRCS estimated at the SAR wind cell resolution is considered as low quality. Valid value range is between -30 and 10 dB.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="brightTargetPfa">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="brightTargetPfa">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Float format="ascii">
+                                  <cd:Description>Probability of false alarm for the removal of bright target.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                </cd:Float>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="activateNoiseCorrection">
+                            <cd:Type namexml="activateNoiseCorrection">
+                              <cd:Integer format="ascii">
+                                <cd:Description>Allow activating the noise correction, value=True to activate the noise correction, otherwise False.</cd:Description>
+                                <cd:NativeType>uint8</cd:NativeType>
+                                <cd:Mapping string="false" value="0"/>
+                                <cd:Mapping string="true" value="1"/>
+                              </cd:Integer>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="activateBrightTarget">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="activateBrightTarget">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Allow the activation of bright target computation in a given channel 'polarisation', if the bright target computation is not activated for the given channel, it is not taking into account for combined bright target mask.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="brightTargetEstimatedFrom">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Text namexml="brightTargetEstimatedFrom">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Description>Parameter allowing to describe for a given channel, the origin of the Bright target mask that has been applied. Possible value examples: "None" No bright target mask applied, "VV" mask from bright target detected on VV only, "VV+VH" mask from bright targets detected on VV channel OR VH channel, "VVxVH" mask from bright targets detected on both VV channel AND VH channel.</cd:Description>
+                              </cd:Text>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="rfiAnnotationThreshold">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="rfiAnnotationThreshold">
+                                <cd:Description>Parameters threshold applied on RFI report annotation value to report the corresponding burst  with RFI. Thresholds are expressed with the attribute beam, supported value ‘IW1’, ‘IW2’, ‘IW3’, ‘EW1’, ‘EW2’, ‘EW3’, ‘EW4’, ‘EW5’</cd:Description>
+                                <cd:Attribute name="beam">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Field name="timeDomainPercentageAffectedLines">
+                                  <cd:Type namexml="timeDomainPercentageAffectedLines">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Percentage Affected Lines</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="timeDomainAvgPercentageAffectedSamples">
+                                  <cd:Type namexml="timeDomainAvgPercentageAffectedSamples">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Avg Percentage Affected Samples</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="timeDomainMaxPercentageAffectedSamples">
+                                  <cd:Type namexml="timeDomainMaxPercentageAffectedSamples">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Max Percentage Affected Samples</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="freqDomainPercentageAffectedLines">
+                                  <cd:Type namexml="freqDomainPercentageAffectedLines">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on freqDomainPercentageAffectedLines</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="freqDomainMaxPercentageAffectedBw">
+                                  <cd:Type namexml="freqDomainMaxPercentageAffectedBw">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on freqDomainMaxPercentageAffectedBw</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                      <cd:Field name="rvlProcParams">
+                        <cd:Record namexml="rvlProcParams">
+                          <cd:Field name="rangeBlockSize">
+                            <cd:Type namexml="rangeBlockSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the Doppler estimation block in the range direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthBlockSize">
+                            <cd:Type namexml="azimuthBlockSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the Doppler estimation block in the azimuth direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rangeCellSize">
+                            <cd:Type namexml="rangeCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of grid cell interval in range direction.</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthCellSize">
+                            <cd:Type namexml="azimuthCellSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of grid cell interval in azimuth direction</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                                <cd:Unit>m</cd:Unit>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rangeResolutionReductionFactor">
+                            <cd:Type namexml="rangeResolutionReductionFactor">
+                              <cd:Float format="ascii">
+                                <cd:Description>Factor of resolution reduction in the range dimension</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthResolutionReductionFactor">
+                            <cd:Type namexml="azimuthResolutionReductionFactor">
+                              <cd:Float format="ascii">
+                                <cd:Description>Factor of resolution reduction in the azimuth dimension</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="nSideBands">
+                            <cd:Type namexml="nSideBands">
+                              <cd:Float format="ascii">
+                                <cd:Description>Parameter used to compute the antenna coefficients</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="azimuthTileSize">
+                            <cd:Type namexml="azimuthTileSize">
+                              <cd:Float format="ascii">
+                                <cd:Description>Size of the tile along the azimuth dimension for reading buffered data</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="yHanningPixels">
+                            <cd:Type namexml="yHanningPixels">
+                              <cd:Float format="ascii">
+                                <cd:Description>Hanning window size along the azimuth dimension</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="xHanningPixels">
+                            <cd:Type namexml="xHanningPixels">
+                              <cd:Float format="ascii">
+                                <cd:Description>Hanning window size along the range dimension</cd:Description>
+                                <cd:NativeType>double</cd:NativeType>
+                              </cd:Float>
+                            </cd:Type>
+                          </cd:Field>
+                          <cd:Field name="rfiAnnotationThreshold">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="rfiAnnotationThreshold">
+                                <cd:Description>Parameters threshold applied on RFI report annotation value to report the corresponding burst  with RFI. Thresholds are expressed with the attribute beam, supported value ‘IW1’, ‘IW2’, ‘IW3’, ‘EW1’, ‘EW2’, ‘EW3’, ‘EW4’, ‘EW5’</cd:Description>
+                                <cd:Attribute name="beam">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Field name="timeDomainPercentageAffectedLines">
+                                  <cd:Type namexml="timeDomainPercentageAffectedLines">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Percentage Affected Lines</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="timeDomainAvgPercentageAffectedSamples">
+                                  <cd:Type namexml="timeDomainAvgPercentageAffectedSamples">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Avg Percentage Affected Samples</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="timeDomainMaxPercentageAffectedSamples">
+                                  <cd:Type namexml="timeDomainMaxPercentageAffectedSamples">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on time Domain Max Percentage Affected Samples</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="freqDomainPercentageAffectedLines">
+                                  <cd:Type namexml="freqDomainPercentageAffectedLines">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on freqDomainPercentageAffectedLines</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="freqDomainMaxPercentageAffectedBw">
+                                  <cd:Type namexml="freqDomainMaxPercentageAffectedBw">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Threshold on freqDomainMaxPercentageAffectedBw</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                        </cd:Record>
+                      </cd:Field>
+                    </cd:Record>
+                  </cd:Field>
+                </cd:Record>
+              </cd:Array>
+            </cd:Field>
+          </cd:Record>
+        </cd:Field>
+        <cd:Attribute name="http://www.w3.org/2001/XMLSchema-instance noNamespaceSchemaLocation">
+          <cd:Optional/>
+        </cd:Attribute>
+      </cd:Record>
+    </cd:Field>
+  </cd:Record>
+</cd:ProductDefinition>
