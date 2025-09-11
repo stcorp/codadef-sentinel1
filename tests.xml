@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2025-07-17">
+<ct:Tests xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" last-modified="2025-09-11">
   <ct:Test name="FileNameCheckEOF" criticality="Error" description="The name of the EOF file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".EOF"]]></ct:Test>
   <ct:Test name="FileNameCheckHDR" criticality="Error" description="The name of the HDR file should be consistent with the product name in the fixed header"><![CDATA[filename() == str(.) + ".HDR"]]></ct:Test>
   <ct:Test name="FileNameMatchCreationDate" criticality="Error" description="The creation date in the product name should be consistent with the creation date field in the header"><![CDATA[substr(25, 15, str(.)) == substr(4, 4, str(../Source/Creation_Date)) + substr(9, 2, str(../Source/Creation_Date)) + substr(12, 5, str(../Source/Creation_Date)) + substr(18, 2, str(../Source/Creation_Date)) + substr(21, 2, str(../Source/Creation_Date))]]></ct:Test>
