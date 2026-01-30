@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="REP__SUP__" format="xml" last-modified="2022-11-16">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="REP__SUP__" format="xml" last-modified="2026-01-30">
   <cd:Record>
     <cd:Field name="Earth_Explorer_File">
       <cd:Record namexml="Earth_Explorer_File">
@@ -24,11 +24,19 @@
             <cd:Attribute name="wrong_type" real_name="Type">
               <cd:Optional/>
             </cd:Attribute>
+            <cd:Field name="Unique_Identifier">
+              <cd:Text namexml="Unique_Identifier"/>
+              <cd:Optional/>
+            </cd:Field>
             <cd:Field name="Unavailability_Reference">
               <cd:Text namexml="Unavailability_Reference"/>
             </cd:Field>
             <cd:Field name="Unavailability_Type">
               <cd:Text namexml="Unavailability_Type"/>
+            </cd:Field>
+            <cd:Field name="Unavailability_Status">
+              <cd:Text namexml="Unavailability_Status"/>
+              <cd:Optional/>
             </cd:Field>
             <cd:Field name="Comment">
               <cd:Text namexml="Comment"/>
@@ -105,6 +113,15 @@
                       </cd:Field>
                       <cd:Field name="Comment">
                         <cd:Text namexml="Comment"/>
+                        <cd:Optional/>
+                      </cd:Field>
+                      <cd:Field name="Category">
+                        <cd:Text namexml="Category"/>
+                        <cd:Optional/>
+                      </cd:Field>
+                      <cd:Field name="Description">
+                        <cd:Text namexml="Description"/>
+                        <cd:Optional/>
                       </cd:Field>
                     </cd:Record>
                     <ct:NamedTest id="ValueOfCountAttributeForParent"/>
