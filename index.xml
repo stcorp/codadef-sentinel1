@@ -798,6 +798,29 @@
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level2MeasurementDataEW_v8" format="hdf5" version="8">
+      <cd:Description>This definition is based on version 3.17 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">ew-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
@@ -960,6 +983,29 @@
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataIW_v7" format="hdf5" version="7">
       <cd:Description>This definition is based on version 3.16 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level2MeasurementDataIW_v8" format="hdf5" version="8">
+      <cd:Description>This definition is based on version 3.17 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">iw-ocn-</cd:MatchFilename>
@@ -1174,6 +1220,33 @@
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
     </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level2MeasurementDataSM_v8" format="hdf5" version="8">
+      <cd:Description>This definition is based on version 3.17 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">s</cd:MatchFilename>
+        <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
   </cd:ProductType>
   <cd:ProductType name="Level2MeasurementDataWV">
     <cd:Description>SAR Standard L2 Product - Measurement Data file for WV</cd:Description>
@@ -1346,6 +1419,33 @@
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">wv</cd:MatchFilename>
         <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+    <cd:ProductDefinition id="Level2MeasurementDataWV_v8" format="hdf5" version="8">
+      <cd:Description>This definition is based on version 3.17 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
+        <cd:MatchFilename offset="4">wv</cd:MatchFilename>
+        <cd:MatchFilename offset="7">-ocn-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
@@ -1368,61 +1468,50 @@
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
-  <cd:ProductType name="Level2OSWDataEW">
-    <cd:Description>SAR Standard L2 Product - OSW Data file for EW</cd:Description>
-    <cd:ProductDefinition id="Level2OSWDataEW_v0" format="hdf5" version="0">
+  <cd:ProductType name="Level2OSWData">
+    <cd:Description>SAR Standard L2 Product - OSW Data file</cd:Description>
+    <cd:ProductDefinition id="Level2OSWData_v0" format="hdf5" version="0">
       <cd:Description>This definition is based on version 3.16 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">ew</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">ew</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">ew</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">ew</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
-  </cd:ProductType>
-  <cd:ProductType name="Level2OSWDataIW">
-    <cd:Description>SAR Standard L2 Product - OSW Data file for IW</cd:Description>
-    <cd:ProductDefinition id="Level2OSWDataIW_v0" format="hdf5" version="0">
-      <cd:Description>This definition is based on version 3.16 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
+    <cd:ProductDefinition id="Level2OSWData_v1" format="hdf5" version="1">
+      <cd:Description>This definition is based on version 3.17 of the Sentinel-1 Product Specification S1-RS-MDA-52-7441</cd:Description>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">iw</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">iw</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">iw</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
-        <cd:MatchFilename offset="4">iw</cd:MatchFilename>
         <cd:MatchFilename offset="7">-osw-</cd:MatchFilename>
         <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
