@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L2AuxiliaryProcessorParameters_v7" format="xml" last-modified="2026-07-21">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L2AuxiliaryProcessorParameters_v8" format="xml" last-modified="2026-07-21">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -22,129 +22,264 @@
                         <cd:Record namexml="oswProcParams">
                           <ct:NamedTest id="TopsOnlyActivateXspecEstimationTops"/>
                           <cd:Field name="spectralEstimationParams">
-                            <cd:Record namexml="spectralEstimationParams">
-                              <cd:Field name="frequencySeparation">
-                                <cd:Type namexml="frequencySeparation">
-                                  <cd:Float format="ascii">
-                                    <cd:Description>Frequency separation of neighbouring looks.</cd:Description>
-                                    <cd:NativeType>double</cd:NativeType>
-                                    <cd:Unit>Hz</cd:Unit>
-                                  </cd:Float>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="rangeLookFilterWidth">
-                                <cd:Type namexml="rangeLookFilterWidth">
-                                  <cd:Float format="ascii">
-                                    <cd:Description>Range look filter width.</cd:Description>
-                                    <cd:NativeType>double</cd:NativeType>
-                                    <cd:Unit>Hz</cd:Unit>
-                                  </cd:Float>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="azimuthLookFilterWidth">
-                                <cd:Type namexml="azimuthLookFilterWidth">
-                                  <cd:Float format="ascii">
-                                    <cd:Description>Azimuth look filter width.</cd:Description>
-                                    <cd:NativeType>double</cd:NativeType>
-                                    <cd:Unit>Hz</cd:Unit>
-                                  </cd:Float>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="numberOfLooks">
-                                <cd:Type namexml="numberOfLooks">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Number of individual looks.</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="numRangePixels">
-                                <cd:Type namexml="numRangePixels">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Number of range pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="numAzimuthPixels">
-                                <cd:Type namexml="numAzimuthPixels">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Number of azimuth pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="numAzimuthPixelsCartesianSpec">
-                                <cd:Type namexml="numAzimuthPixelsCartesianSpec">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Number of azimuth pixels in cartesian co- and cross-spectra [pixels]: N_x=256</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="numRangePixelsCartesianSpec">
-                                <cd:Type namexml="numRangePixelsCartesianSpec">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Number of range pixels in cartesian co- and cross-spectra [pixels]: N_y=256</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="xHanningPixels">
-                                <cd:Type namexml="xHanningPixels">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Order of Hanning window function over the range axis: β_x=1</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="yHanningPixels">
-                                <cd:Type namexml="yHanningPixels">
-                                  <cd:Integer format="ascii">
-                                    <cd:Description>Order of Hanning window function over the azimuth axis: β_y=1</cd:Description>
-                                    <cd:NativeType>uint64</cd:NativeType>
-                                  </cd:Integer>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="detrendFilterWindow">
-                                <cd:Type namexml="detrendFilterWindow" format="ascii">
-                                  <cd:Attribute name="count"/>
-                                  <cd:Array>
-                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Record namexml="spectralEstimationParams">
+                                <cd:Attribute name="beam"/>
+                                <cd:Attribute name="grid">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Field name="frequencySeparation">
+                                  <cd:Type namexml="frequencySeparation">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Frequency separation of neighbouring looks.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="rangeLookFilterWidthRatio">
+                                  <cd:Type namexml="rangeLookFilterWidthRatio">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Range look filter width.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="rangeLooksOffset">
+                                  <cd:Type namexml="rangeLooksOffset">
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:Description>This parameter determines the look range offset configuration. The exact value depends on the specific mode, beam, and grid. It is exclusively applicable to TOPS modes (i.e, EW and IW) and is omitted for SM and WV modes.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="azimuthLookFilterWidthRatio">
+                                  <cd:Type namexml="azimuthLookFilterWidthRatio">
+                                    <cd:Float format="ascii">
+                                      <cd:Description>Azimuth look filter width.</cd:Description>
+                                      <cd:NativeType>double</cd:NativeType>
+                                      <cd:Unit>Hz</cd:Unit>
+                                    </cd:Float>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="azimuthLooksOffset">
+                                  <cd:Type namexml="azimuthLooksOffset">
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:Description>This parameter determines the look azimuth offset configuration. The exact value depends on the specific mode, beam, and grid. It is exclusively applicable to TOPS modes (i.e, EW and IW) and is omitted for SM and WV modes.</cd:Description>
+                                        <cd:NativeType>double</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
+                                  </cd:Type>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="numberOfLooks">
+                                  <cd:Type namexml="numberOfLooks">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>Width of low-pass filter for detrending of SLC image. The default value are: filerwidth=(500 ,500)</cd:Description>
+                                      <cd:Description>Number of individual looks.</cd:Description>
                                       <cd:NativeType>uint64</cd:NativeType>
                                     </cd:Integer>
-                                  </cd:Array>
-                                </cd:Type>
-                              </cd:Field>
-                              <cd:Field name="sizePeriodogrammeXspecTops">
-                                <cd:Type namexml="sizePeriodogrammeXspecTops" format="ascii">
-                                  <cd:Attribute name="count"/>
-                                  <cd:Array>
-                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numRangePixels">
+                                  <cd:Type namexml="numRangePixels">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>Specifies the periodogram size used to estimate the cross-spectra in TOPS mode, applied over the azimuth and range dimensions [Pixel]. Default value: (300,600 )</cd:Description>
+                                      <cd:Description>Number of range pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
                                       <cd:NativeType>uint64</cd:NativeType>
                                     </cd:Integer>
-                                  </cd:Array>
-                                </cd:Type>
-                                <cd:Optional/>
-                              </cd:Field>
-                              <cd:Field name="sizeEstimationAreaXspecTops">
-                                <cd:Type namexml="sizeEstimationAreaXspecTops" format="ascii">
-                                  <cd:Attribute name="count"/>
-                                  <cd:Array>
-                                    <cd:Dimension>int(str(@count))</cd:Dimension>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numAzimuthPixels">
+                                  <cd:Type namexml="numAzimuthPixels">
                                     <cd:Integer format="ascii">
-                                      <cd:Description>Specifies the maximum size, over azimuth and range dimension, of the estimation area form intra/inter-Burst to estimate the cross-spectra in TOPS mode [Pixel]. Default value: (2000, 3000 )</cd:Description>
+                                      <cd:Description>Number of azimuth pixels from input L1 product to be used in the estimation of the OSW. Only used for SM, for WV all range pixels are used.</cd:Description>
                                       <cd:NativeType>uint64</cd:NativeType>
                                     </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numAzimuthPixelsCartesianSpec">
+                                  <cd:Type namexml="numAzimuthPixelsCartesianSpec">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of azimuth pixels in cartesian co- and cross-spectra [pixels]: N_x=256</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="numRangePixelsCartesianSpec">
+                                  <cd:Type namexml="numRangePixelsCartesianSpec">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Number of range pixels in cartesian co- and cross-spectra [pixels]: N_y=256</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="xHanningPixels">
+                                  <cd:Type namexml="xHanningPixels">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Order of Hanning window function over the range axis: β_x=1</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="yHanningPixels">
+                                  <cd:Type namexml="yHanningPixels">
+                                    <cd:Integer format="ascii">
+                                      <cd:Description>Order of Hanning window function over the azimuth axis: β_y=1</cd:Description>
+                                      <cd:NativeType>uint64</cd:NativeType>
+                                    </cd:Integer>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="detrendFilterWindow">
+                                  <cd:Type namexml="detrendFilterWindow" format="ascii">
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array>
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Integer format="ascii">
+                                        <cd:Description>Width of low-pass filter for detrending of SLC image. The default value are: filerwidth=(500 ,500)</cd:Description>
+                                        <cd:NativeType>uint64</cd:NativeType>
+                                      </cd:Integer>
+                                    </cd:Array>
+                                  </cd:Type>
+                                </cd:Field>
+                                <cd:Field name="sizePeriodogrammeXspecTops">
+                                  <cd:Array>
+                                    <cd:Dimension/>                                  
+                                    <cd:Type namexml="sizePeriodogrammeXspecTops" format="ascii">
+                                      <cd:Attribute name="count"/>
+                                      <cd:Attribute name="geometry"/>
+                                      <cd:Array>
+                                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                                        <cd:Float format="ascii">
+                                          <cd:Description>Specifies the periodogram size used to estimate the cross-spectra in TOPS mode, applied over the azimuth and range dimensions [Pixel]. Default value: (300,600 )</cd:Description>
+                                          <cd:NativeType>float</cd:NativeType>
+                                        </cd:Float>
+                                      </cd:Array>
+                                    </cd:Type>
                                   </cd:Array>
-                                </cd:Type>
-                                <cd:Optional/>
-                              </cd:Field>
-                            </cd:Record>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="sizeEstimationAreaXspecTops">
+                                  <cd:Array>
+                                    <cd:Dimension/>                                  
+                                    <cd:Type namexml="sizeEstimationAreaXspecTops" format="ascii">
+                                      <cd:Attribute name="count"/>
+                                      <cd:Attribute name="geometry"/>
+                                      <cd:Array>
+                                        <cd:Dimension>int(str(@count))</cd:Dimension>
+                                        <cd:Integer format="ascii">
+                                          <cd:Description>Specifies the maximum size, over azimuth and range dimension, of the estimation area form intra/inter-Burst to estimate the cross-spectra in TOPS mode [Pixel]. Default value: (2000, 3000 )</cd:Description>
+                                          <cd:NativeType>uint64</cd:NativeType>
+                                        </cd:Integer>
+                                      </cd:Array>
+                                    </cd:Type>
+                                  </cd:Array>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="looksCenteringInsideBounds">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>This parameter enables the manual centering of the looks inside the effective bandwidth, after the deramping and the DC centering. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is true.</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:Mapping string="false" value="0"/>
+                                    <cd:Mapping string="true" value="1"/>
+                                  </cd:Integer>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="flatLooksEnergyWithRFPandAFP">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>This parameter enables the application of the Range Fourier Profile normalization across the range and azimuth dimensions prior to look extraction. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is true.</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:Mapping string="false" value="0"/>
+                                    <cd:Mapping string="true" value="1"/>
+                                  </cd:Integer>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="processingGeometry">
+                                  <cd:Text>
+                                    <cd:Description>It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. This parameter allow to select which geometry will be considered for the processing: "slant" or "ground": for ground geometry, the size is derived from regular ground tiling and measured in meters; for slant geometry, it is derived from SLC tiling and measured in pixels. The default geometry is "ground".</cd:Description>
+                                  </cd:Text>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="tilesMinAzimuthOverlapPercentage">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter specifies the minimum percentage of overlap between tiles (i.e., estimation areas) across the azimuth axis. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 0.0.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="tilesMinRangeOverlapPercentage">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter specifies the minimum percentage of overlap between tiles (i.e., estimation areas) across the rangs axis. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 0.0.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="equallyDistributeTilesInRange">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>This parameter allows the remaining data to be equally distributed among the tiles (i.e., estimation areas) across the range axis if the percentage of remaining data is not higher than the "addExtraTileThresholdInRange" threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is true.</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:Mapping string="false" value="0"/>
+                                    <cd:Mapping string="true" value="1"/>
+                                  </cd:Integer>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="equallyDistributeTilesInAzimuth">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>This parameter allows the remaining data to be equally distributed among the tiles (i.e., estimation areas) across the azimuth axis if the percentage of remaining data is not higher than the "addExtraTileThresholdInRange" threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is true.</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:Mapping string="false" value="0"/>
+                                    <cd:Mapping string="true" value="1"/>
+                                  </cd:Integer>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="addExtraTileThresholdInRange">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter adds an extra tile (i.e., estimation area) along the range axis if the percentage of remaining data is greater than the threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 50 %.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="addExtraTileThresholdInAzimuth">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter adds an extra tile (i.e., estimation area) along the azimuth axis if the percentage of remaining data is greater than the threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 50 %.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="removeBrightTargets">
+                                  <cd:Integer format="ascii">
+                                    <cd:Description>This parameter enables the bright target removal algorithm. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is true.</cd:Description>
+                                    <cd:NativeType>uint8</cd:NativeType>
+                                    <cd:Mapping string="false" value="0"/>
+                                    <cd:Mapping string="true" value="1"/>
+                                  </cd:Integer>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="brightTargetDetectionThreshold">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter fixes the threshold of the bright target removal algorithm. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 15.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                                <cd:Field name="enableFFTpadding">
+                                  <cd:Float format="ascii">
+                                    <cd:Description>This parameter enables the padding of the FFT target support for the periodograms. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. Default values are dynamically determined by the selected mode, beam, and geometry: "auto": Padding is calculated based on the effective bandwidth and the selected ratio for look extraction across the range and azimuth dimensions. Float number : Padding is fixed by a specific scaling factor.</cd:Description>
+                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:Mapping string="auto" value="nan"/>
+                                  </cd:Float>
+                                  <cd:Optional/>
+                                </cd:Field>
+                              </cd:Record>
+                            </cd:Array>
                           </cd:Field>
                           <cd:Field name="spectralInversionParams">
                             <cd:Record namexml="spectralInversionParams">
@@ -337,10 +472,14 @@
                                     <cd:Attribute name="beam">
                                       <cd:Optional/>
                                     </cd:Attribute>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>Resampling growth rate for cartesian spectrum compression from linear to sinh grid. The default value is: resGrowthRate=32</cd:Description>
-                                      <cd:NativeType>float</cd:NativeType>
-                                    </cd:Float>
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:Description>Resampling growth rate for cartesian spectrum compression from linear to sinh grid. The default value is: resGrowthRate=32</cd:Description>
+                                        <cd:NativeType>float</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Array>
                               </cd:Field>
@@ -351,10 +490,14 @@
                                     <cd:Attribute name="beam">
                                       <cd:Optional/>
                                     </cd:Attribute>
-                                    <cd:Float format="ascii">
-                                      <cd:Description>The half width of the lowpass filter for cartesian cross spectra resampling. The default value is 1</cd:Description>
-                                      <cd:NativeType>float</cd:NativeType>
-                                    </cd:Float>
+                                    <cd:Attribute name="count"/>
+                                    <cd:Array format="ascii">
+                                      <cd:Dimension>int(str(@count))</cd:Dimension>
+                                      <cd:Float>
+                                        <cd:Description>The half width of the lowpass filter for cartesian cross spectra resampling. The default value is 1</cd:Description>
+                                        <cd:NativeType>float</cd:NativeType>
+                                      </cd:Float>
+                                    </cd:Array>
                                   </cd:Type>
                                 </cd:Array>
                               </cd:Field>
@@ -531,14 +674,20 @@
                             </cd:Type>
                           </cd:Field>
                           <cd:Field name="activateXspecEstimationTops">
-                            <cd:Type namexml="activateXspecEstimationTops">
-                              <cd:Integer format="ascii">
-                                <cd:Description>Estimate the Cross-spectra estimation from TOPS mode. The default value is set to False.</cd:Description>
-                                <cd:NativeType>uint8</cd:NativeType>
-                                <cd:Mapping string="false" value="0"/>
-                                <cd:Mapping string="true" value="1"/>
-                              </cd:Integer>
-                            </cd:Type>
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="activateXspecEstimationTops">
+                                <cd:Attribute name="polarisation">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Estimate the Cross-spectra estimation from TOPS mode. The default value is set to False.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
+                            </cd:Array>
                             <cd:Optional/>
                           </cd:Field>
                         </cd:Record>
@@ -574,19 +723,23 @@
                           </cd:Field>
                           <cd:Field name="windSpeedStdDev">
                             <cd:Type namexml="windSpeedStdDev">
-                              <cd:Float format="ascii">
-                                <cd:Description>Standard deviation error of the wind speed provided by ancillary wind information.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>m/s</cd:Unit>
-                              </cd:Float>
+                              <cd:Attribute name="count"/>
+                              <cd:Array format="ascii">
+                                <cd:Dimension>int(str(@count))</cd:Dimension>
+                                <cd:Float>
+                                  <cd:Description>Standard deviation error of the wind speed provided by ancillary wind information.</cd:Description>
+                                  <cd:NativeType>double</cd:NativeType>
+                                  <cd:Unit>m/s</cd:Unit>
+                                </cd:Float>
+                              </cd:Array>
                             </cd:Type>
                           </cd:Field>
-                          <cd:Field name="windDirStdDev">
-                            <cd:Type namexml="windDirStdDev">
+                          <cd:Field name="sigma0StdDev">
+                            <cd:Type namexml="sigma0StdDev">
                               <cd:Float format="ascii">
-                                <cd:Description>Standard deviation error of the wind direction provided by ancillary wind information.</cd:Description>
-                                <cd:NativeType>double</cd:NativeType>
-                                <cd:Unit>degrees</cd:Unit>
+                                <cd:Description>Standard deviation error ofon the SAR Sigma0 [dB], used in the cost function.</cd:Description>
+                                <cd:NativeType>float</cd:NativeType>
+                                <cd:Unit>dB</cd:Unit>
                               </cd:Float>
                             </cd:Type>
                           </cd:Field>
@@ -745,6 +898,22 @@
                                   </cd:Type>
                                 </cd:Field>
                               </cd:Record>
+                            </cd:Array>
+                          </cd:Field>
+                          <cd:Field name="activatePrecipitationRate">
+                            <cd:Array>
+                              <cd:Dimension/>
+                              <cd:Type namexml="activatePrecipitationRate">
+                                <cd:Attribute name="productPolarisationType">
+                                  <cd:Optional/>
+                                </cd:Attribute>
+                                <cd:Integer format="ascii">
+                                  <cd:Description>Allow to activate the Precipitation Rate estimation according to the "productPolarisationType" set as attribute with supported values 'DV', 'DH', 'SH', 'SV'.</cd:Description>
+                                  <cd:NativeType>uint8</cd:NativeType>
+                                  <cd:Mapping string="false" value="0"/>
+                                  <cd:Mapping string="true" value="1"/>
+                                </cd:Integer>
+                              </cd:Type>
                             </cd:Array>
                           </cd:Field>
                         </cd:Record>
