@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L2AuxiliaryProcessorParameters_v8" format="xml" last-modified="2026-07-21">
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" xmlns:ct="http://www.stcorp.nl/coda/test/2008/10" id="L2AuxiliaryProcessorParameters_v8" format="xml" last-modified="2026-08-13">
   <cd:Record>
     <cd:Field name="l2AuxiliaryProcessorParameters">
       <cd:Record namexml="l2AuxiliaryProcessorParameters">
@@ -49,14 +49,10 @@
                                 </cd:Field>
                                 <cd:Field name="rangeLooksOffset">
                                   <cd:Type namexml="rangeLooksOffset">
-                                    <cd:Attribute name="count"/>
-                                    <cd:Array format="ascii">
-                                      <cd:Dimension>int(str(@count))</cd:Dimension>
-                                      <cd:Float>
-                                        <cd:Description>This parameter determines the look range offset configuration. The exact value depends on the specific mode, beam, and grid. It is exclusively applicable to TOPS modes (i.e, EW and IW) and is omitted for SM and WV modes.</cd:Description>
-                                        <cd:NativeType>double</cd:NativeType>
-                                      </cd:Float>
-                                    </cd:Array>
+                                    <cd:Float format="ascii">
+                                      <cd:Description>This parameter determines the look range offset configuration. The exact value depends on the specific mode, beam, and grid. It is exclusively applicable to TOPS modes (i.e, EW and IW) and is omitted for SM and WV modes.</cd:Description>
+                                      <cd:NativeType>float</cd:NativeType>
+                                    </cd:Float>
                                   </cd:Type>
                                   <cd:Optional/>
                                 </cd:Field>
@@ -76,7 +72,7 @@
                                       <cd:Dimension>int(str(@count))</cd:Dimension>
                                       <cd:Float>
                                         <cd:Description>This parameter determines the look azimuth offset configuration. The exact value depends on the specific mode, beam, and grid. It is exclusively applicable to TOPS modes (i.e, EW and IW) and is omitted for SM and WV modes.</cd:Description>
-                                        <cd:NativeType>double</cd:NativeType>
+                                        <cd:NativeType>float</cd:NativeType>
                                       </cd:Float>
                                     </cd:Array>
                                   </cd:Type>
@@ -159,7 +155,7 @@
                                       <cd:Array>
                                         <cd:Dimension>int(str(@count))</cd:Dimension>
                                         <cd:Float format="ascii">
-                                          <cd:Description>Specifies the periodogram size used to estimate the cross-spectra in TOPS mode, applied over the azimuth and range dimensions [Pixel]. Default value: (300,600 )</cd:Description>
+                                          <cd:Description>This parameter specifies the periodogram size used to estimate cross-spectra across the azimuth and range dimensions. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes.</cd:Description>
                                           <cd:NativeType>float</cd:NativeType>
                                         </cd:Float>
                                       </cd:Array>
@@ -175,10 +171,10 @@
                                       <cd:Attribute name="geometry"/>
                                       <cd:Array>
                                         <cd:Dimension>int(str(@count))</cd:Dimension>
-                                        <cd:Integer format="ascii">
-                                          <cd:Description>Specifies the maximum size, over azimuth and range dimension, of the estimation area form intra/inter-Burst to estimate the cross-spectra in TOPS mode [Pixel]. Default value: (2000, 3000 )</cd:Description>
-                                          <cd:NativeType>uint64</cd:NativeType>
-                                        </cd:Integer>
+                                        <cd:Float format="ascii">
+                                          <cd:Description>This parameter specifies the tile size used to estimate cross-spectra across the azimuth and range dimensions. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes.</cd:Description>
+                                          <cd:NativeType>float</cd:NativeType>
+                                        </cd:Float>
                                       </cd:Array>
                                     </cd:Type>
                                   </cd:Array>
@@ -211,14 +207,14 @@
                                 <cd:Field name="tilesMinAzimuthOverlapPercentage">
                                   <cd:Float format="ascii">
                                     <cd:Description>This parameter specifies the minimum percentage of overlap between tiles (i.e., estimation areas) across the azimuth axis. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 0.0.</cd:Description>
-                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                   <cd:Optional/>
                                 </cd:Field>
                                 <cd:Field name="tilesMinRangeOverlapPercentage">
                                   <cd:Float format="ascii">
                                     <cd:Description>This parameter specifies the minimum percentage of overlap between tiles (i.e., estimation areas) across the rangs axis. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 0.0.</cd:Description>
-                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                   <cd:Optional/>
                                 </cd:Field>
@@ -243,14 +239,14 @@
                                 <cd:Field name="addExtraTileThresholdInRange">
                                   <cd:Float format="ascii">
                                     <cd:Description>This parameter adds an extra tile (i.e., estimation area) along the range axis if the percentage of remaining data is greater than the threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 50 %.</cd:Description>
-                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                   <cd:Optional/>
                                 </cd:Field>
                                 <cd:Field name="addExtraTileThresholdInAzimuth">
                                   <cd:Float format="ascii">
                                     <cd:Description>This parameter adds an extra tile (i.e., estimation area) along the azimuth axis if the percentage of remaining data is greater than the threshold. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 50 %.</cd:Description>
-                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                   <cd:Optional/>
                                 </cd:Field>
@@ -266,7 +262,7 @@
                                 <cd:Field name="brightTargetDetectionThreshold">
                                   <cd:Float format="ascii">
                                     <cd:Description>This parameter fixes the threshold of the bright target removal algorithm. It is exclusively applicable to TOPS modes (i.e., EW and IW) and is omitted for SM and WV modes. The default value is 15.</cd:Description>
-                                    <cd:NativeType>float</cd:NativeType>
+                                    <cd:NativeType>double</cd:NativeType>
                                   </cd:Float>
                                   <cd:Optional/>
                                 </cd:Field>
