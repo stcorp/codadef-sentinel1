@@ -1199,25 +1199,25 @@
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchData path="@IPFversion"/>
+        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
       </cd:DetectionRule>
     </cd:ProductDefinition>
     <cd:ProductDefinition id="Level2MeasurementDataSM_v8" format="hdf5" version="8">
@@ -1226,25 +1226,25 @@
         <cd:MatchFilename offset="0">s1a-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+        <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1b-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+        <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1c-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+        <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
       <cd:DetectionRule>
         <cd:MatchFilename offset="0">s1d-</cd:MatchFilename>
         <cd:MatchFilename offset="4">s</cd:MatchFilename>
         <cd:MatchFilename offset="6">-ocn-</cd:MatchFilename>
-        <cd:MatchExpression path="@IPFversion"><![CDATA[substr(0, 5, str(.)) == "004.0"]]></cd:MatchExpression>
+        <cd:MatchData path="@IPFversion"/>
       </cd:DetectionRule>
     </cd:ProductDefinition>
   </cd:ProductType>
